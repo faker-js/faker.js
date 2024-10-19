@@ -73,6 +73,20 @@ export class AnimalModule extends ModuleBase {
   }
 
   /**
+   * Returns a random pet name.
+   *
+   * @example
+   * faker.animal.petName() // 'Coco'
+   *
+   * @since 5.5.0
+   */
+  petName(): string {
+    return this.faker.helpers.arrayElement(
+      this.faker.definitions.animal.pet_name
+    );
+  }
+
+  /**
    * Returns a random cetacean species.
    *
    * @example
