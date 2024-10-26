@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [9.1.0](https://github.com/faker-js/faker/compare/v9.0.3...v9.1.0) (2024-10-26)
+
+
+### New Locales
+
+* **locale:** add books on pt_br ([#3218](https://github.com/faker-js/faker/issues/3218)) ([af1dbcd](https://github.com/faker-js/faker/commit/af1dbcdbf363a12c448834dff031a698c8925e2e))
+* **locale:** add Swedish(sv) counties ([#3154](https://github.com/faker-js/faker/issues/3154)) ([67569d9](https://github.com/faker-js/faker/commit/67569d93992e6388647118e9e9e319cfdd6721ed))
+
+
+### Features
+
+* add book module ([#2949](https://github.com/faker-js/faker/issues/2949)) ([2f93d9d](https://github.com/faker-js/faker/commit/2f93d9da383638b6d232ff8b3cae827ea4c80150))
+* **commerce:** more varied product descriptions ([#3174](https://github.com/faker-js/faker/issues/3174)) ([ba4ef9a](https://github.com/faker-js/faker/commit/ba4ef9a5a671ffc6ed10db7fed896dccda90dca1))
+* **internet:** add jwt method ([#2936](https://github.com/faker-js/faker/issues/2936)) ([e3858f2](https://github.com/faker-js/faker/commit/e3858f221bb3b6e1278933c0b8e0d98da6854e52))
+* **internet:** improve ipv4 method ([#2992](https://github.com/faker-js/faker/issues/2992)) ([a5a6c5b](https://github.com/faker-js/faker/commit/a5a6c5b4e1145b1e21e5d8e540bc6f55f97d3a84))
+* **location:** add `continent` method ([#3162](https://github.com/faker-js/faker/issues/3162)) ([4056ab0](https://github.com/faker-js/faker/commit/4056ab09c64be40d41562284ec64e7531fbaff41))
+* **string:** adds support for generating ULID ([#2524](https://github.com/faker-js/faker/issues/2524)) ([5b1c858](https://github.com/faker-js/faker/commit/5b1c8588f8a57be712e64434f7b17a8407a4f465))
+
+
+### Changed Locales
+
+* **locale:** enhance en vehicle manufacturers ([#3187](https://github.com/faker-js/faker/issues/3187)) ([858f8d0](https://github.com/faker-js/faker/commit/858f8d07b098418a7a2b7cb2e265eb9f4388ed3d))
+* **locale:** modernise buzz- and catch-phrases ([#2930](https://github.com/faker-js/faker/issues/2930)) ([247c86f](https://github.com/faker-js/faker/commit/247c86f5b40916957123cb3fa1bd4356d8fa7452))
+* **locale:** remove inaccessible files ([#3205](https://github.com/faker-js/faker/issues/3205)) ([89b695c](https://github.com/faker-js/faker/commit/89b695cbaf20206ebb4570d018af2fa99f720889))
+* **locale:** trim excessive Croatian last names ([#3204](https://github.com/faker-js/faker/issues/3204)) ([18e59aa](https://github.com/faker-js/faker/commit/18e59aa8805b3413b6f8058b1a00ff5bcbfbc935))
+
+
+### Bug Fixes
+
+* **food:** use arrayElement instead of fake for adjective ([#3178](https://github.com/faker-js/faker/issues/3178)) ([a8dfa2f](https://github.com/faker-js/faker/commit/a8dfa2fcde59a1ec9e5beb2e93c690a8ec532cdf))
+* **location:** fix US ZIP code anomalies for zipCode({state}) ([#3180](https://github.com/faker-js/faker/issues/3180)) ([df59724](https://github.com/faker-js/faker/commit/df597241003824279268c1dc9eae6c772c54760b))
+* **location:** update valid ZIP ranges for FL and VA ([#3167](https://github.com/faker-js/faker/issues/3167)) ([e271d4a](https://github.com/faker-js/faker/commit/e271d4a545dd48e57285019e4f412358c49cad0d))
+
 ## [9.0.3](https://github.com/faker-js/faker/compare/v9.0.2...v9.0.3) (2024-09-26)
 
 
