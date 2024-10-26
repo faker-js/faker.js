@@ -15,7 +15,7 @@ This is the migration guide for upgrading from v8 to v9.
 :::
 
 ::: info Want to learn more about new features in v9?
-Read our [release announcements](/about/announcements/2024-08-31.md)
+Read our [release announcements](/about/announcements/2024-10-26.md)
 :::
 
 ## General Breaking Changes
@@ -61,7 +61,7 @@ While this is not a breaking change according to semantic versioning guidelines,
 In v9 we switch from a 32 bit random value to a 53 bit random value.
 We don't change the underlying algorithm much, but we now consume two seed values each step instead of one.
 
-You can read more in out Blog Post: [What's New In v9.0](/about/announcements/2024-08-31#use-high-precision-rng-by-default)
+You can read more in out Blog Post: [What's New In v9.0](/about/announcements/2024-10-26#use-high-precision-rng-by-default)
 
 #### Adoption
 
