@@ -61,6 +61,7 @@ function getSideBarWithExpandedEntry(entryToExpand: string): SidebarItem[] {
           text: 'Announcements',
           link: '/about/announcements',
           items: [
+            { text: '2024-10-26', link: '/about/announcements/2024-10-26' },
             { text: '2022-09-08', link: '/about/announcements/2022-09-08' },
             { text: '2022-01-14', link: '/about/announcements/2022-01-14' },
           ],
