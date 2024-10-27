@@ -14,7 +14,6 @@ export default [
   'granate',
   'gris',
   'gualda',
-  'índigo',
   'lavanda',
   'lila',
   'magenta',
@@ -36,4 +35,5 @@ export default [
   'verde menta',
   'verde oliva',
   'violeta',
+  'índigo',
 ];
