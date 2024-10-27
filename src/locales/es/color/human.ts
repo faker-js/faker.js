@@ -6,7 +6,6 @@ export default [
   'blanco',
   'carmesí',
   'celeste',
-  'ciruela',
   'cian',
   'crema',
   'dorado',
