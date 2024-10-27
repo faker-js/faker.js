@@ -35,5 +35,5 @@ export default [
   'verde lima',
   'verde menta',
   'verde oliva',
-  'violeta'
+  'violeta',
 ];
