@@ -86,7 +86,7 @@ exports[`animal > 1337 > insect 1`] = `"Erythrina gall wasp"`;
 
 exports[`animal > 1337 > lion 1`] = `"Barbary Lion"`;
 
-exports[`animal > 1337 > petName 1`] = `"Cookie"`;
+exports[`animal > 1337 > petName 1`] = `"Cooper"`;
 
 exports[`animal > 1337 > rabbit 1`] = `"Cinnamon"`;
 

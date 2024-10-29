@@ -3,7 +3,6 @@ export default [
   'Archie',
   'Bailey',
   'Bandit',
-  'Bear',
   'Bella',
   'Bentley',
   'Bruno',

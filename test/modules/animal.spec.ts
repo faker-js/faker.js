@@ -136,7 +136,7 @@ describe('animal', () => {
       });
 
       describe('petName()', () => {
-        it('should return random value from type array', () => {
+        it('should return random value from pet name array', () => {
           const actual = faker.animal.petName();
           expect(faker.definitions.animal.pet_name).toContain(actual);
         });
