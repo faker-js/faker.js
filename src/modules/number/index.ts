@@ -464,7 +464,7 @@ export class NumberModule extends SimpleModuleBase {
    * faker.number.romanNumeral({ max: 20 }) // "XVII"
    * faker.number.romanNumeral({ min: 5, max: 10 }) // "VII"
    *
-   * @since 9.1.0
+   * @since 9.2.0
    */
   romanNumeral(
     options:
