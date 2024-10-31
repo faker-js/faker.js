@@ -4,7 +4,7 @@
 import https from 'node:https';
 import { resolve as urlResolve } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { faker } from '../../src';
+import { faker } from '../../../src';
 
 /**
  * Checks that the given address is a working https address.
