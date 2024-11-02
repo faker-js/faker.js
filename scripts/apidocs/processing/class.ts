@@ -13,7 +13,7 @@ import {
   processClassConstructors,
   processClassMethods,
   processInterfaceMethods,
-  processProjectFunctions,
+  processUtilityFunctions,
 } from './method';
 
 /**
@@ -192,12 +192,7 @@ export function processProjectUtilities(project: Project): RawApiDocsPage {
     deprecated: undefined,
     description: 'A list of all the utilities available in Faker.js.',
     examples: [],
-    methods: processProjectFunctions(
-      project,
-      'mergeLocales',
-      'generateMersenne32Randomizer',
-      'generateMersenne53Randomizer'
-    ),
+    methods: processUtilityFunctions(project),
   };
 }
 
