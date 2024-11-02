@@ -20,6 +20,16 @@ export default defineConfig({
       seed: VITEST_SEQUENCE_SEED,
       shuffle: true,
     },
+    onStackTrace(_, { file }) {
+      if (
+        file.includes('/src/internal/locale-proxy') ||
+        file.includes('/test/support/')
+      ) {
+        return false;
+      }
+
+      return true;
+    },
     typecheck: {
       enabled: true,
       include: ['test/**/*.spec-d.ts'],
