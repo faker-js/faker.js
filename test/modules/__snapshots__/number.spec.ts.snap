@@ -50,6 +50,20 @@ exports[`number > 42 > octal > with options 1`] = `"4"`;
 
 exports[`number > 42 > octal > with value 1`] = `"0"`;
 
+exports[`number > 42 > romanNumeral > noArgs 1`] = `"MCDXCVIII"`;
+
+exports[`number > 42 > romanNumeral > with max as 3999 1`] = `"MCDXCVIII"`;
+
+exports[`number > 42 > romanNumeral > with min and max 1`] = `"CCL"`;
+
+exports[`number > 42 > romanNumeral > with min as 1 1`] = `"MCDXCVIII"`;
+
+exports[`number > 42 > romanNumeral > with number value 1`] = `"CCCLXXV"`;
+
+exports[`number > 42 > romanNumeral > with only max 1`] = `"LXII"`;
+
+exports[`number > 42 > romanNumeral > with only min 1`] = `"MDI"`;
+
 exports[`number > 1211 > bigInt > noArgs 1`] = `982966736876848n`;
 
 exports[`number > 1211 > bigInt > with big options 1`] = `25442250580110979794946298n`;
@@ -100,6 +114,20 @@ exports[`number > 1211 > octal > with options 1`] = `"12"`;
 
 exports[`number > 1211 > octal > with value 1`] = `"1"`;
 
+exports[`number > 1211 > romanNumeral > noArgs 1`] = `"MMMDCCXIV"`;
+
+exports[`number > 1211 > romanNumeral > with max as 3999 1`] = `"MMMDCCXIV"`;
+
+exports[`number > 1211 > romanNumeral > with min and max 1`] = `"CDLXXIV"`;
+
+exports[`number > 1211 > romanNumeral > with min as 1 1`] = `"MMMDCCXIV"`;
+
+exports[`number > 1211 > romanNumeral > with number value 1`] = `"CMXXIX"`;
+
+exports[`number > 1211 > romanNumeral > with only max 1`] = `"CLIV"`;
+
+exports[`number > 1211 > romanNumeral > with only min 1`] = `"MMMDCCXIV"`;
+
 exports[`number > 1337 > bigInt > noArgs 1`] = `212435297136194n`;
 
 exports[`number > 1337 > bigInt > with big options 1`] = `27379244885156992800029992n`;
@@ -149,3 +177,17 @@ exports[`number > 1337 > octal > noArgs 1`] = `"2"`;
 exports[`number > 1337 > octal > with options 1`] = `"2"`;
 
 exports[`number > 1337 > octal > with value 1`] = `"0"`;
+
+exports[`number > 1337 > romanNumeral > noArgs 1`] = `"MXLVIII"`;
+
+exports[`number > 1337 > romanNumeral > with max as 3999 1`] = `"MXLVIII"`;
+
+exports[`number > 1337 > romanNumeral > with min and max 1`] = `"CCV"`;
+
+exports[`number > 1337 > romanNumeral > with min as 1 1`] = `"MXLVIII"`;
+
+exports[`number > 1337 > romanNumeral > with number value 1`] = `"CCLXIII"`;
+
+exports[`number > 1337 > romanNumeral > with only max 1`] = `"XLIV"`;
+
+exports[`number > 1337 > romanNumeral > with only min 1`] = `"MLI"`;
