@@ -14,6 +14,7 @@ import fish from './fish';
 import horse from './horse';
 import insect from './insect';
 import lion from './lion';
+import pet_name from './pet_name';
 import rabbit from './rabbit';
 import rodent from './rodent';
 import snake from './snake';
@@ -31,6 +32,7 @@ const animal: AnimalDefinition = {
   horse,
   insect,
   lion,
+  pet_name,
   rabbit,
   rodent,
   snake,
