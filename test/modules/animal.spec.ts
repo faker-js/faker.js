@@ -22,7 +22,8 @@ describe('animal', () => {
       'rabbit',
       'rodent',
       'snake',
-      'type'
+      'type',
+      'petName'
     );
   });
 
@@ -131,6 +132,13 @@ describe('animal', () => {
         it('should return random value from type array', () => {
           const actual = faker.animal.type();
           expect(faker.definitions.animal.type).toContain(actual);
+        });
+      });
+
+      describe('petName()', () => {
+        it('should return random value from pet name array', () => {
+          const actual = faker.animal.petName();
+          expect(faker.definitions.animal.pet_name).toContain(actual);
         });
       });
     }
