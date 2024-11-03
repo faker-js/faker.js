@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [9.2.0](https://github.com/faker-js/faker/compare/v9.1.0...v9.2.0) (2024-11-03)
+
+
+### Features
+
+* **animal:** add petName method ([#3196](https://github.com/faker-js/faker/issues/3196)) ([c02beea](https://github.com/faker-js/faker/commit/c02beeadd49e48656a0307451517e9751e3118c3))
+* **number:** add romanNumeral method ([#3070](https://github.com/faker-js/faker/issues/3070)) ([72937de](https://github.com/faker-js/faker/commit/72937de55c892c011846bc2b67dc0df61fbdf5a2))
+
+
+### Changed Locales
+
+* **locale:** improve Spanish color names ([#3230](https://github.com/faker-js/faker/issues/3230)) ([99d81be](https://github.com/faker-js/faker/commit/99d81bed28b36ab525340e32a7349799cbe88eca))
+
 ## [9.1.0](https://github.com/faker-js/faker/compare/v9.0.3...v9.1.0) (2024-10-26)
 
 
