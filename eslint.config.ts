@@ -147,6 +147,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       'unicorn/import-style': 'off', // subjective & doesn't do anything for us
       'unicorn/no-array-callback-reference': 'off', // reduces readability
       'unicorn/no-nested-ternary': 'off', // incompatible with prettier
+      'unicorn/no-object-as-default-parameter': 'off', // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2199
       'unicorn/no-null': 'off', // incompatible with TypeScript
       'unicorn/no-zero-fractions': 'off', // deactivated to raise awareness of floating operations
       'unicorn/number-literal-case': 'off', // incompatible with prettier
@@ -157,7 +158,6 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       // TODO @Shinigami92 2023-09-23: The following rules currently conflict with our code.
       // Each rule should be checked whether it should be enabled/configured and the problems fixed, or stay disabled permanently.
       'unicorn/consistent-function-scoping': 'off',
-      'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/prefer-export-from': 'off',
       'unicorn/prefer-string-slice': 'off',
       'unicorn/prevent-abbreviations': 'off',
