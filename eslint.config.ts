@@ -115,7 +115,10 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       ],
       '@typescript-eslint/switch-exhaustiveness-check': [
         'error',
-        { requireDefaultForNonUnion: true },
+        {
+          considerDefaultExhaustiveForUnions: true, // we consider default cases for unions valid
+          requireDefaultForNonUnion: true,
+        },
       ],
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/unified-signatures': 'off', // incompatible with our api docs generation
