@@ -2,6 +2,7 @@ name: PR
 
 on:
   pull_request:
+  merge_group:
 
 permissions:
   contents: read # to fetch code (actions/checkout)
