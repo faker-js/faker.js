@@ -22,6 +22,8 @@ exports[`animal > 42 > insect 1`] = `"Gouty oak gall"`;
 
 exports[`animal > 42 > lion 1`] = `"Cape lion"`;
 
+exports[`animal > 42 > petName 1`] = `"Ginger"`;
+
 exports[`animal > 42 > rabbit 1`] = `"English Spot"`;
 
 exports[`animal > 42 > rodent 1`] = `"Famatina chinchilla rat"`;
@@ -52,6 +54,8 @@ exports[`animal > 1211 > insect 1`] = `"Western paper wasp"`;
 
 exports[`animal > 1211 > lion 1`] = `"West African Lion"`;
 
+exports[`animal > 1211 > petName 1`] = `"Scout"`;
+
 exports[`animal > 1211 > rabbit 1`] = `"Silver Marten"`;
 
 exports[`animal > 1211 > rodent 1`] = `"Strong tuco-tuco"`;
@@ -81,6 +85,8 @@ exports[`animal > 1337 > horse 1`] = `"Colorado Ranger"`;
 exports[`animal > 1337 > insect 1`] = `"Erythrina gall wasp"`;
 
 exports[`animal > 1337 > lion 1`] = `"Barbary Lion"`;
+
+exports[`animal > 1337 > petName 1`] = `"Cooper"`;
 
 exports[`animal > 1337 > rabbit 1`] = `"Cinnamon"`;
 
