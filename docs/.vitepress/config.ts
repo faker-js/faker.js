@@ -109,53 +109,19 @@ const config: UserConfig<DefaultTheme.Config> = {
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#40af7c' }],
-    [
-      'meta',
-      {
-        name: 'og:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'og:image',
-        content: image,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: image,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'me',
-        href: 'https://fosstodon.org/@faker_js',
-      },
-    ],
+    ['meta', { name: 'og:title', content: 'FakerJS' }],
+    ['meta', { name: 'og:description', content: description }],
+    ['meta', { name: 'og:image', content: image }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'FakerJS' }],
+    ['meta', { name: 'twitter:description', content: description }],
+    ['meta', { name: 'twitter:site', content: '@faker_js' }],
+    ['meta', { name: 'twitter:image', content: image }],
+    ['meta', { name: 'twitter:image:alt', content: 'The FakerJS logo' }],
+    ['link', { rel: 'me', href: 'https://fosstodon.org/@faker_js' }],
     [
       'script',
-      {
-        id: 'browser-console-faker',
-      },
+      { id: 'browser-console-faker' },
       `
 const logStyle = 'background: rgba(16, 183, 127, 0.14); color: rgba(255, 255, 245, 0.86); padding: 0.5rem; display: inline-block;';
 console.log(\`%cIf you would like to test Faker in the browser console, you can do so using 'await enableFaker()'.
