@@ -18,7 +18,7 @@ describe.each(keys(allLocales))('locale imports', (locale) => {
   });
 
   it(`should be possible to directly import('@faker-js/faker/locale/${locale}')`, async () => {
-    const { faker } = (await import(`../dist/locale/${locale}`)) as {
+    const { faker } = (await import(`../dist/locale/${locale}.js`)) as {
       faker: Faker;
     };
 
