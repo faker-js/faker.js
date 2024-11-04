@@ -17,6 +17,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#region global
   includeIgnoreFile(gitignorePath),
   {
+    name: 'manual ignores',
     ignores: [
       // Skip some files that don't need linting right now
       '.github/workflows/commentCodeGeneration.ts',
@@ -28,6 +29,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
     ],
   },
   {
+    name: 'linter options',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
     },
@@ -37,6 +39,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#region eslint (js)
   eslint.configs.recommended,
   {
+    name: 'eslint overrides',
     rules: {
       eqeqeq: ['error', 'always', { null: 'ignore' }],
       'logical-assignment-operators': 'error',
@@ -51,9 +54,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#region typescript-eslint
   ...tseslint.configs.strictTypeChecked,
   {
-    plugins: {
-      '@typescript-eslint': tseslint.plugin,
-    },
+    name: 'typescript-eslint overrides',
     languageOptions: {
       parserOptions: {
         project: true,
@@ -128,6 +129,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
 
   //#region stylistic
   {
+    name: 'stylistic overrides',
     plugins: {
       '@stylistic': stylistic,
     },
@@ -143,6 +145,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#region unicorn
   eslintPluginUnicorn.configs['flat/recommended'],
   {
+    name: 'unicorn overrides',
     rules: {
       'unicorn/import-style': 'off', // subjective & doesn't do anything for us
       'unicorn/no-array-callback-reference': 'off', // reduces readability
@@ -168,6 +171,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#region jsdoc
   eslintPluginJsdoc.configs['flat/recommended-typescript-error'],
   {
+    name: 'jsdoc overrides',
     rules: {
       'jsdoc/require-jsdoc': 'off', // Enabled only for src/**/*.ts
       'jsdoc/require-returns': 'off',
@@ -204,6 +208,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
 
   //#region overrides
   {
+    name: 'src/**/*.ts overrides',
     files: ['src/**/*.ts'],
     rules: {
       'no-undef': 'error', // Must override the config from typescript-eslint
@@ -215,12 +220,14 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
     },
   },
   {
+    name: 'src/locale/**/*.ts overrides',
     files: ['src/locale/**/*.ts'],
     rules: {
       'unicorn/filename-case': 'off', // our locale files have a custom naming scheme
     },
   },
   {
+    name: 'src/{definitions,locales}/**/*.ts overrides',
     files: ['src/definitions/**/*.ts', 'src/locales/**/*.ts'],
     rules: {
       'unicorn/filename-case': [
@@ -233,6 +240,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
     },
   },
   {
+    name: 'test/**/*.ts overrides',
     files: ['test/**/*.spec.ts', 'test/**/*.spec.d.ts'],
     plugins: {
       vitest: eslintPluginVitest,
