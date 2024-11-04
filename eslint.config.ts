@@ -203,14 +203,17 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   eslintPluginPrettierRecommended,
   //#endregion
 
+  //#region file-progress
+  // https://www.npmjs.com/package/eslint-plugin-file-progress
   {
     plugins: {
       'file-progress': eslintPluginFileProgress,
     },
     rules: {
-      'file-progress/activate': 1,
+      'file-progress/activate': 1, // 1 => enabled
     },
   },
+  //#endregion
 
   //#region overrides
   {

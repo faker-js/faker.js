@@ -34,6 +34,12 @@
       "rangeStrategy": "replace"
     },
     {
+      // Disable updates for eslint-plugin-file-progress + rimraf until Node 18 support is dropped
+      "groupName": "disabled",
+      "matchPackageNames": ["eslint-plugin-file-progress", "rimraf"],
+      "enabled": false
+    },
+    {
       "groupName": "eslint",
       "matchPackageNames": [
         "@eslint/**",
@@ -58,12 +64,6 @@
     {
       "groupName": "doc-dependencies",
       "matchPackageNames": ["ts-morph", "vitepress"]
-    },
-    {
-      // Disable updates for rimraf until Node 18 support is dropped
-      "groupName": "disabled",
-      "matchPackageNames": ["rimraf"],
-      "enabled": false
     }
   ],
   "stopUpdatingLabel": "s: on hold",
