@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_IE from '../locales/en_IE';
 
+/**
+ * The faker instance for the `en_IE` locale.
+ *
+ * - Language: English (Ireland)
+ * - Endonym: English (Ireland)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_IE`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_IE, en, base],
 });

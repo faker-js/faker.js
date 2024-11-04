@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ro from '../locales/ro';
 
+/**
+ * The faker instance for the `ro` locale.
+ *
+ * - Language: Romanian
+ * - Endonym: Română
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ro`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ro, en, base],
 });

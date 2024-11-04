@@ -9,6 +9,19 @@ import en from '../locales/en';
 import ro from '../locales/ro';
 import ro_MD from '../locales/ro_MD';
 
+/**
+ * The faker instance for the `ro_MD` locale.
+ *
+ * - Language: Romanian (Moldova)
+ * - Endonym: Română (Moldova)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ro_MD`
+ * - `ro`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ro_MD, ro, en, base],
 });

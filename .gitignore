@@ -20,6 +20,9 @@ lib-cov
 coverage
 *.lcov
 
+# Vitest Temp files
+tsconfig.vitest-temp.json
+
 # nyc test coverage
 .nyc_output
 

@@ -1,6 +1,6 @@
 import { execSync } from 'node:child_process';
 import * as semver from 'semver';
-import { version } from '../../package.json';
+import { version as version_ } from '../../package.json';
 
 function readBranchName(): string {
   return (
@@ -39,6 +39,11 @@ const {
 const otherVersions = readOtherLatestReleaseTagNames();
 const isReleaseBranch = /^v\d+$/.test(branchName);
 
+/**
+ * The text of the version banner describing the current version.
+ *
+ * This is `null` in production and thus should not be displayed.
+ */
 export const versionBannerInfix: string | null = (() => {
   if (deployContext === 'production') {
     return null;
@@ -55,7 +60,19 @@ export const versionBannerInfix: string | null = (() => {
   return '"a development version"';
 })();
 
-export const currentVersion = isReleaseBranch ? `v${version}` : branchName;
+/**
+ * The current version of Faker from package.json.
+ */
+export const version = version_;
+
+/**
+ * The version label to display in the top-right corner of the site.
+ */
+export const versionLabel = isReleaseBranch ? `v${version}` : branchName;
+
+/**
+ * The links to other versions of the documentation.
+ */
 export const versionLinks = [
   {
     version: 'next',
@@ -69,6 +86,9 @@ export const versionLinks = [
   // Don't link to the current branch's version.
   .filter(({ link }) => link !== `https://${branchName}.fakerjs.dev/`);
 
+/**
+ * The name of the Algolia index to use for search.
+ */
 export const algoliaIndex = isReleaseBranch
   ? `fakerjs-v${semver.major(version)}`
   : 'fakerjs-next';

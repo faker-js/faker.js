@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_IE` locale.
+ *
+ * - Language: English (Ireland)
+ * - Endonym: English (Ireland)
+ */
 const en_IE: LocaleDefinition = {
   cell_phone,
   internet,

@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import sv from '../locales/sv';
 
+/**
+ * The faker instance for the `sv` locale.
+ *
+ * - Language: Swedish
+ * - Endonym: Svenska
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `sv`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [sv, en, base],
 });

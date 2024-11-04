@@ -28,6 +28,12 @@ import team from './team';
 import vehicle from './vehicle';
 import word from './word';
 
+/**
+ * The locale data for the `en` locale.
+ *
+ * - Language: English
+ * - Endonym: English
+ */
 const en: LocaleDefinition = {
   airline,
   animal,

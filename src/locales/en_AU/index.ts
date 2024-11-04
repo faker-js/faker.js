@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_AU` locale.
+ *
+ * - Language: English (Australia)
+ * - Endonym: English (Australia)
+ */
 const en_AU: LocaleDefinition = {
   company,
   internet,

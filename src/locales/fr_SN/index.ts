@@ -8,6 +8,12 @@ import location from './location';
 import metadata from './metadata';
 import person from './person';
 
+/**
+ * The locale data for the `fr_SN` locale.
+ *
+ * - Language: French (Senegal)
+ * - Endonym: Français (Sénégal)
+ */
 const fr_SN: LocaleDefinition = {
   internet,
   location,

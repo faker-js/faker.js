@@ -11,6 +11,12 @@ import lorem from './lorem';
 import metadata from './metadata';
 import person from './person';
 
+/**
+ * The locale data for the `uz_UZ_latin` locale.
+ *
+ * - Language: Uzbek (Uzbekistan, Latin)
+ * - Endonym: O'zbekcha
+ */
 const uz_UZ_latin: LocaleDefinition = {
   color,
   commerce,

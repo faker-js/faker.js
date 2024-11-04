@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import hy from '../locales/hy';
 
+/**
+ * The faker instance for the `hy` locale.
+ *
+ * - Language: Armenian
+ * - Endonym: Հայերեն
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `hy`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [hy, en, base],
 });

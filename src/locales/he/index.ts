@@ -15,6 +15,12 @@ import music from './music';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `he` locale.
+ *
+ * - Language: Hebrew
+ * - Endonym: עברית
+ */
 const he: LocaleDefinition = {
   cell_phone,
   color,

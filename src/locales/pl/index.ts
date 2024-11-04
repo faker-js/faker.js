@@ -18,6 +18,12 @@ import phone_number from './phone_number';
 import science from './science';
 import team from './team';
 
+/**
+ * The locale data for the `pl` locale.
+ *
+ * - Language: Polish
+ * - Endonym: Polski
+ */
 const pl: LocaleDefinition = {
   animal,
   book,

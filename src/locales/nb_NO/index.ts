@@ -14,6 +14,12 @@ import phone_number from './phone_number';
 import science from './science';
 import word from './word';
 
+/**
+ * The locale data for the `nb_NO` locale.
+ *
+ * - Language: Norwegian (Norway)
+ * - Endonym: Norsk bokmål (Norge)
+ */
 const nb_NO: LocaleDefinition = {
   color,
   commerce,

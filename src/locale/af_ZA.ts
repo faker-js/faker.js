@@ -8,6 +8,18 @@ import af_ZA from '../locales/af_ZA';
 import base from '../locales/base';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `af_ZA` locale.
+ *
+ * - Language: Afrikaans (South Africa)
+ * - Endonym: Afrikaans (Suid-Afrika)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `af_ZA`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [af_ZA, en, base],
 });

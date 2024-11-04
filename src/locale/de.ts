@@ -8,6 +8,18 @@ import base from '../locales/base';
 import de from '../locales/de';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `de` locale.
+ *
+ * - Language: German
+ * - Endonym: Deutsch
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `de`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [de, en, base],
 });

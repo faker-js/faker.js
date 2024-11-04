@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `ro` locale.
+ *
+ * - Language: Romanian
+ * - Endonym: Română
+ */
 const ro: LocaleDefinition = {
   cell_phone,
   date,

@@ -142,6 +142,7 @@ function evalProcessFunction(
           return entrypoint(...params);
         }
 
+        // eslint-disable-next-line no-undef
         console.warn(
           `[@faker-js/faker]: Invoking expressions which are not functions is deprecated since v9.0 and will be removed in v10.0.
 Please remove the parentheses or replace the expression with an actual function.

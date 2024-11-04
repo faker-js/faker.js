@@ -816,7 +816,9 @@ export class FinanceModule extends ModuleBase {
   }
 
   /**
-   * Generates a random iban.
+   * Generates a random IBAN.
+   *
+   * Please note that the generated IBAN might be invalid due to randomly generated bank codes/other country specific validation rules.
    *
    * @param options An options object.
    * @param options.formatted Return a formatted version of the generated IBAN. Defaults to `false`.

@@ -29,4 +29,6 @@ export type InternetDefinition = LocaleEntry<{
    * List of some HTTP status codes.
    */
   http_status_code: Record<HTTPStatusCodeType, number[]>;
+
+  jwt_algorithm: string[];
 }>;

@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `zh_TW` locale.
+ *
+ * - Language: Chinese (Taiwan)
+ * - Endonym: 中文 (臺灣)
+ */
 const zh_TW: LocaleDefinition = {
   color,
   date,

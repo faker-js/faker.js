@@ -12,6 +12,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `th` locale.
+ *
+ * - Language: Thai
+ * - Endonym: ไทย
+ */
 const th: LocaleDefinition = {
   animal,
   color,

@@ -13,6 +13,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `tr` locale.
+ *
+ * - Language: Turkish
+ * - Endonym: Türkçe
+ */
 const tr: LocaleDefinition = {
   cell_phone,
   color,

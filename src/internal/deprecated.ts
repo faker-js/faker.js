@@ -43,5 +43,6 @@ export function deprecated(opts: DeprecatedOptions): void {
     message += `. Please use ${opts.proposed} instead`;
   }
 
+  // eslint-disable-next-line no-undef -- Using console here is intentional and required
   console.warn(`${message}.`);
 }

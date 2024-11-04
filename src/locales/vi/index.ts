@@ -13,6 +13,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `vi` locale.
+ *
+ * - Language: Vietnamese
+ * - Endonym: Tiếng Việt
+ */
 const vi: LocaleDefinition = {
   cell_phone,
   company,

@@ -12,6 +12,11 @@ import location from './location';
 import metadata from './metadata';
 import system from './system';
 
+/**
+ * The locale data for the `base` locale.
+ *
+ * The base locale contains data that is shared across all locales such as ISO codes, time zones, and more.
+ */
 const base: LocaleDefinition = {
   color,
   database,

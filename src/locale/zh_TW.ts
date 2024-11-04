@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import zh_TW from '../locales/zh_TW';
 
+/**
+ * The faker instance for the `zh_TW` locale.
+ *
+ * - Language: Chinese (Taiwan)
+ * - Endonym: 中文 (臺灣)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `zh_TW`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [zh_TW, en, base],
 });

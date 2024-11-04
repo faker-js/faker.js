@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `id_ID` locale.
+ *
+ * - Language: Indonesian (Indonesia)
+ * - Endonym: Bahasa Indonesia (Indonesia)
+ */
 const id_ID: LocaleDefinition = {
   company,
   date,

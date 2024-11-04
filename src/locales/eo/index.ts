@@ -15,6 +15,12 @@ import person from './person';
 import science from './science';
 import vehicle from './vehicle';
 
+/**
+ * The locale data for the `eo` locale.
+ *
+ * - Language: Esperanto
+ * - Endonym: Esperanto
+ */
 const eo: LocaleDefinition = {
   animal,
   color,

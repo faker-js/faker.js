@@ -9,6 +9,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_US` locale.
+ *
+ * - Language: English (United States)
+ * - Endonym: English (United States)
+ */
 const en_US: LocaleDefinition = {
   internet,
   location,

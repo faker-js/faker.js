@@ -13,6 +13,12 @@ import person from './person';
 import phone_number from './phone_number';
 import word from './word';
 
+/**
+ * The locale data for the `da` locale.
+ *
+ * - Language: Danish
+ * - Endonym: Dansk
+ */
 const da: LocaleDefinition = {
   commerce,
   company,

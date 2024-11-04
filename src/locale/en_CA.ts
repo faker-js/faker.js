@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_CA from '../locales/en_CA';
 
+/**
+ * The faker instance for the `en_CA` locale.
+ *
+ * - Language: English (Canada)
+ * - Endonym: English (Canada)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_CA`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_CA, en, base],
 });

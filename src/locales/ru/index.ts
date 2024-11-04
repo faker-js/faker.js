@@ -15,6 +15,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `ru` locale.
+ *
+ * - Language: Russian
+ * - Endonym: Русский
+ */
 const ru: LocaleDefinition = {
   color,
   commerce,

@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `it` locale.
+ *
+ * - Language: Italian
+ * - Endonym: Italiano
+ */
 const it: LocaleDefinition = {
   company,
   internet,

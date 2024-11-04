@@ -20,24 +20,24 @@ hero:
       link: https://github.com/faker-js/faker
 
 features:
-  - icon: 👠
-    title: Products
-    details: Generate Prices, Product Names, Adjectives, and Descriptions.
+  - icon: 🧍
+    title: Person
+    details: Generate Names, Genders, Bios, Job titles, and more.
+  - icon: 📍
+    title: Location
+    details: Generate Addresses, Zip Codes, Street Names, States, and Countries!
+  - icon: ⏰
+    title: Date
+    details: Past, present, future, recent, soon... whenever!
   - icon: 💸
     title: Finance
     details: Create stubbed out Account Details, Transactions, and Crypto Addresses.
-  - icon: 💌
-    title: Locations
-    details: Generate valid Addresses, Zip Codes, Street Names, States, and Countries!
-  - icon: 👾
-    title: Hacker Jargon
-    details: “Try to reboot the SQL bus, maybe it will bypass the virtual application!”
-  - icon: ⏰
-    title: Time-based Data
-    details: Past, present, future, recent, soon... whenever!
+  - icon: 👠
+    title: Commerce
+    details: Generate Prices, Product Names, Adjectives, and Descriptions.
   - icon: 🌏
     title: Localization
-    details: Pick a locale to generate realistic looking Names, Addresses, and Phone Numbers.
+    details: Pick from over 60 locales to generate realistic looking Names, Addresses, and Phone Numbers.
 ---
 
 <div class="opencollective">

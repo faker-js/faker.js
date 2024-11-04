@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import fr from '../locales/fr';
 
+/**
+ * The faker instance for the `fr` locale.
+ *
+ * - Language: French
+ * - Endonym: Français
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `fr`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [fr, en, base],
 });

@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import hr from '../locales/hr';
 
+/**
+ * The faker instance for the `hr` locale.
+ *
+ * - Language: Croatian
+ * - Endonym: Hrvatski
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `hr`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [hr, en, base],
 });

@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `zu_ZA` locale.
+ *
+ * - Language: Zulu (South Africa)
+ * - Endonym: isiZulu (Iningizimu Afrika)
+ */
 const zu_ZA: LocaleDefinition = {
   cell_phone,
   company,

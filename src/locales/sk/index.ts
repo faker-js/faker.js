@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `sk` locale.
+ *
+ * - Language: Slovak
+ * - Endonym: slovenčina
+ */
 const sk: LocaleDefinition = {
   company,
   internet,

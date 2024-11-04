@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `fr_BE` locale.
+ *
+ * - Language: French (Belgium)
+ * - Endonym: Français (Belgique)
+ */
 const fr_BE: LocaleDefinition = {
   cell_phone,
   internet,

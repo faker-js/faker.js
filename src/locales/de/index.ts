@@ -16,6 +16,12 @@ import person from './person';
 import phone_number from './phone_number';
 import word from './word';
 
+/**
+ * The locale data for the `de` locale.
+ *
+ * - Language: German
+ * - Endonym: Deutsch
+ */
 const de: LocaleDefinition = {
   cell_phone,
   color,

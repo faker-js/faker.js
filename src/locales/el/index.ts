@@ -18,6 +18,12 @@ import person from './person';
 import phone_number from './phone_number';
 import team from './team';
 
+/**
+ * The locale data for the `el` locale.
+ *
+ * - Language: Greek
+ * - Endonym: Ελληνικά
+ */
 const el: LocaleDefinition = {
   app,
   cell_phone,

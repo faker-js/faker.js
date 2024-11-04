@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import es from '../locales/es';
 
+/**
+ * The faker instance for the `es` locale.
+ *
+ * - Language: Spanish
+ * - Endonym: Español
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `es`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [es, en, base],
 });

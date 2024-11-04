@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import vi from '../locales/vi';
 
+/**
+ * The faker instance for the `vi` locale.
+ *
+ * - Language: Vietnamese
+ * - Endonym: Tiếng Việt
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `vi`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [vi, en, base],
 });

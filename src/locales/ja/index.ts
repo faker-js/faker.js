@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `ja` locale.
+ *
+ * - Language: Japanese
+ * - Endonym: 日本語
+ */
 const ja: LocaleDefinition = {
   cell_phone,
   company,

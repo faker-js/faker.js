@@ -74,6 +74,14 @@ exports[`internet > 42 > ipv4 > with network 1`] = `"229.254.29.199"`;
 
 exports[`internet > 42 > ipv6 1`] = `"8ead:331d:df0f:c444:6b96:d368:ab4b:d1d3"`;
 
+exports[`internet > 42 > jwt > noArgs 1`] = `"eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpYXQiOjE1Nzc3ODI3NjAsImV4cCI6MTU3Nzg0NjAwNCwibmJmIjoxNTg0MDU5Mzg4LCJpc3MiOiJDcmlzdCAtIEJlZXIiLCJzdWIiOiJkOWIwZmQzMi0yNDg2LTQ0OTItODQ1Ny1jMzg5MDkyMWZmYzQiLCJhdWQiOiJhNzE3MGU0YS00ODgyLTRmY2YtOGU5ZS0xMzA1NjRkNTQ4MmMiLCJqdGkiOiJmYzMwZGJiYy0xNTFkLTQ5NTEtODQ1Yi1hZTcxYmM4Yzc4NjAifQ.1DjvUfpKe4h9VODSNbTxOTj6eqOR0vpd7kWkwHmYXfuih2Bv3hUe8uZfFLeJmDDx"`;
+
+exports[`internet > 42 > jwt > with custom header 1`] = `"eyJhbGciOiJFUzI1NiJ9.eyJpYXQiOjE1Nzc3ODI3NjAsImV4cCI6MTU3Nzg2NDkwMiwibmJmIjoxNTkyNDY5MTIyLCJpc3MiOiJDcmlzdCBHcm91cCIsInN1YiI6IjBkOWIwZmQzLTIyNDgtNDY0OS05MjQ1LTdjMzg5MDkyMWZmYyIsImF1ZCI6IjFhNzE3MGU0LWE0ODgtNDJmYy1iZmU5LWUxMzA1NjRkNTQ4MiIsImp0aSI6IjFmYzMwZGJiLWMxNTEtNGQ5NS04MTQ1LWJhZTcxYmM4Yzc4NiJ9.61DjvUfpKe4h9VODSNbTxOTj6eqOR0vpd7kWkwHmYXfuih2Bv3hUe8uZfFLeJmDD"`;
+
+exports[`internet > 42 > jwt > with custom payload 1`] = `"eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJBY21lIn0.JB993RBH1YPdbbiwqiB8imsMcvA2Ba4WXOi6Gr7u2UgFjwxbYMWTBV5c2kogPmhx"`;
+
+exports[`internet > 42 > jwtAlgorithm 1`] = `"RS384"`;
+
 exports[`internet > 42 > mac > noArgs 1`] = `"5f:b9:22:0d:9b:0f"`;
 
 exports[`internet > 42 > mac > with separator 1`] = `"5f:b9:22:0d:9b:0f"`;
@@ -210,6 +218,14 @@ exports[`internet > 1211 > ipv4 > with network 1`] = `"238.219.55.242"`;
 
 exports[`internet > 1211 > ipv6 1`] = `"ed4f:efa7:fbae:c9dc:4c48:fa8e:bf46:fb7c"`;
 
+exports[`internet > 1211 > jwt > noArgs 1`] = `"eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzc4MzA2MjMsImV4cCI6MTU3Nzg1MDExMywibmJmIjoxNjA5MTk5Nzk2LCJpc3MiOiJQYXVjZWssIFJ1bm9sZnNkb3R0aXIgYW5kIEhlcm1hbm4iLCJzdWIiOiJiZGNhZDZkZC0zOTM1LTRmYzYtOGU4Zi0zNGI4NWQ2NDQyOGIiLCJhdWQiOiJiNzM2M2Q5Ny0wYjJiLTQ0YzgtYjczOS1kMWQ3Njc5YzhlZmQiLCJqdGkiOiIzYmQ1ZTA4Yy03MTQyLTQ0M2UtYWY2My05OTk5ZGFkY2RlODUifQ.rlPcW5f2VqUAXZlCKU8wGJfPV9H4qDj1eeVBExFATrtOy1ztr5Cp9avVZNMtsWSD"`;
+
+exports[`internet > 1211 > jwt > with custom header 1`] = `"eyJhbGciOiJFUzI1NiJ9.eyJpYXQiOjE1Nzc4MzA2MjMsImV4cCI6MTU3NzkwNzgxOSwibmJmIjoxNTYwNTI3OTk5LCJpc3MiOiJPc2luc2tpLCBQYXVjZWsgYW5kIFJ1bm9sZnNkb3R0aXIiLCJzdWIiOiI1YmRjYWQ2ZC1kMzkzLTQ1ZmMtYTZlOC1mMzRiODVkNjQ0MjgiLCJhdWQiOiIyYjczNjNkOS03MGIyLTRiNGMtYjg3My05ZDFkNzY3OWM4ZWYiLCJqdGkiOiJkM2JkNWUwOC1jNzE0LTQyNDMtOWVmNi0zOTk5OWRhZGNkZTgifQ.xrlPcW5f2VqUAXZlCKU8wGJfPV9H4qDj1eeVBExFATrtOy1ztr5Cp9avVZNMtsWS"`;
+
+exports[`internet > 1211 > jwt > with custom payload 1`] = `"eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBY21lIn0.dZFGLlHOLEPqRRdAcmZLoWxYdiHwlQngjayH8HufpcQzt2HbHhMvsdBS6QsntzOx"`;
+
+exports[`internet > 1211 > jwtAlgorithm 1`] = `"none"`;
+
 exports[`internet > 1211 > mac > noArgs 1`] = `"ee:3f:aa:c5:bd:ca"`;
 
 exports[`internet > 1211 > mac > with separator 1`] = `"ee:3f:aa:c5:bd:ca"`;
@@ -345,6 +361,14 @@ exports[`internet > 1337 > ipv4 > with cidrBlock 1`] = `"192.168.13.67"`;
 exports[`internet > 1337 > ipv4 > with network 1`] = `"228.49.64.201"`;
 
 exports[`internet > 1337 > ipv6 1`] = `"536a:7b5f:a28d:2f9b:b79c:a46e:a394:bc4f"`;
+
+exports[`internet > 1337 > jwt > noArgs 1`] = `"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzc3NzMwMzksImV4cCI6MTU3Nzc5NzA3MCwibmJmIjoxNTc1MjcwODM1LCJpc3MiOiJMZWFubm9uIC0gR2lic29uIiwic3ViIjoiZmIxNmEyZjctY2M1Ni00OWMzLWI0YTctMjYzOGQyZjY4ODBiIiwiYXVkIjoiMjI1YjA1MGMtNWI3Zi00ZDk5LThmNDAtMWZmNzViMGNhM2FlIiwianRpIjoiZTViNDgyNzctNmM3Yi00YzVlLThiZTYtN2VhODNmOGMzNjY4In0.G1eJVCpQZioHm1lu2UIL52g7eGtWAbbkq4D3IE0LkMkzaQgKyTx14Xs9FCyUTgIu"`;
+
+exports[`internet > 1337 > jwt > with custom header 1`] = `"eyJhbGciOiJFUzI1NiJ9.eyJpYXQiOjE1Nzc3NzMwMzksImV4cCI6MTU3Nzc4Njc1MCwibmJmIjoxNTYzODQyNzk2LCJpc3MiOiJIYW1tZXMgTExDIiwic3ViIjoiNGZiMTZhMmYtN2NjNS00NjljLWEzNGEtNzI2MzhkMmY2ODgwIiwiYXVkIjoiZjIyNWIwNTAtYzViNy00ZmQ5LWI5ZjQtMDFmZjc1YjBjYTNhIiwianRpIjoiMmU1YjQ4MjctNzZjNy00YmM1LWFlYmUtNjdlYTgzZjhjMzY2In0.7G1eJVCpQZioHm1lu2UIL52g7eGtWAbbkq4D3IE0LkMkzaQgKyTx14Xs9FCyUTgI"`;
+
+exports[`internet > 1337 > jwt > with custom payload 1`] = `"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBY21lIn0.hsjwgYJ7nC7YrMNmpALbhFubpcwPbXqvv0JZa7nG0m3MlHuYPBzZf05WYulI0LFb"`;
+
+exports[`internet > 1337 > jwtAlgorithm 1`] = `"RS256"`;
 
 exports[`internet > 1337 > mac > noArgs 1`] = `"42:47:58:4f:b1:6a"`;
 

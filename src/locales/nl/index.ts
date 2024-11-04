@@ -15,6 +15,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `nl` locale.
+ *
+ * - Language: Dutch
+ * - Endonym: Nederlands
+ */
 const nl: LocaleDefinition = {
   color,
   commerce,

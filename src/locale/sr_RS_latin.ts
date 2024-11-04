@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import sr_RS_latin from '../locales/sr_RS_latin';
 
+/**
+ * The faker instance for the `sr_RS_latin` locale.
+ *
+ * - Language: Serbian (Serbia, Latin)
+ * - Endonym: srpski (Srbija, latinica)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `sr_RS_latin`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [sr_RS_latin, en, base],
 });

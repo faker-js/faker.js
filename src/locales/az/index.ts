@@ -13,6 +13,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `az` locale.
+ *
+ * - Language: Azerbaijani
+ * - Endonym: azərbaycan dili
+ */
 const az: LocaleDefinition = {
   color,
   commerce,

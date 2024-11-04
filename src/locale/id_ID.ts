@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import id_ID from '../locales/id_ID';
 
+/**
+ * The faker instance for the `id_ID` locale.
+ *
+ * - Language: Indonesian (Indonesia)
+ * - Endonym: Bahasa Indonesia (Indonesia)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `id_ID`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [id_ID, en, base],
 });

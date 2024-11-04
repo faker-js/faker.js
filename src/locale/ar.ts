@@ -8,6 +8,18 @@ import ar from '../locales/ar';
 import base from '../locales/base';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `ar` locale.
+ *
+ * - Language: Arabic
+ * - Endonym: اَلْعَرَبِيَّةُ
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ar`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ar, en, base],
 });

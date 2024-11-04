@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ja from '../locales/ja';
 
+/**
+ * The faker instance for the `ja` locale.
+ *
+ * - Language: Japanese
+ * - Endonym: 日本語
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ja`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ja, en, base],
 });

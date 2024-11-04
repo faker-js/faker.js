@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import pl from '../locales/pl';
 
+/**
+ * The faker instance for the `pl` locale.
+ *
+ * - Language: Polish
+ * - Endonym: Polski
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `pl`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [pl, en, base],
 });

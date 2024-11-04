@@ -134,11 +134,13 @@ class TestGenerator<
    *
    * @param method The method name to call.
    * @param args The arguments to call it with.
+   * @param extraStackFrames Additional stack frames to add into the stacktrace.
    * @param repetitions The number of times to call it.
    */
   private callAndVerify<TMethodName extends MethodOf<TModule>>(
     method: TMethodName,
     args: Parameters<TModule[TMethodName]>,
+    extraStackFrames: () => string[],
     repetitions: number = 1
   ): void {
     this.setup();
@@ -148,8 +150,12 @@ class TestGenerator<
     }
 
     for (let i = 0; i < repetitions; i++) {
-      const value = callable(...args);
-      expect(value).toMatchSnapshot();
+      try {
+        const value = callable(...args);
+        expect(value).toMatchSnapshot();
+      } catch (error: unknown) {
+        throw patchExtraStackFrames(error, extraStackFrames);
+      }
     }
   }
 
@@ -182,10 +188,12 @@ class TestGenerator<
    */
   itRepeated(method: NoArgsMethodOf<TModule>, repetitions: number): this {
     this.expectNotTested(method);
+    const extraStackFrames = collectExtraStackFrames();
     vi_it(method, () =>
       this.callAndVerify(
         method,
         [] as unknown as Parameters<TModule[NoArgsMethodOf<TModule>]>,
+        extraStackFrames,
         repetitions
       )
     );
@@ -233,7 +241,10 @@ class TestGenerator<
     const tester: MethodTester<TModule[TMethodName]> = {
       it(name: string, ...args: Parameters<TModule[TMethodName]>) {
         expectVariantNotTested(name);
-        vi_it(name, () => callAndVerify(method, args));
+        const extraStackFrames = collectExtraStackFrames(
+          /* t. */ `it('${name}', `.length // ...args)
+        );
+        vi_it(name, () => callAndVerify(method, args, extraStackFrames));
         return tester;
       },
       itRepeated(
@@ -242,7 +253,12 @@ class TestGenerator<
         ...args: Parameters<TModule[TMethodName]>
       ) {
         expectVariantNotTested(name);
-        vi_it(name, () => callAndVerify(method, args, repetitions));
+        const extraStackFrames = collectExtraStackFrames(
+          /* t. */ `itRepeated('${name}', ${repetitions}, `.length // ...args)
+        );
+        vi_it(name, () =>
+          callAndVerify(method, args, extraStackFrames, repetitions)
+        );
         return tester;
       },
     };
@@ -286,6 +302,56 @@ class TestGenerator<
       expect(actual).toEqual(expected);
     });
   }
+}
+
+/**
+ * Lazily collects the current call stack with an additional offset.
+ *
+ * Vitest's stacktraces only contain the stacktrace from inside `it(name, () => { here })`.
+ * This method collects the location where the `it` block is created instead of executed.
+ * The stack frames can then later be added to the error stack to provide a more accurate location.
+ *
+ * @param extraOffset The additional offset to add to the column numbers to account for the name of the test.
+ */
+function collectExtraStackFrames(extraOffset: number = 0): () => string[] {
+  const stack = new Error('collect').stack;
+  if (stack == null) {
+    return () => [];
+  }
+
+  return () =>
+    stack
+      .split('\n')
+      .map((e) => e.replaceAll('\\', '/')) // Windows to Linux paths
+      .filter((e) => e.includes('/test/')) // exclude node_modules
+      .filter((e) => !e.includes('/test/support/')) // exclude this file
+      .map((e) =>
+        e.replace(/:(\d+)$/, (_, column: string) => `:${+column + extraOffset}`)
+      );
+}
+
+/**
+ * Modifies the error stack to include the given additional stack frames after the last occurrence of this file.
+ *
+ * @param error The error to modify.
+ * @param extraStackFrames The additional stack frames to add.
+ */
+function patchExtraStackFrames(
+  error: unknown,
+  extraStackFrames: () => string[]
+): unknown {
+  if (error instanceof Error && error.stack != null) {
+    const stack = error.stack.split('\n');
+    const index = stack.findLastIndex((e) =>
+      e
+        .replaceAll('\\', '/') // Windows to Linux paths
+        .includes('/test/support/')
+    );
+    stack.splice(index + 1, 0, ...extraStackFrames());
+    error.stack = stack.join('\n');
+  }
+
+  return error;
 }
 
 /**

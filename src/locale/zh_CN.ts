@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import zh_CN from '../locales/zh_CN';
 
+/**
+ * The faker instance for the `zh_CN` locale.
+ *
+ * - Language: Chinese (China)
+ * - Endonym: 中文 (中国)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `zh_CN`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [zh_CN, en, base],
 });

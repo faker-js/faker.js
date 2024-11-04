@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_US from '../locales/en_US';
 
+/**
+ * The faker instance for the `en_US` locale.
+ *
+ * - Language: English (United States)
+ * - Endonym: English (United States)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_US`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_US, en, base],
 });

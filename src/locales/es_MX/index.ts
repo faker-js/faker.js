@@ -15,6 +15,12 @@ import person from './person';
 import phone_number from './phone_number';
 import team from './team';
 
+/**
+ * The locale data for the `es_MX` locale.
+ *
+ * - Language: Spanish (Mexico)
+ * - Endonym: Español (México)
+ */
 const es_MX: LocaleDefinition = {
   cell_phone,
   color,

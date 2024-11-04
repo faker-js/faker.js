@@ -7,6 +7,12 @@ import location from './location';
 import metadata from './metadata';
 import person from './person';
 
+/**
+ * The locale data for the `fi` locale.
+ *
+ * - Language: Finnish
+ * - Endonym: suomi
+ */
 const fi: LocaleDefinition = {
   location,
   metadata,

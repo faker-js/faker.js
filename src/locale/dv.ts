@@ -8,6 +8,18 @@ import base from '../locales/base';
 import dv from '../locales/dv';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `dv` locale.
+ *
+ * - Language: Maldivian
+ * - Endonym: ދިވެހި
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `dv`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [dv, en, base],
 });

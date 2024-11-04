@@ -12,6 +12,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `hy` locale.
+ *
+ * - Language: Armenian
+ * - Endonym: Հայերեն
+ */
 const hy: LocaleDefinition = {
   color,
   date,

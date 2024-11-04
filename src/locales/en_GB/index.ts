@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_GB` locale.
+ *
+ * - Language: English (Great Britain)
+ * - Endonym: English (Great Britain)
+ */
 const en_GB: LocaleDefinition = {
   cell_phone,
   internet,

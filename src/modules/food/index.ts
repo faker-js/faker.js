@@ -18,7 +18,9 @@ export class FoodModule extends ModuleBase {
    * @since 9.0.0
    */
   adjective(): string {
-    return this.faker.helpers.fake(this.faker.definitions.food.adjective);
+    return this.faker.helpers.arrayElement(
+      this.faker.definitions.food.adjective
+    );
   }
 
   /**

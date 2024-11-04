@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `ka_GE` locale.
+ *
+ * - Language: Georgian (Georgia)
+ * - Endonym: ქართული (საქართველო)
+ */
 const ka_GE: LocaleDefinition = {
   cell_phone,
   company,

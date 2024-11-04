@@ -254,12 +254,12 @@ export class CommerceModule extends ModuleBase {
    * Returns a product description.
    *
    * @example
-   * faker.commerce.productDescription() // 'Andy shoes are designed to keeping...'
+   * faker.commerce.productDescription() // 'Featuring Phosphorus-enhanced technology, our Fish offers unparalleled Modern performance'
    *
    * @since 5.0.0
    */
   productDescription(): string {
-    return this.faker.helpers.arrayElement(
+    return this.faker.helpers.fake(
       this.faker.definitions.commerce.product_description
     );
   }

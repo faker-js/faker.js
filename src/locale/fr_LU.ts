@@ -9,6 +9,19 @@ import en from '../locales/en';
 import fr from '../locales/fr';
 import fr_LU from '../locales/fr_LU';
 
+/**
+ * The faker instance for the `fr_LU` locale.
+ *
+ * - Language: French (Luxembourg)
+ * - Endonym: Français (Luxembourg)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `fr_LU`
+ * - `fr`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [fr_LU, fr, en, base],
 });

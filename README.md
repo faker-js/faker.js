@@ -34,14 +34,14 @@ For detailed API documentation, please select the version of the documentation y
 
 ## 🚀 Features
 
-- 💌 Locations - Generate valid looking Addresses, Zip Codes, Street Names, States, and Countries!
-- ⏰ Time-based Data - Past, present, future, recent, soon... whenever!
-- 🌏 Localization - Pick a locale to generate realistic looking Names, Addresses, and Phone Numbers.
+- 🧍 Person - Generate Names, Genders, Bios, Job titles, and more.
+- 📍 Location - Generate Addresses, Zip Codes, Street Names, States, and Countries!
+- ⏰ Date - Past, present, future, recent, soon... whenever!
 - 💸 Finance - Create stubbed out Account Details, Transactions, and Crypto Addresses.
-- 👠 Products - Generate Prices, Product Names, Adjectives, and Descriptions.
-- 👾 Hacker Jargon - “Try to reboot the SQL bus, maybe it will bypass the virtual application!”
-- 🧍 Names - Generate virtual humans with a complete online and offline identity.
-- 🔢 Numbers - Of course, we can also generate random numbers and strings.
+- 👠 Commerce - Generate Prices, Product Names, Adjectives, and Descriptions.
+- 👾 Hacker - “Try to reboot the SQL bus, maybe it will bypass the virtual application!”
+- 🔢 Number and String - Of course, we can also generate random numbers and strings.
+- 🌏 Localization - Pick from over 60 locales to generate realistic looking Names, Addresses, and Phone Numbers.
 
 > **Note**: Faker tries to generate realistic data and not obvious fake data.
 > The generated names, addresses, emails, phone numbers, and/or other data might be coincidentally valid information.

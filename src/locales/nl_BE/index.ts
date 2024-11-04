@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `nl_BE` locale.
+ *
+ * - Language: Dutch (Belgium)
+ * - Endonym: Nederlands (België)
+ */
 const nl_BE: LocaleDefinition = {
   company,
   internet,

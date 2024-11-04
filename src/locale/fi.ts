@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import fi from '../locales/fi';
 
+/**
+ * The faker instance for the `fi` locale.
+ *
+ * - Language: Finnish
+ * - Endonym: suomi
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `fi`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [fi, en, base],
 });

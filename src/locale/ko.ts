@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ko from '../locales/ko';
 
+/**
+ * The faker instance for the `ko` locale.
+ *
+ * - Language: Korean
+ * - Endonym: 한국어
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ko`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ko, en, base],
 });

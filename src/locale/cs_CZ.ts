@@ -8,6 +8,18 @@ import base from '../locales/base';
 import cs_CZ from '../locales/cs_CZ';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `cs_CZ` locale.
+ *
+ * - Language: Czech (Czechia)
+ * - Endonym: čeština (Česká republika)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `cs_CZ`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [cs_CZ, en, base],
 });

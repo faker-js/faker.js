@@ -6,13 +6,13 @@ exports[`vehicle > 42 > color 1`] = `"lime"`;
 
 exports[`vehicle > 42 > fuel 1`] = `"Electric"`;
 
-exports[`vehicle > 42 > manufacturer 1`] = `"Ford"`;
+exports[`vehicle > 42 > manufacturer 1`] = `"Jeep"`;
 
 exports[`vehicle > 42 > model 1`] = `"Durango"`;
 
 exports[`vehicle > 42 > type 1`] = `"Extended Cab Pickup"`;
 
-exports[`vehicle > 42 > vehicle 1`] = `"Ford Wrangler"`;
+exports[`vehicle > 42 > vehicle 1`] = `"Jeep Wrangler"`;
 
 exports[`vehicle > 42 > vin 1`] = `"CYRK551VKPAZ82113"`;
 
@@ -42,13 +42,13 @@ exports[`vehicle > 1337 > color 1`] = `"indigo"`;
 
 exports[`vehicle > 1337 > fuel 1`] = `"Electric"`;
 
-exports[`vehicle > 1337 > manufacturer 1`] = `"Dodge"`;
+exports[`vehicle > 1337 > manufacturer 1`] = `"Fiat"`;
 
 exports[`vehicle > 1337 > model 1`] = `"Challenger"`;
 
 exports[`vehicle > 1337 > type 1`] = `"Coupe"`;
 
-exports[`vehicle > 1337 > vehicle 1`] = `"Dodge Aventador"`;
+exports[`vehicle > 1337 > vehicle 1`] = `"Fiat Aventador"`;
 
 exports[`vehicle > 1337 > vin 1`] = `"859FAH8ZR3JL19477"`;
 

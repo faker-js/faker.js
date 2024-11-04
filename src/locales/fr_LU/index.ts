@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `fr_LU` locale.
+ *
+ * - Language: French (Luxembourg)
+ * - Endonym: Français (Luxembourg)
+ */
 const fr_LU: LocaleDefinition = {
   cell_phone,
   internet,

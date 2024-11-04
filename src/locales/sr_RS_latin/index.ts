@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `sr_RS_latin` locale.
+ *
+ * - Language: Serbian (Serbia, Latin)
+ * - Endonym: srpski (Srbija, latinica)
+ */
 const sr_RS_latin: LocaleDefinition = {
   cell_phone,
   date,

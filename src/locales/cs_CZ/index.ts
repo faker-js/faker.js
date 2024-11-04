@@ -12,6 +12,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `cs_CZ` locale.
+ *
+ * - Language: Czech (Czechia)
+ * - Endonym: čeština (Česká republika)
+ */
 const cs_CZ: LocaleDefinition = {
   company,
   date,

@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import pt_PT from '../locales/pt_PT';
 
+/**
+ * The faker instance for the `pt_PT` locale.
+ *
+ * - Language: Portuguese (Portugal)
+ * - Endonym: Português (Portugal)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `pt_PT`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [pt_PT, en, base],
 });

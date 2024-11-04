@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import sk from '../locales/sk';
 
+/**
+ * The faker instance for the `sk` locale.
+ *
+ * - Language: Slovak
+ * - Endonym: slovenčina
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `sk`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [sk, en, base],
 });

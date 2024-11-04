@@ -14,6 +14,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `pt_PT` locale.
+ *
+ * - Language: Portuguese (Portugal)
+ * - Endonym: Português (Portugal)
+ */
 const pt_PT: LocaleDefinition = {
   cell_phone,
   color,

@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import zu_ZA from '../locales/zu_ZA';
 
+/**
+ * The faker instance for the `zu_ZA` locale.
+ *
+ * - Language: Zulu (South Africa)
+ * - Endonym: isiZulu (Iningizimu Afrika)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `zu_ZA`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [zu_ZA, en, base],
 });

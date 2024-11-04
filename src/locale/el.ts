@@ -8,6 +8,18 @@ import base from '../locales/base';
 import el from '../locales/el';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `el` locale.
+ *
+ * - Language: Greek
+ * - Endonym: Ελληνικά
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `el`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [el, en, base],
 });

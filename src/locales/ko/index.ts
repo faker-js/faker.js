@@ -14,6 +14,12 @@ import person from './person';
 import phone_number from './phone_number';
 import word from './word';
 
+/**
+ * The locale data for the `ko` locale.
+ *
+ * - Language: Korean
+ * - Endonym: 한국어
+ */
 const ko: LocaleDefinition = {
   color,
   company,

@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `de_CH` locale.
+ *
+ * - Language: German (Switzerland)
+ * - Endonym: Deutsch (Schweiz)
+ */
 const de_CH: LocaleDefinition = {
   company,
   internet,

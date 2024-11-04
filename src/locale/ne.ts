@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ne from '../locales/ne';
 
+/**
+ * The faker instance for the `ne` locale.
+ *
+ * - Language: Nepali
+ * - Endonym: नेपाली
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ne`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ne, en, base],
 });

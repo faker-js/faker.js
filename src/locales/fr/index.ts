@@ -19,6 +19,12 @@ import phone_number from './phone_number';
 import vehicle from './vehicle';
 import word from './word';
 
+/**
+ * The locale data for the `fr` locale.
+ *
+ * - Language: French
+ * - Endonym: Français
+ */
 const fr: LocaleDefinition = {
   animal,
   color,

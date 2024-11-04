@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_NG from '../locales/en_NG';
 
+/**
+ * The faker instance for the `en_NG` locale.
+ *
+ * - Language: English (Nigeria)
+ * - Endonym: English (Nigeria)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_NG`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_NG, en, base],
 });

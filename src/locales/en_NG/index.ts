@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_NG` locale.
+ *
+ * - Language: English (Nigeria)
+ * - Endonym: English (Nigeria)
+ */
 const en_NG: LocaleDefinition = {
   company,
   internet,

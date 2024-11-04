@@ -13,7 +13,7 @@ import { ModuleBase } from '../../internal/module-base';
  *
  * For a random user avatar image, use [`avatar()`](https://fakerjs.dev/api/image.html#avatar).
  *
- * This module previously also contained methods for specifically themed images like "fashion" or "food", but these are now deprecated. If you need more control over image type, you can request categorized images using [`urlLoremFlickr()`](https://fakerjs.dev/api/image.html#urlloremflickr), use an image provider directly or provide your own set of placeholder images.
+ * If you need more control over the content of the images, you can pass a `category` parameter e.g. `'cat'` or `'nature'` to [`urlLoremFlickr()`](https://fakerjs.dev/api/image.html#urlloremflickr) or simply use [`faker.helpers.arrayElement()`](https://fakerjs.dev/api/helpers.html#arrayelement) with your own array of image URLs.
  */
 export class ImageModule extends ModuleBase {
   /**

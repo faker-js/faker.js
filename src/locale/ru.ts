@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ru from '../locales/ru';
 
+/**
+ * The faker instance for the `ru` locale.
+ *
+ * - Language: Russian
+ * - Endonym: Русский
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ru`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ru, en, base],
 });

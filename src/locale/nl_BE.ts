@@ -9,6 +9,19 @@ import en from '../locales/en';
 import nl from '../locales/nl';
 import nl_BE from '../locales/nl_BE';
 
+/**
+ * The faker instance for the `nl_BE` locale.
+ *
+ * - Language: Dutch (Belgium)
+ * - Endonym: Nederlands (België)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `nl_BE`
+ * - `nl`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [nl_BE, nl, en, base],
 });

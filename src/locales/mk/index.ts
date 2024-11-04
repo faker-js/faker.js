@@ -12,6 +12,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `mk` locale.
+ *
+ * - Language: Macedonian
+ * - Endonym: македонски јазик
+ */
 const mk: LocaleDefinition = {
   cell_phone,
   company,

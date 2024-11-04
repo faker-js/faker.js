@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_HK from '../locales/en_HK';
 
+/**
+ * The faker instance for the `en_HK` locale.
+ *
+ * - Language: English (Hong Kong)
+ * - Endonym: English (Hong Kong)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_HK`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_HK, en, base],
 });

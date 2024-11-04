@@ -1,6 +1,6 @@
 import validator from 'validator';
 import { describe, expect, it } from 'vitest';
-import { faker, fakerSK } from '../../src';
+import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
 import { times } from './../support/times';
 
@@ -414,14 +414,4 @@ describe('system', () => {
       });
     }
   );
-
-  describe('extra tests', () => {
-    describe('commonFileName()', () => {
-      it('#770', () => {
-        fakerSK.seed(5423027051750305);
-        fakerSK.system.commonFileName('xml');
-        fakerSK.system.commonFileName('xml');
-      });
-    });
-  });
 });

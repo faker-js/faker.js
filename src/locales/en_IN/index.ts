@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_IN` locale.
+ *
+ * - Language: English (India)
+ * - Endonym: English (India)
+ */
 const en_IN: LocaleDefinition = {
   company,
   internet,

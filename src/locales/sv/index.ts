@@ -15,6 +15,12 @@ import person from './person';
 import phone_number from './phone_number';
 import team from './team';
 
+/**
+ * The locale data for the `sv` locale.
+ *
+ * - Language: Swedish
+ * - Endonym: Svenska
+ */
 const sv: LocaleDefinition = {
   cell_phone,
   color,

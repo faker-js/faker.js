@@ -12,6 +12,12 @@ import person from './person';
 import phone_number from './phone_number';
 import word from './word';
 
+/**
+ * The locale data for the `de_AT` locale.
+ *
+ * - Language: German (Austria)
+ * - Endonym: Deutsch (Österreich)
+ */
 const de_AT: LocaleDefinition = {
   cell_phone,
   company,

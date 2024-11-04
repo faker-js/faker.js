@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import lv from '../locales/lv';
 
+/**
+ * The faker instance for the `lv` locale.
+ *
+ * - Language: Latvian
+ * - Endonym: latviešu valoda
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `lv`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [lv, en, base],
 });

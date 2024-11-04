@@ -9,6 +9,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_CA` locale.
+ *
+ * - Language: English (Canada)
+ * - Endonym: English (Canada)
+ */
 const en_CA: LocaleDefinition = {
   internet,
   location,

@@ -22,6 +22,12 @@ import science from './science';
 import vehicle from './vehicle';
 import word from './word';
 
+/**
+ * The locale data for the `zh_CN` locale.
+ *
+ * - Language: Chinese (China)
+ * - Endonym: 中文 (中国)
+ */
 const zh_CN: LocaleDefinition = {
   airline,
   animal,

@@ -14,6 +14,12 @@ import person from './person';
 import team from './team';
 import vehicle from './vehicle';
 
+/**
+ * The locale data for the `ar` locale.
+ *
+ * - Language: Arabic
+ * - Endonym: اَلْعَرَبِيَّةُ
+ */
 const ar: LocaleDefinition = {
   cell_phone,
   color,

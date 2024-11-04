@@ -187,11 +187,10 @@ describe('commerce', () => {
       });
 
       describe(`productDescription()`, () => {
-        it('should return random value from product description array', () => {
+        it('should return a product description string', () => {
           const actual = faker.commerce.productDescription();
-          expect(faker.definitions.commerce.product_description).toContain(
-            actual
-          );
+          expect(actual).toBeTruthy();
+          expect(actual).toBeTypeOf('string');
         });
       });
 

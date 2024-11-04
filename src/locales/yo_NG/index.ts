@@ -6,6 +6,12 @@ import type { LocaleDefinition } from '../..';
 import metadata from './metadata';
 import person from './person';
 
+/**
+ * The locale data for the `yo_NG` locale.
+ *
+ * - Language: Yoruba (Nigeria)
+ * - Endonym: Yoruba (Naijiria)
+ */
 const yo_NG: LocaleDefinition = {
   metadata,
   person,

@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_HK` locale.
+ *
+ * - Language: English (Hong Kong)
+ * - Endonym: English (Hong Kong)
+ */
 const en_HK: LocaleDefinition = {
   company,
   internet,

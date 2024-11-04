@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import it from '../locales/it';
 
+/**
+ * The faker instance for the `it` locale.
+ *
+ * - Language: Italian
+ * - Endonym: Italiano
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `it`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [it, en, base],
 });

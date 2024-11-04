@@ -8,6 +8,18 @@ import az from '../locales/az';
 import base from '../locales/base';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `az` locale.
+ *
+ * - Language: Azerbaijani
+ * - Endonym: azərbaycan dili
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `az`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [az, en, base],
 });

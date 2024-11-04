@@ -50,7 +50,11 @@ export function getParameterTags(jsdocs: JSDoc): Record<string, JSDocTag> {
 }
 
 export function getDefault(jsdocs: JSDoc): string | undefined {
-  return getOptionalTagFromJSDoc(jsdocs, `default`);
+  return (
+    getOptionalTagFromJSDoc(jsdocs, `default`)
+      // Prevent line breaks between the key and the value { foo: 'bar' }
+      ?.replaceAll(': ', ': ')
+  );
 }
 
 export function getThrows(jsdocs: JSDoc): string[] {

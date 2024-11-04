@@ -8,6 +8,18 @@ import base from '../locales/base';
 import da from '../locales/da';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `da` locale.
+ *
+ * - Language: Danish
+ * - Endonym: Dansk
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `da`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [da, en, base],
 });

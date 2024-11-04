@@ -14,6 +14,10 @@ This is the migration guide for upgrading from v8 to v9.
 
 :::
 
+::: info Want to learn more about new features in v9?
+Read our [release announcements](/about/announcements/2024-10-26.md)
+:::
+
 ## General Breaking Changes
 
 ### Requires Node v18+
@@ -54,58 +58,10 @@ While this is not a breaking change according to semantic versioning guidelines,
 
 ### Use High Precision RNG by Default
 
-TLDR: Many Faker methods return a different result in v9 compared to v8 for the same seed.
-
 In v9 we switch from a 32 bit random value to a 53 bit random value.
 We don't change the underlying algorithm much, but we now consume two seed values each step instead of one.
-This affects generated values in two ways:
 
-- In large lists or long numbers the values are spread more evenly.
-  This also reduces the number of duplicates it generates.
-  For `faker.number.int()` this reduces the number of duplicates from `1 / 10_000` to less than `1 / 8_000_000`.
-- If you start with the same initial seed to generate a value, you might see some changes in the results you get.
-  This is because we're now working with a higher precision, which affects how numbers are rounded off.
-  As a result, the methods we use might produce slightly different outcomes.
-  And since we are now using two seed values each time subsequent results appear to skip a value each time.
-
-```ts
-import {
-  SimpleFaker,
-  generateMersenne32Randomizer,
-  generateMersenne53Randomizer,
-} from '@faker-js/faker';
-
-// < v9 default
-const oldFaker = new SimpleFaker({
-  randomizer: generateMersenne32Randomizer(),
-});
-oldFaker.seed(123);
-const oldValue = oldFaker.helpers.multiple(() => oldFaker.number.int(10), {
-  count: 10,
-});
-// > v9 default
-const newFaker = new SimpleFaker({
-  randomizer: generateMersenne53Randomizer(),
-});
-newFaker.seed(123);
-const newValue = newFaker.helpers.multiple(() => newFaker.number.int(10), {
-  count: 5,
-});
-
-diff(oldValue, newValue);
-//[
-//  7,
-//  7, // [!code --]
-//  3,
-//  4, // [!code --]
-//  2,
-//  7, // [!code --]
-//  6,
-//  7, // [!code --]
-//  7,
-//  5, // [!code --]
-//]
-```
+You can read more in out Blog Post: [What's New In v9.0](/about/announcements/2024-10-26#use-high-precision-rng-by-default)
 
 #### Adoption
 

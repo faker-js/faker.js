@@ -13,6 +13,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `dv` locale.
+ *
+ * - Language: Maldivian
+ * - Endonym: ދިވެހި
+ */
 const dv: LocaleDefinition = {
   cell_phone,
   color,

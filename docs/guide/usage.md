@@ -32,6 +32,11 @@ For more information on selecting and customizing a locale, please refer to our 
 
 If you want to try it yourself, you can open your browser console via `Ctrl + Shift + J` / `F12`.
 
+On our website, you can load faker into the browser console
+
+- by using `await enableFaker()`
+- or using the following code:
+
 ```js
 const { faker } = await import('https://esm.sh/@faker-js/faker');
 
@@ -74,7 +79,7 @@ const randomEmail = faker.internet.email(); // Tomasa_Ferry14@hotmail.com
 ```
 
 ::: info Note
-It is highly recommended to use version tags when importing libraries in Deno, e.g: `import { faker } from "https://esm.sh/@faker-js/faker@v9.0.3"`.
+It is highly recommended to use version tags when importing libraries in Deno, e.g: `import { faker } from "https://esm.sh/@faker-js/faker@v9.2.0"`.
 :::
 
 ### Alternative CDN links
@@ -89,7 +94,8 @@ It is highly recommended to use version tags when importing libraries in Deno, e
 
 ## TypeScript Support
 
-Faker supports TypeScript out of the box, so you don't have to install any extra packages.
+We assume that you use TypeScript (strict mode).
+You can use Faker without it, but we don't have dedicated error messages for wrong parameter types.
 
 In order to have Faker working properly, you need to check if these `compilerOptions` are set correctly in your `tsconfig` file:
 
@@ -97,7 +103,8 @@ In order to have Faker working properly, you need to check if these `compilerOpt
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "moduleResolution": "Bundler" // "Node10", "Node16" or "NodeNext"
+    "moduleResolution": "Bundler", // "Node10", "Node16" or "NodeNext"
+    "strict": true // Optional, but recommended
   }
 }
 ```
@@ -253,4 +260,49 @@ This allows the value to be more reasonable based on the provided arguments.
 
 Unlike the `_id` property that uses an `uuid` implementation, which has a low chance of duplicates, the `email` function is more likely to produce duplicates, especially if the call arguments are similar. We have a dedicated guide page on generating [unique values](unique).
 
-Congratulations, you should now be able to create any complex object you desire. Happy faking 🥳.
+The example above demonstrates how to generate complex objects.
+To gain more control over the values of specific properties, you can introduce `overwrites`, `options` or similar parameters:
+
+```ts {3,17}
+import { faker } from '@faker-js/faker';
+
+function createRandomUser(overwrites: Partial<User> = {}): User {
+  const {
+    _id = faker.string.uuid(),
+    avatar = faker.image.avatar(),
+    birthday = faker.date.birthdate(),
+    sex = faker.person.sexType(),
+    firstName = faker.person.firstName(sex),
+    lastName = faker.person.lastName(),
+    email = faker.internet.email({ firstName, lastName }),
+    subscriptionTier = faker.helpers.arrayElement([
+      'free',
+      'basic',
+      'business',
+    ]),
+  } = overwrites;
+
+  return {
+    _id,
+    avatar,
+    birthday,
+    email,
+    firstName,
+    lastName,
+    sex,
+    subscriptionTier,
+  };
+}
+
+const user = createRandomUser();
+const userToReject = createRandomUser({ birthday: new Date('2124-10-20') });
+```
+
+A potential `options` parameter could be used to:
+
+- control which optional properties are included,
+- control how nested elements and arrays are merged or replaced,
+- or specify the number of items to generate for nested lists.
+
+Congratulations, you should now be able to create any complex object you desire.
+Happy faking 🥳.

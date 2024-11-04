@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import mk from '../locales/mk';
 
+/**
+ * The faker instance for the `mk` locale.
+ *
+ * - Language: Macedonian
+ * - Endonym: македонски јазик
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `mk`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [mk, en, base],
 });

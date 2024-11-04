@@ -8,6 +8,8 @@ import { times } from './../support/times';
 
 const NON_SEEDED_BASED_RUN = 5;
 
+const refDate = '2020-01-01T00:00:00.000Z';
+
 describe('internet', () => {
   seededTests(faker, 'internet', (t) => {
     t.itEach(
@@ -18,6 +20,7 @@ describe('internet', () => {
       'domainWord',
       'ip',
       'ipv6',
+      'jwtAlgorithm',
       'port',
       'userAgent'
     );
@@ -153,6 +156,12 @@ describe('internet', () => {
       t.it('noArgs')
         .it('with cidrBlock', { cidrBlock: '192.168.13.37/24' })
         .it('with network', { network: IPv4Network.Multicast });
+    });
+
+    t.describe('jwt', (t) => {
+      t.it('noArgs', { refDate })
+        .it('with custom header', { header: { alg: 'ES256' }, refDate })
+        .it('with custom payload', { payload: { iss: 'Acme' }, refDate });
     });
   });
 
@@ -969,6 +978,40 @@ describe('internet', () => {
           expect(emoji).toBeTruthy();
           expect(emoji).toBeTypeOf('string');
           expect(emoji.length).toBeGreaterThanOrEqual(1);
+        });
+      });
+
+      describe('jwt', () => {
+        it('should return a random jwt', () => {
+          const jwt = faker.internet.jwt();
+
+          expect(jwt).toBeTruthy();
+          expect(jwt).toBeTypeOf('string');
+          expect(jwt).toSatisfy(validator.isJWT);
+        });
+
+        it('should return the header and payload values from the token', () => {
+          const header = {
+            kid: faker.string.alphanumeric(),
+          };
+
+          const payload = {
+            nonce: faker.string.alphanumeric(),
+          };
+
+          const actual = faker.internet.jwt({ header, payload });
+
+          expect(actual).toBeTypeOf('string');
+          expect(actual).toSatisfy(validator.isJWT);
+
+          const parts = actual.split('.');
+
+          expect(
+            JSON.parse(Buffer.from(parts[0], 'base64url').toString('ascii'))
+          ).toMatchObject(header);
+          expect(
+            JSON.parse(Buffer.from(parts[1], 'base64url').toString('ascii'))
+          ).toMatchObject(payload);
         });
       });
     }

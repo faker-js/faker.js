@@ -10,6 +10,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `uk` locale.
+ *
+ * - Language: Ukrainian
+ * - Endonym: Українська
+ */
 const uk: LocaleDefinition = {
   company,
   internet,

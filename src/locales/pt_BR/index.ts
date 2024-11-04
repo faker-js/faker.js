@@ -3,6 +3,7 @@
  * Run 'pnpm run generate:locales' to update.
  */
 import type { LocaleDefinition } from '../..';
+import book from './book';
 import color from './color';
 import commerce from './commerce';
 import company from './company';
@@ -14,7 +15,14 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `pt_BR` locale.
+ *
+ * - Language: Portuguese (Brazil)
+ * - Endonym: Português (Brasil)
+ */
 const pt_BR: LocaleDefinition = {
+  book,
   color,
   commerce,
   company,

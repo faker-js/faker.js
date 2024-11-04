@@ -9,6 +9,19 @@ import en from '../locales/en';
 import es from '../locales/es';
 import es_MX from '../locales/es_MX';
 
+/**
+ * The faker instance for the `es_MX` locale.
+ *
+ * - Language: Spanish (Mexico)
+ * - Endonym: Español (México)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `es_MX`
+ * - `es`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [es_MX, es, en, base],
 });

@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import en_GH from '../locales/en_GH';
 
+/**
+ * The faker instance for the `en_GH` locale.
+ *
+ * - Language: English (Ghana)
+ * - Endonym: English (Ghana)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `en_GH`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [en_GH, en, base],
 });

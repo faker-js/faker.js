@@ -7,6 +7,12 @@ import lorem from './lorem';
 import metadata from './metadata';
 import person from './person';
 
+/**
+ * The locale data for the `en_BORK` locale.
+ *
+ * - Language: English (Bork)
+ * - Endonym: English (Bork)
+ */
 const en_BORK: LocaleDefinition = {
   lorem,
   metadata,

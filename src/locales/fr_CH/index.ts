@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `fr_CH` locale.
+ *
+ * - Language: French (Switzerland)
+ * - Endonym: Français (Suisse)
+ */
 const fr_CH: LocaleDefinition = {
   cell_phone,
   internet,

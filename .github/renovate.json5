@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    "schedule:earlyMondays",
+    "schedule:monthly",
     "group:allNonMajor",
     ":prHourlyLimitNone"
   ],
@@ -36,8 +36,8 @@
     {
       "groupName": "eslint",
       "matchPackageNames": [
-        "@eslint-types/**",
         "@eslint/**",
+        "@stylistic/**",
         "eslint",
         "eslint-**",
         "typescript-eslint"
@@ -58,6 +58,12 @@
     {
       "groupName": "doc-dependencies",
       "matchPackageNames": ["ts-morph", "vitepress"]
+    },
+    {
+      // Disable updates for rimraf until Node 18 support is dropped
+      "groupName": "disabled",
+      "matchPackageNames": ["rimraf"],
+      "enabled": false
     }
   ],
   "stopUpdatingLabel": "s: on hold",

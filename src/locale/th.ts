@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import th from '../locales/th';
 
+/**
+ * The faker instance for the `th` locale.
+ *
+ * - Language: Thai
+ * - Endonym: ไทย
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `th`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [th, en, base],
 });

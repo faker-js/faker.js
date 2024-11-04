@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import yo_NG from '../locales/yo_NG';
 
+/**
+ * The faker instance for the `yo_NG` locale.
+ *
+ * - Language: Yoruba (Nigeria)
+ * - Endonym: Yoruba (Naijiria)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `yo_NG`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [yo_NG, en, base],
 });

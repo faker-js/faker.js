@@ -9,6 +9,19 @@ import de from '../locales/de';
 import de_CH from '../locales/de_CH';
 import en from '../locales/en';
 
+/**
+ * The faker instance for the `de_CH` locale.
+ *
+ * - Language: German (Switzerland)
+ * - Endonym: Deutsch (Schweiz)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `de_CH`
+ * - `de`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [de_CH, de, en, base],
 });

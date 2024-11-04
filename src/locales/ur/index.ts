@@ -18,6 +18,12 @@ import person from './person';
 import team from './team';
 import vehicle from './vehicle';
 
+/**
+ * The locale data for the `ur` locale.
+ *
+ * - Language: Urdu
+ * - Endonym: اردو
+ */
 const ur: LocaleDefinition = {
   animal,
   app,

@@ -9,6 +9,19 @@ import en from '../locales/en';
 import fr from '../locales/fr';
 import fr_SN from '../locales/fr_SN';
 
+/**
+ * The faker instance for the `fr_SN` locale.
+ *
+ * - Language: French (Senegal)
+ * - Endonym: Français (Sénégal)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `fr_SN`
+ * - `fr`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [fr_SN, fr, en, base],
 });

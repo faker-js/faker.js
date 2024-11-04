@@ -19,6 +19,12 @@ import phone_number from './phone_number';
 import vehicle from './vehicle';
 import word from './word';
 
+/**
+ * The locale data for the `fa` locale.
+ *
+ * - Language: Farsi/Persian
+ * - Endonym: فارسی
+ */
 const fa: LocaleDefinition = {
   cell_phone,
   color,

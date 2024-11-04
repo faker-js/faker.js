@@ -8,6 +8,18 @@ import base from '../locales/base';
 import en from '../locales/en';
 import ka_GE from '../locales/ka_GE';
 
+/**
+ * The faker instance for the `ka_GE` locale.
+ *
+ * - Language: Georgian (Georgia)
+ * - Endonym: ქართული (საქართველო)
+ *
+ * This instance uses the following locales internally (in descending precedence):
+ *
+ * - `ka_GE`
+ * - `en`
+ * - `base`
+ */
 export const faker = new Faker({
   locale: [ka_GE, en, base],
 });

@@ -30,7 +30,7 @@ exports[`commerce > 42 > product 1`] = `"Computer"`;
 
 exports[`commerce > 42 > productAdjective 1`] = `"Handcrafted"`;
 
-exports[`commerce > 42 > productDescription 1`] = `"New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016"`;
+exports[`commerce > 42 > productDescription 1`] = `"New salmon Pants with ergonomic design for crushing comfort"`;
 
 exports[`commerce > 42 > productMaterial 1`] = `"Frozen"`;
 
@@ -66,7 +66,7 @@ exports[`commerce > 1211 > product 1`] = `"Towels"`;
 
 exports[`commerce > 1211 > productAdjective 1`] = `"Tasty"`;
 
-exports[`commerce > 1211 > productDescription 1`] = `"The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality"`;
+exports[`commerce > 1211 > productDescription 1`] = `"Small Cheese designed with Wooden for right performance"`;
 
 exports[`commerce > 1211 > productMaterial 1`] = `"Wooden"`;
 
@@ -102,7 +102,7 @@ exports[`commerce > 1337 > product 1`] = `"Chicken"`;
 
 exports[`commerce > 1337 > productAdjective 1`] = `"Generic"`;
 
-exports[`commerce > 1337 > productDescription 1`] = `"Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support"`;
+exports[`commerce > 1337 > productDescription 1`] = `"Innovative Car featuring lawful technology and Fresh construction"`;
 
 exports[`commerce > 1337 > productMaterial 1`] = `"Fresh"`;
 

@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `en_ZA` locale.
+ *
+ * - Language: English (South Africa)
+ * - Endonym: English (South Africa)
+ */
 const en_ZA: LocaleDefinition = {
   cell_phone,
   company,

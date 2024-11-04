@@ -11,6 +11,12 @@ import metadata from './metadata';
 import person from './person';
 import phone_number from './phone_number';
 
+/**
+ * The locale data for the `af_ZA` locale.
+ *
+ * - Language: Afrikaans (South Africa)
+ * - Endonym: Afrikaans (Suid-Afrika)
+ */
 const af_ZA: LocaleDefinition = {
   cell_phone,
   company,
