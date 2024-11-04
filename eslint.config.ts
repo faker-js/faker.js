@@ -204,7 +204,6 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#endregion
 
   //#region file-progress
-  // https://www.npmjs.com/package/eslint-plugin-file-progress
   eslintPluginFileProgress.configs.recommended,
   //#endregion
 
