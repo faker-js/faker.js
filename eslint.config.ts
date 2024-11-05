@@ -2,6 +2,7 @@ import { includeIgnoreFile } from '@eslint/compat';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginVitest from '@vitest/eslint-plugin';
+import eslintPluginFileProgress from 'eslint-plugin-file-progress';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
@@ -200,7 +201,11 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
 
   //#region prettier
   eslintPluginPrettierRecommended,
-  //#endregion,
+  //#endregion
+
+  //#region file-progress
+  eslintPluginFileProgress.configs.recommended,
+  //#endregion
 
   //#region overrides
   {
