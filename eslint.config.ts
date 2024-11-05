@@ -2,6 +2,7 @@ import { includeIgnoreFile } from '@eslint/compat';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginVitest from '@vitest/eslint-plugin';
+import eslintPluginFileProgress from 'eslint-plugin-file-progress';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
@@ -156,13 +157,13 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       'unicorn/number-literal-case': 'off', // incompatible with prettier
       'unicorn/numeric-separators-style': 'off', // "magic numbers" may carry specific meaning
       'unicorn/prefer-string-raw': 'off', // The additional prefix doesn't help readability
+      'unicorn/prefer-string-slice': 'off', // string.substring is sometimes easier to use
       'unicorn/prefer-ternary': 'off', // ternaries aren't always better
 
       // TODO @Shinigami92 2023-09-23: The following rules currently conflict with our code.
       // Each rule should be checked whether it should be enabled/configured and the problems fixed, or stay disabled permanently.
       'unicorn/consistent-function-scoping': 'off',
       'unicorn/prefer-export-from': 'off',
-      'unicorn/prefer-string-slice': 'off',
       'unicorn/prevent-abbreviations': 'off',
     },
   },
@@ -204,7 +205,11 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
 
   //#region prettier
   eslintPluginPrettierRecommended,
-  //#endregion,
+  //#endregion
+
+  //#region file-progress
+  eslintPluginFileProgress.configs.recommended,
+  //#endregion
 
   //#region overrides
   {
