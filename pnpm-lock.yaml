@@ -59,6 +59,9 @@ importers:
       eslint-config-prettier:
         specifier: 9.1.0
         version: 9.1.0(eslint@9.14.0(jiti@2.3.3))
+      eslint-plugin-file-progress:
+        specifier: 2.1.1
+        version: 2.1.1(eslint@9.14.0(jiti@2.3.3))
       eslint-plugin-jsdoc:
         specifier: 50.4.3
         version: 50.4.3(eslint@9.14.0(jiti@2.3.3))
@@ -1896,6 +1899,12 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
+  eslint-plugin-file-progress@2.1.1:
+    resolution: {integrity: sha512-Sv4JXc3WRtNxxqRbgcGKbvGhgacEYoFaWqplMIJK2zrPhlmdGR2z9T9AZZv8Nhy1uh90O3t7dnSo/JsiLvVYnQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^9.0.0
+
   eslint-plugin-jsdoc@50.4.3:
     resolution: {integrity: sha512-uWtwFxGRv6B8sU63HZM5dAGDhgsatb+LONwmILZJhdRALLOkCX2HFZhdL/Kw2ls8SQMAVEfK+LmnEfxInRN8HA==}
     engines: {node: '>=18'}
@@ -2684,6 +2693,9 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  nanospinner@1.2.0:
+    resolution: {integrity: sha512-dGxYcEj8YhuxjVO3PYmnj1nBhtwUkvuwYbLl/MduBPmQUPy3xBtG/ScJgqZgntQkX44UQaCSlFeW4rS5fUR/Sw==}
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -5508,6 +5520,12 @@ snapshots:
     dependencies:
       eslint: 9.14.0(jiti@2.3.3)
 
+  eslint-plugin-file-progress@2.1.1(eslint@9.14.0(jiti@2.3.3)):
+    dependencies:
+      eslint: 9.14.0(jiti@2.3.3)
+      nanospinner: 1.2.0
+      picocolors: 1.1.1
+
   eslint-plugin-jsdoc@50.4.3(eslint@9.14.0(jiti@2.3.3)):
     dependencies:
       '@es-joy/jsdoccomment': 0.49.0
@@ -6346,6 +6364,10 @@ snapshots:
       thenify-all: 1.6.0
 
   nanoid@3.3.7: {}
+
+  nanospinner@1.2.0:
+    dependencies:
+      picocolors: 1.1.1
 
   natural-compare@1.4.0: {}
 
