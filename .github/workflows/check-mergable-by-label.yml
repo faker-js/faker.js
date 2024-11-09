@@ -9,6 +9,7 @@ on:
       - edited
       - labeled
       - unlabeled
+  merge_group:
 
 permissions: {}
 
