@@ -102,7 +102,6 @@ In order to have Faker working properly, you need to check if these `compilerOpt
 ```json
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "moduleResolution": "Bundler", // "Node10", "Node16" or "NodeNext"
     "strict": true // Optional, but recommended
   }

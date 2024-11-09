@@ -3,6 +3,25 @@ import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
 
+/**
+ * Checks that the given address is a valid https address.
+ *
+ * An address is considered valid, if it:
+ *
+ * - is a string
+ * - starts with https
+ * - is a proper url
+ *
+ * There is a separate integretation test file for checking if the address is reachable.
+ *
+ * @param address The address to check.
+ */
+function assertValidUrl(address: string): void {
+  expect(address).toBeTypeOf('string');
+  expect(address).toMatch(/^https:\/\//);
+  expect(() => new URL(address)).not.toThrow();
+}
+
 describe('image', () => {
   seededTests(faker, 'image', (t) => {
     t.itEach('avatar', 'avatarGitHub', 'avatarLegacy');
@@ -93,85 +112,78 @@ describe('image', () => {
 
   describe('avatar', () => {
     it('should return a random avatar url', () => {
-      const avatarUrl = faker.image.avatar();
+      const actual = faker.image.avatar();
 
-      expect(avatarUrl).toBeTypeOf('string');
-      expect(avatarUrl).toMatch(/^https:\/\//);
-      expect(() => new URL(avatarUrl)).not.toThrow();
+      assertValidUrl(actual);
     });
   });
 
   describe('avatarGitHub', () => {
     it('should return a random avatar url from GitHub', () => {
-      const avatarUrl = faker.image.avatarGitHub();
+      const actual = faker.image.avatarGitHub();
 
-      expect(avatarUrl).toBeTypeOf('string');
-      expect(avatarUrl).toMatch(
+      expect(actual).toBeTypeOf('string');
+      expect(actual).toMatch(
         /^https:\/\/avatars\.githubusercontent\.com\/u\/\d+$/
       );
+      assertValidUrl(actual);
     });
   });
 
   describe('avatarLegacy', () => {
     it('should return a random avatar url from cloudflare-ipfs', () => {
       // eslint-disable-next-line @typescript-eslint/no-deprecated
-      const avatarUrl = faker.image.avatarLegacy();
+      const actual = faker.image.avatarLegacy();
 
-      expect(avatarUrl).toBeTypeOf('string');
-      expect(avatarUrl).toMatch(
+      expect(actual).toBeTypeOf('string');
+      expect(actual).toMatch(
         /^https:\/\/cloudflare-ipfs\.com\/ipfs\/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye\/avatar\/\d{1,4}\.jpg$/
       );
+      // The links aren't working anymore - there is nothing we can do about it
+      //  assertWebAddress(avatarUrl);
     });
   });
 
   describe('url', () => {
     it('should return a random image url', () => {
-      const imageUrl = faker.image.url();
+      const actual = faker.image.url();
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(/^https:\/\//);
-      expect(() => new URL(imageUrl)).not.toThrow();
+      assertValidUrl(actual);
     });
 
     it('should return a random image url with a width', () => {
       const width = 100;
-      const imageUrl = faker.image.url({ width });
+      const actual = faker.image.url({ width });
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(/^https:\/\//);
-      expect(() => new URL(imageUrl)).not.toThrow();
-      expect(imageUrl).include(`${width}`);
+      assertValidUrl(actual);
+      expect(actual).include(`${width}`);
     });
 
     it('should return a random image url with a height', () => {
       const height = 100;
-      const imageUrl = faker.image.url({ height });
+      const actual = faker.image.url({ height });
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(/^https:\/\//);
-      expect(() => new URL(imageUrl)).not.toThrow();
-      expect(imageUrl).include(`${height}`);
+      assertValidUrl(actual);
+      expect(actual).include(`${height}`);
     });
 
     it('should return a random image url with a width and height', () => {
       const width = 128;
       const height = 64;
-      const imageUrl = faker.image.url({ width, height });
+      const actual = faker.image.url({ width, height });
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(/^https:\/\//);
-      expect(() => new URL(imageUrl)).not.toThrow();
-      expect(imageUrl).include(`${width}`);
-      expect(imageUrl).include(`${height}`);
+      assertValidUrl(actual);
+      expect(actual).include(`${width}`);
+      expect(actual).include(`${height}`);
     });
   });
 
   describe('urlLoremFlickr', () => {
     it('should return a random image url from LoremFlickr', () => {
-      const imageUrl = faker.image.urlLoremFlickr();
+      const actual = faker.image.urlLoremFlickr();
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(
+      assertValidUrl(actual);
+      expect(actual).toMatch(
         /^https:\/\/loremflickr\.com\/\d+\/\d+\?lock=\d+$/
       );
     });
@@ -179,10 +191,10 @@ describe('image', () => {
 
   describe('urlPicsumPhotos', () => {
     it('should return a random image url from PicsumPhotos', () => {
-      const imageUrl = faker.image.urlPicsumPhotos();
+      const actual = faker.image.urlPicsumPhotos();
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(
+      assertValidUrl(actual);
+      expect(actual).toMatch(
         /^https:\/\/picsum\.photos\/seed\/[0-9a-zA-Z]+\/\d+\/\d+(\?(grayscale&?)?(blur=\d+)?)?$/
       );
     });
@@ -190,10 +202,10 @@ describe('image', () => {
 
   describe('urlPlaceholder', () => {
     it('should return a random image url from Placeholder', () => {
-      const imageUrl = faker.image.urlPlaceholder();
+      const actual = faker.image.urlPlaceholder();
 
-      expect(imageUrl).toBeTypeOf('string');
-      expect(imageUrl).toMatch(
+      assertValidUrl(actual);
+      expect(actual).toMatch(
         /^https:\/\/via\.placeholder\.com\/\d+x\d+\/[0-9a-fA-F]{6}\/[0-9a-fA-F]{6}\.[a-z]{3,4}\?text=.+$/
       );
     });
@@ -201,42 +213,47 @@ describe('image', () => {
 
   describe('dataUri', () => {
     it('should return an image data uri', () => {
-      const dataUri = faker.image.dataUri();
-      expect(dataUri).toMatch(/^data:image\/svg\+xml;/);
-      expect(dataUri).toSatisfy(isDataURI);
+      const actual = faker.image.dataUri();
+
+      expect(actual).toMatch(/^data:image\/svg\+xml;/);
+      expect(actual).toSatisfy(isDataURI);
     });
 
     it('should return an uri-encoded image data uri', () => {
-      const dataUri = faker.image.dataUri({ type: 'svg-uri' });
-      expect(dataUri).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
-      expect(dataUri).toSatisfy(isDataURI);
+      const actual = faker.image.dataUri({ type: 'svg-uri' });
+
+      expect(actual).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
+      expect(actual).toSatisfy(isDataURI);
     });
 
     it('should return a base64 image data uri', () => {
-      const dataUri = faker.image.dataUri({ type: 'svg-base64' });
-      expect(dataUri).toMatch(/^data:image\/svg\+xml;base64,/);
-      expect(dataUri).toSatisfy(isDataURI);
+      const actual = faker.image.dataUri({ type: 'svg-base64' });
+
+      expect(actual).toMatch(/^data:image\/svg\+xml;base64,/);
+      expect(actual).toSatisfy(isDataURI);
     });
 
     it('should return an image data uri with fixed size', () => {
-      const dataUri = faker.image.dataUri({
+      const actual = faker.image.dataUri({
         width: 200,
         height: 300,
         type: 'svg-uri', // required for the regex check
       });
-      expect(dataUri).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
-      expect(dataUri).toMatch(/width%3D%22200%22%20height%3D%22300/);
-      expect(dataUri).toSatisfy(isDataURI);
+
+      expect(actual).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
+      expect(actual).toMatch(/width%3D%22200%22%20height%3D%22300/);
+      expect(actual).toSatisfy(isDataURI);
     });
 
     it('should return an image data uri with a fixed background color', () => {
-      const dataUri = faker.image.dataUri({
+      const actual = faker.image.dataUri({
         color: 'red',
         type: 'svg-uri', // required for the regex check
       });
-      expect(dataUri).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
-      expect(dataUri).toMatch(/fill%3D%22red/);
-      expect(dataUri).toSatisfy(isDataURI);
+
+      expect(actual).toMatch(/^data:image\/svg\+xml;charset=UTF-8,/);
+      expect(actual).toMatch(/fill%3D%22red/);
+      expect(actual).toSatisfy(isDataURI);
     });
   });
 });

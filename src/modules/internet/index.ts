@@ -595,9 +595,32 @@ export class InternetModule extends ModuleBase {
    * @since 2.0.1
    */
   domainWord(): string {
-    return this.faker.helpers
-      .slugify(`${this.faker.word.adjective()}-${this.faker.word.noun()}`)
-      .toLowerCase();
+    // Generate an ASCII "word" in the form `noun-adjective`
+    // For locales with non-ASCII characters, we fall back to lorem words, or a random string
+    const isValidSlug = (slug: string): boolean => {
+      return /^[a-z][a-z-]*[a-z]$/i.exec(slug) !== null;
+    };
+
+    const makeValidSlug = (word: string): string => {
+      const slug1 = this.faker.helpers.slugify(word);
+      if (isValidSlug(slug1)) {
+        return slug1;
+      }
+
+      const slug2 = this.faker.helpers.slugify(this.faker.lorem.word());
+      if (isValidSlug(slug2)) {
+        return slug2;
+      }
+
+      return this.faker.string.alpha({
+        casing: 'lower',
+        length: this.faker.number.int({ min: 4, max: 8 }),
+      });
+    };
+
+    const word1 = makeValidSlug(this.faker.word.adjective());
+    const word2 = makeValidSlug(this.faker.word.noun());
+    return `${word1}-${word2}`.toLowerCase();
   }
 
   /**
