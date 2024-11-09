@@ -1,6 +1,6 @@
 import validator from 'validator';
 import { describe, expect, it } from 'vitest';
-import { allFakers, faker } from '../../src';
+import { allFakers, faker, fakerKO } from '../../src';
 import { FakerError } from '../../src/errors/faker-error';
 import { IPv4Network } from '../../src/modules/internet';
 import { seededTests } from '../support/seeded-runs';
@@ -659,6 +659,17 @@ describe('internet', () => {
       describe('domainWord()', () => {
         it('should return a lower-case adjective + noun', () => {
           const domainWord = faker.internet.domainWord();
+
+          expect(domainWord).toBeTruthy();
+          expect(domainWord).toBeTypeOf('string');
+          expect(domainWord).toSatisfy(validator.isSlug);
+          expect(domainWord).toSatisfy((value: string) =>
+            validator.isFQDN(value, { require_tld: false })
+          );
+        });
+
+        it('should return a lower-case domain in non-ASCII locales', () => {
+          const domainWord = fakerKO.internet.domainWord();
 
           expect(domainWord).toBeTruthy();
           expect(domainWord).toBeTypeOf('string');
