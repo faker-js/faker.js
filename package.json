@@ -23,6 +23,7 @@
     "test": "vitest",
     "test:update-snapshots": "vitest run -u",
     "coverage": "vitest run --coverage",
+    "integration-test": "vitest -c vitest.it-config.ts",
     "cypress": "cypress",
     "docs:test:e2e:ci": "run-s docs:build:ci docs:test:e2e:run",
     "docs:test:e2e:run": "run-p --race docs:serve \"cypress run\"",
@@ -103,7 +104,6 @@
     "dist"
   ],
   "devDependencies": {
-    "@actions/github": "6.0.0",
     "@eslint/compat": "1.2.2",
     "@eslint/js": "9.14.0",
     "@stylistic/eslint-plugin": "2.10.1",
