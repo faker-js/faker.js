@@ -60,8 +60,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(eslint@9.14.0(jiti@2.3.3))
       eslint-plugin-file-progress:
-        specifier: 2.1.1
-        version: 2.1.1(eslint@9.14.0(jiti@2.3.3))
+        specifier: 3.0.1
+        version: 3.0.1(eslint@9.14.0(jiti@2.3.3))
       eslint-plugin-jsdoc:
         specifier: 50.4.3
         version: 50.4.3(eslint@9.14.0(jiti@2.3.3))
@@ -1899,8 +1899,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-file-progress@2.1.1:
-    resolution: {integrity: sha512-Sv4JXc3WRtNxxqRbgcGKbvGhgacEYoFaWqplMIJK2zrPhlmdGR2z9T9AZZv8Nhy1uh90O3t7dnSo/JsiLvVYnQ==}
+  eslint-plugin-file-progress@3.0.1:
+    resolution: {integrity: sha512-sPUOIifutW3Ehhmujt40IU5ytXL6HnuGVev2n9cp4d5fzVOoQp1K17DJ/I+cRdctmTpMcYit/fOuF9efjmD98A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.0.0
@@ -5520,7 +5520,7 @@ snapshots:
     dependencies:
       eslint: 9.14.0(jiti@2.3.3)
 
-  eslint-plugin-file-progress@2.1.1(eslint@9.14.0(jiti@2.3.3)):
+  eslint-plugin-file-progress@3.0.1(eslint@9.14.0(jiti@2.3.3)):
     dependencies:
       eslint: 9.14.0(jiti@2.3.3)
       nanospinner: 1.2.0
