@@ -23,6 +23,10 @@ function newTwister(
   return twister;
 }
 
+function randomSeed(): number {
+  return Math.ceil(Math.random() * 1_000_000_000);
+}
+
 describe('MersenneTwister19937', () => {
   describe('genrandInt32()', () => {
     it('should be able to return 0', () => {
@@ -111,10 +115,6 @@ describe.each([
       expect(actual).toMatchSnapshot();
     });
   });
-
-  function randomSeed(): number {
-    return Math.ceil(Math.random() * 1_000_000_000);
-  }
 
   // Create and log-back the seed for debug purposes
   describe.each(

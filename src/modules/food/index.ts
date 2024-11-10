@@ -1,4 +1,17 @@
 import { ModuleBase } from '../../internal/module-base';
+
+/**
+ * Converts the given string to title case.
+ *
+ * @param text The text to convert.
+ */
+function toTitleCase(text: string): string {
+  return text
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 /**
  * Module for generating food-related data.
  *
@@ -47,11 +60,6 @@ export class FoodModule extends ModuleBase {
    */
   dish(): string {
     // A 50/50 mix of specific dishes and dish_patterns
-    const toTitleCase = (s: string) =>
-      s
-        .split(' ')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ');
     if (this.faker.datatype.boolean()) {
       return toTitleCase(
         this.faker.helpers.fake(this.faker.definitions.food.dish_pattern)
