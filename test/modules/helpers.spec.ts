@@ -1091,6 +1091,21 @@ describe('helpers', () => {
           expect(result).toStrictEqual([0, 2, 4]);
         });
       });
+
+      it('should not allow huge counts by default', () => {
+        expect(() => faker.helpers.multiple(() => 1, { count: 1e6 })).toThrow(
+          new Error(
+            "The count parameter is potentially too huge to be executable in a reasonable time or using default memory limits. Please make sure that you didn't confuse count/length with numbers in an expected range. Set the 'allowHuge' option to 'true' to bypass this security check."
+          )
+        );
+      });
+
+      // This test is skipped because it takes a long time to run
+      it.skip('should allow huge counts when flag is present', () => {
+        expect(() =>
+          faker.helpers.multiple(() => 1, { count: 1e6, allowHuge: true })
+        ).not.toThrow();
+      });
     }
   );
 

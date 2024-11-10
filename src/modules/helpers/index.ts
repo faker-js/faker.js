@@ -1,5 +1,6 @@
 import type { Faker, SimpleFaker } from '../..';
 import { FakerError } from '../../errors/faker-error';
+import { checkHuge } from '../../internal/check-huge';
 import { SimpleModuleBase } from '../../internal/module-base';
 import { fakeEval } from './eval';
 import { luhnCheckValue } from './luhn-check';
@@ -1054,6 +1055,11 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * The method will be called with `(_, index)`, to allow using the index in the generated value e.g. as id.
    * @param options The optional options object.
    * @param options.count The number or range of elements to generate. Defaults to `3`.
+   * @param options.allowHuge Safety flag limiting the `count` to less than 1 Mio to prevent long freezes and out of memory errors.
+   * If the limit is exceeded, an error will be thrown.
+   * Defaults to `false`.
+   *
+   * @throws If the count limit of 1 Mio is exceeded and `allowHuge` is not set to `true`.
    *
    * @example
    * faker.helpers.multiple(() => faker.person.firstName()) // [ 'Aniya', 'Norval', 'Dallin' ]
@@ -1082,9 +1088,18 @@ export class SimpleHelpersModule extends SimpleModuleBase {
              */
             max: number;
           };
+      /**
+       * Safety flag limiting the `count` to less than 1 Mio to prevent long freezes and out of memory errors.
+       * If the limit is exceeded, an error will be thrown.
+       *
+       * @default false
+       */
+      allowHuge?: boolean;
     } = {}
   ): TResult[] {
-    const count = this.rangeToNumber(options.count ?? 3);
+    const { count: rawCount = 3, allowHuge = false } = options;
+    checkHuge(rawCount, 'count', allowHuge);
+    const count = this.rangeToNumber(rawCount);
     if (count <= 0) {
       return [];
     }
