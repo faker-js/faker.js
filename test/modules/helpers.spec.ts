@@ -1094,7 +1094,7 @@ describe('helpers', () => {
 
       it('should not allow huge counts by default', () => {
         expect(() => faker.helpers.multiple(() => 1, { count: 1e6 })).toThrow(
-          new Error(
+          new FakerError(
             "The count parameter is potentially too huge to be executable in a reasonable time or using default memory limits. Please make sure that you didn't confuse count/length with numbers in an expected range. Set the 'allowHuge' option to 'true' to bypass this security check."
           )
         );
