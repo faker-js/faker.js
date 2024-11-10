@@ -6,6 +6,7 @@ on:
       - opened
       - edited
       - synchronize
+  merge_group:
 
 permissions: {}
 
