@@ -335,7 +335,7 @@ export class FinanceModule extends ModuleBase {
       deprecated: 'faker.finance.maskedNumber()',
       proposed:
         "faker.finance.iban().replace(/(?<=.{4})\\w(?=.{2})/g, '*') or a similar approach",
-      since: '9.1.0',
+      since: '9.3.0',
       until: '10.0.0',
     });
 
