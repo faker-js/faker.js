@@ -3,13 +3,7 @@ import type { Faker, allLocales } from '../src';
 import { allFakers, fakerEN } from '../src';
 import { keys } from '../src/internal/keys';
 
-const IGNORED_MODULES = new Set([
-  'rawDefinitions',
-  'definitions',
-  'helpers',
-  '_randomizer',
-  '_defaultRefDate',
-]);
+const IGNORED_MODULES = new Set(['definitions', 'helpers', 'fakerCore']);
 
 function getMethodNamesByModules(faker: Faker): { [module: string]: string[] } {
   return Object.fromEntries(

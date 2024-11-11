@@ -701,8 +701,7 @@ describe('number', () => {
 
   describe('value range tests', () => {
     const customFaker = new SimpleFaker();
-    // @ts-expect-error: access private member field
-    const randomizer = customFaker._randomizer;
+    const { randomizer } = customFaker.fakerCore;
     describe('int', () => {
       it('should be able to return 0', () => {
         randomizer.next = () => 0;

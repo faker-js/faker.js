@@ -1,3 +1,4 @@
+import type { FakerCore } from './core';
 import { DatatypeModule } from './modules/datatype';
 import { SimpleDateModule } from './modules/date';
 import { SimpleHelpersModule } from './modules/helpers';
@@ -26,13 +27,13 @@ import { generateMersenne53Randomizer } from './utils/mersenne';
  * simpleFaker.string.uuid(); // 'c50e1f5c-86e8-4aa9-888e-168e0a182519'
  */
 export class SimpleFaker {
-  protected _defaultRefDate: () => Date = () => new Date();
+  readonly fakerCore: FakerCore;
 
   /**
    * Gets a new reference date used to generate relative dates.
    */
   get defaultRefDate(): () => Date {
-    return this._defaultRefDate;
+    return this.fakerCore.config.defaultRefDate ?? (() => new Date());
   }
 
   /**
@@ -72,14 +73,11 @@ export class SimpleFaker {
     dateOrSource: string | Date | number | (() => Date) = () => new Date()
   ): void {
     if (typeof dateOrSource === 'function') {
-      this._defaultRefDate = dateOrSource;
+      this.fakerCore.config.defaultRefDate = dateOrSource;
     } else {
-      this._defaultRefDate = () => new Date(dateOrSource);
+      this.fakerCore.config.defaultRefDate = () => new Date(dateOrSource);
     }
   }
-
-  /** @internal */
-  private readonly _randomizer: Randomizer;
 
   readonly datatype: DatatypeModule = new DatatypeModule(this);
   readonly date: SimpleDateModule = new SimpleDateModule(this);
@@ -111,20 +109,36 @@ export class SimpleFaker {
    * @since 8.1.0
    */
   constructor(
+    options?:
+      | {
+          /**
+           * The Randomizer to use.
+           * Specify this only if you want to use it to achieve a specific goal,
+           * such as sharing the same random generator with other instances/tools.
+           *
+           * @default generateMersenne53Randomizer()
+           */
+          randomizer?: Randomizer;
+        }
+      | {
+          /**
+           * The faker core with the randomizer and config to use.
+           */
+          fakerCore: FakerCore;
+        }
+  );
+  constructor(
     options: {
-      /**
-       * The Randomizer to use.
-       * Specify this only if you want to use it to achieve a specific goal,
-       * such as sharing the same random generator with other instances/tools.
-       *
-       * @default generateMersenne53Randomizer()
-       */
       randomizer?: Randomizer;
+      fakerCore?: FakerCore;
     } = {}
   ) {
-    const { randomizer = generateMersenne53Randomizer() } = options;
+    const {
+      randomizer = generateMersenne53Randomizer(),
+      fakerCore = { locale: {}, randomizer, config: {} },
+    } = options;
 
-    this._randomizer = randomizer;
+    this.fakerCore = fakerCore;
   }
 
   /**
@@ -250,7 +264,7 @@ export class SimpleFaker {
   seed(
     seed: number | number[] = Math.ceil(Math.random() * Number.MAX_SAFE_INTEGER)
   ): number | number[] {
-    this._randomizer.seed(seed);
+    this.fakerCore.randomizer.seed(seed);
 
     return seed;
   }
