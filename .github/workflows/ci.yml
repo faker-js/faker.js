@@ -5,6 +5,7 @@ on:
     branches:
       - next
   pull_request:
+  merge_group:
 
 permissions:
   contents: read # to fetch code (actions/checkout)
