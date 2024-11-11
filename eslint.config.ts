@@ -208,7 +208,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
   //#endregion
 
   //#region file-progress
-  eslintPluginFileProgress.configs.recommended,
+  eslintPluginFileProgress.configs['recommended-ci'],
   //#endregion
 
   //#region overrides
