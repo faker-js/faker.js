@@ -11,7 +11,6 @@ import {
   type MethodDeclaration,
 } from 'ts-morph';
 import { groupBy } from '../../../src/internal/group-by';
-import { valuesForKeys } from '../utils/value-checks';
 import { newProcessingError } from './error';
 import type {
   RawApiDocsSignature,
@@ -138,12 +137,11 @@ function getAllFunctions(
   );
 }
 
-export function processProjectFunctions(
-  project: Project,
-  ...names: string[]
-): RawApiDocsMethod[] {
+export function processUtilityFunctions(project: Project): RawApiDocsMethod[] {
   return processMethodLikes(
-    valuesForKeys(getAllFunctions(project), names),
+    Object.values(getAllFunctions(project)).filter((fn) =>
+      fn.getSourceFile().getFilePath().includes('/src/utils/')
+    ),
     (f) => f.getNameOrThrow()
   );
 }

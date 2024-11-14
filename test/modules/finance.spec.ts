@@ -158,6 +158,7 @@ describe('finance', () => {
 
       describe('maskedNumber()', () => {
         it('should return contain parenthesis, ellipsis and have a length of 4 by default', () => {
+          // eslint-disable-next-line @typescript-eslint/no-deprecated
           const actual = faker.finance.maskedNumber();
 
           expect(actual).toMatch(/\(\.{3}\d{4}\)/);
@@ -165,6 +166,7 @@ describe('finance', () => {
 
         it('should set a default length', () => {
           const expected = 4; // default account mask length
+          // eslint-disable-next-line @typescript-eslint/no-deprecated
           const mask = faker.finance.maskedNumber({
             parens: false,
             ellipsis: false,
@@ -179,6 +181,7 @@ describe('finance', () => {
         it('should set a specified length', () => {
           const expected = faker.number.int({ min: 1, max: 20 });
 
+          // eslint-disable-next-line @typescript-eslint/no-deprecated
           const mask = faker.finance.maskedNumber({
             length: expected,
             parens: false,
