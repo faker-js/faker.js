@@ -84,7 +84,7 @@ exports[`finance > 42 > pin > with length option 1`] = `"3975110867"`;
 
 exports[`finance > 42 > routingNumber 1`] = `"397511082"`;
 
-exports[`finance > 42 > transactionDescription 1`] = `"deposit transaction at Reynolds, Miller and Crist using card ending with ***(...1135) for KES 374.54 in account ***08670982"`;
+exports[`finance > 42 > transactionDescription 1`] = `"deposit transaction at Reynolds, Miller and Crist using card ending with ************4719 for LYD 374.54 in account ***08670982"`;
 
 exports[`finance > 42 > transactionType 1`] = `"invoice"`;
 
@@ -172,7 +172,7 @@ exports[`finance > 1211 > pin > with length option 1`] = `"9829667368"`;
 
 exports[`finance > 1211 > routingNumber 1`] = `"982966738"`;
 
-exports[`finance > 1211 > transactionDescription 1`] = `"payment transaction at Fahey, Zieme and Osinski using card ending with ***(...8825) for CRC 928.52 in account ***73687684"`;
+exports[`finance > 1211 > transactionDescription 1`] = `"payment transaction at Fahey, Zieme and Osinski using card ending with ***************2758 for HNL 928.52 in account ***73687684"`;
 
 exports[`finance > 1211 > transactionType 1`] = `"withdrawal"`;
 
@@ -260,6 +260,6 @@ exports[`finance > 1337 > pin > with length option 1`] = `"2124352971"`;
 
 exports[`finance > 1337 > routingNumber 1`] = `"212435298"`;
 
-exports[`finance > 1337 > transactionDescription 1`] = `"invoice transaction at Gottlieb - Koelpin using card ending with ***(...9477) for HUF 262.02 in account ***52971361"`;
+exports[`finance > 1337 > transactionDescription 1`] = `"invoice transaction at Gottlieb - Koelpin using card ending with *********6413 for JMD 262.02 in account ***52971361"`;
 
 exports[`finance > 1337 > transactionType 1`] = `"invoice"`;
