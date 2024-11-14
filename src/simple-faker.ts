@@ -1,3 +1,4 @@
+import { randomSeed } from './internal/seed';
 import { DatatypeModule } from './modules/datatype';
 import { SimpleDateModule } from './modules/date';
 import { SimpleHelpersModule } from './modules/helpers';
@@ -97,6 +98,10 @@ export class SimpleFaker {
    * Specify this only if you want to use it to achieve a specific goal,
    * such as sharing the same random generator with other instances/tools.
    * Defaults to faker's Mersenne Twister based pseudo random number generator.
+   * @param options.seed The initial seed to use.
+   * The seed can be used to generate reproducible values.
+   * Refer to the `seed()` method for more information.
+   * Defaults to a random seed.
    *
    * @example
    * import { SimpleFaker } from '@faker-js/faker';
@@ -120,11 +125,25 @@ export class SimpleFaker {
        * @default generateMersenne53Randomizer()
        */
       randomizer?: Randomizer;
+
+      /**
+       * The initial seed to use.
+       * The seed can be used to generate reproducible values.
+       *
+       * Refer to the `seed()` method for more information.
+       *
+       * Defaults to a random seed.
+       */
+      seed?: number;
     } = {}
   ) {
-    const { randomizer = generateMersenne53Randomizer() } = options;
+    const { randomizer, seed } = options;
 
-    this._randomizer = randomizer;
+    if (randomizer != null && seed != null) {
+      randomizer.seed(seed);
+    }
+
+    this._randomizer = randomizer ?? generateMersenne53Randomizer(seed);
   }
 
   /**
@@ -247,9 +266,7 @@ export class SimpleFaker {
    * @since 6.0.0
    */
   seed(seed?: number | number[]): number | number[];
-  seed(
-    seed: number | number[] = Math.ceil(Math.random() * Number.MAX_SAFE_INTEGER)
-  ): number | number[] {
+  seed(seed: number | number[] = randomSeed()): number | number[] {
     this._randomizer.seed(seed);
 
     return seed;
