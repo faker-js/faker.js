@@ -1,15 +1,13 @@
 import type {
   ClassDeclaration,
+  ConstructorDeclaration,
   FunctionDeclaration,
   InterfaceDeclaration,
+  MethodDeclaration,
   MethodSignature,
   Project,
 } from 'ts-morph';
-import {
-  SyntaxKind,
-  type ConstructorDeclaration,
-  type MethodDeclaration,
-} from 'ts-morph';
+import { SyntaxKind } from 'ts-morph';
 import { groupBy } from '../../../src/internal/group-by';
 import { newProcessingError } from './error';
 import type {
