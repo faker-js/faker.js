@@ -22,10 +22,6 @@ function newTwister(seed: number = randomSeed()): MersenneTwister19937 {
   return twister;
 }
 
-function randomSeed(): number {
-  return Math.ceil(Math.random() * 1_000_000_000);
-}
-
 describe('MersenneTwister19937', () => {
   describe('genrandInt32()', () => {
     it('should be able to return 0', () => {
