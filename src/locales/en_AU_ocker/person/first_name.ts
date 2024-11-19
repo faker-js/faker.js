@@ -1,5 +1,5 @@
 export default {
-  generic: [
+  female: [
     'Charlotte',
     'Ava',
     'Chloe',
@@ -50,6 +50,8 @@ export default {
     'Evelyn',
     'Mackenzie',
     'Ayla',
+  ],
+  male: [
     'Oliver',
     'Jack',
     'Jackson',
