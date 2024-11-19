@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isIBAN } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { prettyPrintIban } from '../../src/modules/finance';
@@ -17,7 +17,7 @@ describe('finance_iban', () => {
       });
 
       expect(actual).toMatch(new RegExp(`^${country}`));
-      expect(actual).toSatisfy(validator.isIBAN);
+      expect(actual).toSatisfy(isIBAN);
     });
   });
 
@@ -41,7 +41,7 @@ describe('finance_iban', () => {
             countryCode: 'GE',
           });
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           const ibanFormatted = prettyPrintIban(iban);
           const bban = iban.substring(4) + iban.substring(0, 4);
@@ -104,7 +104,7 @@ describe('finance_iban', () => {
             countryCode: 'PK',
           });
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           const ibanFormated = prettyPrintIban(iban);
           const bban = iban.substring(4) + iban.substring(0, 4);
@@ -173,7 +173,7 @@ describe('finance_iban', () => {
             countryCode: 'TR',
           });
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           const ibanFormated = prettyPrintIban(iban);
           const bban = iban.substring(4) + iban.substring(0, 4);
@@ -246,7 +246,7 @@ describe('finance_iban', () => {
             countryCode: 'AZ',
           });
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           const ibanFormated = prettyPrintIban(iban);
           const bban = iban.substring(4) + iban.substring(0, 4);
@@ -308,7 +308,7 @@ describe('finance_iban', () => {
             countryCode: 'CR',
           });
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           const ibanFormated = prettyPrintIban(iban);
           const bban = iban.substring(4) + iban.substring(0, 4);
@@ -360,7 +360,7 @@ describe('finance_iban', () => {
           });
           const ibanFormated = prettyPrintIban(iban);
 
-          expect(iban).toSatisfy(validator.isIBAN);
+          expect(iban).toSatisfy(isIBAN);
 
           expect(
             28,

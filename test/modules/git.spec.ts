@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isEmail, isHexadecimal, isSlug } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
@@ -13,7 +13,7 @@ function isValidCommitAuthor(email: string): boolean {
   // that contain unquoted characters like . output by Git so we need
   // to quote the display name
   const quotedEmail = email.replace(/^(.*) </, '"$1" <');
-  return validator.isEmail(quotedEmail, {
+  return isEmail(quotedEmail, {
     require_display_name: true,
   });
 }
@@ -49,7 +49,7 @@ describe('git', () => {
 
           expect(branch).toBeTruthy();
           expect(branch).toBeTypeOf('string');
-          expect(branch).toSatisfy(validator.isSlug);
+          expect(branch).toSatisfy(isSlug);
         });
       });
 
@@ -145,7 +145,7 @@ describe('git', () => {
 
           expect(commitSha).toBeTruthy();
           expect(commitSha).toBeTypeOf('string');
-          expect(commitSha).toSatisfy(validator.isHexadecimal);
+          expect(commitSha).toSatisfy(isHexadecimal);
           expect(commitSha).toHaveLength(40);
         });
 
@@ -159,7 +159,7 @@ describe('git', () => {
 
             expect(commitSha).toBeTruthy();
             expect(commitSha).toBeTypeOf('string');
-            expect(commitSha).toSatisfy(validator.isHexadecimal);
+            expect(commitSha).toSatisfy(isHexadecimal);
             expect(commitSha).toHaveLength(length);
           }
         );

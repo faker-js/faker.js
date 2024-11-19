@@ -1,4 +1,16 @@
-import validator from 'validator';
+import {
+  isEmail,
+  isFQDN,
+  isHexadecimal,
+  isHexColor,
+  isIP,
+  isJWT,
+  isMACAddress,
+  isPort,
+  isSlug,
+  isStrongPassword,
+  isURL,
+} from 'validator';
 import { describe, expect, it } from 'vitest';
 import { allFakers, faker, fakerKO } from '../../src';
 import { FakerError } from '../../src/errors/faker-error';
@@ -174,7 +186,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [, suffix] = email.split('@');
           expect(faker.definitions.internet.free_email).toContain(suffix);
@@ -191,7 +203,7 @@ describe('internet', () => {
 
             expect(email).toBeTruthy();
             expect(email).toBeTypeOf('string');
-            expect(email).toSatisfy(validator.isEmail);
+            expect(email).toSatisfy(isEmail);
           }
         );
 
@@ -200,7 +212,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
 
@@ -219,7 +231,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix] = email.split('@');
           expect(prefix).not.toMatch(/^\./);
@@ -231,7 +243,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix] = email.split('@');
           //expect it not to contain multiple .s
@@ -246,7 +258,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
 
@@ -266,7 +278,7 @@ describe('internet', () => {
           });
           // should truncate to 50 chars
           // e.g. ElizabethAlexandraMaryJaneAnnabelVictoria.SmithJon@yahoo.com
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
           const localPart = email.split('@')[0];
           expect(localPart.length).toBeLessThanOrEqual(50);
         });
@@ -278,7 +290,7 @@ describe('internet', () => {
           });
           // should strip invalid chars
           // e.g. MatthewMatt_Smith@yahoo.com
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
         });
 
         it('should return an email with special characters', () => {
@@ -290,7 +302,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
 
@@ -305,7 +317,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const suffix = email.split('@')[1];
 
@@ -320,7 +332,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
 
@@ -337,7 +349,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
           expect(email).includes('Aiden');
@@ -357,7 +369,7 @@ describe('internet', () => {
 
           expect(email).toBeTruthy();
           expect(email).toBeTypeOf('string');
-          expect(email).toSatisfy(validator.isEmail);
+          expect(email).toSatisfy(isEmail);
 
           const [prefix, suffix] = email.split('@');
 
@@ -608,7 +620,7 @@ describe('internet', () => {
 
           expect(url).toBeTruthy();
           expect(url).toBeTypeOf('string');
-          expect(url).toSatisfy(validator.isURL);
+          expect(url).toSatisfy(isURL);
         });
 
         it('should return a valid url with slash appended at the end', () => {
@@ -616,7 +628,7 @@ describe('internet', () => {
 
           expect(url).toBeTruthy();
           expect(url).toBeTypeOf('string');
-          expect(url).toSatisfy(validator.isURL);
+          expect(url).toSatisfy(isURL);
           expect(url.endsWith('/')).toBeTruthy();
         });
 
@@ -625,7 +637,7 @@ describe('internet', () => {
 
           expect(url).toBeTruthy();
           expect(url).toBeTypeOf('string');
-          expect(url).toSatisfy(validator.isURL);
+          expect(url).toSatisfy(isURL);
         });
       });
 
@@ -635,11 +647,11 @@ describe('internet', () => {
 
           expect(domainName).toBeTruthy();
           expect(domainName).toBeTypeOf('string');
-          expect(domainName).toSatisfy(validator.isFQDN);
+          expect(domainName).toSatisfy(isFQDN);
 
           const [prefix, suffix] = domainName.split('.');
 
-          expect(prefix).toSatisfy(validator.isSlug);
+          expect(prefix).toSatisfy(isSlug);
           expect(faker.definitions.internet.domain_suffix).toContain(suffix);
         });
       });
@@ -662,9 +674,9 @@ describe('internet', () => {
 
           expect(domainWord).toBeTruthy();
           expect(domainWord).toBeTypeOf('string');
-          expect(domainWord).toSatisfy(validator.isSlug);
+          expect(domainWord).toSatisfy(isSlug);
           expect(domainWord).toSatisfy((value: string) =>
-            validator.isFQDN(value, { require_tld: false })
+            isFQDN(value, { require_tld: false })
           );
         });
 
@@ -673,9 +685,9 @@ describe('internet', () => {
 
           expect(domainWord).toBeTruthy();
           expect(domainWord).toBeTypeOf('string');
-          expect(domainWord).toSatisfy(validator.isSlug);
+          expect(domainWord).toSatisfy(isSlug);
           expect(domainWord).toSatisfy((value: string) =>
-            validator.isFQDN(value, { require_tld: false })
+            isFQDN(value, { require_tld: false })
           );
         });
       });
@@ -686,7 +698,7 @@ describe('internet', () => {
 
           expect(ip).toBeTruthy();
           expect(ip).toBeTypeOf('string');
-          expect(ip).toSatisfy(validator.isIP);
+          expect(ip).toSatisfy(isIP);
         });
       });
 
@@ -696,7 +708,7 @@ describe('internet', () => {
 
           expect(ip).toBeTruthy();
           expect(ip).toBeTypeOf('string');
-          expect(ip).toSatisfy((value: string) => validator.isIP(value, 4));
+          expect(ip).toSatisfy((value: string) => isIP(value, 4));
 
           const parts = ip.split('.');
 
@@ -716,7 +728,7 @@ describe('internet', () => {
 
           expect(actual).toBeTruthy();
           expect(actual).toBeTypeOf('string');
-          expect(actual).toSatisfy((value: string) => validator.isIP(value, 4));
+          expect(actual).toSatisfy((value: string) => isIP(value, 4));
           expect(actual).toMatch(/^192\.168\.42\.\d{1,3}$/);
         });
 
@@ -727,7 +739,7 @@ describe('internet', () => {
 
           expect(actual).toBeTruthy();
           expect(actual).toBeTypeOf('string');
-          expect(actual).toSatisfy((value: string) => validator.isIP(value, 4));
+          expect(actual).toSatisfy((value: string) => isIP(value, 4));
 
           const [first, second, third, fourth] = actual.split('.').map(Number);
           expect(first).toBe(192);
@@ -791,9 +803,7 @@ describe('internet', () => {
 
             expect(actual).toBeTruthy();
             expect(actual).toBeTypeOf('string');
-            expect(actual).toSatisfy((value: string) =>
-              validator.isIP(value, 4)
-            );
+            expect(actual).toSatisfy((value: string) => isIP(value, 4));
             expect(actual).toMatch(regex);
           }
         );
@@ -805,7 +815,7 @@ describe('internet', () => {
 
           expect(ipv6).toBeTruthy();
           expect(ipv6).toBeTypeOf('string');
-          expect(ipv6).toSatisfy((value: string) => validator.isIP(value, 6));
+          expect(ipv6).toSatisfy((value: string) => isIP(value, 6));
 
           const parts = ipv6.split(':');
 
@@ -820,7 +830,7 @@ describe('internet', () => {
           expect(port).toBeTypeOf('number');
           expect(port).toBeGreaterThanOrEqual(0);
           expect(port).toBeLessThanOrEqual(65535);
-          expect(String(port)).toSatisfy(validator.isPort);
+          expect(String(port)).toSatisfy(isPort);
         });
       });
 
@@ -843,7 +853,7 @@ describe('internet', () => {
 
           expect(color).toBeTruthy();
           expect(color).toBeTypeOf('string');
-          expect(color).toSatisfy(validator.isHexColor);
+          expect(color).toSatisfy(isHexColor);
         });
 
         it('should return a random hex value with given values', () => {
@@ -855,7 +865,7 @@ describe('internet', () => {
 
           expect(color).toBeTruthy();
           expect(color).toBeTypeOf('string');
-          expect(color).toSatisfy(validator.isHexColor);
+          expect(color).toSatisfy(isHexColor);
         });
       });
 
@@ -867,7 +877,7 @@ describe('internet', () => {
           expect(mac).toBeTypeOf('string');
           expect(mac).toHaveLength(17);
           expect(mac).toMatch(/^([a-f0-9]{2}:){5}[a-f0-9]{2}$/);
-          expect(mac).toSatisfy(validator.isMACAddress);
+          expect(mac).toSatisfy(isMACAddress);
         });
 
         it('should return a random MAC address with 6 hexadecimal digits and given separator', () => {
@@ -877,7 +887,7 @@ describe('internet', () => {
           expect(mac).toBeTypeOf('string');
           expect(mac).toHaveLength(17);
           expect(mac).toMatch(/^([a-f0-9]{2}-){5}[a-f0-9]{2}$/);
-          expect(mac).toSatisfy(validator.isMACAddress);
+          expect(mac).toSatisfy(isMACAddress);
         });
 
         it('should return a random MAC address with 6 hexadecimal digits and empty separator', () => {
@@ -885,7 +895,7 @@ describe('internet', () => {
 
           expect(mac).toBeTruthy();
           expect(mac).toBeTypeOf('string');
-          expect(mac).toSatisfy(validator.isHexadecimal);
+          expect(mac).toSatisfy(isHexadecimal);
           expect(mac).toHaveLength(12);
           // It's not a valid MAC address
         });
@@ -899,7 +909,7 @@ describe('internet', () => {
             expect(mac).toBeTypeOf('string');
             expect(mac).toHaveLength(17);
             expect(mac).toMatch(/^([a-f0-9]{2}:){5}[a-f0-9]{2}$/);
-            expect(mac).toSatisfy(validator.isMACAddress);
+            expect(mac).toSatisfy(isMACAddress);
           }
         );
       });
@@ -978,7 +988,7 @@ describe('internet', () => {
           expect(password).toBeTypeOf('string');
           expect(password).toHaveLength(32);
           expect(password).toMatch(/^a!G6/);
-          expect(password).toSatisfy(validator.isStrongPassword);
+          expect(password).toSatisfy(isStrongPassword);
         });
       });
 
@@ -998,7 +1008,7 @@ describe('internet', () => {
 
           expect(jwt).toBeTruthy();
           expect(jwt).toBeTypeOf('string');
-          expect(jwt).toSatisfy(validator.isJWT);
+          expect(jwt).toSatisfy(isJWT);
         });
 
         it('should return the header and payload values from the token', () => {
@@ -1013,7 +1023,7 @@ describe('internet', () => {
           const actual = faker.internet.jwt({ header, payload });
 
           expect(actual).toBeTypeOf('string');
-          expect(actual).toSatisfy(validator.isJWT);
+          expect(actual).toSatisfy(isJWT);
 
           const parts = actual.split('.');
 

@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isMimeType, isSemVer } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
@@ -285,7 +285,7 @@ describe('system', () => {
           expect(
             mimeType,
             `generated mime types should be valid mime types.`
-          ).toSatisfy(validator.isMimeType);
+          ).toSatisfy(isMimeType);
         });
       });
 
@@ -294,7 +294,7 @@ describe('system', () => {
           expect(
             faker.system.semver(),
             `generated semver, first number should be between 0 and 9.`
-          ).toSatisfy(validator.isSemVer);
+          ).toSatisfy(isSemVer);
         });
       });
 
