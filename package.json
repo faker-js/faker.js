@@ -28,7 +28,7 @@
     "docs:test:e2e:ci": "run-s docs:build:ci docs:test:e2e:run",
     "docs:test:e2e:run": "run-p --race docs:serve \"cypress run\"",
     "docs:test:e2e:open": "run-p --race docs:serve \"cypress open\"",
-    "release": "commit-and-tag-version",
+    "release": "commit-and-tag-version --commit-all",
     "prepublishOnly": "pnpm run clean && pnpm install && pnpm run build",
     "preflight": "pnpm install && run-s generate format lint build test:update-snapshots ts-check"
   },

@@ -102,6 +102,15 @@ function toBinary(values: number[]): string {
 }
 
 /**
+ * Converts the given value to a percentage (`round(value * 100)`).
+ *
+ * @param value The value to convert to a percentage.
+ */
+function toPercentage(value: number): number {
+  return Math.round(value * 100);
+}
+
+/**
  * Converts an array of numbers into CSS accepted format.
  *
  * @param values Array of values to be converted.
@@ -113,7 +122,6 @@ function toCSS(
   cssFunction: CssFunctionType = 'rgb',
   space: CssSpaceType = 'sRGB'
 ): string {
-  const percentage = (value: number) => Math.round(value * 100);
   switch (cssFunction) {
     case 'rgba': {
       return `rgba(${values[0]}, ${values[1]}, ${values[2]}, ${values[3]})`;
@@ -124,35 +132,35 @@ function toCSS(
     }
 
     case 'cmyk': {
-      return `cmyk(${percentage(values[0])}%, ${percentage(
+      return `cmyk(${toPercentage(values[0])}%, ${toPercentage(
         values[1]
-      )}%, ${percentage(values[2])}%, ${percentage(values[3])}%)`;
+      )}%, ${toPercentage(values[2])}%, ${toPercentage(values[3])}%)`;
     }
 
     case 'hsl': {
-      return `hsl(${values[0]}deg ${percentage(values[1])}% ${percentage(
+      return `hsl(${values[0]}deg ${toPercentage(values[1])}% ${toPercentage(
         values[2]
       )}%)`;
     }
 
     case 'hsla': {
-      return `hsl(${values[0]}deg ${percentage(values[1])}% ${percentage(
+      return `hsl(${values[0]}deg ${toPercentage(values[1])}% ${toPercentage(
         values[2]
-      )}% / ${percentage(values[3])})`;
+      )}% / ${toPercentage(values[3])})`;
     }
 
     case 'hwb': {
-      return `hwb(${values[0]} ${percentage(values[1])}% ${percentage(
+      return `hwb(${values[0]} ${toPercentage(values[1])}% ${toPercentage(
         values[2]
       )}%)`;
     }
 
     case 'lab': {
-      return `lab(${percentage(values[0])}% ${values[1]} ${values[2]})`;
+      return `lab(${toPercentage(values[0])}% ${values[1]} ${values[2]})`;
     }
 
     case 'lch': {
-      return `lch(${percentage(values[0])}% ${values[1]} ${values[2]})`;
+      return `lch(${toPercentage(values[0])}% ${values[1]} ${values[2]})`;
     }
 
     case 'rgb': {

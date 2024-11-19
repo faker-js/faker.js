@@ -263,17 +263,17 @@ export class SystemModule extends ModuleBase {
 
     let suffix: string;
     let prefix = '';
-    const digit = () => this.faker.string.numeric({ allowLeadingZeros: true });
     switch (interfaceSchema) {
       case 'index': {
-        suffix = digit();
+        suffix = this.faker.string.numeric();
         break;
       }
 
       case 'slot': {
-        suffix = `${digit()}${
-          this.faker.helpers.maybe(() => `f${digit()}`) ?? ''
-        }${this.faker.helpers.maybe(() => `d${digit()}`) ?? ''}`;
+        suffix = `${this.faker.string.numeric()}${
+          this.faker.helpers.maybe(() => `f${this.faker.string.numeric()}`) ??
+          ''
+        }${this.faker.helpers.maybe(() => `d${this.faker.string.numeric()}`) ?? ''}`;
         break;
       }
 
@@ -283,10 +283,13 @@ export class SystemModule extends ModuleBase {
       }
 
       case 'pci': {
-        prefix = this.faker.helpers.maybe(() => `P${digit()}`) ?? '';
-        suffix = `${digit()}s${digit()}${
-          this.faker.helpers.maybe(() => `f${digit()}`) ?? ''
-        }${this.faker.helpers.maybe(() => `d${digit()}`) ?? ''}`;
+        prefix =
+          this.faker.helpers.maybe(() => `P${this.faker.string.numeric()}`) ??
+          '';
+        suffix = `${this.faker.string.numeric()}s${this.faker.string.numeric()}${
+          this.faker.helpers.maybe(() => `f${this.faker.string.numeric()}`) ??
+          ''
+        }${this.faker.helpers.maybe(() => `d${this.faker.string.numeric()}`) ?? ''}`;
         break;
       }
     }

@@ -1,5 +1,6 @@
 import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { MersenneTwister19937 } from '../../src/internal/mersenne';
+import { randomSeed } from '../../src/internal/seed';
 import type { Randomizer } from '../../src/randomizer';
 import {
   generateMersenne32Randomizer,
@@ -15,9 +16,7 @@ import {
 
 const NON_SEEDED_BASED_RUN = 25;
 
-function newTwister(
-  seed: number = Math.random() * Number.MAX_SAFE_INTEGER
-): MersenneTwister19937 {
+function newTwister(seed: number = randomSeed()): MersenneTwister19937 {
   const twister = new MersenneTwister19937();
   twister.initGenrand(seed);
   return twister;
@@ -112,11 +111,6 @@ describe.each([
     });
   });
 
-  function randomSeed(): number {
-    return Math.ceil(Math.random() * 1_000_000_000);
-  }
-
-  // Create and log-back the seed for debug purposes
   describe.each(
     times(NON_SEEDED_BASED_RUN).flatMap(() => [
       [randomSeed()],

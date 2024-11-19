@@ -1,4 +1,5 @@
 import { FakerError } from '../../errors/faker-error';
+import type { Faker } from '../../faker';
 import { toBase64Url } from '../../internal/base64';
 import { deprecated } from '../../internal/deprecated';
 import { ModuleBase } from '../../internal/module-base';
@@ -101,6 +102,50 @@ const ipv4Networks: Record<IPv4Network, string> = {
   [IPv4Network.LinkLocal]: '169.254.0.0/16',
   [IPv4Network.Multicast]: '224.0.0.0/4',
 };
+
+/**
+ * Checks whether the given string is a valid slug for `domainWord`s.
+ *
+ * @param slug The slug to check.
+ */
+function isValidDomainWordSlug(slug: string): boolean {
+  return /^[a-z][a-z-]*[a-z]$/i.exec(slug) !== null;
+}
+
+/**
+ * Tries various ways to produce a valid domain word slug, falling back to a random string if needed.
+ *
+ * @param faker The faker instance to use.
+ * @param word The initial word to slugify.
+ */
+function makeValidDomainWordSlug(faker: Faker, word: string): string {
+  const slug1 = faker.helpers.slugify(word);
+  if (isValidDomainWordSlug(slug1)) {
+    return slug1;
+  }
+
+  const slug2 = faker.helpers.slugify(faker.lorem.word());
+  if (isValidDomainWordSlug(slug2)) {
+    return slug2;
+  }
+
+  return faker.string.alpha({
+    casing: 'lower',
+    length: faker.number.int({ min: 4, max: 8 }),
+  });
+}
+
+/**
+ * Generates a random color in hex format with the given base color.
+ *
+ * @param faker The faker instance to use.
+ * @param base The base color to use.
+ */
+function colorFromBase(faker: Faker, base: number): string {
+  return Math.floor((faker.number.int(256) + base) / 2)
+    .toString(16)
+    .padStart(2, '0');
+}
 
 /**
  * Module to generate internet related entries.
@@ -597,29 +642,12 @@ export class InternetModule extends ModuleBase {
   domainWord(): string {
     // Generate an ASCII "word" in the form `noun-adjective`
     // For locales with non-ASCII characters, we fall back to lorem words, or a random string
-    const isValidSlug = (slug: string): boolean => {
-      return /^[a-z][a-z-]*[a-z]$/i.exec(slug) !== null;
-    };
 
-    const makeValidSlug = (word: string): string => {
-      const slug1 = this.faker.helpers.slugify(word);
-      if (isValidSlug(slug1)) {
-        return slug1;
-      }
-
-      const slug2 = this.faker.helpers.slugify(this.faker.lorem.word());
-      if (isValidSlug(slug2)) {
-        return slug2;
-      }
-
-      return this.faker.string.alpha({
-        casing: 'lower',
-        length: this.faker.number.int({ min: 4, max: 8 }),
-      });
-    };
-
-    const word1 = makeValidSlug(this.faker.word.adjective());
-    const word2 = makeValidSlug(this.faker.word.noun());
+    const word1 = makeValidDomainWordSlug(
+      this.faker,
+      this.faker.word.adjective()
+    );
+    const word2 = makeValidDomainWordSlug(this.faker, this.faker.word.noun());
     return `${word1}-${word2}`.toLowerCase();
   }
 
@@ -819,14 +847,9 @@ export class InternetModule extends ModuleBase {
   ): string {
     const { redBase = 0, greenBase = 0, blueBase = 0 } = options;
 
-    const colorFromBase = (base: number): string =>
-      Math.floor((this.faker.number.int(256) + base) / 2)
-        .toString(16)
-        .padStart(2, '0');
-
-    const red = colorFromBase(redBase);
-    const green = colorFromBase(greenBase);
-    const blue = colorFromBase(blueBase);
+    const red = colorFromBase(this.faker, redBase);
+    const green = colorFromBase(this.faker, greenBase);
+    const blue = colorFromBase(this.faker, blueBase);
 
     return `#${red}${green}${blue}`;
   }

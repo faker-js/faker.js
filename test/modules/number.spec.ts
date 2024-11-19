@@ -5,6 +5,14 @@ import { seededTests } from '../support/seeded-runs';
 import { MERSENNE_MAX_VALUE } from '../utils/mersenne-test-utils';
 import { times } from './../support/times';
 
+function isFloat(value: number): boolean {
+  return value % 1 !== 0;
+}
+
+function isBinary(str: string): boolean {
+  return [...str].every((char) => char === '0' || char === '1');
+}
+
 describe('number', () => {
   seededTests(faker, 'number', (t) => {
     t.describeEach(
@@ -259,10 +267,6 @@ describe('number', () => {
     });
 
     describe('float', () => {
-      function isFloat(value: number) {
-        return value % 1 !== 0;
-      }
-
       it('should return a float between 0 and 1 (inclusive) by default', () => {
         const actual = faker.number.float();
 
@@ -405,10 +409,6 @@ describe('number', () => {
     });
 
     describe('binary', () => {
-      function isBinary(str: string) {
-        return [...str].every((char) => char === '0' || char === '1');
-      }
-
       it('generates single binary character when no additional argument was provided', () => {
         const binary = faker.number.binary();
 

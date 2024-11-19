@@ -78,6 +78,18 @@ function assertDescription(description: string): void {
   }
 }
 
+describe('check docs completeness', () => {
+  it('all modules and methods are present', () => {
+    // This could be converted to an Object, but that would erase the order of the pages
+    const pageContents = modules.map((m) => [
+      m.camelTitle,
+      m.methods.map((m) => m.name),
+    ]);
+
+    expect(pageContents).toMatchSnapshot();
+  });
+});
+
 describe('verify JSDoc tags', () => {
   describe.each(modules.map((m) => [m.camelTitle, m]))(
     '%s',
