@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     name: Semantic Pull Request
+    if: ${{ github.event_name != 'merge_group' }}
     steps:
       - name: Validate PR title
         uses: amannn/action-semantic-pull-request@0723387faaf9b38adef4775cd42cfd5155ed6017 # v5.5.3
