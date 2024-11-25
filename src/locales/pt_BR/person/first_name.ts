@@ -201,6 +201,7 @@ export default {
     'Isabela',
     'Isabella',
     'Isabelly',
+    'Isadora',
     'Isis',
     'Janaína',
     'Joana',
