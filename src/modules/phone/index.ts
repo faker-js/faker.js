@@ -19,7 +19,7 @@ export class PhoneModule extends ModuleBase {
    * @see faker.helpers.fromRegExp(): For generating a phone number matching a regular expression.
    *
    * @example
-   * faker.phone.number() // '961-770-7727'
+   * faker.phone.number() // '961-770-7727' (default 'human' style)
    * faker.phone.number({ style: 'human' }) // '555.770.7727 x1234'
    * faker.phone.number({ style: 'national' }) // '(961) 770-7727'
    * faker.phone.number({ style: 'international' }) // '+15551234567'
