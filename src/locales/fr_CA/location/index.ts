@@ -4,14 +4,14 @@
  */
 import type { LocationDefinition } from '../../..';
 import city_pattern from './city_pattern';
-import postcode from './postcode';
+import postcode_pattern from './postcode_pattern';
 import state from './state';
 import state_abbr from './state_abbr';
 import street_pattern from './street_pattern';
 
 const location: LocationDefinition = {
   city_pattern,
-  postcode,
+  postcode_pattern,
   state,
   state_abbr,
   street_pattern,

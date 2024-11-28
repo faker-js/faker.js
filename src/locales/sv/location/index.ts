@@ -10,7 +10,7 @@ import city_suffix from './city_suffix';
 import common_street_suffix from './common_street_suffix';
 import country from './country';
 import county from './county';
-import postcode from './postcode';
+import postcode_pattern from './postcode_pattern';
 import secondary_address from './secondary_address';
 import state from './state';
 import street_address from './street_address';
@@ -27,7 +27,7 @@ const location: LocationDefinition = {
   common_street_suffix,
   country,
   county,
-  postcode,
+  postcode_pattern,
   secondary_address,
   state,
   street_address,

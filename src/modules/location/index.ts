@@ -179,15 +179,9 @@ export class LocationModule extends ModuleBase {
       return this.faker.helpers.replaceSymbols(format);
     }
 
-    let zipPattern = this.faker.definitions.location.postcode;
-
-    if (typeof zipPattern === 'string') {
-      zipPattern = [zipPattern];
-    }
-
-    zipPattern = this.faker.helpers.arrayElement(zipPattern);
-
-    return this.faker.helpers.replaceSymbols(zipPattern);
+    return this.faker.helpers.fake(
+      this.faker.definitions.location.postcode_pattern
+    );
   }
 
   /**

@@ -14,7 +14,7 @@ export type LocationDefinition = LocaleEntry<{
   /**
    * Postcodes patterns.
    */
-  postcode: string | string[];
+  postcode_pattern: string[];
 
   /**
    * The patterns to generate city names.

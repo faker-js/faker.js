@@ -1,0 +1,16 @@
+export default [
+  'A{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'D{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'E{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'F{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'H{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'K{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'N{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'P{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'R{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'T{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'V{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'W{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'X{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+  'Y{{string.numeric(2)}} {{string.alphanumeric({ "casing": "upper" , "length": 4})}}',
+];
