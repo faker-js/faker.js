@@ -237,7 +237,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * faker.helpers.replaceSymbols('#####') // '98441'
    * faker.helpers.replaceSymbols('?????') // 'ZYRQQ'
    * faker.helpers.replaceSymbols('*****') // '4Z3P7'
-   * faker.helpers.replaceSymbols('Your pin is: #?*#?*') // '0T85L1'
+   * faker.helpers.replaceSymbols('Your pin is: #?*#?*') // 'Your pin is: 0T85L1'
    *
    * @since 3.0.0
    */

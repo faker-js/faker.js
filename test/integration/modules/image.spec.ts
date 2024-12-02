@@ -30,7 +30,7 @@ async function assertWorkingUrl(address: string): Promise<void> {
       https
         .get(address, ({ statusCode, headers: { location } }) => {
           if (statusCode == null) {
-            reject(new Error(`No StatusCode, expected 200`));
+            reject(new Error(`No StatusCode, expected 200 for '${address}'`));
           } else if (statusCode === 200) {
             resolve(true);
           } else if (statusCode >= 300 && statusCode < 400 && location) {
@@ -47,7 +47,7 @@ async function assertWorkingUrl(address: string): Promise<void> {
           } else {
             reject(
               new Error(
-                `Bad StatusCode ${statusCode} expected 200 for '${location}'`
+                `Bad StatusCode ${statusCode} expected 200 for '${address}'`
               )
             );
           }
