@@ -3,8 +3,14 @@ import { FakerError } from '../../../src/errors/faker-error';
 import type { LiteralUnion } from '../../../src/internal/types';
 import type { AlphaNumericChar } from '../../../src/modules/string';
 // explicitly export types so they show up in the docs as decomposed types
-export type { NumberColorFormat, StringColorFormat } from '../../../src';
-export type { AlphaNumericChar, Casing, ColorFormat, LiteralUnion };
+export type {
+  Casing,
+  ColorFormat,
+  NumberColorFormat,
+  StringColorFormat,
+} from '../../../src';
+export type { LiteralUnion } from '../../../src/internal/types';
+export type { AlphaNumericChar } from '../../../src/modules/string';
 
 /**
  * Parameter options type with default from signature.

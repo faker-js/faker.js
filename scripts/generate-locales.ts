@@ -427,10 +427,14 @@ async function normalizeLocaleFile(filePath: string, definitionKey: string) {
 const locales = await readdir(pathLocales);
 removeIndexTs(locales);
 
+// src/locale/index.ts (Faker Imports and Exports)
 let localeIndexImports = '';
 let localeIndexExportsIndividual = '';
 let localeIndexExportsGrouped = '';
+// src/locales/index.ts (Locale Data Imports and Exports)
 let localesIndexImports = '';
+let localesIndexExportsIndividual = '';
+let localesIndexExportsGrouped = '';
 
 let localizationLocales = '| Locale | Name | Faker |\n| :--- | :--- | :--- |\n';
 const promises: Array<Promise<unknown>> = [];
@@ -459,9 +463,11 @@ for (const locale of locales) {
   )}`;
 
   localeIndexImports += `import { faker as ${localizedFaker} } from './${locale}';\n`;
-  localeIndexExportsIndividual += `  ${localizedFaker},\n`;
+  localeIndexExportsIndividual += `export { faker as ${localizedFaker} } from './${locale}';\n`;
   localeIndexExportsGrouped += `  ${locale}: ${localizedFaker},\n`;
   localesIndexImports += `import { default as ${locale} } from './${locale}';\n`;
+  localesIndexExportsIndividual += `export { default as ${locale} } from './${locale}';\n`;
+  localesIndexExportsGrouped += `  ${locale},\n`;
   localizationLocales += `| \`${locale}\` | ${localeTitle} | \`${localizedFaker}\` |\n`;
 
   promises.push(
@@ -484,9 +490,7 @@ let localeIndexContent = `
 
   ${localeIndexImports}
 
-  export {
   ${localeIndexExportsIndividual}
-  };
 
   export const allFakers = {
   ${localeIndexExportsGrouped}
@@ -503,9 +507,11 @@ let localesIndexContent = `
 
   ${localesIndexImports}
 
-  export { ${locales.join(',')} };
+  ${localesIndexExportsIndividual}
 
-  export const allLocales = { ${locales.join(',')} };
+  export const allLocales = {
+  ${localesIndexExportsGrouped}
+  } as const;
   `;
 
 localesIndexContent = await formatTypescript(localesIndexContent);
