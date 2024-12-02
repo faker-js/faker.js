@@ -39,8 +39,8 @@ importers:
         specifier: 1.1.13
         version: 1.1.13(@typescript-eslint/utils@8.16.0(eslint@9.16.0(jiti@2.4.1))(typescript@5.7.2))(eslint@9.16.0(jiti@2.4.1))(typescript@5.7.2)(vitest@2.1.6)
       '@vitest/ui':
-        specifier: 2.1.6
-        version: 2.1.6(vitest@2.1.6)
+        specifier: 2.1.7
+        version: 2.1.7(vitest@2.1.6)
       '@vueuse/core':
         specifier: 12.0.0
         version: 12.0.0(typescript@5.7.2)
@@ -115,7 +115,7 @@ importers:
         version: 1.5.0(@algolia/client-search@5.15.0)(@types/node@22.10.1)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       vitest:
         specifier: 2.1.6
-        version: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.6)(jsdom@25.0.1)
+        version: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.7)(jsdom@25.0.1)
       vue:
         specifier: 3.5.13
         version: 3.5.13(typescript@5.7.2)
@@ -1099,6 +1099,9 @@ packages:
   '@vitest/pretty-format@2.1.6':
     resolution: {integrity: sha512-exZyLcEnHgDMKc54TtHca4McV4sKT+NKAe9ix/yhd/qkYb/TP8HTyXRFDijV19qKqTZM0hPL4753zU/U8L/gAA==}
 
+  '@vitest/pretty-format@2.1.7':
+    resolution: {integrity: sha512-HoqRIyfQlXPrRDB43h0lC8eHPUDPwFweMaD6t+psOvwClCC+oZZim6wPMjuoMnRdiFxXqbybg/QbuewgTwK1vA==}
+
   '@vitest/runner@2.1.6':
     resolution: {integrity: sha512-SjkRGSFyrA82m5nz7To4CkRSEVWn/rwQISHoia/DB8c6IHIhaE/UNAo+7UfeaeJRE979XceGl00LNkIz09RFsA==}
 
@@ -1108,13 +1111,16 @@ packages:
   '@vitest/spy@2.1.6':
     resolution: {integrity: sha512-oTFObV8bd4SDdRka5O+mSh5w9irgx5IetrD5i+OsUUsk/shsBoHifwCzy45SAORzAhtNiprUVaK3hSCCzZh1jQ==}
 
-  '@vitest/ui@2.1.6':
-    resolution: {integrity: sha512-SrpLAM0/xpOjXBDv3mayFh5TDEYM59fmEmJXgp1AqtpUWHVw4Tonp6Z9dVBhChU/Q+BY57m74nrQZK8vxKDrMQ==}
+  '@vitest/ui@2.1.7':
+    resolution: {integrity: sha512-0QUttW85GkdG9d11sEa3HHtNiKLYNMl9YXaho33W6lAy9Pu0n1U6BU09aZmxez/b6YzX9GXHF0MuhvMZl2tjdw==}
     peerDependencies:
-      vitest: 2.1.6
+      vitest: 2.1.7
 
   '@vitest/utils@2.1.6':
     resolution: {integrity: sha512-ixNkFy3k4vokOUTU2blIUvOgKq/N2PW8vKIjZZYsGJCMX69MRa9J2sKqX5hY/k5O5Gty3YJChepkqZ3KM9LyIQ==}
+
+  '@vitest/utils@2.1.7':
+    resolution: {integrity: sha512-7gUdvIzCCuIrMZu0WHTvDJo8C1NsUtOqmwmcS3bRHUcfHemj29wmkzLVNuWQD7WHoBD/+I7WIgrnzt7kxR54ow==}
 
   '@volar/language-core@2.4.10':
     resolution: {integrity: sha512-hG3Z13+nJmGaT+fnQzAkS0hjJRa2FCeqZt6Bd+oGNhUkQ+mTFsDETg5rqUTxyzIh5pSOGY7FHCWUS8G82AzLCA==}
@@ -4474,7 +4480,7 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.6)(jsdom@25.0.1)
+      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.7)(jsdom@25.0.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -4484,7 +4490,7 @@ snapshots:
       eslint: 9.16.0(jiti@2.4.1)
     optionalDependencies:
       typescript: 5.7.2
-      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.6)(jsdom@25.0.1)
+      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.7)(jsdom@25.0.1)
 
   '@vitest/expect@2.1.6':
     dependencies:
@@ -4505,6 +4511,10 @@ snapshots:
     dependencies:
       tinyrainbow: 1.2.0
 
+  '@vitest/pretty-format@2.1.7':
+    dependencies:
+      tinyrainbow: 1.2.0
+
   '@vitest/runner@2.1.6':
     dependencies:
       '@vitest/utils': 2.1.6
@@ -4520,20 +4530,26 @@ snapshots:
     dependencies:
       tinyspy: 3.0.2
 
-  '@vitest/ui@2.1.6(vitest@2.1.6)':
+  '@vitest/ui@2.1.7(vitest@2.1.6)':
     dependencies:
-      '@vitest/utils': 2.1.6
+      '@vitest/utils': 2.1.7
       fflate: 0.8.2
       flatted: 3.3.2
       pathe: 1.1.2
       sirv: 3.0.0
       tinyglobby: 0.2.10
       tinyrainbow: 1.2.0
-      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.6)(jsdom@25.0.1)
+      vitest: 2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.7)(jsdom@25.0.1)
 
   '@vitest/utils@2.1.6':
     dependencies:
       '@vitest/pretty-format': 2.1.6
+      loupe: 3.1.2
+      tinyrainbow: 1.2.0
+
+  '@vitest/utils@2.1.7':
+    dependencies:
+      '@vitest/pretty-format': 2.1.7
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
@@ -7123,7 +7139,7 @@ snapshots:
       - typescript
       - universal-cookie
 
-  vitest@2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.6)(jsdom@25.0.1):
+  vitest@2.1.6(@types/node@22.10.1)(@vitest/ui@2.1.7)(jsdom@25.0.1):
     dependencies:
       '@vitest/expect': 2.1.6
       '@vitest/mocker': 2.1.6(vite@5.4.11(@types/node@22.10.1))
@@ -7147,7 +7163,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.10.1
-      '@vitest/ui': 2.1.6(vitest@2.1.6)
+      '@vitest/ui': 2.1.7(vitest@2.1.6)
       jsdom: 25.0.1
     transitivePeerDependencies:
       - less
