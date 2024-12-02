@@ -689,7 +689,7 @@ export default [
   'Sośnicowice',
   'Stalowa Wola',
   'Starachowice',
-  'Stargard,
+  'Stargard',
   'Starogard Gdański',
   'Stary Sącz',
   'Staszów',
