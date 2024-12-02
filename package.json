@@ -115,7 +115,7 @@
     "@vitest/coverage-v8": "2.1.4",
     "@vitest/eslint-plugin": "1.1.7",
     "@vitest/ui": "2.1.4",
-    "@vueuse/core": "11.2.0",
+    "@vueuse/core": "12.0.0",
     "commit-and-tag-version": "12.5.0",
     "cypress": "13.15.1",
     "eslint": "9.14.0",
