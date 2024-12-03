@@ -6,8 +6,8 @@
  *
  * @internal
  *
- * @param obj The object to get the keys of.
+ * @param object The object to get the keys of.
  */
-export function keys<T extends object>(obj: T): Array<keyof T> {
-  return Object.keys(obj) as Array<keyof T>;
+export function keys<T extends object>(object: T): Array<keyof T> {
+  return Object.keys(object) as Array<keyof T>;
 }
