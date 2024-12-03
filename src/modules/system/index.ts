@@ -77,21 +77,21 @@ export class SystemModule extends ModuleBase {
       .toLowerCase()
       .replaceAll(/\W/g, '_');
 
-    const extensionsStr = this.faker.helpers
+    const extensionsSuffix = this.faker.helpers
       .multiple(() => this.fileExt(), { count: extensionCount })
       .join('.');
 
-    if (extensionsStr.length === 0) {
+    if (extensionsSuffix.length === 0) {
       return baseName;
     }
 
-    return `${baseName}.${extensionsStr}`;
+    return `${baseName}.${extensionsSuffix}`;
   }
 
   /**
    * Returns a random file name with a given extension or a commonly used extension.
    *
-   * @param ext Extension. Empty string is considered to be not set.
+   * @param extension The file extension to use. Empty string is considered to be not set.
    *
    * @example
    * faker.system.commonFileName() // 'dollar.jpg'
@@ -99,10 +99,10 @@ export class SystemModule extends ModuleBase {
    *
    * @since 3.1.0
    */
-  commonFileName(ext?: string): string {
-    const str = this.fileName({ extensionCount: 0 });
+  commonFileName(extension?: string): string {
+    const fileName = this.fileName({ extensionCount: 0 });
 
-    return `${str}.${ext || this.commonFileExt()}`;
+    return `${fileName}.${extension || this.commonFileExt()}`;
   }
 
   /**
