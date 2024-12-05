@@ -33,7 +33,7 @@ export type InternetDefinition = LocaleEntry<{
   jwt_algorithm: string[];
 
   /**
-   * List of user agents.
+   * List of user agent patterns.
    */
-  user_agent: string[];
+  user_agent_pattern: string[];
 }>;
