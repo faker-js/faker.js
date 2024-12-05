@@ -4,7 +4,6 @@ import { toBase64Url } from '../../internal/base64';
 import { deprecated } from '../../internal/deprecated';
 import { ModuleBase } from '../../internal/module-base';
 import { charMapping } from './char-mappings';
-import * as random_ua from './user-agent';
 
 export type EmojiType =
   | 'smiley'
@@ -803,7 +802,7 @@ export class InternetModule extends ModuleBase {
    * @since 2.0.1
    */
   userAgent(): string {
-    return random_ua.generate(this.faker);
+    return this.faker.helpers.fake(this.faker.definitions.internet.user_agent);
   }
 
   /**

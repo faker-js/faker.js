@@ -31,4 +31,9 @@ export type InternetDefinition = LocaleEntry<{
   http_status_code: Record<HTTPStatusCodeType, number[]>;
 
   jwt_algorithm: string[];
+
+  /**
+   * List of user agents.
+   */
+  user_agent: string[];
 }>;
