@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [9.3.0](https://github.com/faker-js/faker/compare/v9.2.0...v9.3.0) (2024-12-02)
+
+
+### Features
+
+* add initial seed parameter to constructors ([#3220](https://github.com/faker-js/faker/issues/3220)) ([1633c8d](https://github.com/faker-js/faker/commit/1633c8deb8f6f41151b39b62689ae3e02ab295bc))
+
+
+### Changed Locales
+
+* **locale:** improve zh_CN vehicle manufacturers ([#3254](https://github.com/faker-js/faker/issues/3254)) ([9abaed1](https://github.com/faker-js/faker/commit/9abaed1061b5fa9dc9f93822162610105a788296))
+* **locale:** lowercase Mexican color names ([#3200](https://github.com/faker-js/faker/issues/3200)) ([0d85075](https://github.com/faker-js/faker/commit/0d850758d0ea0db45a9a4c8abda5c1e09796fb44))
+* **locale:** sort person data ([#3269](https://github.com/faker-js/faker/issues/3269)) ([01e20e9](https://github.com/faker-js/faker/commit/01e20e9695575211ee63c7a937f4ae93a934ef32))
+* **locale:** split en_AU_ocker first_names by sex ([#3270](https://github.com/faker-js/faker/issues/3270)) ([b0a5ad3](https://github.com/faker-js/faker/commit/b0a5ad38bb6e516ba4a6776342c0bb389ca17363))
+* **locale:** split up Spanish generic first names ([#3279](https://github.com/faker-js/faker/issues/3279)) ([5d5fe30](https://github.com/faker-js/faker/commit/5d5fe30ab4f4df092a1ebac991cdf4a345f604fc))
+* **locale:** update Polish city name ([#3306](https://github.com/faker-js/faker/issues/3306)) ([53441b7](https://github.com/faker-js/faker/commit/53441b77731f9d15bb7823de8050a18ecbbbe22a))
+
+
+### Bug Fixes
+
+* **internet:** ensure domainWord always returns a valid value in all locales ([#3253](https://github.com/faker-js/faker/issues/3253)) ([525fedc](https://github.com/faker-js/faker/commit/525fedc91bd02f53330cfb40fe228b148dcf562b))
+* **locale:** add Isadora to female names in pt_BR for consistency ([#3282](https://github.com/faker-js/faker/issues/3282)) ([b390432](https://github.com/faker-js/faker/commit/b390432626811d2af32086b16151bc4c55634c60))
+* **locale:** fix incorrect accents in it first_name ([#3281](https://github.com/faker-js/faker/issues/3281)) ([e0fb23e](https://github.com/faker-js/faker/commit/e0fb23ef81009f565676485d63b6fe97afd8a31e))
+
 ## [9.2.0](https://github.com/faker-js/faker/compare/v9.1.0...v9.2.0) (2024-11-03)
 
 

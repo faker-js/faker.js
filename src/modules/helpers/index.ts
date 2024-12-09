@@ -664,9 +664,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param length The number of elements to generate.
    *
    * @example
-   * faker.helpers.uniqueArray(faker.word.sample, 50)
-   * faker.helpers.uniqueArray(faker.definitions.person.first_name, 6)
-   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2)
+   * faker.helpers.uniqueArray(faker.word.sample, 3) // ['mob', 'junior', 'ripe']
+   * faker.helpers.uniqueArray(faker.definitions.person.first_name.generic, 6) // ['Silas', 'Montana', 'Lorenzo', 'Alayna', 'Aditya', 'Antone']
+   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2) // ['World', 'Goodbye']
    *
    * @since 6.0.0
    */
