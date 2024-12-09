@@ -9,7 +9,7 @@ export default [
   'bordô',
   'bronze',
   'caramelo',
-  'castanho ',
+  'castanho',
   'cenoura',
   'cinza',
   'cobre',
