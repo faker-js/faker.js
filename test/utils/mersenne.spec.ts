@@ -16,69 +16,63 @@ import {
 
 const NON_SEEDED_BASED_RUN = 25;
 
-function newTwister(seed: number = randomSeed()): MersenneTwister19937 {
-  const twister = new MersenneTwister19937();
-  twister.initGenrand(seed);
-  return twister;
-}
-
 describe('MersenneTwister19937', () => {
-  describe('genrandInt32()', () => {
+  describe('nextU32()', () => {
     it('should be able to return 0', () => {
-      const twister = newTwister(257678572);
+      const twister = new MersenneTwister19937(257678572);
 
       // There is no single value seed that can produce 0 in the first call
       for (let i = 0; i < 5; i++) {
-        twister.genrandInt32();
+        twister.nextU32();
       }
 
-      const actual = twister.genrandInt32();
+      const actual = twister.nextU32();
       expect(actual).toBe(0);
     });
 
     it('should be able to return 2^32-1', () => {
-      const twister = newTwister(2855577693);
-      const actual = twister.genrandInt32();
+      const twister = new MersenneTwister19937(2855577693);
+      const actual = twister.nextU32();
       expect(actual).toBe(2 ** 32 - 1);
     });
   });
 
-  describe('genrandReal2()', () => {
+  describe('nextF32()', () => {
     it('should be able to return 0', () => {
-      const twister = newTwister();
+      const twister = new MersenneTwister19937();
       // shortcut to return minimal value
       // the test above shows that it is possible to return 0
-      twister.genrandInt32 = () => 0;
-      const actual = twister.genrandReal2();
+      twister.nextU32 = () => 0;
+      const actual = twister.nextF32();
       expect(actual).toBe(0);
     });
 
     it('should be able to return almost 1', () => {
-      const twister = newTwister();
+      const twister = new MersenneTwister19937();
       // shortcut to return maximal value
       // the test above shows that it is possible to return 2^32-1
-      twister.genrandInt32 = () => 2 ** 32 - 1;
-      const actual = twister.genrandReal2();
+      twister.nextU32 = () => 2 ** 32 - 1;
+      const actual = twister.nextF32();
       expect(actual).toBe(TWISTER_32CO_MAX_VALUE);
     });
   });
 
-  describe('genrandRes53()', () => {
+  describe('nextF53()', () => {
     it('should be able to return 0', () => {
-      const twister = newTwister();
+      const twister = new MersenneTwister19937();
       // shortcut to return minimal value
       // the test above shows that it is possible to return 0
-      twister.genrandInt32 = () => 0;
-      const actual = twister.genrandRes53();
+      twister.nextU32 = () => 0;
+      const actual = twister.nextF53();
       expect(actual).toBe(0);
     });
 
     it('should be able to return almost 1', () => {
-      const twister = newTwister();
+      const twister = new MersenneTwister19937();
       // shortcut to return maximal value
       // the test above shows that it is possible to return 2^32-1
-      twister.genrandInt32 = () => 2 ** 32 - 1;
-      const actual = twister.genrandRes53();
+      twister.nextU32 = () => 2 ** 32 - 1;
+      const actual = twister.nextF53();
       expect(actual).toBe(TWISTER_53CO_MAX_VALUE);
     });
   });

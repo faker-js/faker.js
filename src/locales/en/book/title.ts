@@ -110,7 +110,7 @@ export default [
   'Nightmare Abbey',
   'Nineteen Eighty Four',
   'Nostromo',
-  'Notes from the Underground ',
+  'Notes from the Underground',
   'Of Mice and Men',
   'Oliver Twist',
   'On the Duty of Civil Disobedience',
