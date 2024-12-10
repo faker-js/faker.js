@@ -126,6 +126,8 @@ describe('location', () => {
 
     t.it('timeZone');
 
+    t.it('language');
+
     t.describeEach(
       'direction',
       'cardinalDirection',
@@ -413,6 +415,13 @@ describe('location', () => {
         it('should return a random timezone', () => {
           const actual = faker.location.timeZone();
           expect(faker.definitions.location.time_zone).toContain(actual);
+        });
+      });
+
+      describe('language()', () => {
+        it('should return a random language', () => {
+          const actual = faker.location.language();
+          expect(faker.definitions.location.language).toContain(actual);
         });
       });
     }
