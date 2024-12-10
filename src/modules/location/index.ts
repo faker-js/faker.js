@@ -628,4 +628,20 @@ export class LocationModule extends ModuleBase {
       this.faker.definitions.location.time_zone
     );
   }
+
+  /**
+   * Returns a random Spoken Language.
+   *
+   * @see [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+   *
+   * @example
+   * faker.location.language() // 'English'
+   *
+   * @since 9.3.0
+   */
+  language(): string {
+    return this.faker.helpers.arrayElement(
+      this.faker.definitions.location.language
+    );
+  }
 }
