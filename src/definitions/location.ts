@@ -147,4 +147,9 @@ export type LocationDefinition = LocaleEntry<{
    * @see [IANA Time Zone Database](https://www.iana.org/time-zones)
    */
   time_zone: string[];
+
+  /**
+   * A list of languages.
+   */
+  language: string[];
 }>;
