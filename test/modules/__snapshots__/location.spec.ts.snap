@@ -34,7 +34,7 @@ exports[`location > 42 > direction > with abbreviated option 1`] = `"S"`;
 
 exports[`location > 42 > language 1`] = `
 {
-  "alpha2": "TR",
+  "alpha2": "tr",
   "alpha3": "TUR",
   "name": "Turkish",
 }
@@ -180,7 +180,7 @@ exports[`location > 1211 > direction > with abbreviated option 1`] = `"SW"`;
 
 exports[`location > 1211 > language 1`] = `
 {
-  "alpha2": "MS",
+  "alpha2": "ms",
   "alpha3": "MSA",
   "name": "Malay",
 }
@@ -326,7 +326,7 @@ exports[`location > 1337 > direction > with abbreviated option 1`] = `"S"`;
 
 exports[`location > 1337 > language 1`] = `
 {
-  "alpha2": "BN",
+  "alpha2": "bn",
   "alpha3": "BEN",
   "name": "Bengali",
 }
