@@ -632,10 +632,12 @@ export class LocationModule extends ModuleBase {
   /**
    * Returns a random Spoken Language.
    *
-   * @see [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+   * @see [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+   * @see [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)
+   * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
    *
    * @example
-   * faker.location.language() // 'English'
+   * faker.location.language() // { alpha2: 'EN', alpha3: 'ENG', name: 'English' }
    *
    * @since 9.3.0
    */
