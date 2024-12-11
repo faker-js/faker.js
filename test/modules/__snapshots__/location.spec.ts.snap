@@ -32,7 +32,13 @@ exports[`location > 42 > direction > noArgs 1`] = `"South"`;
 
 exports[`location > 42 > direction > with abbreviated option 1`] = `"S"`;
 
-exports[`location > 42 > language 1`] = `"Inupiaq"`;
+exports[`location > 42 > language 1`] = `
+{
+  "alpha2": "TR",
+  "alpha3": "TUR",
+  "name": "Turkish",
+}
+`;
 
 exports[`location > 42 > latitude > noArgs 1`] = `-22.5828`;
 
@@ -172,7 +178,13 @@ exports[`location > 1211 > direction > noArgs 1`] = `"Southwest"`;
 
 exports[`location > 1211 > direction > with abbreviated option 1`] = `"SW"`;
 
-exports[`location > 1211 > language 1`] = `"Uighur"`;
+exports[`location > 1211 > language 1`] = `
+{
+  "alpha2": "MS",
+  "alpha3": "MSA",
+  "name": "Malay",
+}
+`;
 
 exports[`location > 1211 > latitude > noArgs 1`] = `77.1337`;
 
@@ -312,7 +324,13 @@ exports[`location > 1337 > direction > noArgs 1`] = `"South"`;
 
 exports[`location > 1337 > direction > with abbreviated option 1`] = `"S"`;
 
-exports[`location > 1337 > language 1`] = `"French"`;
+exports[`location > 1337 > language 1`] = `
+{
+  "alpha2": "BN",
+  "alpha3": "BEN",
+  "name": "Bengali",
+}
+`;
 
 exports[`location > 1337 > latitude > noArgs 1`] = `-42.8356`;
 
