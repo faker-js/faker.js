@@ -876,14 +876,14 @@ export class InternetModule extends ModuleBase {
   /**
    * Generates a random mac address.
    *
-   * @param sep The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
+   * @param separator The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
    *
    * @example
    * faker.internet.mac() // '32:8e:2e:09:c6:05'
    *
    * @since 3.0.0
    */
-  mac(sep?: string): string;
+  mac(separator?: string): string;
   /**
    * Generates a random mac address.
    *
