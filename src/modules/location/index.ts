@@ -659,7 +659,7 @@ export class LocationModule extends ModuleBase {
    * @example
    * faker.location.language() // { alpha2: 'en', alpha3: 'eng', name: 'English' }
    *
-   * @since 9.4.0
+   * @since v9.4.0 (or later)
    */
   language(): Language {
     return this.faker.helpers.arrayElement(
