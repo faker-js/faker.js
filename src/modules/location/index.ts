@@ -2,6 +2,26 @@ import { FakerError } from '../../errors/faker-error';
 import { ModuleBase } from '../../internal/module-base';
 
 /**
+ * Represents a language with its full name, 2 character ISO 639-1 code, and 3 character ISO 639-2 code.
+ */
+export interface Language {
+  /**
+   * The full name for the Language (e.g. `English`).
+   */
+  name: string;
+
+  /**
+   * The 2 character ISO 639-1 code.
+   */
+  alpha2: string;
+
+  /**
+   * The 3 character ISO 639-2 code.
+   */
+  alpha3: string;
+}
+
+/**
  * Module to generate addresses and locations. Prior to Faker 8.0.0, this module was known as `faker.address`.
  *
  * ### Overview
@@ -641,7 +661,7 @@ export class LocationModule extends ModuleBase {
    *
    * @since 9.4.0
    */
-  language(): { alpha2: string; alpha3: string; name: string } {
+  language(): Language {
     return this.faker.helpers.arrayElement(
       this.faker.definitions.location.language
     );

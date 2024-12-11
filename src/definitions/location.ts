@@ -1,3 +1,4 @@
+import type { Language } from '../modules/location';
 import type { LocaleEntry } from './definitions';
 
 /**
@@ -156,20 +157,5 @@ export type LocationDefinition = LocaleEntry<{
    * @see [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)
    * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
    */
-  language: Array<{
-    /**
-     * Name of the language.
-     */
-    name: string;
-
-    /**
-     * ISO 639-1 code of the language.
-     */
-    alpha2: string;
-
-    /**
-     * ISO 639-2 code of the language.
-     */
-    alpha3: string;
-  }>;
+  language: Language[];
 }>;
