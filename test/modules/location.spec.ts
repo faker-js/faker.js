@@ -421,6 +421,10 @@ describe('location', () => {
       describe('language()', () => {
         it('should return a random language', () => {
           const actual = faker.location.language();
+          expect(actual.name).toBeTruthy();
+          expect(actual.alpha2).toBeTruthy();
+          expect(actual.alpha3).toBeTruthy();
+
           expect(faker.definitions.location.language).toContain(actual);
         });
       });
