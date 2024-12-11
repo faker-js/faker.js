@@ -641,7 +641,7 @@ export class LocationModule extends ModuleBase {
    *
    * @since 9.3.0
    */
-  language(): string {
+  language(): { alpha2: string; alpha3: string; name: string } {
     return this.faker.helpers.arrayElement(
       this.faker.definitions.location.language
     );
