@@ -150,7 +150,7 @@ export type LocationDefinition = LocaleEntry<{
   time_zone: string[];
 
   /**
-   * A list of languages.
+   * A list of spoken languages.
    * Each language has a name, an ISO 639-1 code, and an ISO 639-2 code.
    *
    * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)

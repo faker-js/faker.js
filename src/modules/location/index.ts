@@ -6,7 +6,7 @@ import { ModuleBase } from '../../internal/module-base';
  */
 export interface Language {
   /**
-   * The full name for the Language (e.g. `English`).
+   * The full name for the language (e.g. `English`).
    */
   name: string;
 
@@ -650,7 +650,7 @@ export class LocationModule extends ModuleBase {
   }
 
   /**
-   * Returns a random Spoken Language.
+   * Returns a random spoken language.
    *
    * @see [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
    * @see [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)
