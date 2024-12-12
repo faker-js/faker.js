@@ -11,7 +11,7 @@ export interface Language {
   name: string;
 
   /**
-   * The 2 character ISO 639-1 code.
+   * The 2 character [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) code.
    */
   alpha2: string;
 
