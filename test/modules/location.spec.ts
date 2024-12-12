@@ -423,7 +423,9 @@ describe('location', () => {
           const actual = faker.location.language();
           expect(actual.name).toBeTruthy();
           expect(actual.alpha2).toBeTruthy();
+          expect(actual.alpha2).toHaveLength(2);
           expect(actual.alpha3).toBeTruthy();
+          expect(actual.alpha3).toHaveLength(3);
 
           expect(faker.definitions.location.language).toContain(actual);
         });
