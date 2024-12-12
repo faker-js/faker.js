@@ -658,6 +658,9 @@ export class LocationModule extends ModuleBase {
    *
    * @example
    * faker.location.language() // { alpha2: 'en', alpha3: 'eng', name: 'English' }
+   * faker.location.language().name // English
+   * faker.location.language().alpha2 // en
+   * faker.location.language().alpha3 // eng
    *
    * @since 9.4.0
    */
