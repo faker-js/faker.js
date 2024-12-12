@@ -16,7 +16,7 @@ export interface Language {
   alpha2: string;
 
   /**
-   * The 3 character ISO 639-2 code.
+   * The 3 character [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2) code.
    */
   alpha3: string;
 }
