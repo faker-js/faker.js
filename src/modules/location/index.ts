@@ -657,10 +657,10 @@ export class LocationModule extends ModuleBase {
    * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
    *
    * @example
-   * faker.location.language() // { alpha2: 'en', alpha3: 'eng', name: 'English' }
-   * faker.location.language().name // English
-   * faker.location.language().alpha2 // en
-   * faker.location.language().alpha3 // eng
+   * faker.location.language() // { alpha2: 'de', alpha3: 'deu', name: 'German' }
+   * faker.location.language().name // German
+   * faker.location.language().alpha2 // de
+   * faker.location.language().alpha3 // deu
    *
    * @since 9.4.0
    */
