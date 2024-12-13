@@ -230,7 +230,7 @@ export default [
   'Tuvalu',
   'Uganda',
   'Ukrajina',
-  'Ujedinjeni Arapski Emirati ',
+  'Ujedinjeni Arapski Emirati',
   'Ujedinjeno Kraljevstvo',
   'Sjedinjenje Američke Države',
   'Urugvaj',

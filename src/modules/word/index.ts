@@ -67,10 +67,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.adjective,
       })
     );
@@ -137,10 +140,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.adverb,
       })
     );
@@ -207,10 +213,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.conjunction,
       })
     );
@@ -277,10 +286,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.interjection,
       })
     );
@@ -347,10 +359,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.noun,
       })
     );
@@ -417,10 +432,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.preposition,
       })
     );
@@ -487,10 +505,13 @@ export class WordModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.word.verb,
       })
     );

@@ -40,7 +40,7 @@ export default [
   'à bas de',
   'à cause de',
   'à côté de',
-  'à défaut de ',
+  'à défaut de',
   'afin de',
   'à force de',
   'à la merci',

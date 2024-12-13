@@ -56,7 +56,7 @@ export default [
   'Baicha',
   'Baise',
   'Baixadeiro',
-  'Baixo-Amazona ',
+  'Baixo-Amazona',
   'Bajau',
   'Baladi',
   'Bale',
