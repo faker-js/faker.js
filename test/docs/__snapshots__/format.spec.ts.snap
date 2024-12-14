@@ -8,7 +8,7 @@ exports[`formatResult > should format bigint 1`] = `"135464154865415n"`;
 
 exports[`formatResult > should format number 1`] = `"123"`;
 
-exports[`formatResult > should format object 1`] = `"{ 'a': 1, 'b': "2" }"`;
+exports[`formatResult > should format object 1`] = `"{ 'a': 1, 'b': '2' }"`;
 
 exports[`formatResult > should format string 1`] = `"'a simple string'"`;
 
