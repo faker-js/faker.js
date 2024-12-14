@@ -153,6 +153,7 @@ function seeAlsoToUrl(see: string): string {
 
     <h3 class="inline">Examples</h3>
     <RefreshButton
+      class="refresh"
       v-if="refresh != null"
       style="margin-left: 0.5em"
       :refresh="onRefresh"
