@@ -1,3 +1,4 @@
+import type { Language } from '../modules/location';
 import type { LocaleEntry } from './definitions';
 
 /**
@@ -147,4 +148,11 @@ export type LocationDefinition = LocaleEntry<{
    * @see [IANA Time Zone Database](https://www.iana.org/time-zones)
    */
   time_zone: string[];
+
+  /**
+   * A list of spoken languages.
+   *
+   * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+   */
+  language: Language[];
 }>;
