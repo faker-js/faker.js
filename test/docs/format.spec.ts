@@ -61,7 +61,7 @@ describe('formatResult', () => {
   });
 
   it('should format Date', () => {
-    const actual = formatResult(new Date());
+    const actual = formatResult(new Date(Date.UTC(2025, 0, 1)));
 
     expect(actual).toBeTypeOf('string');
     expect(actual).toMatchSnapshot();
