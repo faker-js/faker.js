@@ -7,8 +7,8 @@ export function formatResult(result: unknown): string {
           .replaceAll('\\r', '')
           .replaceAll('<', '&lt;')
           .replaceAll(
-            /"([^'\n]*?)"$/gm,
-            (_, p1) => `'${p1.replace(/\\"/g, '"')}'`
+            /(^ *|: )"([^'\n]*?)"(,?$|: )/gm,
+            (_, p1, p2, p3) => `${p1}'${p2.replace(/\\"/g, '"')}'${p3}`
           )
           .replaceAll(/\n */g, ' ');
 }
