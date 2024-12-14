@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import { sourceBaseUrl } from '../../../api/source-base-url';
 import { slugify } from '../../shared/utils/slugify';
+import { formatResult } from './format';
 import type { ApiDocsMethod } from './method';
 import MethodParameters from './method-parameters.vue';
 import RefreshButton from './refresh-button.vue';
@@ -84,10 +85,7 @@ async function onRefresh() {
   if (refresh != null && codeBlock.value != null) {
     codeLines ??= initRefresh();
 
-    const [results, { formatResult }] = await Promise.all([
-      refresh(),
-      import('./format.ts'),
-    ]);
+    const results = await refresh();
 
     // Remove old comments
     codeBlock.value

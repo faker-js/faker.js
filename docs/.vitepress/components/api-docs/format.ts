@@ -1,22 +1,14 @@
-import type { Options } from 'prettier';
-import pluginBabel from 'prettier/plugins/babel';
-import pluginEstree from 'prettier/plugins/estree';
-import { format } from 'prettier/standalone';
-
-export async function formatResult(result: unknown): Promise<string> {
+export function formatResult(result: unknown): string {
   return result === undefined
     ? 'undefined'
-    : (
-        await format(
-          JSON.stringify(result).replaceAll('\\r', '').replaceAll('<', '&lt;'),
-          options
-        )
-      ).replaceAll(/\n */g, ' ');
+    : typeof result === 'bigint'
+      ? `${result}n`
+      : JSON.stringify(result, undefined, 2)
+          .replaceAll('\\r', '')
+          .replaceAll('<', '&lt;')
+          .replaceAll(
+            /"([^'\n]*?)"$/gm,
+            (_, p1) => `'${p1.replace(/\\"/g, '"')}'`
+          )
+          .replaceAll(/\n */g, ' ');
 }
-
-const options: Options = {
-  singleQuote: true,
-  trailingComma: 'none',
-  parser: 'json5',
-  plugins: [pluginBabel, pluginEstree],
-};
