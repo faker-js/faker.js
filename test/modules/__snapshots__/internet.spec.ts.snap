@@ -110,7 +110,7 @@ exports[`internet > 42 > url > with slash appended 1`] = `"https://hospitable-un
 
 exports[`internet > 42 > url > without slash appended and with http protocol 1`] = `"http://hospitable-unit.net"`;
 
-exports[`internet > 42 > userAgent 1`] = `"Mozilla/5.0 (X11; Linux i686; rv:13.5) Gecko/20100101 Firefox/13.5.1"`;
+exports[`internet > 42 > userAgent 1`] = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/118.0"`;
 
 exports[`internet > 42 > userName > noArgs 1`] = `"Garnet.Reynolds-Miller15"`;
 
@@ -254,7 +254,7 @@ exports[`internet > 1211 > url > with slash appended 1`] = `"https://velvety-tar
 
 exports[`internet > 1211 > url > without slash appended and with http protocol 1`] = `"http://velvety-tarragon.biz"`;
 
-exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko"`;
+exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/605.67 (KHTML, like Gecko) Chrome/107.7.3.6 Mobile Safari/592.76"`;
 
 exports[`internet > 1211 > userName > noArgs 1`] = `"Tito67"`;
 
@@ -398,7 +398,7 @@ exports[`internet > 1337 > url > with slash appended 1`] = `"https://fatal-co-pr
 
 exports[`internet > 1337 > url > without slash appended and with http protocol 1`] = `"http://fatal-co-producer.biz"`;
 
-exports[`internet > 1337 > userAgent 1`] = `"Mozilla/5.0 (Windows NT 5.3; WOW64; rv:8.4) Gecko/20100101 Firefox/8.4.3"`;
+exports[`internet > 1337 > userAgent 1`] = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/547.27.45 (KHTML, like Gecko) Version/16.1 Safari/558.51.26"`;
 
 exports[`internet > 1337 > userName > noArgs 1`] = `"Devyn.Gottlieb"`;
 
