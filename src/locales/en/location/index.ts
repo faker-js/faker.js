@@ -12,6 +12,7 @@ import continent from './continent';
 import country from './country';
 import county from './county';
 import direction from './direction';
+import language from './language';
 import postcode from './postcode';
 import secondary_address from './secondary_address';
 import state from './state';
@@ -31,6 +32,7 @@ const location: LocationDefinition = {
   country,
   county,
   direction,
+  language,
   postcode,
   secondary_address,
   state,
