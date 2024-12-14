@@ -1,5 +1,5 @@
 describe('example-refresh', () => {
-  it('should refresh the page', () => {
+  it('should refresh the example', () => {
     // given
     cy.visit('/api/faker.html#constructor');
     cy.get('.refresh').first().as('refresh');
