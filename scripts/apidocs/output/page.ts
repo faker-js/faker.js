@@ -115,20 +115,11 @@ async function writePageData(page: RawApiDocsPage): Promise<void> {
     )
   );
 
-  const content = `export default ${JSON.stringify(
-    pageData,
-    (_, value: unknown) => {
-      if (typeof value === 'function') {
-        return value.toString(); // Insert placeholder
-      }
-
-      return value;
-    },
-    2
-  )}`.replaceAll(
-    /"refresh-([^"-]+)-placeholder"/g,
-    (_, name) => refreshFunctions[name]
-  );
+  const content =
+    `export default ${JSON.stringify(pageData, undefined, 2)}`.replaceAll(
+      /"refresh-([^"-]+)-placeholder"/g,
+      (_, name) => refreshFunctions[name]
+    );
 
   writeFileSync(
     resolve(FILE_PATH_API_DOCS, `${camelTitle}.ts`),
@@ -158,7 +149,9 @@ async function toMethodData(method: RawApiDocsMethod): Promise<ApiDocsMethod> {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   const refresh = async () => ['refresh', name, 'placeholder'];
-  refresh.toString = () => `refresh-${name}-placeholder`;
+  // This is a placeholder to be replaced by the actual refresh function code
+  // If we put the actual code here, it would be a string and not executable
+  refresh.toJSON = () => `refresh-${name}-placeholder`;
 
   /* Target order, omitted to improve diff to old files
   return {
