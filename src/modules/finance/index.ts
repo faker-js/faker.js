@@ -969,18 +969,13 @@ export class FinanceModule extends ModuleBase {
    *
    * @example
    * faker.finance.transactionDescription()
-   * // 'invoice transaction at Kilback - Durgan using card ending with ************4316 for UAH 783.82 in account ***16168663'
+   * // 'payment transaction at Emard LLC using card ending with ****9187 for HNL 506.57 in account ***2584.'
    *
    * @since 5.1.0
    */
   transactionDescription(): string {
-    const amount = this.amount();
-    const company = this.faker.company.name();
-    const transactionType = this.transactionType();
-    const account = this.accountNumber();
-    const card = this.creditCardNumber().replaceAll(/.(?=.{4})/g, '*');
-    const currency = this.currencyCode();
-
-    return `${transactionType} transaction at ${company} using card ending with ${card} for ${currency} ${amount} in account ***${account}`;
+    return this.faker.helpers.fake(
+      this.faker.definitions.finance.transaction_description_pattern
+    );
   }
 }

@@ -184,18 +184,18 @@ export function legacyReplaceSymbolWithNumber(
   string: string = '',
   symbol: string = '#'
 ): string {
-  let str = '';
+  let result = '';
   for (let i = 0; i < string.length; i++) {
     if (string.charAt(i) === symbol) {
-      str += faker.number.int(9);
+      result += faker.number.int(9);
     } else if (string.charAt(i) === '!') {
-      str += faker.number.int({ min: 2, max: 9 });
+      result += faker.number.int({ min: 2, max: 9 });
     } else {
-      str += string.charAt(i);
+      result += string.charAt(i);
     }
   }
 
-  return str;
+  return result;
 }
 
 /**
@@ -270,23 +270,23 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       'Y',
       'Z',
     ];
-    let str = '';
+    let result = '';
 
     for (let i = 0; i < string.length; i++) {
       if (string.charAt(i) === '#') {
-        str += this.faker.number.int(9);
+        result += this.faker.number.int(9);
       } else if (string.charAt(i) === '?') {
-        str += this.arrayElement(alpha);
+        result += this.arrayElement(alpha);
       } else if (string.charAt(i) === '*') {
-        str += this.faker.datatype.boolean()
+        result += this.faker.datatype.boolean()
           ? this.arrayElement(alpha)
           : this.faker.number.int(9);
       } else {
-        str += string.charAt(i);
+        result += string.charAt(i);
       }
     }
 
-    return str;
+    return result;
   }
 
   /**
@@ -700,7 +700,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   /**
    * Replaces the `{{placeholder}}` patterns in the given string mustache style.
    *
-   * @param str The template string to parse.
+   * @param text The template string to parse.
    * @param data The data used to populate the placeholders.
    * This is a record where the key is the template placeholder,
    * whereas the value is either a string or a function suitable for `String.replace()`.
@@ -714,10 +714,10 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @since 2.0.1
    */
   mustache(
-    str: string | undefined,
+    text: string | undefined,
     data: Record<string, string | Parameters<string['replace']>[1]>
   ): string {
-    if (str == null) {
+    if (text == null) {
       return '';
     }
 
@@ -727,13 +727,13 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       if (typeof value === 'string') {
         // escape $, source: https://stackoverflow.com/a/6969486/6897682
         value = value.replaceAll('$', '$$$$');
-        str = str.replace(re, value);
+        text = text.replace(re, value);
       } else {
-        str = str.replace(re, value);
+        text = text.replace(re, value);
       }
     }
 
-    return str;
+    return text;
   }
 
   /**
@@ -897,7 +897,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       );
     }
 
-    const total = array.reduce((acc, { weight }) => acc + weight, 0);
+    const total = array.reduce((sum, { weight }) => sum + weight, 0);
     const random = this.faker.number.float({
       min: 0,
       max: total,
@@ -1276,10 +1276,10 @@ export class HelpersModule extends SimpleHelpersModule {
 
     // Replace the found tag with the returned fake value
     // We cannot use string.replace here because the result might contain evaluated characters
-    const res =
+    const patched =
       pattern.substring(0, start) + stringified + pattern.substring(end + 2);
 
     // return the response recursively until we are done finding all tags
-    return this.fake(res);
+    return this.fake(patched);
   }
 }

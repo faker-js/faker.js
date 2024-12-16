@@ -2,6 +2,26 @@ import { FakerError } from '../../errors/faker-error';
 import { ModuleBase } from '../../internal/module-base';
 
 /**
+ * Represents a language with its full name, 2 character ISO 639-1 code, and 3 character ISO 639-2 code.
+ */
+export interface Language {
+  /**
+   * The full name for the language (e.g. `English`).
+   */
+  name: string;
+
+  /**
+   * The 2 character [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) code.
+   */
+  alpha2: string;
+
+  /**
+   * The 3 character [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2) code.
+   */
+  alpha3: string;
+}
+
+/**
  * Module to generate addresses and locations. Prior to Faker 8.0.0, this module was known as `faker.address`.
  *
  * ### Overview
@@ -626,6 +646,27 @@ export class LocationModule extends ModuleBase {
   timeZone(): string {
     return this.faker.helpers.arrayElement(
       this.faker.definitions.location.time_zone
+    );
+  }
+
+  /**
+   * Returns a random spoken language.
+   *
+   * @see [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+   * @see [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)
+   * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+   *
+   * @example
+   * faker.location.language() // { alpha2: 'de', alpha3: 'deu', name: 'German' }
+   * faker.location.language().name // German
+   * faker.location.language().alpha2 // de
+   * faker.location.language().alpha3 // deu
+   *
+   * @since 9.4.0
+   */
+  language(): Language {
+    return this.faker.helpers.arrayElement(
+      this.faker.definitions.location.language
     );
   }
 }
