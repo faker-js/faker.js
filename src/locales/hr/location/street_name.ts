@@ -346,7 +346,6 @@ export default [
   'Vladimira Vidrića',
   'Vlašićka',
   'Voćarska',
-  'Voćarska ',
   'Voćinska',
   'Vodenička',
   'Vranska',
