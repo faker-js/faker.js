@@ -200,7 +200,9 @@ export function extractSummaryDefault(description: string): string | undefined {
   return defaultCommentRegex.exec(description)?.[1];
 }
 
-async function toRefreshFunction(method: RawApiDocsMethod): Promise<string> {
+export async function toRefreshFunction(
+  method: RawApiDocsMethod
+): Promise<string> {
   const { name, signatures } = method;
   const signatureData = required(signatures.at(-1), 'method signature');
   const { examples } = signatureData;
@@ -216,7 +218,7 @@ async function toRefreshFunction(method: RawApiDocsMethod): Promise<string> {
     .replaceAll(/^import .*$/gm, '') // Remove imports
     .replaceAll(
       // record results of faker calls
-      /^(\w*faker\w*\..+(?:(?:.|\n..)*\n[^ ])?\));?$/gim,
+      /^(\w*faker\w*\..+(?:(?:.|\n..)*\n[^ ])?\)(?:\.\w+)?);?$/gim,
       `try { result.push($1); } catch (error: unknown) { result.push(error instanceof Error ? error.name : 'Error'); }\n`
     );
 

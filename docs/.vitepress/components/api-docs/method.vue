@@ -46,9 +46,15 @@ function initRefresh(): Element[] {
     // Skip to end of the invocation (if multiline)
     while (
       domLines[lineIndex] != null &&
-      !/^([^ ].*)?\);? ?(\/\/|$)/.test(domLines[lineIndex]?.textContent ?? '')
+      !/^([^ ].*)?\)(\.\w+)?;? ?(\/\/|$)/.test(
+        domLines[lineIndex]?.textContent ?? ''
+      )
     ) {
       lineIndex++;
+    }
+
+    if (lineIndex >= domLines.length) {
+      break;
     }
 
     const domLine = domLines[lineIndex];
