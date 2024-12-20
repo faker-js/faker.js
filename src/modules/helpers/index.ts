@@ -771,7 +771,6 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   }
 
   /**
-   * Returns a random key from given object.
    * Returns a random key from the given object.
    *
    * @template T The type of the object to select from.
