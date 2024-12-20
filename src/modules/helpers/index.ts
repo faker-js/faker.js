@@ -818,7 +818,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // [ 'Snail', 0.03 ]
+   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // ['Snail', 0.03]
    *
    * @since 8.0.0
    */
