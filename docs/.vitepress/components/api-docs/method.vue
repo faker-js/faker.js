@@ -25,7 +25,7 @@ const {
 
 const code = useTemplateRef('code');
 const codeBlock = computed(() => code.value?.querySelector('div pre code'));
-let codeLines: Element[] | undefined;
+const codeLines: Ref<Element[] | undefined> = ref();
 
 function initRefresh(): Element[] {
   if (codeBlock.value == null) {
@@ -90,7 +90,7 @@ function initRefresh(): Element[] {
 
 async function onRefresh(): Promise<void> {
   if (refresh != null && codeBlock.value != null) {
-    codeLines ??= initRefresh();
+    codeLines.value ??= initRefresh();
 
     const results = await refresh();
 
@@ -102,7 +102,7 @@ async function onRefresh(): Promise<void> {
     // Insert new comments
     for (let i = 0; i < results.length; i++) {
       const result = results[i];
-      const domLine = codeLines[i];
+      const domLine = codeLines.value[i];
       const prettyResult = formatResult(result);
       const resultLines = prettyResult.split('\\n');
 
