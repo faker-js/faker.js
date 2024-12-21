@@ -34,7 +34,7 @@ exports[`finance > 42 > creditCardCVV 1`] = `"397"`;
 
 exports[`finance > 42 > creditCardIssuer 1`] = `"discover"`;
 
-exports[`finance > 42 > creditCardNumber > noArgs 1`] = `"6575-6211-0867-0982-1139"`;
+exports[`finance > 42 > creditCardNumber > noArgs 1`] = `"6575-1108-6709-8211"`;
 
 exports[`finance > 42 > creditCardNumber > with issuer 1`] = `"4975110867099"`;
 

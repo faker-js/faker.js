@@ -771,7 +771,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   }
 
   /**
-   * Returns a random key from given object.
+   * Returns a random key from the given object.
    *
    * @template T The type of the object to select from.
    *
@@ -780,7 +780,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectKey({ myProperty: 'myValue' }) // 'myProperty'
+   * faker.helpers.objectKey({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // 'Falcon'
    *
    * @since 6.3.0
    */
@@ -790,7 +790,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   }
 
   /**
-   * Returns a random value from given object.
+   * Returns a random value from the given object.
    *
    * @template T The type of object to select from.
    *
@@ -799,7 +799,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectValue({ myProperty: 'myValue' }) // 'myValue'
+   * faker.helpers.objectValue({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // 390
    *
    * @since 6.3.0
    */
@@ -818,7 +818,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectEntry({ prop1: 'value1', prop2: 'value2' }) // ['prop1', 'value1']
+   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // ['Snail', 0.03]
    *
    * @since 8.0.0
    */
