@@ -87,7 +87,7 @@ function initRefresh(): Element[] {
   return result;
 }
 
-async function onRefresh() {
+async function onRefresh(): Promise<void> {
   if (refresh != null && codeBlock.value != null) {
     codeLines ??= initRefresh();
 
@@ -102,7 +102,7 @@ async function onRefresh() {
     for (let i = 0; i < results.length; i++) {
       const result = results[i];
       const domLine = codeLines[i];
-      const prettyResult = await formatResult(result);
+      const prettyResult = formatResult(result);
       const resultLines = prettyResult.split('\\n');
 
       if (resultLines.length === 1) {
