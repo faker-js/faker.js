@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
+import { computed, ref, useTemplateRef } from 'vue';
 import { sourceBaseUrl } from '../../../api/source-base-url';
 import { slugify } from '../../shared/utils/slugify';
 import { formatResult } from './format';
@@ -22,7 +23,7 @@ const {
   sourcePath,
 } = method;
 
-const code = ref<HTMLDivElement | null>(null);
+const code = useTemplateRef('code');
 const codeBlock = computed(() => code.value?.querySelector('div pre code'));
 let codeLines: Element[] | undefined;
 
