@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ComputedRef, Ref } from 'vue';
 import { computed, ref, useTemplateRef } from 'vue';
 import { sourceBaseUrl } from '../../../api/source-base-url';
 import { slugify } from '../../shared/utils/slugify';
@@ -25,7 +24,7 @@ const {
 
 const code = useTemplateRef('code');
 const codeBlock = computed(() => code.value?.querySelector('div pre code'));
-const codeLines: Ref<Element[] | undefined> = ref();
+const codeLines = ref<Element[]>();
 
 function initRefresh(): Element[] {
   if (codeBlock.value == null) {
