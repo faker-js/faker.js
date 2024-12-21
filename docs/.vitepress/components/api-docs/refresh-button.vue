@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+// This should probably use emit instead, but emit cannot be awaited
 const { refresh } = defineProps<{ refresh: () => Promise<void> }>();
 
 const spinning = ref(false);
