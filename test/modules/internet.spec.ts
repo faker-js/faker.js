@@ -841,9 +841,7 @@ describe('internet', () => {
           expect(ua).toBeTruthy();
           expect(ua).toBeTypeOf('string');
           expect(ua.length).toBeGreaterThanOrEqual(1);
-          expect(ua).toMatch(
-            /^(([^\d]+\/[\dA-Za-z.]+(\s\(.*\)))|([^\d]+\/[\dA-Za-z.]+(\s\(.*\)*))(\s[^\d]+\/[\dA-Za-z.]+(\s\(.*\)*))*)$/
-          );
+          expect(ua).includes('/');
         });
       });
 

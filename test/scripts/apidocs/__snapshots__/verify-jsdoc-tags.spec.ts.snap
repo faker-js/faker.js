@@ -288,6 +288,7 @@ exports[`check docs completeness > all modules and methods are present 1`] = `
       "countryCode",
       "county",
       "direction",
+      "language",
       "latitude",
       "longitude",
       "nearbyGPSCoordinate",

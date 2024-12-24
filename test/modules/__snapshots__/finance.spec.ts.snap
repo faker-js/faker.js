@@ -34,7 +34,7 @@ exports[`finance > 42 > creditCardCVV 1`] = `"397"`;
 
 exports[`finance > 42 > creditCardIssuer 1`] = `"discover"`;
 
-exports[`finance > 42 > creditCardNumber > noArgs 1`] = `"6575-6211-0867-0982-1139"`;
+exports[`finance > 42 > creditCardNumber > noArgs 1`] = `"6575-1108-6709-8211"`;
 
 exports[`finance > 42 > creditCardNumber > with issuer 1`] = `"4975110867099"`;
 
@@ -84,7 +84,7 @@ exports[`finance > 42 > pin > with length option 1`] = `"3975110867"`;
 
 exports[`finance > 42 > routingNumber 1`] = `"397511082"`;
 
-exports[`finance > 42 > transactionDescription 1`] = `"withdrawal transaction at Crist, Streich and Aufderhar using card ending with ***************6103 for XOF 374.54 in account ***82113542"`;
+exports[`finance > 42 > transactionDescription 1`] = `"You made a withdrawal of SAR 598.66 at Streich - Aufderhar using card ending in ****9821 from account ***1354."`;
 
 exports[`finance > 42 > transactionType 1`] = `"invoice"`;
 
@@ -172,7 +172,7 @@ exports[`finance > 1211 > pin > with length option 1`] = `"9829667368"`;
 
 exports[`finance > 1211 > routingNumber 1`] = `"982966738"`;
 
-exports[`finance > 1211 > transactionDescription 1`] = `"withdrawal transaction at Osinski-Paucek, Powlowski and O'Reilly using card ending with ***************3230 for CLP 928.52 in account ***48825139"`;
+exports[`finance > 1211 > transactionDescription 1`] = `"withdrawal transaction at Paucek - Powlowski using card ending with ****8768 for KES 867.32 in account ***8251."`;
 
 exports[`finance > 1211 > transactionType 1`] = `"withdrawal"`;
 
@@ -260,6 +260,6 @@ exports[`finance > 1337 > pin > with length option 1`] = `"2124352971"`;
 
 exports[`finance > 1337 > routingNumber 1`] = `"212435298"`;
 
-exports[`finance > 1337 > transactionDescription 1`] = `"payment transaction at Hammes - Wolf using card ending with ***************8190 for JPY 262.02 in account ***13619477"`;
+exports[`finance > 1337 > transactionDescription 1`] = `"Payment of CAD 278.12 for invoice at Wolf - Howe, processed with card ending ****6194 linked to account ***7734."`;
 
 exports[`finance > 1337 > transactionType 1`] = `"invoice"`;

@@ -58,11 +58,11 @@ function selectDefinition<T>(
     if (generic != null) {
       return faker.helpers.weightedArrayElement([
         {
-          weight: 80,
+          weight: 3 * Math.sqrt(binary.length),
           value: binary,
         },
         {
-          weight: 20,
+          weight: Math.sqrt(generic.length),
           value: generic,
         },
       ]);

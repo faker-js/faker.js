@@ -32,15 +32,15 @@ exports[`internet > 42 > domainSuffix 1`] = `"info"`;
 
 exports[`internet > 42 > domainWord 1`] = `"hospitable-unit"`;
 
-exports[`internet > 42 > email > noArgs 1`] = `"Leroy60@yahoo.com"`;
+exports[`internet > 42 > email > noArgs 1`] = `"Larue60@yahoo.com"`;
 
 exports[`internet > 42 > email > with all options 1`] = `"Jane.Doe@fakerjs.dev"`;
 
-exports[`internet > 42 > email > with allowSpecialCharacters option 1`] = `"Leroy60@yahoo.com"`;
+exports[`internet > 42 > email > with allowSpecialCharacters option 1`] = `"Larue60@yahoo.com"`;
 
 exports[`internet > 42 > email > with firstName option 1`] = `"Jane.Miller15@yahoo.com"`;
 
-exports[`internet > 42 > email > with lastName option 1`] = `"Leroy.Doe15@yahoo.com"`;
+exports[`internet > 42 > email > with lastName option 1`] = `"Larue.Doe15@yahoo.com"`;
 
 exports[`internet > 42 > email > with provider option 1`] = `"Mohammad.Crist@fakerjs.dev"`;
 
@@ -48,15 +48,15 @@ exports[`internet > 42 > emoji > noArgs 1`] = `"🌾"`;
 
 exports[`internet > 42 > emoji > with options 1`] = `"🦔"`;
 
-exports[`internet > 42 > exampleEmail > noArgs 1`] = `"Leroy60@example.com"`;
+exports[`internet > 42 > exampleEmail > noArgs 1`] = `"Larue60@example.com"`;
 
 exports[`internet > 42 > exampleEmail > with all options 1`] = `"Jane_Doe@example.com"`;
 
-exports[`internet > 42 > exampleEmail > with allowSpecialCharacters option 1`] = `"Leroy60@example.com"`;
+exports[`internet > 42 > exampleEmail > with allowSpecialCharacters option 1`] = `"Larue60@example.com"`;
 
 exports[`internet > 42 > exampleEmail > with firstName option 1`] = `"Jane.Miller15@example.com"`;
 
-exports[`internet > 42 > exampleEmail > with lastName option 1`] = `"Leroy.Doe15@example.com"`;
+exports[`internet > 42 > exampleEmail > with lastName option 1`] = `"Larue.Doe15@example.com"`;
 
 exports[`internet > 42 > httpMethod 1`] = `"POST"`;
 
@@ -110,7 +110,7 @@ exports[`internet > 42 > url > with slash appended 1`] = `"https://hospitable-un
 
 exports[`internet > 42 > url > without slash appended and with http protocol 1`] = `"http://hospitable-unit.net"`;
 
-exports[`internet > 42 > userAgent 1`] = `"Mozilla/5.0 (X11; Linux i686; rv:13.5) Gecko/20100101 Firefox/13.5.1"`;
+exports[`internet > 42 > userAgent 1`] = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/118.0"`;
 
 exports[`internet > 42 > userName > noArgs 1`] = `"Mohammad.Crist"`;
 
@@ -254,7 +254,7 @@ exports[`internet > 1211 > url > with slash appended 1`] = `"https://velvety-tar
 
 exports[`internet > 1211 > url > without slash appended and with http protocol 1`] = `"http://velvety-tarragon.biz"`;
 
-exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko"`;
+exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/605.67 (KHTML, like Gecko) Chrome/107.7.3.6 Mobile Safari/592.76"`;
 
 exports[`internet > 1211 > userName > noArgs 1`] = `"Dana35"`;
 
@@ -398,7 +398,7 @@ exports[`internet > 1337 > url > with slash appended 1`] = `"https://fatal-co-pr
 
 exports[`internet > 1337 > url > without slash appended and with http protocol 1`] = `"http://fatal-co-producer.biz"`;
 
-exports[`internet > 1337 > userAgent 1`] = `"Mozilla/5.0 (Windows NT 5.3; WOW64; rv:8.4) Gecko/20100101 Firefox/8.4.3"`;
+exports[`internet > 1337 > userAgent 1`] = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/547.27.45 (KHTML, like Gecko) Version/16.1 Safari/558.51.26"`;
 
 exports[`internet > 1337 > userName > noArgs 1`] = `"Elsa97"`;
 
