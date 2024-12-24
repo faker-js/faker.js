@@ -6,7 +6,7 @@ exports[`location > 42 > cardinalDirection > noArgs 1`] = `"East"`;
 
 exports[`location > 42 > cardinalDirection > with abbreviated option 1`] = `"E"`;
 
-exports[`location > 42 > city 1`] = `"Fort Charlie"`;
+exports[`location > 42 > city 1`] = `"Fort Camryn"`;
 
 exports[`location > 42 > continent 1`] = `"Asia"`;
 
@@ -424,11 +424,11 @@ exports[`location > 1337 > state > with options 1`] = `"IN"`;
 
 exports[`location > 1337 > street 1`] = `"Josephine Gateway"`;
 
-exports[`location > 1337 > streetAddress > noArgs 1`] = `"22435 Brett Hills"`;
+exports[`location > 1337 > streetAddress > noArgs 1`] = `"22435 Bernardo Hills"`;
 
-exports[`location > 1337 > streetAddress > with boolean 1`] = `"22435 Brett Hills"`;
+exports[`location > 1337 > streetAddress > with boolean 1`] = `"22435 Bernardo Hills"`;
 
-exports[`location > 1337 > streetAddress > with useFullAddress options 1`] = `"22435 Brett Hills Suite 294"`;
+exports[`location > 1337 > streetAddress > with useFullAddress options 1`] = `"22435 Bernardo Hills Suite 294"`;
 
 exports[`location > 1337 > timeZone 1`] = `"America/Guadeloupe"`;
 
