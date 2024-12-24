@@ -241,8 +241,8 @@ export class ImageModule extends ModuleBase {
    * Generates a random image url provided via https://via.placeholder.com/.
    *
    * @param options Options for generating a URL for an image.
-   * @param options.width The width of the image. Defaults to a random number between 1 and 3999.
-   * @param options.height The height of the image. Defaults to a random number between 1 and 3999.
+   * @param options.width The width of the image. Defaults to a random number between 1 and 3500.
+   * @param options.height The height of the image. Defaults to a random number between 1 and 3500.
    * @param options.backgroundColor The background color of the image. Defaults to a random hex color.
    * @param options.textColor The text color of the image. Defaults to a random hex color.
    * @param options.format The format of the image. Defaults to a random format.
@@ -259,19 +259,21 @@ export class ImageModule extends ModuleBase {
    * faker.image.urlPlaceholder({ width: 128, height: 128, backgroundColor: '000000', textColor: 'FF0000', format: 'png', text: 'lorem ipsum' }) // 'https://via.placeholder.com/128x128/000000/FF0000.png?text=lorem+ipsum'
    *
    * @since 8.0.0
+   *
+   * @deprecated The service has bad uptime. Use `url()` or another method instead.
    */
   urlPlaceholder(
     options: {
       /**
        * The width of the image.
        *
-       * @default faker.number.int({ min: 1, max: 3999 })
+       * @default faker.number.int({ min: 1, max: 3500 })
        */
       width?: number;
       /**
        * The height of the image.
        *
-       * @default faker.number.int({ min: 1, max: 3999 })
+       * @default faker.number.int({ min: 1, max: 3500 })
        */
       height?: number;
       /**
@@ -300,9 +302,16 @@ export class ImageModule extends ModuleBase {
       text?: string;
     } = {}
   ): string {
+    deprecated({
+      deprecated: 'faker.image.urlPlaceholder()',
+      proposed: 'faker.image.url()',
+      since: '9.4.0',
+      until: '10.0.0',
+    });
+
     const {
-      width = this.faker.number.int({ min: 1, max: 3999 }),
-      height = this.faker.number.int({ min: 1, max: 3999 }),
+      width = this.faker.number.int({ min: 1, max: 3500 }),
+      height = this.faker.number.int({ min: 1, max: 3500 }),
       backgroundColor = this.faker.color.rgb({ format: 'hex', prefix: '' }),
       textColor = this.faker.color.rgb({ format: 'hex', prefix: '' }),
       format = this.faker.helpers.arrayElement([

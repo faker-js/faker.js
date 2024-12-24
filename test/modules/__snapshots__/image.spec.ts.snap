@@ -56,23 +56,23 @@ exports[`image > 42 > urlPicsumPhotos > with width 1`] = `"https://picsum.photos
 
 exports[`image > 42 > urlPicsumPhotos > with width and height 1`] = `"https://picsum.photos/seed/B993RBH1Y/128/128?grayscale&blur=10"`;
 
-exports[`image > 42 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/1498x3802/ad331d/df0fc4.gif?text=auctus%20cognomen%20esse"`;
+exports[`image > 42 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/1311x3328/ad331d/df0fc4.gif?text=auctus%20cognomen%20esse"`;
 
 exports[`image > 42 > urlPlaceholder > with all options 1`] = `"https://via.placeholder.com/128x128/FF0000/0000FF.png?text=hello"`;
 
-exports[`image > 42 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/1498x3802/FF0000/ad331d.png?text=suggero%20accusator%20volubilis"`;
+exports[`image > 42 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/1311x3328/FF0000/ad331d.png?text=suggero%20accusator%20volubilis"`;
 
 exports[`image > 42 > urlPlaceholder > with empty colors and text 1`] = `"https://via.placeholder.com/128x128//.png?text="`;
 
-exports[`image > 42 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/1498x3802/ad331d/df0fc4.webp?text=attonbitus%20auctus%20cognomen"`;
+exports[`image > 42 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/1311x3328/ad331d/df0fc4.webp?text=attonbitus%20auctus%20cognomen"`;
 
-exports[`image > 42 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/1498x128/ead331/ddf0fc.jpeg?text=attonbitus%20auctus%20cognomen"`;
+exports[`image > 42 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/1311x128/ead331/ddf0fc.jpeg?text=attonbitus%20auctus%20cognomen"`;
 
-exports[`image > 42 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/1498x3802/ad331d/df0fc4.gif?text=Hello"`;
+exports[`image > 42 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/1311x3328/ad331d/df0fc4.gif?text=Hello"`;
 
-exports[`image > 42 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/1498x3802/ad331d/0000FF.png?text=suggero%20accusator%20volubilis"`;
+exports[`image > 42 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/1311x3328/ad331d/0000FF.png?text=suggero%20accusator%20volubilis"`;
 
-exports[`image > 42 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x1498/ead331/ddf0fc.jpeg?text=attonbitus%20auctus%20cognomen"`;
+exports[`image > 42 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x1311/ead331/ddf0fc.jpeg?text=attonbitus%20auctus%20cognomen"`;
 
 exports[`image > 42 > urlPlaceholder > with width and height 1`] = `"https://via.placeholder.com/128x128/8ead33/1ddf0f.webp?text=benevolentia%20attonbitus%20auctus"`;
 
@@ -132,23 +132,23 @@ exports[`image > 1211 > urlPicsumPhotos > with width 1`] = `"https://picsum.phot
 
 exports[`image > 1211 > urlPicsumPhotos > with width and height 1`] = `"https://picsum.photos/seed/ZFGLlH/128/128?blur=9"`;
 
-exports[`image > 1211 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/3714x3573/4fefa7/fbaec9.webp?text=unde%20blanditiis%20officia"`;
+exports[`image > 1211 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/3250x3128/4fefa7/fbaec9.webp?text=unde%20blanditiis%20officia"`;
 
 exports[`image > 1211 > urlPlaceholder > with all options 1`] = `"https://via.placeholder.com/128x128/FF0000/0000FF.png?text=hello"`;
 
-exports[`image > 1211 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/3714x3573/FF0000/4fefa7.png?text=tonsor%20tenuis%20sollers"`;
+exports[`image > 1211 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/3250x3128/FF0000/4fefa7.png?text=tonsor%20tenuis%20sollers"`;
 
 exports[`image > 1211 > urlPlaceholder > with empty colors and text 1`] = `"https://via.placeholder.com/128x128//.png?text="`;
 
-exports[`image > 1211 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/3714x3573/4fefa7/fbaec9.webp?text=usque%20unde%20blanditiis"`;
+exports[`image > 1211 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/3250x3128/4fefa7/fbaec9.webp?text=usque%20unde%20blanditiis"`;
 
-exports[`image > 1211 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/3714x128/d4fefa/7fbaec.jpg?text=usque%20unde%20blanditiis"`;
+exports[`image > 1211 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/3250x128/d4fefa/7fbaec.jpg?text=usque%20unde%20blanditiis"`;
 
-exports[`image > 1211 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/3714x3573/4fefa7/fbaec9.webp?text=Hello"`;
+exports[`image > 1211 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/3250x3128/4fefa7/fbaec9.webp?text=Hello"`;
 
-exports[`image > 1211 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/3714x3573/4fefa7/0000FF.png?text=tonsor%20tenuis%20sollers"`;
+exports[`image > 1211 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/3250x3128/4fefa7/0000FF.png?text=tonsor%20tenuis%20sollers"`;
 
-exports[`image > 1211 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x3714/d4fefa/7fbaec.jpg?text=usque%20unde%20blanditiis"`;
+exports[`image > 1211 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x3250/d4fefa/7fbaec.jpg?text=usque%20unde%20blanditiis"`;
 
 exports[`image > 1211 > urlPlaceholder > with width and height 1`] = `"https://via.placeholder.com/128x128/ed4fef/a7fbae.webp?text=dapifer%20usque%20unde"`;
 
@@ -208,22 +208,22 @@ exports[`image > 1337 > urlPicsumPhotos > with width 1`] = `"https://picsum.phot
 
 exports[`image > 1337 > urlPicsumPhotos > with width and height 1`] = `"https://picsum.photos/seed/sjwgYJ/128/128?grayscale&blur=1"`;
 
-exports[`image > 1337 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/1048x635/6a7b5f/a28d2f.jpg?text=testimonium%20thalassinus%20contra"`;
+exports[`image > 1337 > urlPlaceholder > noArgs 1`] = `"https://via.placeholder.com/918x556/6a7b5f/a28d2f.jpg?text=testimonium%20thalassinus%20contra"`;
 
 exports[`image > 1337 > urlPlaceholder > with all options 1`] = `"https://via.placeholder.com/128x128/FF0000/0000FF.png?text=hello"`;
 
-exports[`image > 1337 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/1048x635/FF0000/6a7b5f.png?text=ancilla%20creptio%20quisquam"`;
+exports[`image > 1337 > urlPlaceholder > with backgroundColor 1`] = `"https://via.placeholder.com/918x556/FF0000/6a7b5f.png?text=ancilla%20creptio%20quisquam"`;
 
 exports[`image > 1337 > urlPlaceholder > with empty colors and text 1`] = `"https://via.placeholder.com/128x128//.png?text="`;
 
-exports[`image > 1337 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/1048x635/6a7b5f/a28d2f.webp?text=decipio%20testimonium%20thalassinus"`;
+exports[`image > 1337 > urlPlaceholder > with format 1`] = `"https://via.placeholder.com/918x556/6a7b5f/a28d2f.webp?text=decipio%20testimonium%20thalassinus"`;
 
-exports[`image > 1337 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/1048x128/36a7b5/fa28d2.webp?text=decipio%20testimonium%20thalassinus"`;
+exports[`image > 1337 > urlPlaceholder > with height 1`] = `"https://via.placeholder.com/918x128/36a7b5/fa28d2.webp?text=decipio%20testimonium%20thalassinus"`;
 
-exports[`image > 1337 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/1048x635/6a7b5f/a28d2f.jpg?text=Hello"`;
+exports[`image > 1337 > urlPlaceholder > with text 1`] = `"https://via.placeholder.com/918x556/6a7b5f/a28d2f.jpg?text=Hello"`;
 
-exports[`image > 1337 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/1048x635/6a7b5f/0000FF.png?text=ancilla%20creptio%20quisquam"`;
+exports[`image > 1337 > urlPlaceholder > with textColor 1`] = `"https://via.placeholder.com/918x556/6a7b5f/0000FF.png?text=ancilla%20creptio%20quisquam"`;
 
-exports[`image > 1337 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x1048/36a7b5/fa28d2.webp?text=decipio%20testimonium%20thalassinus"`;
+exports[`image > 1337 > urlPlaceholder > with width 1`] = `"https://via.placeholder.com/128x918/36a7b5/fa28d2.webp?text=decipio%20testimonium%20thalassinus"`;
 
 exports[`image > 1337 > urlPlaceholder > with width and height 1`] = `"https://via.placeholder.com/128x128/536a7b/5fa28d.gif?text=vorago%20decipio%20testimonium"`;
