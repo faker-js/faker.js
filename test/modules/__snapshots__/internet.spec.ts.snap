@@ -32,15 +32,15 @@ exports[`internet > 42 > domainSuffix 1`] = `"info"`;
 
 exports[`internet > 42 > domainWord 1`] = `"hospitable-unit"`;
 
-exports[`internet > 42 > email > noArgs 1`] = `"Leon60@yahoo.com"`;
+exports[`internet > 42 > email > noArgs 1`] = `"Lavinia60@yahoo.com"`;
 
 exports[`internet > 42 > email > with all options 1`] = `"Jane.Doe@fakerjs.dev"`;
 
-exports[`internet > 42 > email > with allowSpecialCharacters option 1`] = `"Leon60@yahoo.com"`;
+exports[`internet > 42 > email > with allowSpecialCharacters option 1`] = `"Lavinia60@yahoo.com"`;
 
 exports[`internet > 42 > email > with firstName option 1`] = `"Jane.Miller15@yahoo.com"`;
 
-exports[`internet > 42 > email > with lastName option 1`] = `"Leon.Doe15@yahoo.com"`;
+exports[`internet > 42 > email > with lastName option 1`] = `"Lavinia.Doe15@yahoo.com"`;
 
 exports[`internet > 42 > email > with provider option 1`] = `"Moses.Crist@fakerjs.dev"`;
 
@@ -48,15 +48,15 @@ exports[`internet > 42 > emoji > noArgs 1`] = `"🌾"`;
 
 exports[`internet > 42 > emoji > with options 1`] = `"🦔"`;
 
-exports[`internet > 42 > exampleEmail > noArgs 1`] = `"Leon60@example.com"`;
+exports[`internet > 42 > exampleEmail > noArgs 1`] = `"Lavinia60@example.com"`;
 
 exports[`internet > 42 > exampleEmail > with all options 1`] = `"Jane_Doe@example.com"`;
 
-exports[`internet > 42 > exampleEmail > with allowSpecialCharacters option 1`] = `"Leon60@example.com"`;
+exports[`internet > 42 > exampleEmail > with allowSpecialCharacters option 1`] = `"Lavinia60@example.com"`;
 
 exports[`internet > 42 > exampleEmail > with firstName option 1`] = `"Jane.Miller15@example.com"`;
 
-exports[`internet > 42 > exampleEmail > with lastName option 1`] = `"Leon.Doe15@example.com"`;
+exports[`internet > 42 > exampleEmail > with lastName option 1`] = `"Lavinia.Doe15@example.com"`;
 
 exports[`internet > 42 > httpMethod 1`] = `"POST"`;
 

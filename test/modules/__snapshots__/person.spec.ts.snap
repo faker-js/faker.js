@@ -64,9 +64,9 @@ exports[`person > 1211 > fullName > noArgs 1`] = `"Dane Osinski-Paucek"`;
 
 exports[`person > 1211 > fullName > with all (sex) 1`] = `"John Doe PhD"`;
 
-exports[`person > 1211 > fullName > with firstName 1`] = `"Mr. John Fahey DDS"`;
+exports[`person > 1211 > fullName > with firstName 1`] = `"Mrs. John Fahey DDS"`;
 
-exports[`person > 1211 > fullName > with lastName 1`] = `"Mr. Dane Doe DDS"`;
+exports[`person > 1211 > fullName > with lastName 1`] = `"Mrs. Dane Doe DDS"`;
 
 exports[`person > 1211 > fullName > with sex 1`] = `"Skye Zieme"`;
 
