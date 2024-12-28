@@ -378,7 +378,7 @@ export class ImageModule extends ModuleBase {
       width = this.faker.number.int({ min: 1, max: 3999 }),
       height = this.faker.number.int({ min: 1, max: 3999 }),
       color = this.faker.color.rgb(),
-      type = this.faker.helpers.arrayElements(['svg-uri', 'svg-base64']),
+      type = this.faker.helpers.arrayElement(['svg-uri', 'svg-base64']),
     } = options;
 
     const svgString = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${color}"/><text x="${
