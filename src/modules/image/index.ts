@@ -369,7 +369,7 @@ export class ImageModule extends ModuleBase {
        * The type of the image to return. Consisting of
        * the file extension and the used encoding.
        *
-       * @default faker.helpers.arrayElements(['svg-uri', 'svg-base64'])
+       * @default faker.helpers.arrayElement(['svg-uri', 'svg-base64'])
        */
       type?: 'svg-uri' | 'svg-base64';
     } = {}
