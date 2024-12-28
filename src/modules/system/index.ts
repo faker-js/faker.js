@@ -213,15 +213,15 @@ export class SystemModule extends ModuleBase {
    * Returns a [semantic version](https://semver.org).
    *
    * @example
-   * faker.system.semver() // '1.1.2'
+   * faker.system.semver() // '1.15.2'
    *
    * @since 3.1.0
    */
   semver(): string {
     return [
       this.faker.number.int(9),
-      this.faker.number.int(9),
-      this.faker.number.int(9),
+      this.faker.number.int(20),
+      this.faker.number.int(20),
     ].join('.');
   }
 
