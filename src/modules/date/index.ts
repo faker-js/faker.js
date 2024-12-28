@@ -192,12 +192,12 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @example
    * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' })
    * // [
-   * //   2022-07-02T06:00:00.000Z,
-   * //   2024-12-31T12:00:00.000Z,
-   * //   2027-07-02T18:00:00.000Z
+   * //   '2022-07-02T06:00:00.000Z',
+   * //   '2024-12-31T12:00:00.000Z',
+   * //   '2027-07-02T18:00:00.000Z'
    * // ]
    * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: 2 })
-   * // [ 2023-05-02T16:00:00.000Z, 2026-09-01T08:00:00.000Z ]
+   * // [ '2023-05-02T16:00:00.000Z', '2026-09-01T08:00:00.000Z' ]
    * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: { min: 2, max: 5 }})
    * // [
    * //   2021-12-19T06:35:40.191Z,
@@ -347,7 +347,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.refDate The date to use as reference point for the newly generated date. Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate() // 1977-07-10T01:37:30.719Z
+   * faker.date.birthdate() // '1977-07-10T01:37:30.719Z'
    *
    * @since 7.0.0
    */
@@ -369,7 +369,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.refDate The date to use as reference point for the newly generated date. Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // 2003-11-02T20:03:20.116Z
+   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '2003-11-02T20:03:20.116Z'
    *
    * @since 7.0.0
    */
@@ -403,7 +403,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.max The maximum year to generate a birthdate in.
    *
    * @example
-   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // 1940-08-20T08:53:07.538Z
+   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1940-08-20T08:53:07.538Z'
    *
    * @since 7.0.0
    */
@@ -435,9 +435,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate() // 1977-07-10T01:37:30.719Z
-   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // 2003-11-02T20:03:20.116Z
-   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // 1940-08-20T08:53:07.538Z
+   * faker.date.birthdate() // '1977-07-10T01:37:30.719Z'
+   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '2003-11-02T20:03:20.116Z'
+   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1940-08-20T08:53:07.538Z'
    *
    * @since 7.0.0
    */
