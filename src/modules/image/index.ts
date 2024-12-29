@@ -260,7 +260,7 @@ export class ImageModule extends ModuleBase {
    *
    * @since 8.0.0
    *
-   * @deprecated The service has bad uptime. Use `url()` or another method instead.
+   * @deprecated The service has bad uptime. Use `faker.image.url()` or `faker.image.dataUri()` instead.
    */
   urlPlaceholder(
     options: {
@@ -304,7 +304,7 @@ export class ImageModule extends ModuleBase {
   ): string {
     deprecated({
       deprecated: 'faker.image.urlPlaceholder()',
-      proposed: 'faker.image.url()',
+      proposed: 'faker.image.url() or faker.image.dataUri()',
       since: '9.4.0',
       until: '10.0.0',
     });
