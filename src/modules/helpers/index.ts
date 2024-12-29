@@ -394,9 +394,21 @@ export class SimpleHelpersModule extends SimpleModuleBase {
         quantifierMax
       );
 
+      let replacement: string;
+      if (token[1] === '.') {
+        replacement = this.faker.string.alphanumeric(repetitions);
+      } else if (isCaseInsensitive) {
+        replacement = this.faker.string.fromCharacters(
+          [token[1].toLowerCase(), token[1].toUpperCase()],
+          repetitions
+        );
+      } else {
+        replacement = token[1].repeat(repetitions);
+      }
+
       pattern =
         pattern.slice(0, token.index) +
-        token[1].repeat(repetitions) +
+        replacement +
         pattern.slice(token.index + token[0].length);
       token = SINGLE_CHAR_REG.exec(pattern);
     }

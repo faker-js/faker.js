@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`formatResult > should format Date 1`] = `"'2025-01-01T00:00:00.000Z'"`;
+
+exports[`formatResult > should format array 1`] = `"[ 1, '2' ]"`;
+
+exports[`formatResult > should format bigint 1`] = `"135464154865415n"`;
+
+exports[`formatResult > should format number 1`] = `"123"`;
+
+exports[`formatResult > should format object 1`] = `"{ 'a': 1, 'b': '2' }"`;
+
+exports[`formatResult > should format string 1`] = `"'a simple string'"`;
+
+exports[`formatResult > should format string with new lines 1`] = `"'string\\nwith\\nnew\\nlines'"`;
+
+exports[`formatResult > should format string with special characters 1`] = `"'string with "special" characters'"`;
+
+exports[`formatResult > should format undefined 1`] = `"undefined"`;

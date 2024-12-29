@@ -254,7 +254,7 @@ exports[`internet > 1211 > url > with slash appended 1`] = `"https://velvety-tar
 
 exports[`internet > 1211 > url > without slash appended and with http protocol 1`] = `"http://velvety-tarragon.biz"`;
 
-exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/605.67 (KHTML, like Gecko) Chrome/107.7.3.6 Mobile Safari/592.76"`;
+exports[`internet > 1211 > userAgent 1`] = `"Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/605.67 (KHTML, like Gecko) Chrome/107.7.7.14 Mobile Safari/592.76"`;
 
 exports[`internet > 1211 > userName > noArgs 1`] = `"Tito67"`;
 

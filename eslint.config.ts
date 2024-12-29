@@ -24,6 +24,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       '.github/workflows/commentCodeGeneration.ts',
       '.prettierrc.js',
       'docs/.vitepress/components/shims.d.ts',
+      'docs/.vitepress/components/api-docs/format.ts',
       'docs/.vitepress/shared/utils/slugify.ts',
       'docs/.vitepress/theme/index.ts',
       'eslint.config.js',
