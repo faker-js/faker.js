@@ -16,7 +16,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random dog breed.
    *
    * @example
-   * faker.animal.dog() // 'Irish Water Spaniel'
+   * faker.animal.dog() // 'Kuvasz'
    *
    * @since 5.5.0
    */
@@ -28,7 +28,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random cat breed.
    *
    * @example
-   * faker.animal.cat() // 'Singapura'
+   * faker.animal.cat() // 'Norwegian Forest Cat'
    *
    * @since 5.5.0
    */
@@ -40,7 +40,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random snake species.
    *
    * @example
-   * faker.animal.snake() // 'Eyelash viper'
+   * faker.animal.snake() // "Malcolm's tree viper"
    *
    * @since 5.5.0
    */
@@ -52,7 +52,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random bear species.
    *
    * @example
-   * faker.animal.bear() // 'Asian black bear'
+   * faker.animal.bear() // 'Polar bear'
    *
    * @since 5.5.0
    */
@@ -64,7 +64,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random lion species.
    *
    * @example
-   * faker.animal.lion() // 'Northeast Congo Lion'
+   * faker.animal.lion() // 'Masai Lion'
    *
    * @since 5.5.0
    */
@@ -76,7 +76,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random cetacean species.
    *
    * @example
-   * faker.animal.cetacean() // 'Spinner Dolphin'
+   * faker.animal.cetacean() // 'Irrawaddy Dolphin'
    *
    * @since 5.5.0
    */
@@ -90,7 +90,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random horse breed.
    *
    * @example
-   * faker.animal.horse() // 'Swedish Warmblood'
+   * faker.animal.horse() // "M'Par"
    *
    * @since 5.5.0
    */
@@ -102,7 +102,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random bird species.
    *
    * @example
-   * faker.animal.bird() // 'Buller's Shearwater'
+   * faker.animal.bird() // 'Magnificent Frigatebird'
    *
    * @since 5.5.0
    */
@@ -114,7 +114,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random cow species.
    *
    * @example
-   * faker.animal.cow() // 'Brava'
+   * faker.animal.cow() // 'Kenana cattle'
    *
    * @since 5.5.0
    */
@@ -126,7 +126,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random fish species.
    *
    * @example
-   * faker.animal.fish() // 'Mandarin fish'
+   * faker.animal.fish() // 'Japanese jack mackerel'
    *
    * @since 5.5.0
    */
@@ -138,7 +138,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random crocodilian species.
    *
    * @example
-   * faker.animal.crocodilia() // 'Philippine Crocodile'
+   * faker.animal.crocodilia() // 'New Guinea Freshwater Crocodile'
    *
    * @since 5.5.0
    */
@@ -152,7 +152,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random insect species.
    *
    * @example
-   * faker.animal.insect() // 'Pyramid ant'
+   * faker.animal.insect() // 'Mossyrose gall wasp'
    *
    * @since 5.5.0
    */
@@ -166,7 +166,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random rabbit species.
    *
    * @example
-   * faker.animal.rabbit() // 'Florida White'
+   * faker.animal.rabbit() // 'Havana'
    *
    * @since 5.5.0
    */
@@ -180,7 +180,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random rodent breed.
    *
    * @example
-   * faker.animal.rodent() // 'Cuscomys ashanika'
+   * faker.animal.rodent() // 'Indian porcupine'
    *
    * @since 7.4.0
    */
@@ -194,7 +194,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random animal type.
    *
    * @example
-   * faker.animal.type() // 'crocodile'
+   * faker.animal.type() // 'koala'
    *
    * @since 5.5.0
    */
@@ -206,7 +206,7 @@ export class AnimalModule extends ModuleBase {
    * Returns a random pet name.
    *
    * @example
-   * faker.animal.petName() // 'Coco'
+   * faker.animal.petName() // 'Leo'
    *
    * @since 9.2.0
    */

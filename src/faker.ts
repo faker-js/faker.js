@@ -196,8 +196,8 @@ export class Faker extends SimpleFaker {
    * @example
    * import { faker, fakerES_MX } from '@faker-js/faker';
    * // const { faker, fakerES_MX } = require("@faker-js/faker")
-   * faker.getMetadata(); // { title: 'English', code: 'en', language: 'en', endonym: 'English', dir: 'ltr', script: 'Latn' }
-   * fakerES_MX.getMetadata(); // { title: 'Spanish (Mexico)', code: 'es_MX', language: 'es', endonym: 'Español (México)', dir: 'ltr', script: 'Latn', country: 'MX' }
+   * faker.getMetadata(); // { 'title': 'English', 'code': 'en', 'language': 'en', 'endonym': 'English', 'dir': 'ltr', 'script': 'Latn' }
+   * fakerES_MX.getMetadata(); // { 'title': 'Spanish (Mexico)', 'code': 'es_MX', 'language': 'es', 'endonym': 'Español (México)', 'dir': 'ltr', 'script': 'Latn', 'country': 'MX' }
    *
    * @since 8.1.0
    */

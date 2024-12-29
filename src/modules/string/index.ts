@@ -108,10 +108,10 @@ export class StringModule extends SimpleModuleBase {
    * @param length.max The maximum length of the string to generate.
    *
    * @example
-   * faker.string.fromCharacters('abc') // 'c'
-   * faker.string.fromCharacters(['a', 'b', 'c']) // 'a'
-   * faker.string.fromCharacters('abc', 10) // 'cbbbacbacb'
-   * faker.string.fromCharacters('abc', { min: 5, max: 10 }) // 'abcaaaba'
+   * faker.string.fromCharacters('abc') // 'b'
+   * faker.string.fromCharacters(['a', 'b', 'c']) // 'c'
+   * faker.string.fromCharacters('abc', 10) // 'bbbbbccbcb'
+   * faker.string.fromCharacters('abc', { min: 5, max: 10 }) // 'caaacccc'
    *
    * @since 8.0.0
    */
@@ -161,12 +161,12 @@ export class StringModule extends SimpleModuleBase {
    * @param options.exclude An array with characters which should be excluded in the generated string. Defaults to `[]`.
    *
    * @example
-   * faker.string.alpha() // 'b'
-   * faker.string.alpha(10) // 'fEcAaCVbaR'
-   * faker.string.alpha({ length: { min: 5, max: 10 } }) // 'HcVrCf'
-   * faker.string.alpha({ casing: 'lower' }) // 'r'
-   * faker.string.alpha({ exclude: ['W'] }) // 'Z'
-   * faker.string.alpha({ length: 5, casing: 'upper', exclude: ['A'] }) // 'DTCIC'
+   * faker.string.alpha() // 'C'
+   * faker.string.alpha(10) // 'LFCwHwUYtP'
+   * faker.string.alpha({ length: { min: 5, max: 10 } }) // 'DWdebROT'
+   * faker.string.alpha({ casing: 'lower' }) // 'z'
+   * faker.string.alpha({ exclude: ['W'] }) // 'O'
+   * faker.string.alpha({ length: 5, casing: 'upper', exclude: ['A'] }) // 'MUDQE'
    *
    * @since 8.0.0
    */
@@ -255,12 +255,12 @@ export class StringModule extends SimpleModuleBase {
    * @param options.exclude An array of characters and digits which should be excluded in the generated string. Defaults to `[]`.
    *
    * @example
-   * faker.string.alphanumeric() // '2'
-   * faker.string.alphanumeric(5) // '3e5V7'
-   * faker.string.alphanumeric({ length: { min: 5, max: 10 } }) // 'muaApG'
-   * faker.string.alphanumeric({ casing: 'upper' }) // 'A'
-   * faker.string.alphanumeric({ exclude: ['W'] }) // 'r'
-   * faker.string.alphanumeric({ length: 5, exclude: ["a"] }) // 'x1Z7f'
+   * faker.string.alphanumeric() // 'y'
+   * faker.string.alphanumeric(5) // 'IBxqE'
+   * faker.string.alphanumeric({ length: { min: 5, max: 10 } }) // 'TXnNwzV'
+   * faker.string.alphanumeric({ casing: 'upper' }) // '2'
+   * faker.string.alphanumeric({ exclude: ['W'] }) // '5'
+   * faker.string.alphanumeric({ length: 5, exclude: ["a"] }) // '1PMSY'
    *
    * @since 8.0.0
    */
@@ -352,10 +352,10 @@ export class StringModule extends SimpleModuleBase {
    *
    * @example
    * faker.string.binary() // '0b1'
-   * faker.string.binary({ length: 10 }) // '0b1101011011'
-   * faker.string.binary({ length: { min: 5, max: 10 } }) // '0b11101011'
+   * faker.string.binary({ length: 10 }) // '0b1110101101'
+   * faker.string.binary({ length: { min: 5, max: 10 } }) // '0b11000111'
    * faker.string.binary({ prefix: '0b' }) // '0b1'
-   * faker.string.binary({ length: 10, prefix: 'bin_' }) // 'bin_1101011011'
+   * faker.string.binary({ length: 10, prefix: 'bin_' }) // 'bin_1010101100'
    *
    * @since 8.0.0
    */
@@ -403,11 +403,11 @@ export class StringModule extends SimpleModuleBase {
    * @see faker.number.octal(): For generating an octal number (within a range).
    *
    * @example
-   * faker.string.octal() // '0o3'
-   * faker.string.octal({ length: 10 }) // '0o1526216210'
-   * faker.string.octal({ length: { min: 5, max: 10 } }) // '0o15263214'
+   * faker.string.octal() // '0o4'
+   * faker.string.octal({ length: 10 }) // '0o5443537736'
+   * faker.string.octal({ length: { min: 5, max: 10 } }) // '0o47000666'
    * faker.string.octal({ prefix: '0o' }) // '0o7'
-   * faker.string.octal({ length: 10, prefix: 'oct_' }) // 'oct_1542153414'
+   * faker.string.octal({ length: 10, prefix: 'oct_' }) // 'oct_6360517432'
    *
    * @since 8.0.0
    */
@@ -457,15 +457,15 @@ export class StringModule extends SimpleModuleBase {
    * @param options.prefix Prefix for the generated number. Defaults to `'0x'`.
    *
    * @example
-   * faker.string.hexadecimal() // '0xB'
-   * faker.string.hexadecimal({ length: 10 }) // '0xaE13d044cB'
-   * faker.string.hexadecimal({ length: { min: 5, max: 10 } }) // '0x7dEf7FCD'
-   * faker.string.hexadecimal({ prefix: '0x' }) // '0xE'
-   * faker.string.hexadecimal({ casing: 'lower' }) // '0xf'
-   * faker.string.hexadecimal({ length: 10, prefix: '#' }) // '#f12a974eB1'
-   * faker.string.hexadecimal({ length: 10, casing: 'upper' }) // '0xE3F38014FB'
-   * faker.string.hexadecimal({ casing: 'lower', prefix: '' }) // 'd'
-   * faker.string.hexadecimal({ length: 10, casing: 'mixed', prefix: '0x' }) // '0xAdE330a4D1'
+   * faker.string.hexadecimal() // '0xc'
+   * faker.string.hexadecimal({ length: 10 }) // '0xfdb9e9DF8B'
+   * faker.string.hexadecimal({ length: { min: 5, max: 10 } }) // '0xcE110CBD'
+   * faker.string.hexadecimal({ prefix: '0x' }) // '0xF'
+   * faker.string.hexadecimal({ casing: 'lower' }) // '0xb'
+   * faker.string.hexadecimal({ length: 10, prefix: '#' }) // '#aB2e3Eb95B'
+   * faker.string.hexadecimal({ length: 10, casing: 'upper' }) // '0xAC0DDDEF79'
+   * faker.string.hexadecimal({ casing: 'lower', prefix: '' }) // 'f'
+   * faker.string.hexadecimal({ length: 10, casing: 'mixed', prefix: '0x' }) // '0x1ee4268c9F'
    *
    * @since 8.0.0
    */
@@ -556,12 +556,12 @@ export class StringModule extends SimpleModuleBase {
    * @see faker.number.int(): For generating a number (within a range).
    *
    * @example
-   * faker.string.numeric() // '2'
-   * faker.string.numeric(5) // '31507'
-   * faker.string.numeric(42) // '06434563150765416546479875435481513188548'
-   * faker.string.numeric({ length: { min: 5, max: 10 } }) // '197089478'
-   * faker.string.numeric({ length: 42, allowLeadingZeros: false }) // '72564846278453876543517840713421451546115'
-   * faker.string.numeric({ length: 6, exclude: ['0'] }) // '943228'
+   * faker.string.numeric() // '5'
+   * faker.string.numeric(5) // '76546'
+   * faker.string.numeric(42) // '489375590008789747161954274506669634606621'
+   * faker.string.numeric({ length: { min: 5, max: 10 } }) // '354912'
+   * faker.string.numeric({ length: 42, allowLeadingZeros: false }) // '262421161138080949670212134065250593617215'
+   * faker.string.numeric({ length: 6, exclude: ['0'] }) // '181737'
    *
    * @since 8.0.0
    */
@@ -654,9 +654,9 @@ export class StringModule extends SimpleModuleBase {
    * @param length.max The maximum length of the string to generate.
    *
    * @example
-   * faker.string.sample() // 'Zo!.:*e>wR'
-   * faker.string.sample(5) // '6Bye8'
-   * faker.string.sample({ min: 5, max: 10 }) // 'FeKunG'
+   * faker.string.sample() // 'TcYSH]IszD'
+   * faker.string.sample(5) // "jRUw'"
+   * faker.string.sample({ min: 5, max: 10 }) // '"niq|'
    *
    * @since 8.0.0
    */
@@ -696,7 +696,7 @@ export class StringModule extends SimpleModuleBase {
    * Returns a UUID v4 ([Universally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)).
    *
    * @example
-   * faker.string.uuid() // '4136cd0b-d90b-4af7-b485-5d1ded8db252'
+   * faker.string.uuid() // '8b986a7e-f6c8-49e1-910d-cdfc7c1a2f86'
    *
    * @since 8.0.0
    */
@@ -715,8 +715,8 @@ export class StringModule extends SimpleModuleBase {
    * Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.string.ulid() // '01ARZ3NDEKTSV4RRFFQ69G5FAV'
-   * faker.string.ulid({ refDate: '2020-01-01T00:00:00.000Z' }) // '01DXF6DT00CX9QNNW7PNXQ3YR8'
+   * faker.string.ulid() // '01JGFF53C0HPKHDMEWYCSGJX22'
+   * faker.string.ulid({ refDate: '2020-01-01T00:00:00.000Z' }) // '01DXF6DT000TRVZSER3M4YGD8R'
    *
    * @since 9.1.0
    */
@@ -745,9 +745,9 @@ export class StringModule extends SimpleModuleBase {
    * @param length.max The maximum length of the Nano ID to generate.
    *
    * @example
-   * faker.string.nanoid() // ptL0KpX_yRMI98JFr6B3n
-   * faker.string.nanoid(10) // VsvwSdm_Am
-   * faker.string.nanoid({ min: 13, max: 37 }) // KIRsdEL9jxVgqhBDlm
+   * faker.string.nanoid() // 'IxETnwV5PR-MDWpMzCCGr'
+   * faker.string.nanoid(10) // '3F7mr_aff6'
+   * faker.string.nanoid({ min: 13, max: 37 }) // 'cOPYYJhij3zwzj8hAPGJfAdrHOSSI'
    *
    * @since 8.0.0
    */
@@ -804,9 +804,9 @@ export class StringModule extends SimpleModuleBase {
    * @param length.max The maximum length of the string to generate.
    *
    * @example
-   * faker.string.symbol() // '$'
-   * faker.string.symbol(5) // '#*!.~'
-   * faker.string.symbol({ min: 5, max: 10 }) // ')|@*>^+'
+   * faker.string.symbol() // '&lt;'
+   * faker.string.symbol(5) // '[>&lt;.?'
+   * faker.string.symbol({ min: 5, max: 10 }) // '{}-^;=|'
    *
    * @since 8.0.0
    */

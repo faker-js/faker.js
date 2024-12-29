@@ -14,7 +14,7 @@ export class GitModule extends ModuleBase {
    * Generates a random branch name.
    *
    * @example
-   * faker.git.branch() // 'feed-parse'
+   * faker.git.branch() // 'matrix-parse'
    *
    * @since 5.0.0
    */
@@ -36,11 +36,12 @@ export class GitModule extends ModuleBase {
    *
    * @example
    * faker.git.commitEntry()
-   * // commit fe8c38a965d13d9794eb36918cb24cebe49a45c2
-   * // Author: Marion Becker <Marion_Becker49@gmail.com>
-   * // Date: Mon Nov 7 05:38:37 2022 -0600
-   * //
-   * //     generate open-source system
+   * // 'commit fdb9e9df8bbce110cbdfbab2e3eb95bac0dddef7
+   * // Author: Humberto Beier &lt;Humberto.Beier98@yahoo.com>
+   * // Date: Tue Dec 31 04:00:46 2024 -0800
+   * // 
+   * //     override cross-platform hard drive
+   * // '
    *
    * @since 5.0.0
    */
@@ -114,7 +115,7 @@ export class GitModule extends ModuleBase {
    * Generates a random commit message.
    *
    * @example
-   * faker.git.commitMessage() // 'reboot cross-platform driver'
+   * faker.git.commitMessage() // 'input optical microchip'
    *
    * @since 5.0.0
    */
@@ -129,8 +130,8 @@ export class GitModule extends ModuleBase {
    * @param options.refDate The date to use as reference point for the commit. Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.git.commitDate() // 'Mon Nov 7 14:40:58 2022 +0600'
-   * faker.git.commitDate({ refDate: '2020-01-01' }) // 'Tue Dec 31 05:40:59 2019 -0400'
+   * faker.git.commitDate() // 'Tue Dec 31 12:10:16 2024 +0600'
+   * faker.git.commitDate({ refDate: '2020-01-01' }) // 'Tue Dec 31 14:27:58 2019 +0200'
    *
    * @since 8.0.0
    */
@@ -194,9 +195,9 @@ export class GitModule extends ModuleBase {
    * @param options.length The length of the commit sha. Defaults to `40`.
    *
    * @example
-   * faker.git.commitSha() // '2c6e3880fd94ddb7ef72d34e683cdc0c47bec6e6'
-   * faker.git.commitSha({ length: 7 }) // 'dbee57b'
-   * faker.git.commitSha({ length: 8 }) // '0e52376a'
+   * faker.git.commitSha() // 'cfdb9e9df8bbce110cbdfbab2e3eb95bac0dddef'
+   * faker.git.commitSha({ length: 7 }) // '79f1ee4'
+   * faker.git.commitSha({ length: 8 }) // '268c9f24'
    *
    * @since 5.0.0
    */

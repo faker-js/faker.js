@@ -21,7 +21,7 @@ export class BookModule extends ModuleBase {
    * Returns a random author name.
    *
    * @example
-   * faker.book.author() // 'William Shakespeare'
+   * faker.book.author() // 'Joseph Conrad'
    *
    * @since 9.1.0
    */
@@ -45,7 +45,7 @@ export class BookModule extends ModuleBase {
    * Returns a random genre.
    *
    * @example
-   * faker.book.genre() // 'Fantasy'
+   * faker.book.genre() // 'Memoir'
    *
    * @since 9.1.0
    */
@@ -57,7 +57,7 @@ export class BookModule extends ModuleBase {
    * Returns a random publisher.
    *
    * @example
-   * faker.book.publisher() // 'Addison-Wesley'
+   * faker.book.publisher() // 'Jarrolds Publishing'
    *
    * @since 9.1.0
    */
@@ -71,7 +71,7 @@ export class BookModule extends ModuleBase {
    * Returns a random series.
    *
    * @example
-   * faker.book.series() // 'Harry Potter'
+   * faker.book.series() // 'The Dresden Files'
    *
    * @since 9.1.0
    */
@@ -83,7 +83,7 @@ export class BookModule extends ModuleBase {
    * Returns a random title.
    *
    * @example
-   * faker.book.title() // 'Romeo and Juliet'
+   * faker.book.title() // 'Second Treatise of Government'
    *
    * @since 9.1.0
    */

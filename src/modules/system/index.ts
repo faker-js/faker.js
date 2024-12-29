@@ -43,9 +43,9 @@ export class SystemModule extends ModuleBase {
    * @param options.extensionCount Define how many extensions the file name should have. Defaults to `1`.
    *
    * @example
-   * faker.system.fileName() // 'faithfully_calculating.u8mdn'
-   * faker.system.fileName({ extensionCount: 2 }) // 'times_after.swf.ntf'
-   * faker.system.fileName({ extensionCount: { min: 1, max: 2 } }) // 'jaywalk_like_ill.osfpvg'
+   * faker.system.fileName() // 'tapioca_blaring.lrf'
+   * faker.system.fileName({ extensionCount: 2 }) // 'successfully.distz.ogg'
+   * faker.system.fileName({ extensionCount: { min: 1, max: 2 } }) // 'midst.m2a'
    *
    * @since 3.1.0
    */
@@ -94,8 +94,8 @@ export class SystemModule extends ModuleBase {
    * @param extension The file extension to use. Empty string is considered to be not set.
    *
    * @example
-   * faker.system.commonFileName() // 'dollar.jpg'
-   * faker.system.commonFileName('txt') // 'global_borders_wyoming.txt'
+   * faker.system.commonFileName() // 'tapioca_blaring.pdf'
+   * faker.system.commonFileName('txt') // 'successfully.txt'
    *
    * @since 3.1.0
    */
@@ -109,7 +109,7 @@ export class SystemModule extends ModuleBase {
    * Returns a mime-type.
    *
    * @example
-   * faker.system.mimeType() // 'video/vnd.vivo'
+   * faker.system.mimeType() // 'audio/midi'
    *
    * @since 3.1.0
    */
@@ -123,7 +123,7 @@ export class SystemModule extends ModuleBase {
    * Returns a commonly used file type.
    *
    * @example
-   * faker.system.commonFileType() // 'audio'
+   * faker.system.commonFileType() // 'image'
    *
    * @since 3.1.0
    */
@@ -135,7 +135,7 @@ export class SystemModule extends ModuleBase {
    * Returns a commonly used file extension.
    *
    * @example
-   * faker.system.commonFileExt() // 'gif'
+   * faker.system.commonFileExt() // 'jpe'
    *
    * @since 3.1.0
    */
@@ -147,7 +147,7 @@ export class SystemModule extends ModuleBase {
    * Returns a file type.
    *
    * @example
-   * faker.system.fileType() // 'message'
+   * faker.system.fileType() // 'image'
    *
    * @since 3.1.0
    */
@@ -166,8 +166,8 @@ export class SystemModule extends ModuleBase {
    * @param mimeType Valid [mime-type](https://github.com/jshttp/mime-db/blob/master/db.json)
    *
    * @example
-   * faker.system.fileExt() // 'emf'
-   * faker.system.fileExt('application/json') // 'json'
+   * faker.system.fileExt() // '3g2'
+   * faker.system.fileExt('application/json') // 'map'
    *
    * @since 3.1.0
    */
@@ -188,7 +188,7 @@ export class SystemModule extends ModuleBase {
    * Returns a directory path.
    *
    * @example
-   * faker.system.directoryPath() // '/etc/mail'
+   * faker.system.directoryPath() // '/root'
    *
    * @since 3.1.0
    */
@@ -201,7 +201,7 @@ export class SystemModule extends ModuleBase {
    * Returns a file path.
    *
    * @example
-   * faker.system.filePath() // '/usr/local/src/money.dotx'
+   * faker.system.filePath() // '/root/whole_busily_jive.ico'
    *
    * @since 3.1.0
    */
@@ -213,7 +213,7 @@ export class SystemModule extends ModuleBase {
    * Returns a [semantic version](https://semver.org).
    *
    * @example
-   * faker.system.semver() // '1.15.2'
+   * faker.system.semver() // '5.15.12'
    *
    * @since 3.1.0
    */
@@ -233,10 +233,10 @@ export class SystemModule extends ModuleBase {
    * @param options.interfaceSchema The interface schema. Can be one of `index`, `slot`, `mac`, `pci`.
    *
    * @example
-   * faker.system.networkInterface() // 'enp0s3'
-   * faker.system.networkInterface({ interfaceType: 'wl' }) // 'wlo1'
-   * faker.system.networkInterface({ interfaceSchema: 'mac' }) // 'enx000c29c00000'
-   * faker.system.networkInterface({ interfaceType: 'en', interfaceSchema: 'pci' }) // 'enp5s0f1d0'
+   * faker.system.networkInterface() // 'wlx986a7ef6c89e'
+   * faker.system.networkInterface({ interfaceType: 'wl' }) // 'wlo0'
+   * faker.system.networkInterface({ interfaceSchema: 'mac' }) // 'enxdcdfc7c1a2f8'
+   * faker.system.networkInterface({ interfaceType: 'en', interfaceSchema: 'pci' }) // 'P2enp7s4d6'
    *
    * @since 7.4.0
    */
@@ -305,11 +305,11 @@ export class SystemModule extends ModuleBase {
    * @param options.includeNonStandard Whether to include a `@yearly`, `@monthly`, `@daily`, etc text labels in the generated expression. Defaults to `false`.
    *
    * @example
-   * faker.system.cron() // '45 23 * * 6'
-   * faker.system.cron({ includeYear: true }) // '45 23 * * 6 2067'
-   * faker.system.cron({ includeYear: false }) // '45 23 * * 6'
-   * faker.system.cron({ includeNonStandard: false }) // '45 23 * * 6'
-   * faker.system.cron({ includeNonStandard: true }) // '@yearly'
+   * faker.system.cron() // '* * * * *'
+   * faker.system.cron({ includeYear: true }) // '* * * * 5 *'
+   * faker.system.cron({ includeYear: false }) // '* 22 * * *'
+   * faker.system.cron({ includeNonStandard: false }) // '40 8 14 9 *'
+   * faker.system.cron({ includeNonStandard: true }) // '59 2 7 * 4'
    *
    * @since 7.5.0
    */

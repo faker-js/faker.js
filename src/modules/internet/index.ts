@@ -171,12 +171,12 @@ export class InternetModule extends ModuleBase {
    * in the email address. Defaults to `false`.
    *
    * @example
-   * faker.internet.email() // 'Kassandra4@hotmail.com'
-   * faker.internet.email({ firstName: 'Jeanne'}) // 'Jeanne63@yahoo.com'
-   * faker.internet.email({ firstName: 'Jeanne'}) // 'Jeanne_Smith63@yahoo.com'
-   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne.Doe63@yahoo.com'
-   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe', provider: 'example.fakerjs.dev' }) // 'Jeanne_Doe88@example.fakerjs.dev'
-   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe', provider: 'example.fakerjs.dev', allowSpecialCharacters: true }) // 'Jeanne%Doe88@example.fakerjs.dev'
+   * faker.internet.email() // 'Micheal.Little@yahoo.com'
+   * faker.internet.email({ firstName: 'Jeanne'}) // 'Jeanne56@hotmail.com'
+   * faker.internet.email({ firstName: 'Jeanne'}) // 'Jeanne77@gmail.com'
+   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne_Doe@hotmail.com'
+   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe', provider: 'example.fakerjs.dev' }) // 'Jeanne.Doe63@example.fakerjs.dev'
+   * faker.internet.email({ firstName: 'Jeanne', lastName: 'Doe', provider: 'example.fakerjs.dev', allowSpecialCharacters: true }) // 'Jeanne_Doe52@example.fakerjs.dev'
    *
    * @since 2.0.1
    */
@@ -252,11 +252,11 @@ export class InternetModule extends ModuleBase {
    * in the email address. Defaults to `false`.
    *
    * @example
-   * faker.internet.exampleEmail() // 'Helmer.Graham23@example.com'
-   * faker.internet.exampleEmail({ firstName: 'Jeanne' }) // 'Jeanne96@example.net'
-   * faker.internet.exampleEmail({ firstName: 'Jeanne' }) // 'Jeanne.Smith96@example.net'
-   * faker.internet.exampleEmail({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne_Doe96@example.net'
-   * faker.internet.exampleEmail({ firstName: 'Jeanne', lastName: 'Doe', allowSpecialCharacters: true }) // 'Jeanne%Doe88@example.com'
+   * faker.internet.exampleEmail() // 'Micheal.Little@example.com'
+   * faker.internet.exampleEmail({ firstName: 'Jeanne' }) // 'Jeanne56@example.net'
+   * faker.internet.exampleEmail({ firstName: 'Jeanne' }) // 'Jeanne77@example.org'
+   * faker.internet.exampleEmail({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne_Doe@example.net'
+   * faker.internet.exampleEmail({ firstName: 'Jeanne', lastName: 'Doe', allowSpecialCharacters: true }) // 'Jeanne+Doe@example.org'
    *
    * @since 3.1.0
    */
@@ -309,14 +309,14 @@ export class InternetModule extends ModuleBase {
    * @see faker.internet.displayName(): For generating an Unicode display name.
    *
    * @example
-   * faker.internet.userName() // 'Nettie_Zboncak40'
-   * faker.internet.userName({ firstName: 'Jeanne' }) // 'Jeanne98'
-   * faker.internet.userName({ firstName: 'Jeanne' }) // 'Jeanne.Smith98'
-   * faker.internet.userName({ firstName: 'Jeanne', lastName: 'Doe'}) // 'Jeanne_Doe98'
-   * faker.internet.userName({ firstName: 'John', lastName: 'Doe' }) // 'John.Doe'
-   * faker.internet.userName({ firstName: 'Hélene', lastName: 'Müller' }) // 'Helene_Muller11'
-   * faker.internet.userName({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Fedor.Dostoevskii50'
-   * faker.internet.userName({ firstName: '大羽', lastName: '陳' }) // 'hlzp8d.tpv45' - note neither name is used
+   * faker.internet.userName() // 'Katharina_Mitchell'
+   * faker.internet.userName({ firstName: 'Jeanne' }) // 'Jeanne38'
+   * faker.internet.userName({ firstName: 'Jeanne' }) // 'Jeanne_Mante7'
+   * faker.internet.userName({ firstName: 'Jeanne', lastName: 'Doe'}) // 'Jeanne.Doe'
+   * faker.internet.userName({ firstName: 'John', lastName: 'Doe' }) // 'John_Doe'
+   * faker.internet.userName({ firstName: 'Hélene', lastName: 'Müller' }) // 'Helene.Muller78'
+   * faker.internet.userName({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Fedor_Dostoevskii'
+   * faker.internet.userName({ firstName: '大羽', lastName: '陳' }) // 'hlzp8d_tpv41'
    *
    * @since 2.0.1
    *
@@ -361,14 +361,14 @@ export class InternetModule extends ModuleBase {
    * @see faker.internet.displayName(): For generating an Unicode display name.
    *
    * @example
-   * faker.internet.username() // 'Nettie_Zboncak40'
-   * faker.internet.username({ firstName: 'Jeanne' }) // 'Jeanne98'
-   * faker.internet.username({ firstName: 'Jeanne' }) // 'Jeanne.Smith98'
-   * faker.internet.username({ firstName: 'Jeanne', lastName: 'Doe'}) // 'Jeanne_Doe98'
-   * faker.internet.username({ firstName: 'John', lastName: 'Doe' }) // 'John.Doe'
-   * faker.internet.username({ firstName: 'Hélene', lastName: 'Müller' }) // 'Helene_Muller11'
-   * faker.internet.username({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Fedor.Dostoevskii50'
-   * faker.internet.username({ firstName: '大羽', lastName: '陳' }) // 'hlzp8d.tpv45' - note neither name is used
+   * faker.internet.username() // 'Katharina_Mitchell'
+   * faker.internet.username({ firstName: 'Jeanne' }) // 'Jeanne38'
+   * faker.internet.username({ firstName: 'Jeanne' }) // 'Jeanne_Mante7'
+   * faker.internet.username({ firstName: 'Jeanne', lastName: 'Doe'}) // 'Jeanne.Doe'
+   * faker.internet.username({ firstName: 'John', lastName: 'Doe' }) // 'John_Doe'
+   * faker.internet.username({ firstName: 'Hélene', lastName: 'Müller' }) // 'Helene.Muller78'
+   * faker.internet.username({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Fedor_Dostoevskii'
+   * faker.internet.username({ firstName: '大羽', lastName: '陳' }) // 'hlzp8d_tpv41'
    *
    * @since 9.1.0
    */
@@ -449,12 +449,12 @@ export class InternetModule extends ModuleBase {
    * @see faker.internet.username(): For generating a plain ASCII username.
    *
    * @example
-   * faker.internet.displayName() // 'Nettie_Zboncak40'
-   * faker.internet.displayName({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne98' - note surname not used.
+   * faker.internet.displayName() // 'Katharina_Mitchell'
+   * faker.internet.displayName({ firstName: 'Jeanne', lastName: 'Doe' }) // 'Jeanne.Doe89'
    * faker.internet.displayName({ firstName: 'John', lastName: 'Doe' }) // 'John.Doe'
-   * faker.internet.displayName({ firstName: 'Hélene', lastName: 'Müller' }) // 'Hélene_Müller11'
-   * faker.internet.displayName({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Фёдор.Достоевский50'
-   * faker.internet.displayName({ firstName: '大羽', lastName: '陳' }) // '大羽.陳'
+   * faker.internet.displayName({ firstName: 'Hélene', lastName: 'Müller' }) // 'Hélene92'
+   * faker.internet.displayName({ firstName: 'Фёдор', lastName: 'Достоевский' }) // 'Фёдор.Достоевский2'
+   * faker.internet.displayName({ firstName: '大羽', lastName: '陳' }) // '大羽_陳87'
    *
    * @since 8.0.0
    */
@@ -497,7 +497,7 @@ export class InternetModule extends ModuleBase {
    * Returns a random web protocol. Either `http` or `https`.
    *
    * @example
-   * faker.internet.protocol() // 'http'
+   * faker.internet.protocol() // 'https'
    *
    * @since 2.1.5
    */
@@ -518,7 +518,7 @@ export class InternetModule extends ModuleBase {
    * - `PATCH`
    *
    * @example
-   * faker.internet.httpMethod() // 'PATCH'
+   * faker.internet.httpMethod() // 'PUT'
    *
    * @since 5.4.0
    */
@@ -540,8 +540,8 @@ export class InternetModule extends ModuleBase {
    * @param options.types A list of the HTTP status code types that should be used.
    *
    * @example
-   * faker.internet.httpStatusCode() // 200
-   * faker.internet.httpStatusCode({ types: ['success', 'serverError'] }) // 500
+   * faker.internet.httpStatusCode() // 306
+   * faker.internet.httpStatusCode({ types: ['success', 'serverError'] }) // 505
    *
    * @since 7.0.0
    */
@@ -574,9 +574,9 @@ export class InternetModule extends ModuleBase {
    * @param options.protocol The protocol to use. Defaults to `'https'`.
    *
    * @example
-   * faker.internet.url() // 'https://remarkable-hackwork.info'
-   * faker.internet.url({ appendSlash: true }) // 'https://slow-timer.info/'
-   * faker.internet.url({ protocol: 'http', appendSlash: false }) // 'http://www.terrible-idea.com'
+   * faker.internet.url() // 'https://second-newsletter.name'
+   * faker.internet.url({ appendSlash: true }) // 'https://insignificant-parsnip.info/'
+   * faker.internet.url({ protocol: 'http', appendSlash: false }) // 'http://unique-veto.info'
    *
    * @since 2.1.5
    */
@@ -605,7 +605,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random domain name.
    *
    * @example
-   * faker.internet.domainName() // 'slow-timer.info'
+   * faker.internet.domainName() // 'negligible-provider.name'
    *
    * @since 2.0.1
    */
@@ -617,8 +617,8 @@ export class InternetModule extends ModuleBase {
    * Returns a random domain suffix.
    *
    * @example
-   * faker.internet.domainSuffix() // 'com'
    * faker.internet.domainSuffix() // 'name'
+   * faker.internet.domainSuffix() // 'net'
    *
    * @since 2.0.1
    */
@@ -632,8 +632,8 @@ export class InternetModule extends ModuleBase {
    * Generates a random domain word.
    *
    * @example
-   * faker.internet.domainWord() // 'close-reality'
-   * faker.internet.domainWord() // 'weird-cytoplasm'
+   * faker.internet.domainWord() // 'negligible-provider'
+   * faker.internet.domainWord() // 'perky-making'
    *
    * @since 2.0.1
    */
@@ -653,8 +653,8 @@ export class InternetModule extends ModuleBase {
    * Generates a random IPv4 or IPv6 address.
    *
    * @example
-   * faker.internet.ip() // '245.108.222.0'
-   * faker.internet.ip() // '4e5:f9c5:4337:abfd:9caf:1135:41ad:d8d3'
+   * faker.internet.ip() // 'fdb9:e9df:8bbc:e110:cbdf:bab2:e3eb:95ba'
+   * faker.internet.ip() // '0ddd:ef79:f1ee:4268:c9f2:43e5:a532:e348'
    *
    * @since 2.0.1
    */
@@ -669,8 +669,8 @@ export class InternetModule extends ModuleBase {
    * @param options.cidrBlock The optional CIDR block to use. Must be in the format `x.x.x.x/y`. Defaults to `'0.0.0.0/0'`.
    *
    * @example
-   * faker.internet.ipv4() // '245.108.222.0'
-   * faker.internet.ipv4({ cidrBlock: '192.168.0.0/16' }) // '192.168.215.224'
+   * faker.internet.ipv4() // '140.127.10.178'
+   * faker.internet.ipv4({ cidrBlock: '192.168.0.0/16' }) // '192.168.183.22'
    *
    * @since 6.1.1
    */
@@ -689,8 +689,8 @@ export class InternetModule extends ModuleBase {
    * @param options.network The optional network to use. This is intended as an alias for well-known `cidrBlock`s. Defaults to `'any'`.
    *
    * @example
-   * faker.internet.ipv4() // '245.108.222.0'
-   * faker.internet.ipv4({ network: 'private-a' }) // '10.199.154.205'
+   * faker.internet.ipv4() // '140.127.10.178'
+   * faker.internet.ipv4({ network: 'private-a' }) // '10.183.22.166'
    *
    * @since 6.1.1
    */
@@ -710,9 +710,9 @@ export class InternetModule extends ModuleBase {
    * @param options.network The optional network to use. This is intended as an alias for well-known `cidrBlock`s. Defaults to `'any'`.
    *
    * @example
-   * faker.internet.ipv4() // '245.108.222.0'
-   * faker.internet.ipv4({ cidrBlock: '192.168.0.0/16' }) // '192.168.215.224'
-   * faker.internet.ipv4({ network: 'private-a' }) // '10.199.154.205'
+   * faker.internet.ipv4() // '140.127.10.178'
+   * faker.internet.ipv4({ cidrBlock: '192.168.0.0/16' }) // '192.168.183.22'
+   * faker.internet.ipv4({ network: 'private-a' }) // '10.154.78.179'
    *
    * @since 6.1.1
    */
@@ -765,7 +765,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random IPv6 address.
    *
    * @example
-   * faker.internet.ipv6() // '269f:1230:73e3:318d:842b:daab:326d:897b'
+   * faker.internet.ipv6() // 'cfdb:9e9d:f8bb:ce11:0cbd:fbab:2e3e:b95b'
    *
    * @since 4.0.0
    */
@@ -783,7 +783,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random port number.
    *
    * @example
-   * faker.internet.port() // 9414
+   * faker.internet.port() // 35967
    *
    * @since 5.4.0
    */
@@ -795,8 +795,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random user agent string.
    *
    * @example
-   * faker.internet.userAgent()
-   * // 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1 like Mac OS X) AppleWebKit/537.19.86 (KHTML, like Gecko) Version/18_3 Mobile/15E148 Safari/598.43'
+   * faker.internet.userAgent() // 'Mozilla/5.0 (X11; Linux x86_64; rv:117.0) Gecko/20100101 Firefox/110.0'
    *
    * @since 2.0.1
    */
@@ -818,8 +817,8 @@ export class InternetModule extends ModuleBase {
    * @param options.blueBase The optional base blue in range between `0` and `255`. Defaults to `0`.
    *
    * @example
-   * faker.internet.color() // '#30686e'
-   * faker.internet.color({ redBase: 100, greenBase: 100, blueBase: 100 }) // '#4e5f8b'
+   * faker.internet.color() // '#465b4d'
+   * faker.internet.color({ redBase: 100, greenBase: 100, blueBase: 100 }) // '#786884'
    *
    * @since 2.0.1
    */
@@ -861,7 +860,7 @@ export class InternetModule extends ModuleBase {
    * @param separator The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
    *
    * @example
-   * faker.internet.mac() // '32:8e:2e:09:c6:05'
+   * faker.internet.mac() // '8b:98:6a:7e:f6:c8'
    *
    * @since 3.0.0
    */
@@ -879,7 +878,7 @@ export class InternetModule extends ModuleBase {
    * @param separator The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
    *
    * @example
-   * faker.internet.mac() // '32:8e:2e:09:c6:05'
+   * faker.internet.mac() // '8b:98:6a:7e:f6:c8'
    *
    * @since 3.0.0
    */
@@ -891,7 +890,7 @@ export class InternetModule extends ModuleBase {
    * @param separator The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
    *
    * @example
-   * faker.internet.mac() // '32:8e:2e:09:c6:05'
+   * faker.internet.mac() // '8b:98:6a:7e:f6:c8'
    *
    * @since 3.0.0
    */
@@ -955,11 +954,11 @@ export class InternetModule extends ModuleBase {
    * @param options.prefix The prefix to use. Defaults to `''`.
    *
    * @example
-   * faker.internet.password() // '89G1wJuBLbGziIs'
-   * faker.internet.password({ length: 20 }) // 'aF55c_8O9kZaPOrysFB_'
-   * faker.internet.password({ length: 20, memorable: true }) // 'lawetimufozujosodedi'
-   * faker.internet.password({ length: 20, memorable: true, pattern: /[A-Z]/ }) // 'HMAQDFFYLDDUTBKVNFVS'
-   * faker.internet.password({ length: 20, memorable: true, pattern: /[A-Z]/, prefix: 'Hello ' }) // 'Hello IREOXTDWPERQSB'
+   * faker.internet.password() // 'UdZTIJuElSVxpjs'
+   * faker.internet.password({ length: 20 }) // 'lLkzRHjLWzaCJc4CWJ40'
+   * faker.internet.password({ length: 20, memorable: true }) // 'mexofepiziwivumesayo'
+   * faker.internet.password({ length: 20, memorable: true, pattern: /[A-Z]/ }) // 'jalixosidefobihuxota'
+   * faker.internet.password({ length: 20, memorable: true, pattern: /[A-Z]/, prefix: 'Hello ' }) // 'Hello zanoqejuraceki'
    *
    * @since 2.0.1
    */
@@ -1043,8 +1042,8 @@ export class InternetModule extends ModuleBase {
    * @param options.types A list of the emoji types that should be included. Possible values are `'smiley'`, `'body'`, `'person'`, `'nature'`, `'food'`, `'travel'`, `'activity'`, `'object'`, `'symbol'`, `'flag'`. By default, emojis from any type will be included.
    *
    * @example
-   * faker.internet.emoji() // '🥰'
-   * faker.internet.emoji({ types: ['food', 'nature'] }) // '🥐'
+   * faker.internet.emoji() // '🕟'
+   * faker.internet.emoji({ types: ['food', 'nature'] }) // '🦉'
    *
    * @since 6.2.0
    */
@@ -1073,8 +1072,8 @@ export class InternetModule extends ModuleBase {
    * @see faker.internet.jwt(): For generating random JWT (JSON Web Token).
    *
    * @example
-   * faker.internet.jwtAlgorithm() // 'HS256'
-   * faker.internet.jwtAlgorithm() // 'RS512'
+   * faker.internet.jwtAlgorithm() // 'ES384'
+   * faker.internet.jwtAlgorithm() // 'PS256'
    *
    * @since 9.1.0
    */
@@ -1098,10 +1097,10 @@ export class InternetModule extends ModuleBase {
    * @see faker.internet.jwtAlgorithm(): For generating random JWT (JSON Web Token) Algorithm.
    *
    * @example
-   * faker.internet.jwt() // 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzI2MzgxMDYsImV4cCI6MTczMjY5MjUwOSwibmJmIjoxNzA1MDgxNjQ4LCJpc3MiOiJHdXRrb3dza2kgYW5kIFNvbnMiLCJzdWIiOiJlMzQxZjMwNS0yM2I2LTRkYmQtOTY2ZC1iNDRiZmM0ZGIzMGUiLCJhdWQiOiI0YzMwZGE3Yi0zZDUzLTQ4OGUtYTAyZC0zOWI2MDZiZmYxMTciLCJqdGkiOiJiMGZmOTMzOC04ODMwLTRmNDgtYjA3Ny1kNDNmMjU2OGZlYzAifQ.oDLVR73M0u5SjMPlc1aruxbdK7l2titXSeo9J5M1JUd65a1X9MhCz7FOobtX8eaj'
-   * faker.internet.jwt({ header: { alg: 'HS256' }}) // 'eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTg2MTM3MTIsImV4cCI6MTcxODYzMzY3OSwibmJmIjoxNjk3MjYzNjMwLCJpc3MiOiJEb3lsZSBhbmQgU29ucyIsInN1YiI6IjYxYWRkYWFmLWY4MjktNDkzZS1iNTI1LTJjMGJkNjkzOTdjNyIsImF1ZCI6IjczNjcyMjVjLWIwMWMtNGE1My1hYzQyLTYwOWJkZmI1MzBiOCIsImp0aSI6IjU2Y2ZkZjAxLWRhMzMtNGUxNi04MzJiLTFlYTk3ZGY1MTQ2YSJ9.5iUgaCaFVPZ8d1QD0xMjoeJbmPVyUfKfoRQ6Njzm5MLp5F4UMh5REbPCrW70fAkr'
-   * faker.internet.jwt({ payload: { iss: 'Acme' }}) // 'eyJhbGciOiJFUzM4NCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBY21lIn0.syUt0GBukNac8Cn1AGKFq2SWAXWy1YIfl0uOYiwg6TZ3omAW0c7FGWY6bC7ZOFSt'
-   * faker.internet.jwt({ refDate: '2020-01-01T00:00:00.000Z' }) // 'eyJhbGciOiJFUzM4NCIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzc4MDY4NDUsImV4cCI6MTU3Nzg0NjI4MCwibmJmIjoxNTgxNTQyMDYwLCJpc3MiOiJLcmVpZ2VyLCBBbHRlbndlcnRoIGFuZCBQYXVjZWsiLCJzdWIiOiI5NzVjMjMyOS02MDlhLTRjYTYtYjBkZi05ZmY4MGZiNDUwN2QiLCJhdWQiOiI0ODQxZWYwNi01OWYwLTQzMWEtYmFmZi0xMjkxZmRhZDdhNjgiLCJqdGkiOiJmNDBjZTJiYi00ZWYyLTQ1MjMtOGIxMy1kN2Q4NTA5N2M2ZTUifQ.cuClEZQ0CyPIMVS5uxrMwWXz0wcqFFdt0oNne3PMryyly0jghkxVurss2TapMC3C'
+   * faker.internet.jwt() // 'eyJhbGciOiJQUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzU2NDcwMTcsImV4cCI6MTczNTY5OTA5NiwibmJmIjoxNzM4NTE2ODcyLCJpc3MiOiJPJ0Nvbm5lbGwgSW5jIiwic3ViIjoiZWY2Yzg5ZTEtMTBkYy00ZGZjLWE3YzEtYTJmODY0Yzc5MDk5IiwiYXVkIjoiZmE1NmIwYWEtMzI1NS00OTdmLWIxMzItYTQ3MzIxYTIzNWQxIiwianRpIjoiMWY3ZjliMDQtMTQxNS00NjFiLTg5NDgtMTllNWEyYjQyOTBkIn0.GgJXfzAzdXrQHiOoSASGIvXDqB1iEhCq8izAzEEqTmrTNH6VIZ9RaC7QOzp4HsIR'
+   * faker.internet.jwt({ header: { alg: 'HS256' }}) // 'eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MzU2ODM4ODQsImV4cCI6MTczNTc1NzgyNiwibmJmIjoxNzA0ODg4ODMxLCJpc3MiOiJSZW5uZXIgR3JvdXAiLCJzdWIiOiI4MDMwYzM1ZS1iMDI5LTQ5M2UtOTk4OS1iNDYzMmZiNzM0MDYiLCJhdWQiOiJiNjIwMWE3OC1lZjNhLTQ0MGMtODU2OS1kYWQ0YzJmYTNmYjQiLCJqdGkiOiI4MDM2NTc0OS1kMTgyLTRiNjktODIyNy01ZmNiZTE4OWY0MzEifQ.VFMhA3uYSkXeWWNDSiQC0l9YtuDm8Obvd6RYXULk5pe83I0L945FfqyRJg83igsG'
+   * faker.internet.jwt({ payload: { iss: 'Acme' }}) // 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBY21lIn0.nbM3HMMgnAgmcs2N4wjzXE2qvxGh7oXbUxsSsIoUGHkKDe9NXsARsXzOUO9Co3qg'
+   * faker.internet.jwt({ refDate: '2020-01-01T00:00:00.000Z' }) // 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzc4MjM3NTYsImV4cCI6MTU3NzkwNjYxMiwibmJmIjoxNTY4NzE0NjI0LCJpc3MiOiJBcm1zdHJvbmcgR3JvdXAiLCJzdWIiOiI2ZTFmZDc1My05MDA2LTQxNDMtODQyMC0xOWZmNjJhN2YxYzQiLCJhdWQiOiJhM2E4Njg0Yi02NWRlLTQwMzUtOWRmZi1lNGYzMWYzYjBiZTQiLCJqdGkiOiI1YjMyNzRkMy04ZmFkLTRmY2ItYmZmNy0xNDI2Mjk2ZWY4NDkifQ.pygsofvjnwKkVR3fr6lJGCIclFSxh1I0nwV5p1lChd7zHFW0EBAX1HOvkN6rwH5e'
    *
    * @since 9.1.0
    */

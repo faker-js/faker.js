@@ -20,8 +20,7 @@ export class ImageModule extends ModuleBase {
    * Generates a random avatar image url.
    *
    * @example
-   * faker.image.avatar()
-   * // 'https://avatars.githubusercontent.com/u/97165289'
+   * faker.image.avatar() // 'https://avatars.githubusercontent.com/u/54881350'
    *
    * @since 2.0.1
    */
@@ -34,8 +33,7 @@ export class ImageModule extends ModuleBase {
    * Generates a random avatar from GitHub.
    *
    * @example
-   * faker.image.avatarGitHub()
-   * // 'https://avatars.githubusercontent.com/u/97165289'
+   * faker.image.avatarGitHub() // 'https://avatars.githubusercontent.com/u/54881350'
    *
    * @since 8.0.0
    */
@@ -49,8 +47,7 @@ export class ImageModule extends ModuleBase {
    * Generates a random avatar from `https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar`.
    *
    * @example
-   * faker.image.avatarLegacy()
-   * // 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg'
+   * faker.image.avatarLegacy() // 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/686.jpg'
    *
    * @since 8.0.0
    *
@@ -77,7 +74,7 @@ export class ImageModule extends ModuleBase {
    * @param options.height The height of the image. Defaults to a random integer between `1` and `3999`.
    *
    * @example
-   * faker.image.url() // 'https://loremflickr.com/640/480?lock=1234'
+   * faker.image.url() // 'https://picsum.photos/seed/qErTXnNw/2195/2861'
    *
    * @since 8.0.0
    */
@@ -120,10 +117,10 @@ export class ImageModule extends ModuleBase {
    * @param options.category Category to use for the image.
    *
    * @example
-   * faker.image.urlLoremFlickr() // 'https://loremflickr.com/640/480?lock=1234'
-   * faker.image.urlLoremFlickr({ width: 128 }) // 'https://loremflickr.com/128/480?lock=1234'
-   * faker.image.urlLoremFlickr({ height: 128 }) // 'https://loremflickr.com/640/128?lock=1234'
-   * faker.image.urlLoremFlickr({ category: 'nature' }) // 'https://loremflickr.com/640/480/nature?lock=1234'
+   * faker.image.urlLoremFlickr() // 'https://loremflickr.com/2195/2861?lock=5429209831737675'
+   * faker.image.urlLoremFlickr({ width: 128 }) // 'https://loremflickr.com/128/2179?lock=3815943192872827'
+   * faker.image.urlLoremFlickr({ height: 128 }) // 'https://loremflickr.com/2583/128?lock=3941435203169513'
+   * faker.image.urlLoremFlickr({ category: 'nature' }) // 'https://loremflickr.com/3567/3854/nature?lock=3453734162604299'
    *
    * @since 8.0.0
    */
@@ -168,12 +165,12 @@ export class ImageModule extends ModuleBase {
    * @param options.blur Whether the image should be blurred. `0` disables the blur. Defaults to a random integer between `0` and `10`.
    *
    * @example
-   * faker.image.urlPicsumPhotos() // 'https://picsum.photos/seed/NWbJM2B/640/480'
-   * faker.image.urlPicsumPhotos({ width: 128 }) // 'https://picsum.photos/seed/NWbJM2B/128/480'
-   * faker.image.urlPicsumPhotos({ height: 128 }) // 'https://picsum.photos/seed/NWbJM2B/640/128'
-   * faker.image.urlPicsumPhotos({ grayscale: true }) // 'https://picsum.photos/seed/NWbJM2B/640/480?grayscale'
-   * faker.image.urlPicsumPhotos({ blur: 4 }) // 'https://picsum.photos/seed/NWbJM2B/640/480?blur=4'
-   * faker.image.urlPicsumPhotos({ blur: 4, grayscale: true }) // 'https://picsum.photos/seed/NWbJM2B/640/480?grayscale&blur=4'
+   * faker.image.urlPicsumPhotos() // 'https://picsum.photos/seed/ErTXnNw/2195/2861?blur=5'
+   * faker.image.urlPicsumPhotos({ width: 128 }) // 'https://picsum.photos/seed/1PMRY/128/2272'
+   * faker.image.urlPicsumPhotos({ height: 128 }) // 'https://picsum.photos/seed/D8Wwp/3196/128?grayscale&blur=8'
+   * faker.image.urlPicsumPhotos({ grayscale: true }) // 'https://picsum.photos/seed/1CBCWGmr/1058/3097?grayscale&blur=5'
+   * faker.image.urlPicsumPhotos({ blur: 4 }) // 'https://picsum.photos/seed/d7jmzrZ6c/2790/241?blur=4'
+   * faker.image.urlPicsumPhotos({ blur: 4, grayscale: true }) // 'https://picsum.photos/seed/sf96E8/646/2612?grayscale&blur=4'
    *
    * @since 8.0.0
    */
@@ -249,14 +246,14 @@ export class ImageModule extends ModuleBase {
    * @param options.text The text to display on the image. Defaults to a random string.
    *
    * @example
-   * faker.image.urlPlaceholder() // 'https://via.placeholder.com/150x180/FF0000/FFFFFF.webp?text=lorem'
-   * faker.image.urlPlaceholder({ width: 128 }) // 'https://via.placeholder.com/128x180/FF0000/FFFFFF.webp?text=lorem'
-   * faker.image.urlPlaceholder({ height: 128 }) // 'https://via.placeholder.com/150x128/FF0000/FFFFFF.webp?text=lorem'
-   * faker.image.urlPlaceholder({ backgroundColor: '000000' }) // 'https://via.placeholder.com/150x180/000000/FFFFFF.webp?text=lorem'
-   * faker.image.urlPlaceholder({ textColor: '000000' }) // 'https://via.placeholder.com/150x180/FF0000/000000.webp?text=lorem'
-   * faker.image.urlPlaceholder({ format: 'png' }) // 'https://via.placeholder.com/150x180/FF0000/FFFFFF.png?text=lorem'
-   * faker.image.urlPlaceholder({ text: 'lorem ipsum' }) // 'https://via.placeholder.com/150x180/FF0000/FFFFFF.webp?text=lorem+ipsum'
-   * faker.image.urlPlaceholder({ width: 128, height: 128, backgroundColor: '000000', textColor: 'FF0000', format: 'png', text: 'lorem ipsum' }) // 'https://via.placeholder.com/128x128/000000/FF0000.png?text=lorem+ipsum'
+   * faker.image.urlPlaceholder() // 'https://via.placeholder.com/1921x2504/db9e9d/f8bbce.gif?text=alias%20accusator%20tristis'
+   * faker.image.urlPlaceholder({ width: 128 }) // 'https://via.placeholder.com/128x2724/dfbab2/e3eb95.png?text=defleo%20minus%20accusamus'
+   * faker.image.urlPlaceholder({ height: 128 }) // 'https://via.placeholder.com/2162x128/ddef79/f1ee42.jpeg?text=convoco%20molestiae%20decens'
+   * faker.image.urlPlaceholder({ backgroundColor: '000000' }) // 'https://via.placeholder.com/3460x358/000000/43e5a5.gif?text=amor%20sollicito%20aptus'
+   * faker.image.urlPlaceholder({ textColor: '000000' }) // 'https://via.placeholder.com/689x1291/c2c2fa/000000.webp?text=pecco%20tactus%20adflicto'
+   * faker.image.urlPlaceholder({ format: 'png' }) // 'https://via.placeholder.com/990x421/62691f/c5b2ce.png?text=comis%20sopor%20apostolus'
+   * faker.image.urlPlaceholder({ text: 'lorem ipsum' }) // 'https://via.placeholder.com/2508x1013/4c0c0e/5af5cd.jpg?text=lorem%20ipsum'
+   * faker.image.urlPlaceholder({ width: 128, height: 128, backgroundColor: '000000', textColor: 'FF0000', format: 'png', text: 'lorem ipsum' }) // 'https://via.placeholder.com/128x128/000000/FF0000.png?text=lorem%20ipsum'
    *
    * @since 8.0.0
    *
@@ -349,8 +346,8 @@ export class ImageModule extends ModuleBase {
    * @param options.type The type of the image. Defaults to a random type.
    *
    * @example
-   * faker.image.dataUri() // 'data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http...'
-   * faker.image.dataUri({ type: 'svg-base64' }) // 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3...'
+   * faker.image.dataUri() // 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSIyMTk1IiBoZWlnaHQ9IjI4NjEiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNkYjllOWQiLz48dGV4dCB4PSIxMDk3LjUiIHk9IjE0MzAuNSIgZm9udC1zaXplPSIyMCIgYWxpZ25tZW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj4yMTk1eDI4NjE8L3RleHQ+PC9zdmc+'
+   * faker.image.dataUri({ type: 'svg-base64' }) // 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSIxNTM0IiBoZWlnaHQ9IjMxNjciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiY2UxMTAiLz48dGV4dCB4PSI3NjciIHk9IjE1ODMuNSIgZm9udC1zaXplPSIyMCIgYWxpZ25tZW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj4xNTM0eDMxNjc8L3RleHQ+PC9zdmc+'
    *
    * @since 4.0.0
    */

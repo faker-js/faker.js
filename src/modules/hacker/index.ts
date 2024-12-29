@@ -20,7 +20,7 @@ export class HackerModule extends ModuleBase {
    * Returns a random hacker/IT abbreviation.
    *
    * @example
-   * faker.hacker.abbreviation() // 'THX'
+   * faker.hacker.abbreviation() // 'RAM'
    *
    * @since 2.0.1
    */
@@ -34,7 +34,7 @@ export class HackerModule extends ModuleBase {
    * Returns a random hacker/IT adjective.
    *
    * @example
-   * faker.hacker.adjective() // 'cross-platform'
+   * faker.hacker.adjective() // 'neural'
    *
    * @since 2.0.1
    */
@@ -48,7 +48,7 @@ export class HackerModule extends ModuleBase {
    * Returns a random hacker/IT noun.
    *
    * @example
-   * faker.hacker.noun() // 'system'
+   * faker.hacker.noun() // 'matrix'
    *
    * @since 2.0.1
    */
@@ -60,7 +60,7 @@ export class HackerModule extends ModuleBase {
    * Returns a random hacker/IT verb.
    *
    * @example
-   * faker.hacker.verb() // 'copy'
+   * faker.hacker.verb() // 'input'
    *
    * @since 2.0.1
    */
@@ -72,7 +72,7 @@ export class HackerModule extends ModuleBase {
    * Returns a random hacker/IT verb for continuous actions (en: ing suffix; e.g. hacking).
    *
    * @example
-   * faker.hacker.ingverb() // 'navigating'
+   * faker.hacker.ingverb() // 'indexing'
    *
    * @since 2.0.1
    */
@@ -86,8 +86,7 @@ export class HackerModule extends ModuleBase {
    * Generates a random hacker/IT phrase.
    *
    * @example
-   * faker.hacker.phrase()
-   * // 'If we override the card, we can get to the HDD feed through the back-end HDD sensor!'
+   * faker.hacker.phrase() // 'Use the online SQL firewall, then you can hack the neural monitor!'
    *
    * @since 2.0.1
    */

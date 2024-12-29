@@ -20,7 +20,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @see faker.date.future(): For generating dates explicitly in the future.
    *
    * @example
-   * faker.date.anytime() // '2022-07-31T01:33:29.567Z'
+   * faker.date.anytime() // '2025-02-05T14:12:45.320Z'
    *
    * @since 8.0.0
    */
@@ -53,9 +53,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @see faker.date.recent(): For generating dates in the recent past (days instead of years).
    *
    * @example
-   * faker.date.past() // '2021-12-03T05:40:44.408Z'
-   * faker.date.past({ years: 10 }) // '2017-10-25T21:34:19.488Z'
-   * faker.date.past({ years: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2017-08-18T02:59:12.350Z'
+   * faker.date.past() // '2024-07-20T06:36:22.111Z'
+   * faker.date.past({ years: 10 }) // '2022-02-26T09:35:17.864Z'
+   * faker.date.past({ years: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2016-01-12T02:04:17.675Z'
    *
    * @since 8.0.0
    */
@@ -99,9 +99,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @see faker.date.soon(): For generating dates in the near future (days instead of years).
    *
    * @example
-   * faker.date.future() // '2022-11-19T05:52:49.100Z'
-   * faker.date.future({ years: 10 }) // '2030-11-23T09:38:28.710Z'
-   * faker.date.future({ years: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2020-12-13T22:45:10.252Z'
+   * faker.date.future() // '2025-07-20T06:36:23.111Z'
+   * faker.date.future({ years: 10 }) // '2032-02-24T09:35:18.864Z'
+   * faker.date.future({ years: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2026-01-09T02:04:18.675Z'
    *
    * @since 8.0.0
    */
@@ -146,7 +146,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @throws If `from` is after `to`.
    *
    * @example
-   * faker.date.between({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' }) // '2026-05-16T02:22:53.002Z'
+   * faker.date.between({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' }) // '2025-06-27T19:34:39.059Z'
    *
    * @since 8.0.0
    */
@@ -190,20 +190,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @throws If `from` is after `to`.
    *
    * @example
-   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' })
-   * // [
-   * //   '2022-07-02T06:00:00.000Z',
-   * //   '2024-12-31T12:00:00.000Z',
-   * //   '2027-07-02T18:00:00.000Z'
-   * // ]
-   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: 2 })
-   * // [ '2023-05-02T16:00:00.000Z', '2026-09-01T08:00:00.000Z' ]
-   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: { min: 2, max: 5 }})
-   * // [
-   * //   2021-12-19T06:35:40.191Z,
-   * //   2022-09-10T08:03:51.351Z,
-   * //   2023-04-19T11:41:17.501Z
-   * // ]
+   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' }) // [ '2025-06-27T19:34:39.059Z', '2026-01-10T21:28:14.545Z', '2027-02-25T14:04:55.663Z' ]
+   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: 2 }) // [ '2024-03-27T14:39:48.843Z', '2025-06-13T10:59:54.311Z' ]
+   * faker.date.betweens({ from: '2020-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z', count: { min: 2, max: 5 }}) // [ '2023-11-01T17:05:05.418Z', '2024-05-17T12:08:45.549Z', '2028-12-01T15:31:21.089Z', '2029-08-21T06:14:29.540Z' ]
    *
    * @since 8.0.0
    */
@@ -257,9 +246,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @see faker.date.past(): For generating dates further back in time (years instead of days).
    *
    * @example
-   * faker.date.recent() // '2022-02-04T02:09:35.077Z'
-   * faker.date.recent({ days: 10 }) // '2022-01-29T06:12:12.829Z'
-   * faker.date.recent({ days: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2019-12-27T18:11:19.117Z'
+   * faker.date.recent() // '2024-12-31T12:10:16.938Z'
+   * faker.date.recent({ days: 10 }) // '2024-12-29T02:38:42.898Z'
+   * faker.date.recent({ days: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2019-12-28T00:39:46.954Z'
    *
    * @since 8.0.0
    */
@@ -303,9 +292,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @see faker.date.future(): For generating dates further in the future (years instead of days).
    *
    * @example
-   * faker.date.soon() // '2022-02-05T09:55:39.216Z'
-   * faker.date.soon({ days: 10 }) // '2022-02-11T05:14:39.138Z'
-   * faker.date.soon({ days: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2020-01-01T02:40:44.990Z'
+   * faker.date.soon() // '2025-01-01T12:10:17.938Z'
+   * faker.date.soon({ days: 10 }) // '2025-01-08T02:38:43.898Z'
+   * faker.date.soon({ days: 10, refDate: '2020-01-01T00:00:00.000Z' }) // '2020-01-07T00:39:47.954Z'
    *
    * @since 8.0.0
    */
@@ -347,7 +336,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.refDate The date to use as reference point for the newly generated date. Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate() // '1977-07-10T01:37:30.719Z'
+   * faker.date.birthdate() // '1978-07-30T03:46:09.872Z'
    *
    * @since 7.0.0
    */
@@ -369,7 +358,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.refDate The date to use as reference point for the newly generated date. Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '2003-11-02T20:03:20.116Z'
+   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '1985-05-06T04:59:20.027Z'
    *
    * @since 7.0.0
    */
@@ -403,7 +392,7 @@ export class SimpleDateModule extends SimpleModuleBase {
    * @param options.max The maximum year to generate a birthdate in.
    *
    * @example
-   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1940-08-20T08:53:07.538Z'
+   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1955-06-07T02:00:33.353Z'
    *
    * @since 7.0.0
    */
@@ -435,9 +424,9 @@ export class SimpleDateModule extends SimpleModuleBase {
    * Defaults to `faker.defaultRefDate()`.
    *
    * @example
-   * faker.date.birthdate() // '1977-07-10T01:37:30.719Z'
-   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '2003-11-02T20:03:20.116Z'
-   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1940-08-20T08:53:07.538Z'
+   * faker.date.birthdate() // '1978-07-30T03:46:09.872Z'
+   * faker.date.birthdate({ mode: 'age', min: 18, max: 65 }) // '1993-04-30T22:38:05.154Z'
+   * faker.date.birthdate({ mode: 'year', min: 1900, max: 2000 }) // '1960-11-17T03:11:01.233Z'
    *
    * @since 7.0.0
    */
@@ -578,10 +567,10 @@ export class DateModule extends SimpleDateModule {
    * @param options.context Whether to return the name of a month in the context of a date. In the default `en` locale this has no effect, however, in other locales like `fr` or `ru`, this may affect grammar or capitalization, for example `'январь'` with `{ context: false }` and `'января'` with `{ context: true }` in `ru`. Defaults to `false`.
    *
    * @example
-   * faker.date.month() // 'October'
-   * faker.date.month({ abbreviated: true }) // 'Feb'
-   * faker.date.month({ context: true }) // 'June'
-   * faker.date.month({ abbreviated: true, context: true }) // 'Sep'
+   * faker.date.month() // 'June'
+   * faker.date.month({ abbreviated: true }) // 'May'
+   * faker.date.month({ context: true }) // 'March'
+   * faker.date.month({ abbreviated: true, context: true }) // 'Jun'
    *
    * @since 3.0.1
    */
@@ -630,10 +619,10 @@ export class DateModule extends SimpleDateModule {
    * @param options.context Whether to return the day of the week in the context of a date. In the default `en` locale this has no effect, however, in other locales like `fr` or `ru`, this may affect grammar or capitalization, for example `'Lundi'` with `{ context: false }` and `'lundi'` with `{ context: true }` in `fr`. Defaults to `false`.
    *
    * @example
-   * faker.date.weekday() // 'Monday'
-   * faker.date.weekday({ abbreviated: true }) // 'Thu'
+   * faker.date.weekday() // 'Sunday'
+   * faker.date.weekday({ abbreviated: true }) // 'Tue'
    * faker.date.weekday({ context: true }) // 'Thursday'
-   * faker.date.weekday({ abbreviated: true, context: true }) // 'Fri'
+   * faker.date.weekday({ abbreviated: true, context: true }) // 'Sun'
    *
    * @since 3.0.1
    */
@@ -683,7 +672,7 @@ export class DateModule extends SimpleDateModule {
    * @see faker.location.timeZone(): For generating a timezone based on the current locale.
    *
    * @example
-   * faker.location.timeZone() // 'Pacific/Guam'
+   * faker.location.timeZone() // 'Asia/Dili'
    *
    * @since 9.0.0
    */

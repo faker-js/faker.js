@@ -24,11 +24,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.adjective() // 'pungent'
-   * faker.word.adjective(5) // 'slimy'
-   * faker.word.adjective(100) // 'complete'
-   * faker.word.adjective({ strategy: 'shortest' }) // 'icy'
-   * faker.word.adjective({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'distant'
+   * faker.word.adjective() // 'negligible'
+   * faker.word.adjective(5) // 'short'
+   * faker.word.adjective(100) // 'perky'
+   * faker.word.adjective({ strategy: 'shortest' }) // 'mad'
+   * faker.word.adjective({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'likable'
    *
    * @since 6.0.0
    */
@@ -97,11 +97,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.adverb() // 'quarrelsomely'
-   * faker.word.adverb(5) // 'madly'
-   * faker.word.adverb(100) // 'sadly'
-   * faker.word.adverb({ strategy: 'shortest' }) // 'too'
-   * faker.word.adverb({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'sweetly'
+   * faker.word.adverb() // 'often'
+   * faker.word.adverb(5) // 'sadly'
+   * faker.word.adverb(100) // 'promptly'
+   * faker.word.adverb({ strategy: 'shortest' }) // 'not'
+   * faker.word.adverb({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'likely'
    *
    * @since 6.0.0
    */
@@ -170,11 +170,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.conjunction() // 'in order that'
-   * faker.word.conjunction(5) // 'since'
-   * faker.word.conjunction(100) // 'as long as'
+   * faker.word.conjunction() // 'provided'
+   * faker.word.conjunction(5) // 'which'
+   * faker.word.conjunction(100) // 'supposing'
    * faker.word.conjunction({ strategy: 'shortest' }) // 'or'
-   * faker.word.conjunction({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'hence'
+   * faker.word.conjunction({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'since'
    *
    * @since 6.0.0
    */
@@ -243,10 +243,10 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.interjection() // 'gah'
-   * faker.word.interjection(5) // 'fooey'
-   * faker.word.interjection(100) // 'yowza'
-   * faker.word.interjection({ strategy: 'shortest' }) // 'hm'
+   * faker.word.interjection() // 'ugh'
+   * faker.word.interjection(5) // 'yahoo'
+   * faker.word.interjection(100) // 'eek'
+   * faker.word.interjection({ strategy: 'shortest' }) // 'aw'
    * faker.word.interjection({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'boohoo'
    *
    * @since 6.0.0
@@ -316,11 +316,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.noun() // 'external'
-   * faker.word.noun(5) // 'front'
-   * faker.word.noun(100) // 'care'
+   * faker.word.noun() // 'mantua'
+   * faker.word.noun(5) // 'slide'
+   * faker.word.noun(100) // 'newsletter'
    * faker.word.noun({ strategy: 'shortest' }) // 'ad'
-   * faker.word.noun({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'average'
+   * faker.word.noun({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'jungle'
    *
    * @since 6.0.0
    */
@@ -389,11 +389,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.preposition() // 'without'
-   * faker.word.preposition(5) // 'abaft'
-   * faker.word.preposition(100) // 'an'
+   * faker.word.preposition() // 'like'
+   * faker.word.preposition(5) // 'round'
+   * faker.word.preposition(100) // 'next'
    * faker.word.preposition({ strategy: 'shortest' }) // 'a'
-   * faker.word.preposition({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'given'
+   * faker.word.preposition({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'circa'
    *
    * @since 6.0.0
    */
@@ -462,11 +462,11 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.verb() // 'act'
-   * faker.word.verb(5) // 'tinge'
-   * faker.word.verb(100) // 'mess'
-   * faker.word.verb({ strategy: 'shortest' }) // 'do'
-   * faker.word.verb({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'vault'
+   * faker.word.verb() // 'nauseate'
+   * faker.word.verb(5) // 'slump'
+   * faker.word.verb(100) // 'pause'
+   * faker.word.verb({ strategy: 'shortest' }) // 'pip'
+   * faker.word.verb({ length: { min: 5, max: 7 }, strategy: "fail" }) // 'implode'
    *
    * @since 6.0.0
    */
@@ -535,8 +535,8 @@ export class WordModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.word.sample() // 'incidentally'
-   * faker.word.sample(5) // 'fruit'
+   * faker.word.sample() // 'jealous'
+   * faker.word.sample(5) // 'weird'
    *
    * @since 8.0.0
    */
@@ -606,10 +606,10 @@ export class WordModule extends ModuleBase {
    * @param options.count The number of words to return. Defaults to a random value between `1` and `3`.
    *
    * @example
-   * faker.word.words() // 'almost'
-   * faker.word.words(5) // 'before hourly patiently dribble equal'
-   * faker.word.words({ count: 5 }) // 'whoever edible um kissingly faraway'
-   * faker.word.words({ count: { min: 5, max: 10 } }) // 'vice buoyant through apropos poised total wary boohoo'
+   * faker.word.words() // 'tapioca blaring'
+   * faker.word.words(5) // 'the mismatch plagiarise past interestingly'
+   * faker.word.words({ count: 5 }) // 'reassuringly amongst wedge colorfully orientate'
+   * faker.word.words({ count: { min: 5, max: 10 } }) // 'ceramic yuck supposing friendly serpentine if'
    *
    * @since 8.0.0
    */

@@ -65,8 +65,8 @@ export class FinanceModule extends ModuleBase {
    * @param length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // '92842238'
-   * faker.finance.accountNumber(5) // '32564'
+   * faker.finance.accountNumber() // '57654648'
+   * faker.finance.accountNumber(5) // '93755'
    *
    * @since 8.0.0
    */
@@ -78,8 +78,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // '92842238'
-   * faker.finance.accountNumber({ length: 5 }) // '32564'
+   * faker.finance.accountNumber() // '57654648'
+   * faker.finance.accountNumber({ length: 5 }) // '93755'
    *
    * @since 8.0.0
    */
@@ -98,9 +98,9 @@ export class FinanceModule extends ModuleBase {
    * @param optionsOrLength.length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // '92842238'
-   * faker.finance.accountNumber(5) // '28736'
-   * faker.finance.accountNumber({ length: 5 }) // '32564'
+   * faker.finance.accountNumber() // '57654648'
+   * faker.finance.accountNumber(5) // '93755'
+   * faker.finance.accountNumber({ length: 5 }) // '90008'
    *
    * @since 8.0.0
    */
@@ -154,7 +154,7 @@ export class FinanceModule extends ModuleBase {
    * Generates a random account name.
    *
    * @example
-   * faker.finance.accountName() // 'Personal Loan Account'
+   * faker.finance.accountName() // 'Investment Account'
    *
    * @since 2.0.1
    */
@@ -171,7 +171,7 @@ export class FinanceModule extends ModuleBase {
    * Generates a random routing number.
    *
    * @example
-   * faker.finance.routingNumber() // '522814402'
+   * faker.finance.routingNumber() // '576546483'
    *
    * @since 5.0.0
    */
@@ -199,8 +199,8 @@ export class FinanceModule extends ModuleBase {
    * @param length The length of the unmasked number. Defaults to `4`.
    *
    * @example
-   * faker.finance.maskedNumber() // '(...9711)'
-   * faker.finance.maskedNumber(3) // '(...342)'
+   * faker.finance.maskedNumber() // '(...5765)'
+   * faker.finance.maskedNumber(3) // '(...464)'
    *
    * @since 8.0.0
    *
@@ -216,10 +216,10 @@ export class FinanceModule extends ModuleBase {
    * @param options.ellipsis Whether to prefix the numbers with an ellipsis. Defaults to `true`.
    *
    * @example
-   * faker.finance.maskedNumber() // '(...9711)'
-   * faker.finance.maskedNumber({ length: 3 }) // '(...342)'
-   * faker.finance.maskedNumber({ length: 3, parens: false }) // '...236'
-   * faker.finance.maskedNumber({ length: 3, parens: false, ellipsis: false }) // '298'
+   * faker.finance.maskedNumber() // '(...5765)'
+   * faker.finance.maskedNumber({ length: 3 }) // '(...464)'
+   * faker.finance.maskedNumber({ length: 3, parens: false }) // '...893'
+   * faker.finance.maskedNumber({ length: 3, parens: false, ellipsis: false }) // '755'
    *
    * @since 8.0.0
    *
@@ -254,11 +254,11 @@ export class FinanceModule extends ModuleBase {
    * @param optionsOrLength.ellipsis Whether to prefix the numbers with an ellipsis. Defaults to `true`.
    *
    * @example
-   * faker.finance.maskedNumber() // '(...9711)'
-   * faker.finance.maskedNumber(3) // '(...342)'
-   * faker.finance.maskedNumber({ length: 3 }) // '(...342)'
-   * faker.finance.maskedNumber({ length: 3, parens: false }) // '...236'
-   * faker.finance.maskedNumber({ length: 3, parens: false, ellipsis: false }) // '298'
+   * faker.finance.maskedNumber() // '(...5765)'
+   * faker.finance.maskedNumber(3) // '(...464)'
+   * faker.finance.maskedNumber({ length: 3 }) // '(...893)'
+   * faker.finance.maskedNumber({ length: 3, parens: false }) // '...755'
+   * faker.finance.maskedNumber({ length: 3, parens: false, ellipsis: false }) // '900'
    *
    * @since 8.0.0
    *
@@ -369,11 +369,11 @@ export class FinanceModule extends ModuleBase {
    * @param options.autoFormat If true this method will use `Number.toLocaleString()`. Otherwise it will use `Number.toFixed()`.
    *
    * @example
-   * faker.finance.amount() // '617.87'
-   * faker.finance.amount({ min: 5, max: 10 }) // '5.53'
+   * faker.finance.amount() // '548.81'
+   * faker.finance.amount({ min: 5, max: 10 }) // '8.58'
    * faker.finance.amount({ min: 5, max: 10, dec: 0 }) // '8'
-   * faker.finance.amount({ min: 5, max: 10, dec: 2, symbol: '$' }) // '$5.85'
-   * faker.finance.amount({ min: 5, max: 10, dec: 5, symbol: '', autoFormat: true }) // '9,75067'
+   * faker.finance.amount({ min: 5, max: 10, dec: 2, symbol: '$' }) // '$7.72'
+   * faker.finance.amount({ min: 5, max: 10, dec: 5, symbol: '', autoFormat: true }) // '7,11827'
    *
    * @since 2.0.1
    */
@@ -454,7 +454,7 @@ export class FinanceModule extends ModuleBase {
    * @see faker.finance.currencySymbol(): For generating specifically the currency symbol.
    *
    * @example
-   * faker.finance.currency() // { code: 'USD', name: 'US Dollar', symbol: '$' }
+   * faker.finance.currency() // { 'name': 'Kyat', 'code': 'MMK', 'symbol': '' }
    *
    * @since 8.0.0
    */
@@ -469,7 +469,7 @@ export class FinanceModule extends ModuleBase {
    * (The short text/abbreviation for the currency (e.g. `US Dollar` -> `USD`))
    *
    * @example
-   * faker.finance.currencyCode() // 'USD'
+   * faker.finance.currencyCode() // 'MMK'
    *
    * @since 2.0.1
    */
@@ -481,7 +481,7 @@ export class FinanceModule extends ModuleBase {
    * Returns a random currency name.
    *
    * @example
-   * faker.finance.currencyName() // 'US Dollar'
+   * faker.finance.currencyName() // 'Kyat'
    *
    * @since 2.0.1
    */
@@ -493,7 +493,7 @@ export class FinanceModule extends ModuleBase {
    * Returns a random currency symbol.
    *
    * @example
-   * faker.finance.currencySymbol() // '$'
+   * faker.finance.currencySymbol() // 'руб'
    *
    * @since 2.0.1
    */
@@ -514,9 +514,9 @@ export class FinanceModule extends ModuleBase {
    * @param options.network The bitcoin network (`'mainnet'` or `'testnet'`). Defaults to `'mainnet'`.
    *
    * @example
-   * faker.finance.bitcoinAddress() // '1TeZEFLmGPLEQrSRdAcnZLoWwYeiHwmRog'
-   * faker.finance.bitcoinAddress({ type: 'bech32' }) // 'bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4'
-   * faker.finance.bitcoinAddress({ type: 'bech32', network: 'testnet' }) // 'tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx'
+   * faker.finance.bitcoinAddress() // 'bc1qmkfngwyetjlx330usvztgs4n5yjf9sgl0mmmyp'
+   * faker.finance.bitcoinAddress({ type: 'bech32' }) // 'bc1dfq2pp75cdlgz476n9g864p57du4u4zgzmr2a4a'
+   * faker.finance.bitcoinAddress({ type: 'bech32', network: 'testnet' }) // 'tb14cf3ql9j4lxcp5qa6l0u0p9ry8lll8ygvqauewl'
    *
    * @since 3.1.0
    */
@@ -557,7 +557,7 @@ export class FinanceModule extends ModuleBase {
    * Generates a random Litecoin address.
    *
    * @example
-   * faker.finance.litecoinAddress() // 'MoQaSTGWBRXkWfyxKbNKuPrAWGELzcW'
+   * faker.finance.litecoinAddress() // '3AxqDrTXoMwyV562QMSYNsM7D9Wwqg'
    *
    * @since 5.0.0
    */
@@ -580,9 +580,9 @@ export class FinanceModule extends ModuleBase {
    * @param issuer The name of the issuer (case-insensitive) or the format used to generate one.
    *
    * @example
-   * faker.finance.creditCardNumber() // '4427163488662'
-   * faker.finance.creditCardNumber('visa') // '4882664999007'
-   * faker.finance.creditCardNumber('63[7-9]#-####-####-###L') // '6375-3265-4676-6646'
+   * faker.finance.creditCardNumber() // '3565-4648-9375-5909'
+   * faker.finance.creditCardNumber('visa') // '4087897471614'
+   * faker.finance.creditCardNumber('63[7-9]#-####-####-###L') // '6395-4274-5066-6966'
    *
    * @since 5.0.0
    */
@@ -594,9 +594,9 @@ export class FinanceModule extends ModuleBase {
    * @param options.issuer The name of the issuer (case-insensitive) or the format used to generate one. Defaults to `''`.
    *
    * @example
-   * faker.finance.creditCardNumber() // '4427163488662'
-   * faker.finance.creditCardNumber({ issuer: 'visa' }) // '4882664999007'
-   * faker.finance.creditCardNumber({ issuer: '63[7-9]#-####-####-###L' }) // '6375-3265-4676-6646'
+   * faker.finance.creditCardNumber() // '3565-4648-9375-5909'
+   * faker.finance.creditCardNumber({ issuer: 'visa' }) // '4087897471614'
+   * faker.finance.creditCardNumber({ issuer: '63[7-9]#-####-####-###L' }) // '6395-4274-5066-6966'
    *
    * @since 5.0.0
    */
@@ -615,10 +615,10 @@ export class FinanceModule extends ModuleBase {
    * @param options.issuer The name of the issuer (case-insensitive) or the format used to generate one. Defaults to `''`.
    *
    * @example
-   * faker.finance.creditCardNumber() // '4427163488662'
-   * faker.finance.creditCardNumber({ issuer: 'visa' }) // '4882664999007'
-   * faker.finance.creditCardNumber({ issuer: '63[7-9]#-####-####-###L' }) // '6375-3265-4676-6646'
-   * faker.finance.creditCardNumber('visa') // '1226423499765'
+   * faker.finance.creditCardNumber() // '3565-4648-9375-5909'
+   * faker.finance.creditCardNumber({ issuer: 'visa' }) // '4087897471614'
+   * faker.finance.creditCardNumber({ issuer: '63[7-9]#-####-####-###L' }) // '6395-4274-5066-6966'
+   * faker.finance.creditCardNumber('visa') // '4460662133547'
    *
    * @since 5.0.0
    */
@@ -689,7 +689,7 @@ export class FinanceModule extends ModuleBase {
    * Generates a random credit card CVV.
    *
    * @example
-   * faker.finance.creditCardCVV() // '506'
+   * faker.finance.creditCardCVV() // '576'
    *
    * @since 5.0.0
    */
@@ -701,7 +701,7 @@ export class FinanceModule extends ModuleBase {
    * Returns a random credit card issuer.
    *
    * @example
-   * faker.finance.creditCardIssuer() // 'discover'
+   * faker.finance.creditCardIssuer() // 'jcb'
    *
    * @since 6.3.0
    */
@@ -719,8 +719,8 @@ export class FinanceModule extends ModuleBase {
    * @throws Will throw an error if length is less than 1.
    *
    * @example
-   * faker.finance.pin() // '5067'
-   * faker.finance.pin(6) // '213789'
+   * faker.finance.pin() // '5765'
+   * faker.finance.pin(6) // '464893'
    *
    * @since 6.2.0
    */
@@ -734,8 +734,8 @@ export class FinanceModule extends ModuleBase {
    * @throws Will throw an error if length is less than 1.
    *
    * @example
-   * faker.finance.pin() // '5067'
-   * faker.finance.pin({ length: 6 }) // '213789'
+   * faker.finance.pin() // '5765'
+   * faker.finance.pin({ length: 6 }) // '464893'
    *
    * @since 6.2.0
    */
@@ -756,9 +756,9 @@ export class FinanceModule extends ModuleBase {
    * @throws Will throw an error if length is less than 1.
    *
    * @example
-   * faker.finance.pin() // '5067'
-   * faker.finance.pin({ length: 6 }) // '213789'
-   * faker.finance.pin(6) // '213789'
+   * faker.finance.pin() // '5765'
+   * faker.finance.pin({ length: 6 }) // '464893'
+   * faker.finance.pin(6) // '755900'
    *
    * @since 6.2.0
    */
@@ -820,7 +820,7 @@ export class FinanceModule extends ModuleBase {
    * To generate a checksummed Ethereum address (with specific per character casing), wrap this method in a custom method and use third-party libraries to transform the result.
    *
    * @example
-   * faker.finance.ethereumAddress() // '0xf03dfeecbafc5147241cc4c4ca20b3c9dfd04c4a'
+   * faker.finance.ethereumAddress() // '0xcfdb9e9df8bbce110cbdfbab2e3eb95bac0dddef'
    *
    * @since 5.0.0
    */
@@ -844,9 +844,9 @@ export class FinanceModule extends ModuleBase {
    * @throws Will throw an error if the passed country code is not supported.
    *
    * @example
-   * faker.finance.iban() // 'TR736918640040966092800056'
-   * faker.finance.iban({ formatted: true }) // 'FR20 8008 2330 8984 74S3 Z620 224'
-   * faker.finance.iban({ formatted: true, countryCode: 'DE' }) // 'DE84 1022 7075 0900 1170 01'
+   * faker.finance.iban() // 'LI256448975B0UZ411N24'
+   * faker.finance.iban({ formatted: true }) // 'LT33 0696 3607 0035 9002'
+   * faker.finance.iban({ formatted: true, countryCode: 'DE' }) // 'DE25 2200 6004 0046 0003 13'
    *
    * @since 4.0.0
    */
@@ -928,9 +928,9 @@ export class FinanceModule extends ModuleBase {
    * @param options.includeBranchCode Whether to include a three-digit branch code at the end of the generated code. Defaults to a random boolean value.
    *
    * @example
-   * faker.finance.bic() // 'WYAUPGX1'
-   * faker.finance.bic({ includeBranchCode: true }) // 'KCAUPGR1432'
-   * faker.finance.bic({ includeBranchCode: false }) // 'XDAFQGT7'
+   * faker.finance.bic() // 'SPOLNEFW'
+   * faker.finance.bic({ includeBranchCode: true }) // 'ZJUNMHX20TS'
+   * faker.finance.bic({ includeBranchCode: false }) // 'WZULSD4N'
    *
    * @since 4.0.0
    */
@@ -968,8 +968,7 @@ export class FinanceModule extends ModuleBase {
    * Generates a random transaction description.
    *
    * @example
-   * faker.finance.transactionDescription()
-   * // 'payment transaction at Emard LLC using card ending with ****9187 for HNL 506.57 in account ***2584.'
+   * faker.finance.transactionDescription() // 'payment at Little Inc with a card ending in ****6489 for INR 791.73 from account ***5590.'
    *
    * @since 5.1.0
    */

@@ -31,10 +31,10 @@ export class LoremModule extends ModuleBase {
    * Defaults to `'any-length'`.
    *
    * @example
-   * faker.lorem.word() // 'temporibus'
-   * faker.lorem.word(5) // 'velit'
+   * faker.lorem.word() // 'inflammatio'
+   * faker.lorem.word(5) // 'teneo'
    * faker.lorem.word({ strategy: 'shortest' }) // 'a'
-   * faker.lorem.word({ length: { min: 5, max: 7 }, strategy: 'fail' }) // 'quaerat'
+   * faker.lorem.word({ length: { min: 5, max: 7 }, strategy: 'fail' }) // 'pauci'
    *
    * @since 3.1.0
    */
@@ -95,9 +95,9 @@ export class LoremModule extends ModuleBase {
    * @param wordCount.max The maximum number of words to generate.
    *
    * @example
-   * faker.lorem.words() // 'qui praesentium pariatur'
-   * faker.lorem.words(10) // 'debitis consectetur voluptatem non doloremque ipsum autem totam eum ratione'
-   * faker.lorem.words({ min: 1, max: 3 }) // 'tenetur error cum'
+   * faker.lorem.words() // 'inflammatio sumo pax'
+   * faker.lorem.words(10) // 'impedit curriculum sint debitis vallum vix credo textilis eveniet minus'
+   * faker.lorem.words({ min: 1, max: 3 }) // 'aeneus alias accusator'
    *
    * @since 2.0.1
    */
@@ -128,9 +128,9 @@ export class LoremModule extends ModuleBase {
    * @param wordCount.max The maximum number of words to generate. Defaults to `10`.
    *
    * @example
-   * faker.lorem.sentence() // 'Voluptatum cupiditate suscipit autem eveniet aut dolorem aut officiis distinctio.'
-   * faker.lorem.sentence(5) // 'Laborum voluptatem officiis est et.'
-   * faker.lorem.sentence({ min: 3, max: 5 }) // 'Fugiat repellendus nisi.'
+   * faker.lorem.sentence() // 'Sumo pax impedit curriculum sint debitis vallum.'
+   * faker.lorem.sentence(5) // 'Vix credo textilis eveniet minus.'
+   * faker.lorem.sentence({ min: 3, max: 5 }) // 'Aeneus alias accusator tristis tergo.'
    *
    * @since 2.0.1
    */
@@ -160,9 +160,9 @@ export class LoremModule extends ModuleBase {
    * @param wordCount.max The maximum number of words to generate.
    *
    * @example
-   * faker.lorem.slug() // 'dolores-illo-est'
-   * faker.lorem.slug(5) // 'delectus-totam-iusto-itaque-placeat'
-   * faker.lorem.slug({ min: 1, max: 3 }) // 'illo-ratione'
+   * faker.lorem.slug() // 'inflammatio-sumo-pax'
+   * faker.lorem.slug(5) // 'impedit-curriculum-sint-debitis-vallum'
+   * faker.lorem.slug({ min: 1, max: 3 }) // 'credo-textilis-eveniet'
    *
    * @since 4.0.0
    */
@@ -193,12 +193,12 @@ export class LoremModule extends ModuleBase {
    * @param separator The separator to add between sentences. Defaults to `' '`.
    *
    * @example
-   * faker.lorem.sentences() // 'Iste molestiae incidunt aliquam possimus reprehenderit eum corrupti. Deleniti modi voluptatem nostrum ut esse.'
-   * faker.lorem.sentences(2) // 'Maxime vel numquam quibusdam. Dignissimos ex molestias quos aut molestiae quam nihil occaecati maiores.'
+   * faker.lorem.sentences() // 'Pax impedit curriculum sint debitis vallum vix credo. Eveniet minus vespillo aeneus alias accusator tristis tergo usus. Thermae deinde termes angustus rerum arbitro vinco enim cuppedia celo. Defleo minus accusamus quae perspiciatis provident villa statim contigo.'
+   * faker.lorem.sentences(2) // 'Subiungo adulescens sopor spargo bene aperiam. Convoco molestiae decens voveo ambitus.'
    * faker.lorem.sentences(2, '\n')
-   * // 'Et rerum a unde tempora magnam sit nisi.
-   * // Et perspiciatis ipsam omnis.'
-   * faker.lorem.sentences({ min: 1, max: 3 }) // 'Placeat ex natus tenetur repellendus repellendus iste. Optio nostrum veritatis.'
+   * // 'Arx solitudo catena deleniti.
+   * // Articulus amor sollicito aptus.'
+   * faker.lorem.sentences({ min: 1, max: 3 }) // 'Trado alter tum alo voluptatibus.'
    *
    * @since 2.0.1
    */
@@ -230,9 +230,9 @@ export class LoremModule extends ModuleBase {
    * @param sentenceCount.max The maximum number of sentences to generate.
    *
    * @example
-   * faker.lorem.paragraph() // 'Non architecto nam unde sint. Ex tenetur dolor facere optio aut consequatur. Ea laudantium reiciendis repellendus.'
-   * faker.lorem.paragraph(2) // 'Animi possimus nemo consequuntur ut ea et tempore unde qui. Quis corporis esse occaecati.'
-   * faker.lorem.paragraph({ min: 1, max: 3 }) // 'Quis doloribus necessitatibus sint. Rerum accusamus impedit corporis porro.'
+   * faker.lorem.paragraph() // 'Sumo pax impedit curriculum sint debitis vallum. Credo textilis eveniet minus vespillo aeneus alias accusator tristis tergo. Volutabrum thermae deinde termes angustus rerum arbitro vinco enim.'
+   * faker.lorem.paragraph(2) // 'Celo teres defleo minus accusamus quae. Provident villa statim contigo debilito subiungo adulescens.'
+   * faker.lorem.paragraph({ min: 1, max: 3 }) // 'Bene aperiam comedo convoco molestiae decens voveo ambitus. Arx solitudo catena deleniti. Articulus amor sollicito aptus.'
    *
    * @since 2.0.1
    */
@@ -263,25 +263,22 @@ export class LoremModule extends ModuleBase {
    *
    * @example
    * faker.lorem.paragraphs()
-   * // 'Beatae voluptatem dicta et assumenda fugit eaque quidem consequatur. Fuga unde provident. Id reprehenderit soluta facilis est laborum laborum. Illum aut non ut. Est nulla rem ipsa.
-   * // Voluptatibus quo pariatur est. Temporibus deleniti occaecati pariatur nemo est molestias voluptas. Doloribus commodi et et exercitationem vel et. Omnis inventore cum aut amet.
-   * // Sapiente deleniti et. Ducimus maiores eum. Rem dolorem itaque aliquam.'
-   *
+   * // 'Sumo pax impedit curriculum sint debitis vallum. Credo textilis eveniet minus vespillo aeneus alias accusator tristis tergo. Volutabrum thermae deinde termes angustus rerum arbitro vinco enim.
+   * // Celo teres defleo minus accusamus quae. Provident villa statim contigo debilito subiungo adulescens. Spargo bene aperiam comedo convoco molestiae decens voveo.
+   * // Bellicus arx solitudo. Deleniti caries articulus amor sollicito. Auxilium corporis trado alter.'
+   * 
    * faker.lorem.paragraphs(5)
-   * // 'Quia hic sunt ducimus expedita quo impedit soluta. Quam impedit et ipsum optio. Unde dolores nulla nobis vero et aspernatur officiis.
-   * // Aliquam dolorem temporibus dolores voluptatem voluptatem qui nostrum quia. Sit hic facilis rerum eius. Beatae doloribus nesciunt iste ipsum.
-   * // Natus nam eum nulla voluptas molestiae fuga libero nihil voluptatibus. Sed quam numquam eum ipsam temporibus eaque ut et. Enim quas debitis quasi quis. Vitae et vitae.
-   * // Repellat voluptatem est laborum illo harum sed reprehenderit aut. Quo sit et. Exercitationem blanditiis totam velit ad dicta placeat.
-   * // Rerum non eum incidunt amet quo. Eaque laborum ut. Recusandae illo ab distinctio veritatis. Cum quis architecto ad maxime a.'
-   *
+   * // 'Alo voluptatibus delicate voluptatibus pecco tactus adflicto cimentarius animi. Angustus cometes cupio advoco stultus. Cena eos aliquid nemo vetus comis sopor.
+   * // Sumptus clam auctus occaecati. Tricesimus abeo spiritus. Tabesco vivo carpo nemo omnis.
+   * // Cado viridis dedecor tyrannus subnecto coadunatio torqueo. Uxor nobis uxor stultus surgo desino. Sequi curriculum pecto accusantium cogito solutio clam quae curto appositus.
+   * // Molestiae officiis natus solitudo solio. Vel corona debeo vapulus timidus succurro. Verto summopere vulticulus.
+   * // Ustilo ascisco possimus anser. Timor modi cum aegrus subiungo defetiscor suppono usitas voluptates. Absum contigo sustineo astrum eligendi adopto aveho accusamus textus.'
+   * 
    * faker.lorem.paragraphs(2, '<br/>\n')
-   * // 'Eos magnam aut qui accusamus. Sapiente quas culpa totam excepturi. Blanditiis totam distinctio occaecati dignissimos cumque atque qui officiis.<br/>
-   * // Nihil quis vel consequatur. Blanditiis commodi deserunt sunt animi dolorum. A optio porro hic dolorum fugit aut et sint voluptas. Minima ad sed ipsa est non dolores.'
-   *
-   * faker.lorem.paragraphs({ min: 1, max: 3 })
-   * // 'Eum nam fugiat laudantium.
-   * // Dignissimos tempore porro necessitatibus commodi nam.
-   * // Veniam at commodi iste perferendis totam dolorum corporis ipsam.'
+   * // 'Coniuratio vestrum succurro addo. Quas neque capio victus. Facilis officia sustineo color cubicularis bellum audentia.&lt;br/>
+   * // Tactus depraedor calcar caterva adsuesco damno color subito crapula attero. Aegre spoliatio defetiscor. Vel vulariter bis somnus celer accusator tempora.'
+   * 
+   * faker.lorem.paragraphs({ min: 1, max: 3 }) // 'Odio tripudio quo uter certus theologus. Viridis stips bibo vinitor. Catena benigne eaque acies beatus currus corrumpo delectus.'
    *
    * @since 2.0.1
    */
@@ -309,13 +306,11 @@ export class LoremModule extends ModuleBase {
    * Generates a random text based on a random lorem method.
    *
    * @example
-   * faker.lorem.text() // 'Doloribus autem non quis vero quia.'
+   * faker.lorem.text() // 'Pax impedit curriculum sint debitis vallum vix credo. Eveniet minus vespillo aeneus alias accusator tristis tergo usus. Thermae deinde termes angustus rerum arbitro vinco enim cuppedia celo.'
    * faker.lorem.text()
-   * // 'Rerum eum reiciendis id ipsa hic dolore aut laborum provident.
-   * // Quis beatae quis corporis veritatis corrupti ratione delectus sapiente ut.
-   * // Quis ut dolor dolores facilis possimus tempore voluptates.
-   * // Iure nam officia optio cumque.
-   * // Dolor tempora iusto.'
+   * // 'Minus accusamus quae perspiciatis provident villa. Contigo debilito subiungo adulescens sopor spargo bene aperiam. Convoco molestiae decens voveo ambitus.
+   * // Arx solitudo catena deleniti. Articulus amor sollicito aptus. Corporis trado alter tum.
+   * // Voluptatibus delicate voluptatibus. Tactus adflicto cimentarius animi clementia angustus cometes. Advoco stultus minima cena eos aliquid.'
    *
    * @since 3.1.0
    */
@@ -342,21 +337,21 @@ export class LoremModule extends ModuleBase {
    *
    * @example
    * faker.lorem.lines()
-   * // 'Rerum quia aliquam pariatur explicabo sint minima eos.
-   * // Voluptatem repellat consequatur deleniti qui quibusdam harum cumque.
-   * // Enim eveniet a qui.
-   * // Consectetur velit eligendi animi nostrum veritatis.'
-   *
+   * // 'Pax impedit curriculum sint debitis vallum vix credo.
+   * // Eveniet minus vespillo aeneus alias accusator tristis tergo usus.
+   * // Thermae deinde termes angustus rerum arbitro vinco enim cuppedia celo.'
+   * 
    * faker.lorem.lines()
-   * // 'Soluta deserunt eos quam reiciendis libero autem enim nam ut.
-   * // Voluptate aut aut.'
-   *
+   * // 'Minus accusamus quae perspiciatis provident villa.
+   * // Contigo debilito subiungo adulescens sopor spargo bene aperiam.
+   * // Convoco molestiae decens voveo ambitus.
+   * // Arx solitudo catena deleniti.'
+   * 
    * faker.lorem.lines(2)
-   * // 'Quod quas nam quis impedit aut consequuntur.
-   * // Animi dolores aspernatur.'
-   *
-   * faker.lorem.lines({ min: 1, max: 3 })
-   * // 'Error dolorem natus quos eum consequatur necessitatibus.'
+   * // 'Articulus amor sollicito aptus.
+   * // Corporis trado alter tum.'
+   * 
+   * faker.lorem.lines({ min: 1, max: 3 }) // 'Delicate voluptatibus pecco tactus adflicto cimentarius animi clementia angustus cometes.'
    *
    * @since 3.1.0
    */
