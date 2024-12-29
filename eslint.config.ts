@@ -24,6 +24,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       '.github/workflows/commentCodeGeneration.ts',
       '.prettierrc.js',
       'docs/.vitepress/components/shims.d.ts',
+      'docs/.vitepress/components/api-docs/format.ts',
       'docs/.vitepress/shared/utils/slugify.ts',
       'docs/.vitepress/theme/index.ts',
       'eslint.config.js',
@@ -159,11 +160,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       'unicorn/prefer-string-raw': 'off', // The additional prefix doesn't help readability
       'unicorn/prefer-string-slice': 'off', // string.substring is sometimes easier to use
       'unicorn/prefer-ternary': 'off', // ternaries aren't always better
-
-      // TODO @Shinigami92 2023-09-23: The following rules currently conflict with our code.
-      // Each rule should be checked whether it should be enabled/configured and the problems fixed, or stay disabled permanently.
-      'unicorn/prefer-export-from': 'off',
-      'unicorn/prevent-abbreviations': 'off',
+      'unicorn/prevent-abbreviations': 'off', // if abbreviations don't reduce readability, they're fine
     },
   },
   //#endregion

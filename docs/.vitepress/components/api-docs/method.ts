@@ -8,6 +8,7 @@ export interface ApiDocsMethod {
   readonly throws: string | undefined; // HTML
   readonly signature: string; // HTML
   readonly examples: string; // HTML
+  readonly refresh: (() => Promise<unknown[]>) | undefined;
   readonly seeAlsos: string[];
   readonly sourcePath: string; // URL-Suffix
 }

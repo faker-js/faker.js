@@ -4,17 +4,17 @@ exports[`person > 42 > bio 1`] = `"traveler, philosopher, model"`;
 
 exports[`person > 42 > firstName > noArgs 1`] = `"Garnet"`;
 
-exports[`person > 42 > firstName > with sex 1`] = `"Glen"`;
+exports[`person > 42 > firstName > with sex 1`] = `"Gerald"`;
 
-exports[`person > 42 > fullName > noArgs 1`] = `"Lorene Miller"`;
+exports[`person > 42 > fullName > noArgs 1`] = `"Tracy Miller"`;
 
 exports[`person > 42 > fullName > with all (sex) 1`] = `"John Doe"`;
 
 exports[`person > 42 > fullName > with firstName 1`] = `"John Reynolds-Miller"`;
 
-exports[`person > 42 > fullName > with lastName 1`] = `"Lorene Doe"`;
+exports[`person > 42 > fullName > with lastName 1`] = `"Tracy Doe"`;
 
-exports[`person > 42 > fullName > with sex 1`] = `"Melanie Reynolds-Miller"`;
+exports[`person > 42 > fullName > with sex 1`] = `"Hilda Reynolds-Miller"`;
 
 exports[`person > 42 > gender 1`] = `"Gender nonconforming"`;
 
@@ -36,7 +36,7 @@ exports[`person > 42 > middleName > with sex 1`] = `"Houston"`;
 
 exports[`person > 42 > prefix > noArgs 1`] = `"Miss"`;
 
-exports[`person > 42 > prefix > with sex 1`] = `"Mr."`;
+exports[`person > 42 > prefix > with sex 1`] = `"Dr."`;
 
 exports[`person > 42 > sex > noArgs 1`] = `"female"`;
 
@@ -54,17 +54,17 @@ exports[`person > 1211 > bio 1`] = `"decongestant supporter, parent 🎲"`;
 
 exports[`person > 1211 > firstName > noArgs 1`] = `"Tito"`;
 
-exports[`person > 1211 > firstName > with sex 1`] = `"Percy"`;
+exports[`person > 1211 > firstName > with sex 1`] = `"Todd"`;
 
-exports[`person > 1211 > fullName > noArgs 1`] = `"Darrel Zieme"`;
+exports[`person > 1211 > fullName > noArgs 1`] = `"Steve Zieme"`;
 
 exports[`person > 1211 > fullName > with all (sex) 1`] = `"John Doe PhD"`;
 
-exports[`person > 1211 > fullName > with firstName 1`] = `"Dr. John Fahey MD"`;
+exports[`person > 1211 > fullName > with firstName 1`] = `"Mr. John Fahey MD"`;
 
-exports[`person > 1211 > fullName > with lastName 1`] = `"Darrel Doe"`;
+exports[`person > 1211 > fullName > with lastName 1`] = `"Steve Doe"`;
 
-exports[`person > 1211 > fullName > with sex 1`] = `"Miss Patti Fahey MD"`;
+exports[`person > 1211 > fullName > with sex 1`] = `"Mrs. Teri Fahey MD"`;
 
 exports[`person > 1211 > gender 1`] = `"Trigender"`;
 
@@ -86,7 +86,7 @@ exports[`person > 1211 > middleName > with sex 1`] = `"Walter"`;
 
 exports[`person > 1211 > prefix > noArgs 1`] = `"Ms."`;
 
-exports[`person > 1211 > prefix > with sex 1`] = `"Dr."`;
+exports[`person > 1211 > prefix > with sex 1`] = `"Mr."`;
 
 exports[`person > 1211 > sex > noArgs 1`] = `"male"`;
 
@@ -104,17 +104,17 @@ exports[`person > 1337 > bio 1`] = `"creator, engineer, friend"`;
 
 exports[`person > 1337 > firstName > noArgs 1`] = `"Devyn"`;
 
-exports[`person > 1337 > firstName > with sex 1`] = `"Ray"`;
+exports[`person > 1337 > firstName > with sex 1`] = `"Douglas"`;
 
-exports[`person > 1337 > fullName > noArgs 1`] = `"Marilyn Koelpin"`;
+exports[`person > 1337 > fullName > noArgs 1`] = `"Chelsea Koelpin"`;
 
 exports[`person > 1337 > fullName > with all (sex) 1`] = `"John Doe"`;
 
 exports[`person > 1337 > fullName > with firstName 1`] = `"John Gottlieb"`;
 
-exports[`person > 1337 > fullName > with lastName 1`] = `"Marilyn Doe"`;
+exports[`person > 1337 > fullName > with lastName 1`] = `"Chelsea Doe"`;
 
-exports[`person > 1337 > fullName > with sex 1`] = `"Esther Gottlieb"`;
+exports[`person > 1337 > fullName > with sex 1`] = `"Elizabeth Gottlieb"`;
 
 exports[`person > 1337 > gender 1`] = `"Demigender"`;
 
@@ -136,7 +136,7 @@ exports[`person > 1337 > middleName > with sex 1`] = `"Ethan"`;
 
 exports[`person > 1337 > prefix > noArgs 1`] = `"Miss"`;
 
-exports[`person > 1337 > prefix > with sex 1`] = `"Mr."`;
+exports[`person > 1337 > prefix > with sex 1`] = `"Dr."`;
 
 exports[`person > 1337 > sex > noArgs 1`] = `"female"`;
 

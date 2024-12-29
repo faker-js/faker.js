@@ -414,7 +414,7 @@ export default [
   'Dellen',
   'Delwijnen',
   'Demen',
-  'Den ',
+  'Den',
   'Deursen',
   'Deuteren',
   'Deventer',

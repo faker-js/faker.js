@@ -9,7 +9,7 @@
  * Instances are expected to be ready for use before being passed to any Faker constructor,
  * this includes being `seed()`ed with either a random or fixed value.
  *
- * For more information please refer to the [documentation](https://fakerjs.dev/api/randomizer.html).
+ * For more information please refer to the [documentation](https://fakerjs.dev/guide/randomizer.html).
  *
  * @example
  * import { Faker, Randomizer, SimpleFaker } from '@faker-js/faker';
