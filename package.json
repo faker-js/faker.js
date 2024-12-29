@@ -9,6 +9,7 @@
     "build": "run-s build:clean build:code",
     "generate": "run-s generate:locales generate:api-docs",
     "generate:api-docs": "tsx ./scripts/apidocs.ts",
+    "generate:examples": "tsx ./scripts/examples.ts",
     "generate:locales": "tsx ./scripts/generate-locales.ts",
     "docs:build": "run-s generate:api-docs docs:build:run",
     "docs:build:run": "vitepress build docs",

@@ -66,9 +66,11 @@ function getAllClasses(
 }
 
 export function processProjectClasses(project: Project): RawApiDocsPage[] {
-  return processClasses(
-    valuesForKeys(getAllClasses(project), ['Faker', 'SimpleFaker'])
-  );
+  return processClasses(findProjectClasses(project));
+}
+
+export function findProjectClasses(project: Project): ClassDeclaration[] {
+  return valuesForKeys(getAllClasses(project), ['Faker', 'SimpleFaker']);
 }
 
 function processClasses(classes: ClassDeclaration[]): RawApiDocsPage[] {
@@ -95,15 +97,17 @@ export function processClass(clazz: ClassDeclaration): RawApiDocsPage {
 // Modules
 
 export function processModuleClasses(project: Project): RawApiDocsPage[] {
-  return processModules(
-    Object.values(
-      getAllClasses(
-        project,
-        (module: string): boolean =>
-          module.endsWith('Module') && !module.startsWith('Simple')
-      )
-    ).sort((a, b) => a.getNameOrThrow().localeCompare(b.getNameOrThrow()))
-  );
+  return processModules(findModuleClasses(project));
+}
+
+export function findModuleClasses(project: Project): ClassDeclaration[] {
+  return Object.values(
+    getAllClasses(
+      project,
+      (module: string): boolean =>
+        module.endsWith('Module') && !module.startsWith('Simple')
+    )
+  ).sort((a, b) => a.getNameOrThrow().localeCompare(b.getNameOrThrow()));
 }
 
 function processModules(modules: ClassDeclaration[]): RawApiDocsPage[] {

@@ -208,30 +208,20 @@ export async function toRefreshFunction(
   const { examples } = signatureData;
 
   const exampleCode = examples.join('\n');
-  if (!/^\w*faker\w*\./im.test(exampleCode)) {
+  if (!hasFakerCalls(exampleCode)) {
     // No recordable faker calls in examples
     return 'undefined';
   }
 
-  const exampleLines = exampleCode
-    .replaceAll(/ ?\/\/.*$/gm, '') // Remove comments
-    .replaceAll(/^import .*$/gm, '') // Remove imports
-    .replaceAll(
-      // record results of faker calls
-      /^(\w*faker\w*\..+(?:(?:.|\n..)*\n[^ ])?\)(?:\.\w+)?);?$/gim,
-      `try { result.push($1); } catch (error: unknown) { result.push(error instanceof Error ? error.name : 'Error'); }\n`
-    );
-
-  const fullMethod = `async (): Promise<unknown[]> => {
-await enableFaker();
-faker.seed();
-faker.setDefaultRefDate();
-const result: unknown[] = [];
-
-${exampleLines}
-
-return result;
-}`;
+  const fullMethod = prepareExampleCapturing({
+    main: exampleCode,
+    async: true,
+    init: [
+      'await enableFaker();',
+      'faker.seed();',
+      'faker.setDefaultRefDate();',
+    ],
+  });
   try {
     const formattedMethod = await formatTypescript(fullMethod);
     return formattedMethod.replace(/;\s+$/, ''); // Remove trailing semicolon
@@ -244,4 +234,33 @@ return result;
     );
     return 'undefined';
   }
+}
+
+function hasFakerCalls(exampleCode: string) {
+  return /^\w*faker\w*\./im.test(exampleCode);
+}
+
+export function prepareExampleCapturing(options: {
+  main: string;
+  async: boolean;
+  init?: string[];
+}): string {
+  const { main, async, init = [] } = options;
+  const captureCode = main
+    .replaceAll(/ ?\/\/.*$/gm, '') // Remove comments
+    .replaceAll(/^import .*$/gm, '') // Remove imports
+    .replaceAll(
+      // record results of faker calls
+      /^(\w*faker\w*\..+(?:(?:.|\n..)*\n[^ ])?\)(?:\.\w+)?);?$/gim,
+      `try { result.push($1); } catch (error: unknown) { result.push(error instanceof Error ? error.name : 'Error'); }\n`
+    );
+
+  return `${async ? 'async (): Promise<unknown[]>' : '(): unknown[]'} => {
+      ${init.join('\n')}
+      const result: unknown[] = [];
+
+      ${captureCode}
+
+      return result;
+      }`;
 }
