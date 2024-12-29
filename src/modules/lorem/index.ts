@@ -275,7 +275,7 @@ export class LoremModule extends ModuleBase {
    * // Ustilo ascisco possimus anser. Timor modi cum aegrus subiungo defetiscor suppono usitas voluptates. Absum contigo sustineo astrum eligendi adopto aveho accusamus textus.'
    *
    * faker.lorem.paragraphs(2, '<br/>\n')
-   * // 'Coniuratio vestrum succurro addo. Quas neque capio victus. Facilis officia sustineo color cubicularis bellum audentia.&lt;br/>
+   * // 'Coniuratio vestrum succurro addo. Quas neque capio victus. Facilis officia sustineo color cubicularis bellum audentia.<br/>
    * // Tactus depraedor calcar caterva adsuesco damno color subito crapula attero. Aegre spoliatio defetiscor. Vel vulariter bis somnus celer accusator tempora.'
    *
    * faker.lorem.paragraphs({ min: 1, max: 3 }) // 'Odio tripudio quo uter certus theologus. Viridis stips bibo vinitor. Catena benigne eaque acies beatus currus corrumpo delectus.'

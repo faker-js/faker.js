@@ -804,8 +804,8 @@ export class StringModule extends SimpleModuleBase {
    * @param length.max The maximum length of the string to generate.
    *
    * @example
-   * faker.string.symbol() // '&lt;'
-   * faker.string.symbol(5) // '[>&lt;.?'
+   * faker.string.symbol() // '<'
+   * faker.string.symbol(5) // '[><.?'
    * faker.string.symbol({ min: 5, max: 10 }) // '{}-^;=|'
    *
    * @since 8.0.0
