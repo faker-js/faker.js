@@ -48,22 +48,22 @@ export class SimpleFaker {
    *
    * @example
    * faker.seed(1234); // 1234
-   * 
+   *
    * // Default behavior
    * // faker.setDefaultRefDate();
    * faker.date.past(); // '2024-03-11T20:42:37.195Z'
-   * 
+   *
    * // Use a static ref date
    * faker.setDefaultRefDate(new Date('2020-01-01')); // undefined
    * faker.date.past(); // '2019-08-16T01:40:21.582Z'
-   * 
+   *
    * // Use a ref date that changes every time it is used
    * let clock = new Date("2020-01-01").getTime();
    * faker.setDefaultRefDate(() => {
    *   clock += 1000; // +1s
    *   return new Date(clock);
    * }); // undefined
-   * 
+   *
    * faker.defaultRefDate() // '2020-01-01T00:00:01.000Z'
    * faker.defaultRefDate() // '2020-01-01T00:00:02.000Z'
    *
@@ -171,11 +171,11 @@ export class SimpleFaker {
    * faker.seed(42) // 42
    * faker.number.int(10); // 4
    * faker.number.int(10); // 10
-   * 
+   *
    * faker.seed(42) // 42
    * faker.number.int(10); // 4
    * faker.number.int(10); // 10
-   * 
+   *
    * // Random but reproducible tests:
    * // Simply log the seed, and if you need to reproduce it, insert the seed here
    * console.log('Running test with seed:', faker.seed());
@@ -208,11 +208,11 @@ export class SimpleFaker {
    * faker.seed([42, 13, 17]) // [ 42, 13, 17 ]
    * faker.number.int(10); // 3
    * faker.number.int(10); // 10
-   * 
+   *
    * faker.seed([42, 13, 17]) // [ 42, 13, 17 ]
    * faker.number.int(10); // 3
    * faker.number.int(10); // 10
-   * 
+   *
    * // Random but reproducible tests:
    * // Simply log the seed, and if you need to reproduce it, insert the seed here
    * console.log('Running test with seed:', faker.seed());
@@ -245,20 +245,20 @@ export class SimpleFaker {
    * faker.seed(42) // 42
    * faker.number.int(10); // 4
    * faker.number.int(10); // 10
-   * 
+   *
    * faker.seed(42) // 42
    * faker.number.int(10); // 4
    * faker.number.int(10); // 10
-   * 
+   *
    * // Consistent values for tests (using an array):
    * faker.seed([42, 13, 17]) // [ 42, 13, 17 ]
    * faker.number.int(10); // 3
    * faker.number.int(10); // 10
-   * 
+   *
    * faker.seed([42, 13, 17]) // [ 42, 13, 17 ]
    * faker.number.int(10); // 3
    * faker.number.int(10); // 10
-   * 
+   *
    * // Random but reproducible tests:
    * // Simply log the seed, and if you need to reproduce it, insert the seed here
    * console.log('Running test with seed:', faker.seed());

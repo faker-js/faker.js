@@ -39,7 +39,7 @@ export class GitModule extends ModuleBase {
    * // 'commit fdb9e9df8bbce110cbdfbab2e3eb95bac0dddef7
    * // Author: Humberto Beier &lt;Humberto.Beier98@yahoo.com>
    * // Date: Tue Dec 31 04:00:46 2024 -0800
-   * // 
+   * //
    * //     override cross-platform hard drive
    * // '
    *

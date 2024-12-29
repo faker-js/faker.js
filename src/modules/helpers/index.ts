@@ -1002,10 +1002,10 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @example
    * enum Color { Red, Green, Blue }
    * faker.helpers.enumValue(Color) // 1
-   * 
+   *
    * enum Direction { North = 'North', South = 'South'}
    * faker.helpers.enumValue(Direction) // 'South'
-   * 
+   *
    * enum HttpStatus { Ok = 200, Created = 201, BadRequest = 400, Unauthorized = 401 }
    * faker.helpers.enumValue(HttpStatus) // 400
    *

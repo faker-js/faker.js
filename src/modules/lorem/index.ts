@@ -266,18 +266,18 @@ export class LoremModule extends ModuleBase {
    * // 'Sumo pax impedit curriculum sint debitis vallum. Credo textilis eveniet minus vespillo aeneus alias accusator tristis tergo. Volutabrum thermae deinde termes angustus rerum arbitro vinco enim.
    * // Celo teres defleo minus accusamus quae. Provident villa statim contigo debilito subiungo adulescens. Spargo bene aperiam comedo convoco molestiae decens voveo.
    * // Bellicus arx solitudo. Deleniti caries articulus amor sollicito. Auxilium corporis trado alter.'
-   * 
+   *
    * faker.lorem.paragraphs(5)
    * // 'Alo voluptatibus delicate voluptatibus pecco tactus adflicto cimentarius animi. Angustus cometes cupio advoco stultus. Cena eos aliquid nemo vetus comis sopor.
    * // Sumptus clam auctus occaecati. Tricesimus abeo spiritus. Tabesco vivo carpo nemo omnis.
    * // Cado viridis dedecor tyrannus subnecto coadunatio torqueo. Uxor nobis uxor stultus surgo desino. Sequi curriculum pecto accusantium cogito solutio clam quae curto appositus.
    * // Molestiae officiis natus solitudo solio. Vel corona debeo vapulus timidus succurro. Verto summopere vulticulus.
    * // Ustilo ascisco possimus anser. Timor modi cum aegrus subiungo defetiscor suppono usitas voluptates. Absum contigo sustineo astrum eligendi adopto aveho accusamus textus.'
-   * 
+   *
    * faker.lorem.paragraphs(2, '<br/>\n')
    * // 'Coniuratio vestrum succurro addo. Quas neque capio victus. Facilis officia sustineo color cubicularis bellum audentia.&lt;br/>
    * // Tactus depraedor calcar caterva adsuesco damno color subito crapula attero. Aegre spoliatio defetiscor. Vel vulariter bis somnus celer accusator tempora.'
-   * 
+   *
    * faker.lorem.paragraphs({ min: 1, max: 3 }) // 'Odio tripudio quo uter certus theologus. Viridis stips bibo vinitor. Catena benigne eaque acies beatus currus corrumpo delectus.'
    *
    * @since 2.0.1
@@ -340,17 +340,17 @@ export class LoremModule extends ModuleBase {
    * // 'Pax impedit curriculum sint debitis vallum vix credo.
    * // Eveniet minus vespillo aeneus alias accusator tristis tergo usus.
    * // Thermae deinde termes angustus rerum arbitro vinco enim cuppedia celo.'
-   * 
+   *
    * faker.lorem.lines()
    * // 'Minus accusamus quae perspiciatis provident villa.
    * // Contigo debilito subiungo adulescens sopor spargo bene aperiam.
    * // Convoco molestiae decens voveo ambitus.
    * // Arx solitudo catena deleniti.'
-   * 
+   *
    * faker.lorem.lines(2)
    * // 'Articulus amor sollicito aptus.
    * // Corporis trado alter tum.'
-   * 
+   *
    * faker.lorem.lines({ min: 1, max: 3 }) // 'Delicate voluptatibus pecco tactus adflicto cimentarius animi clementia angustus cometes.'
    *
    * @since 3.1.0
