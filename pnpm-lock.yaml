@@ -93,8 +93,8 @@ importers:
         specifier: 7.6.3
         version: 7.6.3
       ts-morph:
-        specifier: 24.0.0
-        version: 24.0.0
+        specifier: 25.0.0
+        version: 25.0.0
       tsup:
         specifier: 8.3.5
         version: 8.3.5(jiti@2.4.1)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
@@ -936,8 +936,8 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@ts-morph/common@0.25.0':
-    resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
+  '@ts-morph/common@0.26.0':
+    resolution: {integrity: sha512-/RmKAtctStXqM5nECMQ46duT74Hoig/DBzhWXGHcodlDNrgRbsbwwHqSKFNbca6z9Xt/CUWMeXOsC9QEN1+rqw==}
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -3381,8 +3381,8 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  ts-morph@24.0.0:
-    resolution: {integrity: sha512-2OAOg/Ob5yx9Et7ZX4CvTCc0UFoZHwLEJ+dpDPSUi5TgwwlTlX47w+iFRrEwzUZwYACjq83cgjS/Da50Ga37uw==}
+  ts-morph@25.0.0:
+    resolution: {integrity: sha512-ERPTUVO5qF8cEGJgAejGOsCVlbk8d0SDyiJsucKQT5XgqoZslv0Qml+gnui6Yy6o+uQqw5SestyW2HvlVtT/Sg==}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -4367,11 +4367,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@ts-morph/common@0.25.0':
+  '@ts-morph/common@0.26.0':
     dependencies:
+      fast-glob: 3.3.2
       minimatch: 9.0.5
       path-browserify: 1.0.1
-      tinyglobby: 0.2.10
 
   '@types/eslint@9.6.1':
     dependencies:
@@ -7016,9 +7016,9 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-morph@24.0.0:
+  ts-morph@25.0.0:
     dependencies:
-      '@ts-morph/common': 0.25.0
+      '@ts-morph/common': 0.26.0
       code-block-writer: 13.0.3
 
   tslib@2.8.1: {}
