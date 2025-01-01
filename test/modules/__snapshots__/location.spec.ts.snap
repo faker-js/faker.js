@@ -32,6 +32,14 @@ exports[`location > 42 > direction > noArgs 1`] = `"South"`;
 
 exports[`location > 42 > direction > with abbreviated option 1`] = `"S"`;
 
+exports[`location > 42 > language 1`] = `
+{
+  "alpha2": "gu",
+  "alpha3": "guj",
+  "name": "Gujarati",
+}
+`;
+
 exports[`location > 42 > latitude > noArgs 1`] = `-22.5828`;
 
 exports[`location > 42 > latitude > with max and min option 1`] = `-2.5092`;
@@ -170,6 +178,14 @@ exports[`location > 1211 > direction > noArgs 1`] = `"Southwest"`;
 
 exports[`location > 1211 > direction > with abbreviated option 1`] = `"SW"`;
 
+exports[`location > 1211 > language 1`] = `
+{
+  "alpha2": "tl",
+  "alpha3": "tgl",
+  "name": "Tagalog",
+}
+`;
+
 exports[`location > 1211 > latitude > noArgs 1`] = `77.1337`;
 
 exports[`location > 1211 > latitude > with max and min option 1`] = `8.5704`;
@@ -307,6 +323,14 @@ exports[`location > 1337 > county 1`] = `"Morgan County"`;
 exports[`location > 1337 > direction > noArgs 1`] = `"South"`;
 
 exports[`location > 1337 > direction > with abbreviated option 1`] = `"S"`;
+
+exports[`location > 1337 > language 1`] = `
+{
+  "alpha2": "ru",
+  "alpha3": "rus",
+  "name": "Russian",
+}
+`;
 
 exports[`location > 1337 > latitude > noArgs 1`] = `-42.8356`;
 

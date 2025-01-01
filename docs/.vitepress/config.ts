@@ -133,6 +133,7 @@ async function enableFaker() {
 e.g. 'faker.food.description()' or 'fakerZH_CN.person.firstName()'
 For other languages please refer to https://fakerjs.dev/guide/localization.html#available-locales
 For a full list of all methods please refer to https://fakerjs.dev/api/\`, logStyle);
+  enableFaker = () => imported; // Init only once
   return imported;
 }
 `,

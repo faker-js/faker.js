@@ -3,6 +3,7 @@
  * Run 'pnpm run generate:locales' to update.
  */
 import type { LocaleDefinition } from '../..';
+import animal from './animal';
 import cell_phone from './cell_phone';
 import color from './color';
 import company from './company';
@@ -23,6 +24,7 @@ import word from './word';
  * - Endonym: Deutsch
  */
 const de: LocaleDefinition = {
+  animal,
   cell_phone,
   color,
   company,

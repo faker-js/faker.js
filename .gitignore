@@ -80,6 +80,11 @@ versions.json
 /dist
 /docs/.vitepress/cache
 /docs/.vitepress/dist
+/docs/api/*.ts
+!/docs/api/api-types.ts
+/docs/api/*.md
+!/docs/api/index.md
+/docs/api/api-search-index.json
 /docs/public/api-diff-index.json
 
 # Faker

@@ -445,7 +445,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // cmyk(100%, 0%, 0%, 0%)
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
    * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
    *
    * @since 7.0.0
@@ -487,7 +487,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
    * faker.color.cmyk({ format: 'decimal' }) // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // cmyk(100%, 0%, 0%, 0%)
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
    * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
    *
    * @since 7.0.0
@@ -639,7 +639,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -681,7 +681,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
    * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -703,7 +703,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
    * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -744,7 +744,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.lab() // [0.832133, -80.3245, 100.1234]
-   * faker.color.lab({ format: 'css' }) // lab(29.2345% 39.3825 20.0664)
+   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
    * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -786,7 +786,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.lab() // [0.832133, -80.3245, 100.1234]
    * faker.color.lab({ format: 'decimal' }) // [0.856773, -80.2345, 100.2341]
-   * faker.color.lab({ format: 'css' }) // lab(29.2345% 39.3825 20.0664)
+   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
    * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -834,7 +834,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.lch() // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // lch(52.2345% 72.2 56.2)
+   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
    * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -882,7 +882,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.lch() // [0.522345, 72.2, 56.2]
    * faker.color.lch({ format: 'decimal' }) // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // lch(52.2345% 72.2 56.2)
+   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
    * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
