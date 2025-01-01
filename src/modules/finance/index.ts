@@ -65,8 +65,8 @@ export class FinanceModule extends ModuleBase {
    * @param length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // 92842238
-   * faker.finance.accountNumber(5) // 32564
+   * faker.finance.accountNumber() // '92842238'
+   * faker.finance.accountNumber(5) // '32564'
    *
    * @since 8.0.0
    */
@@ -78,8 +78,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // 92842238
-   * faker.finance.accountNumber({ length: 5 }) // 32564
+   * faker.finance.accountNumber() // '92842238'
+   * faker.finance.accountNumber({ length: 5 }) // '32564'
    *
    * @since 8.0.0
    */
@@ -98,9 +98,9 @@ export class FinanceModule extends ModuleBase {
    * @param optionsOrLength.length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // 92842238
-   * faker.finance.accountNumber(5) // 28736
-   * faker.finance.accountNumber({ length: 5 }) // 32564
+   * faker.finance.accountNumber() // '92842238'
+   * faker.finance.accountNumber(5) // '28736'
+   * faker.finance.accountNumber({ length: 5 }) // '32564'
    *
    * @since 8.0.0
    */
@@ -123,9 +123,9 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the account number. Defaults to `8`.
    *
    * @example
-   * faker.finance.accountNumber() // 92842238
-   * faker.finance.accountNumber(5) // 28736
-   * faker.finance.accountNumber({ length: 5 }) // 32564
+   * faker.finance.accountNumber() // '92842238'
+   * faker.finance.accountNumber(5) // '28736'
+   * faker.finance.accountNumber({ length: 5 }) // '32564'
    *
    * @since 8.0.0
    */
