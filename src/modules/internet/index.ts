@@ -498,7 +498,6 @@ export class InternetModule extends ModuleBase {
    *
    * @example
    * faker.internet.protocol() // 'http'
-   * faker.internet.protocol() // 'https'
    *
    * @since 2.1.5
    */
@@ -784,7 +783,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random port number.
    *
    * @example
-   * faker.internet.port() // '9414'
+   * faker.internet.port() // 9414
    *
    * @since 5.4.0
    */
