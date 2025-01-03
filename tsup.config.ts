@@ -14,7 +14,4 @@ export default defineConfig({
   minify: true,
   sourcemap: false,
   splitting: true,
-  esbuildOptions(options) {
-    options.charset = 'utf8'; // Prevent Unicode escaping
-  },
 });
