@@ -11,7 +11,7 @@
     "generate:api-docs": "tsx ./scripts/apidocs.ts",
     "generate:locales": "tsx ./scripts/generate-locales.ts",
     "docs:build": "run-s generate:api-docs docs:build:embedded docs:build:run",
-    "docs:build:embedded": "tsup-node --entry.faker src/index.ts --format esm --outDir docs/public --no-dts --no-splitting  --no-clean",
+    "docs:build:embedded": "tsup-node --entry.faker src/index.ts --format esm --outDir docs/public --no-dts --no-clean",
     "docs:build:run": "vitepress build docs",
     "docs:build:ci": "run-s build docs:build",
     "docs:dev": "run-s generate:api-docs docs:build:embedded docs:dev:run",
