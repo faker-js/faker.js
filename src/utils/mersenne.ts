@@ -22,20 +22,14 @@ import type { Randomizer } from '../randomizer';
 export function generateMersenne32Randomizer(
   seed: number = randomSeed()
 ): Randomizer {
-  const twister = new MersenneTwister19937();
-
-  twister.initGenrand(seed);
+  const twister = new MersenneTwister19937(seed);
 
   return {
     next(): number {
-      return twister.genrandReal2();
+      return twister.nextF32();
     },
     seed(seed: number | number[]): void {
-      if (typeof seed === 'number') {
-        twister.initGenrand(seed);
-      } else if (Array.isArray(seed)) {
-        twister.initByArray(seed, seed.length);
-      }
+      twister.seed(seed);
     },
   };
 }
@@ -60,20 +54,14 @@ export function generateMersenne32Randomizer(
 export function generateMersenne53Randomizer(
   seed: number = randomSeed()
 ): Randomizer {
-  const twister = new MersenneTwister19937();
-
-  twister.initGenrand(seed);
+  const twister = new MersenneTwister19937(seed);
 
   return {
     next(): number {
-      return twister.genrandRes53();
+      return twister.nextF53();
     },
     seed(seed: number | number[]): void {
-      if (typeof seed === 'number') {
-        twister.initGenrand(seed);
-      } else if (Array.isArray(seed)) {
-        twister.initByArray(seed, seed.length);
-      }
+      twister.seed(seed);
     },
   };
 }

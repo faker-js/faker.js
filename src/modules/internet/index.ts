@@ -4,7 +4,6 @@ import { toBase64Url } from '../../internal/base64';
 import { deprecated } from '../../internal/deprecated';
 import { ModuleBase } from '../../internal/module-base';
 import { charMapping } from './char-mappings';
-import * as random_ua from './user-agent';
 
 export type EmojiType =
   | 'smiley'
@@ -499,7 +498,6 @@ export class InternetModule extends ModuleBase {
    *
    * @example
    * faker.internet.protocol() // 'http'
-   * faker.internet.protocol() // 'https'
    *
    * @since 2.1.5
    */
@@ -785,7 +783,7 @@ export class InternetModule extends ModuleBase {
    * Generates a random port number.
    *
    * @example
-   * faker.internet.port() // '9414'
+   * faker.internet.port() // 9414
    *
    * @since 5.4.0
    */
@@ -798,12 +796,14 @@ export class InternetModule extends ModuleBase {
    *
    * @example
    * faker.internet.userAgent()
-   * // 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_8_8)  AppleWebKit/536.0.2 (KHTML, like Gecko) Chrome/27.0.849.0 Safari/536.0.2'
+   * // 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1 like Mac OS X) AppleWebKit/537.19.86 (KHTML, like Gecko) Version/18_3 Mobile/15E148 Safari/598.43'
    *
    * @since 2.0.1
    */
   userAgent(): string {
-    return random_ua.generate(this.faker);
+    return this.faker.helpers.fake(
+      this.faker.definitions.internet.user_agent_pattern
+    );
   }
 
   /**
@@ -876,14 +876,14 @@ export class InternetModule extends ModuleBase {
   /**
    * Generates a random mac address.
    *
-   * @param sep The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
+   * @param separator The optional separator to use. Can be either `':'`, `'-'` or `''`. Defaults to `':'`.
    *
    * @example
    * faker.internet.mac() // '32:8e:2e:09:c6:05'
    *
    * @since 3.0.0
    */
-  mac(sep?: string): string;
+  mac(separator?: string): string;
   /**
    * Generates a random mac address.
    *

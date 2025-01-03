@@ -184,18 +184,18 @@ export function legacyReplaceSymbolWithNumber(
   string: string = '',
   symbol: string = '#'
 ): string {
-  let str = '';
+  let result = '';
   for (let i = 0; i < string.length; i++) {
     if (string.charAt(i) === symbol) {
-      str += faker.number.int(9);
+      result += faker.number.int(9);
     } else if (string.charAt(i) === '!') {
-      str += faker.number.int({ min: 2, max: 9 });
+      result += faker.number.int({ min: 2, max: 9 });
     } else {
-      str += string.charAt(i);
+      result += string.charAt(i);
     }
   }
 
-  return str;
+  return result;
 }
 
 /**
@@ -270,23 +270,23 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       'Y',
       'Z',
     ];
-    let str = '';
+    let result = '';
 
     for (let i = 0; i < string.length; i++) {
       if (string.charAt(i) === '#') {
-        str += this.faker.number.int(9);
+        result += this.faker.number.int(9);
       } else if (string.charAt(i) === '?') {
-        str += this.arrayElement(alpha);
+        result += this.arrayElement(alpha);
       } else if (string.charAt(i) === '*') {
-        str += this.faker.datatype.boolean()
+        result += this.faker.datatype.boolean()
           ? this.arrayElement(alpha)
           : this.faker.number.int(9);
       } else {
-        str += string.charAt(i);
+        result += string.charAt(i);
       }
     }
 
-    return str;
+    return result;
   }
 
   /**
@@ -394,9 +394,21 @@ export class SimpleHelpersModule extends SimpleModuleBase {
         quantifierMax
       );
 
+      let replacement: string;
+      if (token[1] === '.') {
+        replacement = this.faker.string.alphanumeric(repetitions);
+      } else if (isCaseInsensitive) {
+        replacement = this.faker.string.fromCharacters(
+          [token[1].toLowerCase(), token[1].toUpperCase()],
+          repetitions
+        );
+      } else {
+        replacement = token[1].repeat(repetitions);
+      }
+
       pattern =
         pattern.slice(0, token.index) +
-        token[1].repeat(repetitions) +
+        replacement +
         pattern.slice(token.index + token[0].length);
       token = SINGLE_CHAR_REG.exec(pattern);
     }
@@ -664,9 +676,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param length The number of elements to generate.
    *
    * @example
-   * faker.helpers.uniqueArray(faker.word.sample, 50)
-   * faker.helpers.uniqueArray(faker.definitions.person.first_name, 6)
-   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2)
+   * faker.helpers.uniqueArray(faker.word.sample, 3) // ['mob', 'junior', 'ripe']
+   * faker.helpers.uniqueArray(faker.definitions.person.first_name.generic, 6) // ['Silas', 'Montana', 'Lorenzo', 'Alayna', 'Aditya', 'Antone']
+   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2) // ['World', 'Goodbye']
    *
    * @since 6.0.0
    */
@@ -700,7 +712,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   /**
    * Replaces the `{{placeholder}}` patterns in the given string mustache style.
    *
-   * @param str The template string to parse.
+   * @param text The template string to parse.
    * @param data The data used to populate the placeholders.
    * This is a record where the key is the template placeholder,
    * whereas the value is either a string or a function suitable for `String.replace()`.
@@ -714,10 +726,10 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @since 2.0.1
    */
   mustache(
-    str: string | undefined,
+    text: string | undefined,
     data: Record<string, string | Parameters<string['replace']>[1]>
   ): string {
-    if (str == null) {
+    if (text == null) {
       return '';
     }
 
@@ -727,13 +739,13 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       if (typeof value === 'string') {
         // escape $, source: https://stackoverflow.com/a/6969486/6897682
         value = value.replaceAll('$', '$$$$');
-        str = str.replace(re, value);
+        text = text.replace(re, value);
       } else {
-        str = str.replace(re, value);
+        text = text.replace(re, value);
       }
     }
 
-    return str;
+    return text;
   }
 
   /**
@@ -771,7 +783,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   }
 
   /**
-   * Returns a random key from given object.
+   * Returns a random key from the given object.
    *
    * @template T The type of the object to select from.
    *
@@ -780,7 +792,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectKey({ myProperty: 'myValue' }) // 'myProperty'
+   * faker.helpers.objectKey({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // 'Falcon'
    *
    * @since 6.3.0
    */
@@ -790,7 +802,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
   }
 
   /**
-   * Returns a random value from given object.
+   * Returns a random value from the given object.
    *
    * @template T The type of object to select from.
    *
@@ -799,7 +811,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectValue({ myProperty: 'myValue' }) // 'myValue'
+   * faker.helpers.objectValue({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // 390
    *
    * @since 6.3.0
    */
@@ -818,7 +830,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectEntry({ prop1: 'value1', prop2: 'value2' }) // ['prop1', 'value1']
+   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // ['Snail', 0.03]
    *
    * @since 8.0.0
    */
@@ -897,7 +909,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
       );
     }
 
-    const total = array.reduce((acc, { weight }) => acc + weight, 0);
+    const total = array.reduce((sum, { weight }) => sum + weight, 0);
     const random = this.faker.number.float({
       min: 0,
       max: total,
@@ -1276,10 +1288,10 @@ export class HelpersModule extends SimpleHelpersModule {
 
     // Replace the found tag with the returned fake value
     // We cannot use string.replace here because the result might contain evaluated characters
-    const res =
+    const patched =
       pattern.substring(0, start) + stringified + pattern.substring(end + 2);
 
     // return the response recursively until we are done finding all tags
-    return this.fake(res);
+    return this.fake(patched);
   }
 }

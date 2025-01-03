@@ -71,9 +71,9 @@ exports[`helpers > 42 > fromRegExp > with static string 1`] = `"Hello World!"`;
 
 exports[`helpers > 42 > fromRegExp > with wildcard character 1`] = `"."`;
 
-exports[`helpers > 42 > fromRegExp > with wildcard character and min max quantifier 1`] = `".."`;
+exports[`helpers > 42 > fromRegExp > with wildcard character and min max quantifier 1`] = `"WJ"`;
 
-exports[`helpers > 42 > fromRegExp > with wildcard character and quantifier 1`] = `"..."`;
+exports[`helpers > 42 > fromRegExp > with wildcard character and quantifier 1`] = `"nWJ"`;
 
 exports[`helpers > 42 > maybe > with only value 1`] = `"Hello World!"`;
 
@@ -293,9 +293,9 @@ exports[`helpers > 1211 > fromRegExp > with static string 1`] = `"Hello World!"`
 
 exports[`helpers > 1211 > fromRegExp > with wildcard character 1`] = `"."`;
 
-exports[`helpers > 1211 > fromRegExp > with wildcard character and min max quantifier 1`] = `"....."`;
+exports[`helpers > 1211 > fromRegExp > with wildcard character and min max quantifier 1`] = `"TdZFG"`;
 
-exports[`helpers > 1211 > fromRegExp > with wildcard character and quantifier 1`] = `"..."`;
+exports[`helpers > 1211 > fromRegExp > with wildcard character and quantifier 1`] = `"VTd"`;
 
 exports[`helpers > 1211 > maybe > with only value 1`] = `undefined`;
 
@@ -510,9 +510,9 @@ exports[`helpers > 1337 > fromRegExp > with static string 1`] = `"Hello World!"`
 
 exports[`helpers > 1337 > fromRegExp > with wildcard character 1`] = `"."`;
 
-exports[`helpers > 1337 > fromRegExp > with wildcard character and min max quantifier 1`] = `".."`;
+exports[`helpers > 1337 > fromRegExp > with wildcard character and min max quantifier 1`] = `"9h"`;
 
-exports[`helpers > 1337 > fromRegExp > with wildcard character and quantifier 1`] = `"..."`;
+exports[`helpers > 1337 > fromRegExp > with wildcard character and quantifier 1`] = `"g9h"`;
 
 exports[`helpers > 1337 > maybe > with only value 1`] = `"Hello World!"`;
 

@@ -8,7 +8,7 @@ exports[`animal > 42 > cat 1`] = `"Himalayan"`;
 
 exports[`animal > 42 > cetacean 1`] = `"Fraser’s Dolphin"`;
 
-exports[`animal > 42 > cow 1`] = `"Finnish Ayrshire"`;
+exports[`animal > 42 > cow 1`] = `"Estonian Holstein"`;
 
 exports[`animal > 42 > crocodilia 1`] = `"Cuvier’s Dwarf Caiman"`;
 
@@ -40,7 +40,7 @@ exports[`animal > 1211 > cat 1`] = `"Tonkinese"`;
 
 exports[`animal > 1211 > cetacean 1`] = `"Spinner Dolphin"`;
 
-exports[`animal > 1211 > cow 1`] = `"Umblachery"`;
+exports[`animal > 1211 > cow 1`] = `"Tux-Zillertal"`;
 
 exports[`animal > 1211 > crocodilia 1`] = `"West African Crocodile"`;
 
@@ -72,7 +72,7 @@ exports[`animal > 1337 > cat 1`] = `"Devon Rex"`;
 
 exports[`animal > 1337 > cetacean 1`] = `"Clymene Dolphin"`;
 
-exports[`animal > 1337 > cow 1`] = `"Campbell Island cattle"`;
+exports[`animal > 1337 > cow 1`] = `"Butana cattle"`;
 
 exports[`animal > 1337 > crocodilia 1`] = `"Chinese Alligator"`;
 

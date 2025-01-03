@@ -202,6 +202,7 @@ describe('image', () => {
 
   describe('urlPlaceholder', () => {
     it('should return a random image url from Placeholder', () => {
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
       const actual = faker.image.urlPlaceholder();
 
       assertValidUrl(actual);

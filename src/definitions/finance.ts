@@ -26,4 +26,9 @@ export type FinanceDefinition = LocaleEntry<{
    * Types of transactions (e.g. `deposit`).
    */
   transaction_type: string[];
+
+  /**
+   * The pattern used to generate transaction descriptions.
+   */
+  transaction_description_pattern: string[];
 }>;

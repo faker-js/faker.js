@@ -196,7 +196,7 @@ export default [
   'Haldwani-cum-Kathgodam',
   'Hansi',
   'Hapur',
-  'Hardoi ',
+  'Hardoi',
   'Hardwar',
   'Hazaribag',
   'Hindupur',
