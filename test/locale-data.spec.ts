@@ -80,38 +80,3 @@ describe('locale-data', () => {
     expect(characterSets).toMatchSnapshot();
   });
 });
-
-/**
- * Helper function to locate a specific character in the locale data.
- *
- * @param data The locale data to search in.
- * @param char The character to search for.
- * @param path The current path in the data. Defaults to an empty string.
- *
- * @example
- * locateCharacter(allLocales.zh_CN, 'A');
- */
-export function locateCharacter(
-  data: unknown,
-  char: string,
-  path: string = ''
-): void {
-  if (ignoredCharacterData.has(path)) {
-    return;
-  }
-
-  if (Array.isArray(data)) {
-    for (const e of data) {
-      locateCharacter(e, char, `${path}[]`);
-    }
-  } else if (typeof data === 'object' && data != null) {
-    for (const [key, entry] of Object.entries(data)) {
-      locateCharacter(entry, char, `${path}.${key}`);
-    }
-  } else if (
-    typeof data === 'string' &&
-    allCharacters(data, path).includes(char)
-  ) {
-    console.log(path, data);
-  }
-}
