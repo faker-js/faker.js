@@ -18,7 +18,7 @@
     "docs:serve": "vitepress serve docs --port 5173",
     "docs:diff": "tsx ./scripts/diff.ts",
     "format": "prettier --cache --write .",
-    "lint": "eslint --cache --cache-strategy content --flag unstable_ts_config .",
+    "lint": "eslint --cache --cache-strategy content .",
     "ts-check": "tsc",
     "test": "vitest",
     "test:update-snapshots": "vitest run -u",

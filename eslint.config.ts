@@ -27,7 +27,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
       'docs/.vitepress/components/api-docs/format.ts',
       'docs/.vitepress/shared/utils/slugify.ts',
       'docs/.vitepress/theme/index.ts',
-      'eslint.config.js',
+      'eslint.config.ts',
     ],
   },
   {

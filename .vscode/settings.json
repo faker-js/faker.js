@@ -1,7 +1,4 @@
 {
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  },
   // Enable eslint validation for js and ts files
   "eslint.validate": ["javascript", "typescript"],
 
