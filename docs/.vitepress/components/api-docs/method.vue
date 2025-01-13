@@ -2,7 +2,7 @@
 import { computed, ref, useTemplateRef } from 'vue';
 import { sourceBaseUrl } from '../../../api/source-base-url';
 import { slugify } from '../../shared/utils/slugify';
-import { formatResult } from './format';
+import { formatResultForHtml } from './format';
 import type { ApiDocsMethod } from './method';
 import MethodParameters from './method-parameters.vue';
 import RefreshButton from './refresh-button.vue';
@@ -102,7 +102,7 @@ async function onRefresh(): Promise<void> {
     for (let i = 0; i < results.length; i++) {
       const result = results[i];
       const domLine = codeLines.value[i];
-      const prettyResult = formatResult(result);
+      const prettyResult = formatResultForHtml(result);
       const resultLines = prettyResult.split('\\n');
 
       if (resultLines.length === 1) {

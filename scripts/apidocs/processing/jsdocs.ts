@@ -58,40 +58,41 @@ export function getDefault(jsdocs: JSDoc): string | undefined {
 }
 
 export function getThrows(jsdocs: JSDoc): string[] {
-  return getTagsFromJSDoc(jsdocs, 'throws');
+  return getTagsContentsFromJSDoc(jsdocs, 'throws');
 }
 
 export function getExamples(jsdocs: JSDoc): string[] {
-  return getTagsFromJSDoc(jsdocs, 'example');
+  return getTagsContentsFromJSDoc(jsdocs, 'example');
 }
 
 export function getSeeAlsos(jsdocs: JSDoc): string[] {
-  return getTagsFromJSDoc(jsdocs, 'see', true);
+  return getTagsContentsFromJSDoc(jsdocs, 'see', true);
 }
 
 function getOptionalTagFromJSDoc(
   jsdocs: JSDoc,
   type: string
 ): string | undefined {
-  return optionalOne(getTagsFromJSDoc(jsdocs, type), `@${type}`);
+  return optionalOne(getTagsContentsFromJSDoc(jsdocs, type), `@${type}`);
 }
 
 function getExactlyOneTagFromJSDoc(jsdocs: JSDoc, type: string): string {
-  return exactlyOne(getTagsFromJSDoc(jsdocs, type), `@${type}`);
+  return exactlyOne(getTagsContentsFromJSDoc(jsdocs, type), `@${type}`);
 }
 
-function getTagsFromJSDoc(
+function getTagsContentsFromJSDoc(
   jsdocs: JSDoc,
   type: string,
   full: boolean = false
 ): string[] {
   return allRequired(
-    jsdocs
-      .getTags()
-      .filter((tag) => tag.getTagName() === type)
-      .map((tag) =>
-        full ? tag.getStructure().text?.toString() : tag.getCommentText()
-      ),
+    getTagsFromJSDoc(jsdocs, type).map((tag) =>
+      full ? tag.getStructure().text?.toString() : tag.getCommentText()
+    ),
     `@${type}`
   );
+}
+
+export function getTagsFromJSDoc(jsdocs: JSDoc, type: string): JSDocTag[] {
+  return jsdocs.getTags().filter((tag) => tag.getTagName() === type);
 }

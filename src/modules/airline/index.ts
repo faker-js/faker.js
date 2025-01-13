@@ -82,7 +82,7 @@ export class AirlineModule extends ModuleBase {
    * Generates a random airport.
    *
    * @example
-   * faker.airline.airport() // { name: 'Dallas Fort Worth International Airport', iataCode: 'DFW' }
+   * faker.airline.airport() // { 'name': 'Leonardo da Vinci-Fiumicino Airport', 'iataCode': 'FCO' }
    *
    * @since 8.0.0
    */
@@ -96,7 +96,7 @@ export class AirlineModule extends ModuleBase {
    * Generates a random airline.
    *
    * @example
-   * faker.airline.airline() // { name: 'American Airlines', iataCode: 'AA' }
+   * faker.airline.airline() // { 'name': 'Korean Air', 'iataCode': 'KE' }
    *
    * @since 8.0.0
    */
@@ -110,7 +110,7 @@ export class AirlineModule extends ModuleBase {
    * Generates a random airplane.
    *
    * @example
-   * faker.airline.airplane() // { name: 'Airbus A321neo', iataTypeCode: '32Q' }
+   * faker.airline.airplane() // { 'name': 'Canadair CL-44', 'iataTypeCode': 'CL4' }
    *
    * @since 8.0.0
    */
@@ -130,10 +130,10 @@ export class AirlineModule extends ModuleBase {
    * @param options.allowVisuallySimilarCharacters Whether to allow visually similar characters such as '1' and 'I'. Defaults to `false`.
    *
    * @example
-   * faker.airline.recordLocator() // 'KIFRWE'
-   * faker.airline.recordLocator({ allowNumerics: true }) // 'E5TYEM'
-   * faker.airline.recordLocator({ allowVisuallySimilarCharacters: true }) // 'ANZNEI'
-   * faker.airline.recordLocator({ allowNumerics: true, allowVisuallySimilarCharacters: true }) // '1Z2Z3E'
+   * faker.airline.recordLocator() // 'PTQPKR'
+   * faker.airline.recordLocator({ allowNumerics: true }) // 'FWYDTJ'
+   * faker.airline.recordLocator({ allowVisuallySimilarCharacters: true }) // 'OYBCAV'
+   * faker.airline.recordLocator({ allowNumerics: true, allowVisuallySimilarCharacters: true }) // 'SVZSGS'
    *
    * @since 8.0.0
    */
@@ -178,9 +178,9 @@ export class AirlineModule extends ModuleBase {
    * @param options.aircraftType The aircraft type. Can be one of `narrowbody`, `regional`, `widebody`. Defaults to `narrowbody`.
    *
    * @example
-   * faker.airline.seat() // '22C'
-   * faker.airline.seat({ aircraftType: 'regional' }) // '7A'
-   * faker.airline.seat({ aircraftType: 'widebody' }) // '42K'
+   * faker.airline.seat() // '20E'
+   * faker.airline.seat({ aircraftType: 'regional' }) // '13C'
+   * faker.airline.seat({ aircraftType: 'widebody' }) // '26G'
    *
    * @since 8.0.0
    */
@@ -206,7 +206,7 @@ export class AirlineModule extends ModuleBase {
    * Returns a random aircraft type.
    *
    * @example
-   * faker.airline.aircraftType() // 'narrowbody'
+   * faker.airline.aircraftType() // 'regional'
    *
    * @since 8.0.0
    */
@@ -230,12 +230,12 @@ export class AirlineModule extends ModuleBase {
    * @param options.addLeadingZeros Whether to pad the flight number up to 4 digits with leading zeros. Defaults to `false`.
    *
    * @example
-   * faker.airline.flightNumber() // '2405'
-   * faker.airline.flightNumber({ addLeadingZeros: true }) // '0249'
-   * faker.airline.flightNumber({ addLeadingZeros: true, length: 2 }) // '0042'
-   * faker.airline.flightNumber({ addLeadingZeros: true, length: { min: 2, max: 3 } }) // '0624'
-   * faker.airline.flightNumber({ length: 3 }) // '425'
-   * faker.airline.flightNumber({ length: { min: 2, max: 3 } }) // '84'
+   * faker.airline.flightNumber() // '765'
+   * faker.airline.flightNumber({ addLeadingZeros: true }) // '0064'
+   * faker.airline.flightNumber({ addLeadingZeros: true, length: 2 }) // '0099'
+   * faker.airline.flightNumber({ addLeadingZeros: true, length: { min: 2, max: 3 } }) // '0085'
+   * faker.airline.flightNumber({ length: 3 }) // '690'
+   * faker.airline.flightNumber({ length: { min: 2, max: 3 } }) // '18'
    *
    * @since 8.0.0
    */

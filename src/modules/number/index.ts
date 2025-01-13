@@ -32,12 +32,12 @@ export class NumberModule extends SimpleModuleBase {
    * @see faker.string.numeric(): For generating a `string` of digits with a given length (range).
    *
    * @example
-   * faker.number.int() // 2900970162509863
-   * faker.number.int(100) // 52
-   * faker.number.int({ min: 1000000 }) // 2900970162509863
-   * faker.number.int({ max: 100 }) // 42
-   * faker.number.int({ min: 10, max: 100 }) // 57
-   * faker.number.int({ min: 10, max: 100, multipleOf: 10 }) // 50
+   * faker.number.int() // 4943272583565992
+   * faker.number.int(100) // 72
+   * faker.number.int({ min: 1000000 }) // 5429209832134912
+   * faker.number.int({ max: 100 }) // 55
+   * faker.number.int({ min: 10, max: 100 }) // 48
+   * faker.number.int({ min: 10, max: 100, multipleOf: 10 }) // 70
    *
    * @since 8.0.0
    */
@@ -118,15 +118,15 @@ export class NumberModule extends SimpleModuleBase {
    * @throws When `fractionDigits` and `multipleOf` is passed in the same options object.
    *
    * @example
-   * faker.number.float() // 0.5688541042618454
-   * faker.number.float(3) // 2.367973240558058
-   * faker.number.float({ max: 100 }) // 17.3687307164073
-   * faker.number.float({ min: 20, max: 30 }) // 23.94764115102589
-   * faker.number.float({ multipleOf: 0.25, min: 0, max:10 }) // 7.75
-   * faker.number.float({ fractionDigits: 1 }) // 0.9
-   * faker.number.float({ min: 10, max: 100, multipleOf: 0.02 }) // 35.42
-   * faker.number.float({ min: 10, max: 100, fractionDigits: 3 }) // 65.716
-   * faker.number.float({ min: 10, max: 100, multipleOf: 0.001 }) // 65.716 - same as above
+   * faker.number.float() // 0.5488135039273248
+   * faker.number.float(3) // 2.1455680991172583
+   * faker.number.float({ max: 100 }) // 60.276337607164386
+   * faker.number.float({ min: 20, max: 30 }) // 25.448831829968967
+   * faker.number.float({ multipleOf: 0.25, min: 0, max:10 }) // 4.25
+   * faker.number.float({ fractionDigits: 1 }) // 0.7
+   * faker.number.float({ min: 10, max: 100, multipleOf: 0.02 }) // 49.38
+   * faker.number.float({ min: 10, max: 100, fractionDigits: 3 }) // 90.26
+   * faker.number.float({ min: 10, max: 100, multipleOf: 0.001 }) // 96.73
    *
    * @since 8.0.0
    */
@@ -235,8 +235,8 @@ export class NumberModule extends SimpleModuleBase {
    *
    * @example
    * faker.number.binary() // '1'
-   * faker.number.binary(255) // '110101'
-   * faker.number.binary({ min: 0, max: 65535 }) // '10110101'
+   * faker.number.binary(255) // '10110111'
+   * faker.number.binary({ min: 0, max: 65535 }) // '1001101001001110'
    *
    * @since 8.0.0
    */
@@ -284,9 +284,9 @@ export class NumberModule extends SimpleModuleBase {
    * @see faker.string.octal(): For generating an `octal string` with a given length (range).
    *
    * @example
-   * faker.number.octal() // '5'
-   * faker.number.octal(255) // '377'
-   * faker.number.octal({ min: 0, max: 65535 }) // '4766'
+   * faker.number.octal() // '4'
+   * faker.number.octal(255) // '267'
+   * faker.number.octal({ min: 0, max: 65535 }) // '115116'
    *
    * @since 8.0.0
    */
@@ -332,9 +332,9 @@ export class NumberModule extends SimpleModuleBase {
    * @throws When there are no integers between `min` and `max`.
    *
    * @example
-   * faker.number.hex() // 'b'
-   * faker.number.hex(255) // '9d'
-   * faker.number.hex({ min: 0, max: 65535 }) // 'af17'
+   * faker.number.hex() // '8'
+   * faker.number.hex(255) // 'b7'
+   * faker.number.hex({ min: 0, max: 65535 }) // '9a4e'
    *
    * @since 8.0.0
    */
@@ -379,11 +379,11 @@ export class NumberModule extends SimpleModuleBase {
    * @throws When `min` is greater than `max`.
    *
    * @example
-   * faker.number.bigInt() // 55422n
-   * faker.number.bigInt(100n) // 52n
-   * faker.number.bigInt({ min: 1000000n }) // 431433n
-   * faker.number.bigInt({ max: 100n }) // 42n
-   * faker.number.bigInt({ min: 10n, max: 100n }) // 36n
+   * faker.number.bigInt() // 576546489375590n
+   * faker.number.bigInt(100n) // 8n
+   * faker.number.bigInt({ min: 1000000n }) // 789747162954274n
+   * faker.number.bigInt({ max: 100n }) // 1n
+   * faker.number.bigInt({ min: 10n, max: 100n }) // 76n
    *
    * @since 8.0.0
    */
@@ -458,11 +458,11 @@ export class NumberModule extends SimpleModuleBase {
    * @throws When `max` is greater than `3999`.
    *
    * @example
-   * faker.number.romanNumeral() // "CMXCIII"
-   * faker.number.romanNumeral(5) // "III"
-   * faker.number.romanNumeral({ min: 10 }) // "XCIX"
-   * faker.number.romanNumeral({ max: 20 }) // "XVII"
-   * faker.number.romanNumeral({ min: 5, max: 10 }) // "VII"
+   * faker.number.romanNumeral() // 'MMCXCV'
+   * faker.number.romanNumeral(5) // 'IV'
+   * faker.number.romanNumeral({ min: 10 }) // 'MMCDXV'
+   * faker.number.romanNumeral({ max: 20 }) // 'XI'
+   * faker.number.romanNumeral({ min: 5, max: 10 }) // 'VII'
    *
    * @since 9.2.0
    */

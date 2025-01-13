@@ -26,7 +26,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random dish adjective.
    *
    * @example
-   * faker.food.adjective() // 'crispy'
+   * faker.food.adjective() // 'rich'
    *
    * @since 9.0.0
    */
@@ -40,7 +40,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random dish description.
    *
    * @example
-   * faker.food.description() // 'An exquisite ostrich roast, infused with the essence of longan, slow-roasted to bring out its natural flavors and served with a side of creamy red cabbage'
+   * faker.food.description() // 'Fresh mixed greens tossed with mace-rubbed kangaroo, english spinach, and a light dressing.'
    *
    * @since 9.0.0
    */
@@ -54,7 +54,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random dish name.
    *
    * @example
-   * faker.food.dish() // 'Tagine-Rubbed Venison Salad'
+   * faker.food.dish() // 'Pork Sausage Roll'
    *
    * @since 9.0.0
    */
@@ -75,7 +75,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random food's ethnic category.
    *
    * @example
-   * faker.food.ethnicCategory() // 'Italian'
+   * faker.food.ethnicCategory() // 'Lebanese'
    *
    * @since 9.0.0
    */
@@ -101,7 +101,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random ingredient name.
    *
    * @example
-   * faker.food.ingredient() // 'butter'
+   * faker.food.ingredient() // 'mahlab'
    *
    * @since 9.0.0
    */
@@ -115,7 +115,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random meat
    *
    * @example
-   * faker.food.meat() // 'venison'
+   * faker.food.meat() // 'ostrich'
    *
    * @since 9.0.0
    */
@@ -127,7 +127,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random spice name.
    *
    * @example
-   * faker.food.spice() // 'chilli'
+   * faker.food.spice() // 'korma'
    *
    * @since 9.0.0
    */
@@ -139,7 +139,7 @@ export class FoodModule extends ModuleBase {
    * Generates a random vegetable name.
    *
    * @example
-   * faker.food.vegetable() // 'broccoli'
+   * faker.food.vegetable() // 'iceberg lettuce'
    *
    * @since 9.0.0
    */

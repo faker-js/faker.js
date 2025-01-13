@@ -73,9 +73,9 @@ export class PersonModule extends ModuleBase {
    * Can be either `'female'` or `'male'`.
    *
    * @example
-   * faker.person.firstName() // 'Antwan'
-   * faker.person.firstName('female') // 'Victoria'
-   * faker.person.firstName('male') // 'Tom'
+   * faker.person.firstName() // 'Katharina'
+   * faker.person.firstName('female') // 'Misty'
+   * faker.person.firstName('male') // 'Leroy'
    *
    * @since 8.0.0
    */
@@ -96,9 +96,9 @@ export class PersonModule extends ModuleBase {
    * Can be either `'female'` or `'male'`.
    *
    * @example
-   * faker.person.lastName() // 'Hauck'
-   * faker.person.lastName('female') // 'Grady'
-   * faker.person.lastName('male') // 'Barton'
+   * faker.person.lastName() // 'Rau'
+   * faker.person.lastName('female') // 'Little'
+   * faker.person.lastName('male') // "O'Connell"
    *
    * @since 8.0.0
    */
@@ -126,9 +126,9 @@ export class PersonModule extends ModuleBase {
    * Can be either `'female'` or `'male'`.
    *
    * @example
-   * faker.person.middleName() // 'James'
-   * faker.person.middleName('female') // 'Eloise'
-   * faker.person.middleName('male') // 'Asher'
+   * faker.person.middleName() // 'Kyle'
+   * faker.person.middleName('female') // 'Monroe'
+   * faker.person.middleName('male') // 'Levi'
    *
    * @since 8.0.0
    */
@@ -151,11 +151,11 @@ export class PersonModule extends ModuleBase {
    * @param options.sex The optional sex to use. Can be either `'female'` or `'male'`.
    *
    * @example
-   * faker.person.fullName() // 'Allen Brown'
-   * faker.person.fullName({ firstName: 'Joann' }) // 'Joann Osinski'
-   * faker.person.fullName({ firstName: 'Marcella', sex: 'female' }) // 'Mrs. Marcella Huels'
-   * faker.person.fullName({ lastName: 'Beer' }) // 'Mr. Alfonso Beer'
-   * faker.person.fullName({ sex: 'male' }) // 'Fernando Schaefer'
+   * faker.person.fullName() // 'Nicolas Little'
+   * faker.person.fullName({ firstName: 'Joann' }) // 'Joann Toy III'
+   * faker.person.fullName({ firstName: 'Marcella', sex: 'female' }) // 'Marcella Lehner'
+   * faker.person.fullName({ lastName: 'Beer' }) // 'Austin Beer'
+   * faker.person.fullName({ sex: 'male' }) // 'Mr. Alex Satterfield'
    *
    * @since 8.0.0
    */
@@ -207,7 +207,7 @@ export class PersonModule extends ModuleBase {
    * @see faker.person.sex(): For generating a binary-gender value.
    *
    * @example
-   * faker.person.gender() // 'Trans*Man'
+   * faker.person.gender() // 'Male to female transgender woman'
    *
    * @since 8.0.0
    */
@@ -227,7 +227,7 @@ export class PersonModule extends ModuleBase {
    * @see faker.person.sexType(): For generating a sex value to be used as a parameter.
    *
    * @example
-   * faker.person.sex() // 'female'
+   * faker.person.sex() // 'male'
    *
    * @since 8.0.0
    */
@@ -242,7 +242,7 @@ export class PersonModule extends ModuleBase {
    * @see faker.person.sex(): For generating a binary-gender value in forms.
    *
    * @example
-   * faker.person.sexType() // Sex.Female
+   * faker.person.sexType() // 'male'
    *
    * @since 8.0.0
    */
@@ -254,7 +254,7 @@ export class PersonModule extends ModuleBase {
    * Returns a random short biography
    *
    * @example
-   * faker.person.bio() // 'oatmeal advocate, veteran 🐠'
+   * faker.person.bio() // 'newsletter fan'
    *
    * @since 8.0.0
    */
@@ -270,8 +270,8 @@ export class PersonModule extends ModuleBase {
    * @param sex The optional sex to use. Can be either `'female'` or `'male'`.
    *
    * @example
-   * faker.person.prefix() // 'Miss'
-   * faker.person.prefix('female') // 'Ms.'
+   * faker.person.prefix() // 'Mr.'
+   * faker.person.prefix('female') // 'Mrs.'
    * faker.person.prefix('male') // 'Mr.'
    *
    * @since 8.0.0
@@ -286,7 +286,7 @@ export class PersonModule extends ModuleBase {
    * Returns a random person suffix.
    *
    * @example
-   * faker.person.suffix() // 'DDS'
+   * faker.person.suffix() // 'V'
    *
    * @since 8.0.0
    */
@@ -301,7 +301,7 @@ export class PersonModule extends ModuleBase {
    * Generates a random job title.
    *
    * @example
-   * faker.person.jobTitle() // 'Global Accounts Engineer'
+   * faker.person.jobTitle() // 'Global Assurance Orchestrator'
    *
    * @since 8.0.0
    */
@@ -315,7 +315,7 @@ export class PersonModule extends ModuleBase {
    * Generates a random job descriptor.
    *
    * @example
-   * faker.person.jobDescriptor() // 'Customer'
+   * faker.person.jobDescriptor() // 'Global'
    *
    * @since 8.0.0
    */
@@ -329,7 +329,7 @@ export class PersonModule extends ModuleBase {
    * Generates a random job area.
    *
    * @example
-   * faker.person.jobArea() // 'Brand'
+   * faker.person.jobArea() // 'Infrastructure'
    *
    * @since 8.0.0
    */
@@ -343,7 +343,7 @@ export class PersonModule extends ModuleBase {
    * Generates a random job type.
    *
    * @example
-   * faker.person.jobType() // 'Assistant'
+   * faker.person.jobType() // 'Designer'
    *
    * @since 8.0.0
    */
@@ -357,7 +357,7 @@ export class PersonModule extends ModuleBase {
    * Returns a random zodiac sign.
    *
    * @example
-   * faker.person.zodiacSign() // 'Pisces'
+   * faker.person.zodiacSign() // 'Leo'
    *
    * @since 8.0.0
    */

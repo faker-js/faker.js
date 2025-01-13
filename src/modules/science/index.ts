@@ -41,9 +41,9 @@ export class ScienceModule extends ModuleBase {
    * Returns a random periodic table element.
    *
    * @example
-   * faker.science.chemicalElement() // { symbol: 'H', name: 'Hydrogen', atomicNumber: 1 }
-   * faker.science.chemicalElement() // { symbol: 'Xe', name: 'Xenon', atomicNumber: 54 }
-   * faker.science.chemicalElement() // { symbol: 'Ce', name: 'Cerium', atomicNumber: 58 }
+   * faker.science.chemicalElement() // { 'symbol': 'Tb', 'name': 'Terbium', 'atomicNumber': 65 }
+   * faker.science.chemicalElement() // { 'symbol': 'At', 'name': 'Astatine', 'atomicNumber': 85 }
+   * faker.science.chemicalElement() // { 'symbol': 'Hf', 'name': 'Hafnium', 'atomicNumber': 72 }
    *
    * @since 7.2.0
    */
@@ -57,9 +57,9 @@ export class ScienceModule extends ModuleBase {
    * Returns a random scientific unit.
    *
    * @example
-   * faker.science.unit() // { name: 'meter', symbol: 'm' }
-   * faker.science.unit() // { name: 'second', symbol: 's' }
-   * faker.science.unit() // { name: 'mole', symbol: 'mol' }
+   * faker.science.unit() // { 'name': 'ohm', 'symbol': 'Ω' }
+   * faker.science.unit() // { 'name': 'gray', 'symbol': 'Gy' }
+   * faker.science.unit() // { 'name': 'degree Celsius', 'symbol': '°C' }
    *
    * @since 7.2.0
    */

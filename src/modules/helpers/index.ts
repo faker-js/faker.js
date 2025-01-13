@@ -234,10 +234,10 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    *
    * @example
    * faker.helpers.replaceSymbols() // ''
-   * faker.helpers.replaceSymbols('#####') // '98441'
-   * faker.helpers.replaceSymbols('?????') // 'ZYRQQ'
-   * faker.helpers.replaceSymbols('*****') // '4Z3P7'
-   * faker.helpers.replaceSymbols('Your pin is: #?*#?*') // 'Your pin is: 0T85L1'
+   * faker.helpers.replaceSymbols('#####') // '57654'
+   * faker.helpers.replaceSymbols('?????') // 'QLXZJ'
+   * faker.helpers.replaceSymbols('*****') // '59CV8'
+   * faker.helpers.replaceSymbols('Your pin is: #?*#?*') // 'Your pin is: 9UU1QY'
    *
    * @since 3.0.0
    */
@@ -299,8 +299,8 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param symbol The symbol to replace with a digit. Defaults to `'#'`.
    *
    * @example
-   * faker.helpers.replaceCreditCardSymbols() // '6453-4876-8626-8995-3771'
-   * faker.helpers.replaceCreditCardSymbols('1234-[4-9]-##!!-L') // '1234-9-5298-2'
+   * faker.helpers.replaceCreditCardSymbols() // '6453-5765-4648-9375-5901'
+   * faker.helpers.replaceCreditCardSymbols('1234-[4-9]-##!!-L') // '1234-4-0888-6'
    *
    * @since 5.0.0
    */
@@ -349,19 +349,19 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    *
    * @example
    * faker.helpers.fromRegExp('#{5}') // '#####'
-   * faker.helpers.fromRegExp('#{2,9}') // '#######'
-   * faker.helpers.fromRegExp('[1-7]') // '5'
-   * faker.helpers.fromRegExp('#{3}test[1-5]') // '###test3'
-   * faker.helpers.fromRegExp('[0-9a-dmno]') // '5'
+   * faker.helpers.fromRegExp('#{2,9}') // '######'
+   * faker.helpers.fromRegExp('[1-7]') // '6'
+   * faker.helpers.fromRegExp('#{3}test[1-5]') // '###test4'
+   * faker.helpers.fromRegExp('[0-9a-dmno]') // '9'
    * faker.helpers.fromRegExp('[^a-zA-Z0-8]') // '9'
-   * faker.helpers.fromRegExp('[a-d0-6]{2,8}') // 'a0dc45b0'
-   * faker.helpers.fromRegExp('[-a-z]{5}') // 'a-zab'
-   * faker.helpers.fromRegExp(/[A-Z0-9]{4}-[A-Z0-9]{4}/) // 'BS4G-485H'
-   * faker.helpers.fromRegExp(/[A-Z]{5}/i) // 'pDKfh'
-   * faker.helpers.fromRegExp(/.{5}/) // '14(#B'
+   * faker.helpers.fromRegExp('[a-d0-6]{2,8}') // '3056'
+   * faker.helpers.fromRegExp('[-a-z]{5}') // 'junox'
+   * faker.helpers.fromRegExp(/[A-Z0-9]{4}-[A-Z0-9]{4}/) // 'CDA3-2592'
+   * faker.helpers.fromRegExp(/[A-Z]{5}/i) // 'lUDqd'
+   * faker.helpers.fromRegExp(/.{5}/) // 'WwpgM'
    * faker.helpers.fromRegExp(/Joh?n/) // 'Jon'
    * faker.helpers.fromRegExp(/ABC*DE/) // 'ABDE'
-   * faker.helpers.fromRegExp(/bee+p/) // 'beeeeeeeep'
+   * faker.helpers.fromRegExp(/bee+p/) // 'beep'
    *
    * @since 8.0.0
    */
@@ -577,7 +577,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param options.inplace Whether to shuffle the array in place or return a new array. Defaults to `false`.
    *
    * @example
-   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: true }) // [ 'b', 'c', 'a' ]
+   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: true }) // [ 'a', 'c', 'b' ]
    *
    * @since 8.0.0
    */
@@ -602,8 +602,8 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param options.inplace Whether to shuffle the array in place or return a new array. Defaults to `false`.
    *
    * @example
-   * faker.helpers.shuffle(['a', 'b', 'c']) // [ 'b', 'c', 'a' ]
-   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: false }) // [ 'b', 'c', 'a' ]
+   * faker.helpers.shuffle(['a', 'b', 'c']) // [ 'a', 'c', 'b' ]
+   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: false }) // [ 'a', 'c', 'b' ]
    *
    * @since 2.0.1
    */
@@ -628,9 +628,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param options.inplace Whether to shuffle the array in place or return a new array. Defaults to `false`.
    *
    * @example
-   * faker.helpers.shuffle(['a', 'b', 'c']) // [ 'b', 'c', 'a' ]
-   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: true }) // [ 'b', 'c', 'a' ]
-   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: false }) // [ 'b', 'c', 'a' ]
+   * faker.helpers.shuffle(['a', 'b', 'c']) // [ 'a', 'c', 'b' ]
+   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: true }) // [ 'a', 'c', 'b' ]
+   * faker.helpers.shuffle(['a', 'b', 'c'], { inplace: false }) // [ 'a', 'c', 'b' ]
    *
    * @since 2.0.1
    */
@@ -676,9 +676,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param length The number of elements to generate.
    *
    * @example
-   * faker.helpers.uniqueArray(faker.word.sample, 3) // ['mob', 'junior', 'ripe']
-   * faker.helpers.uniqueArray(faker.definitions.person.first_name.generic, 6) // ['Silas', 'Montana', 'Lorenzo', 'Alayna', 'Aditya', 'Antone']
-   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2) // ['World', 'Goodbye']
+   * faker.helpers.uniqueArray(faker.word.sample, 3) // [ 'jealous', 'valuable', 'wasabi' ]
+   * faker.helpers.uniqueArray(faker.definitions.person.first_name.generic, 6) // [ 'Elaina', 'Oswald', 'Maxime', 'Daren', 'Franz', 'Alisha' ]
+   * faker.helpers.uniqueArray(["Hello", "World", "Goodbye"], 2) // [ 'World', 'Hello' ]
    *
    * @since 6.0.0
    */
@@ -721,7 +721,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * faker.helpers.mustache('I found {{count}} instances of "{{word}}".', {
    *   count: () => `${faker.number.int()}`,
    *   word: "this word",
-   * }) // 'I found 57591 instances of "this word".'
+   * }) // 'I found 4943272583565992 instances of "this word".'
    *
    * @since 2.0.1
    */
@@ -758,7 +758,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param options.probability The probability (`[0.00, 1.00]`) of the callback being invoked. Defaults to `0.5`.
    *
    * @example
-   * faker.helpers.maybe(() => 'Hello World!') // 'Hello World!'
+   * faker.helpers.maybe(() => 'Hello World!') // undefined
    * faker.helpers.maybe(() => 'Hello World!', { probability: 0.1 }) // undefined
    * faker.helpers.maybe(() => 'Hello World!', { probability: 0.9 }) // 'Hello World!'
    *
@@ -830,7 +830,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @throws If the given object is empty.
    *
    * @example
-   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // ['Snail', 0.03]
+   * faker.helpers.objectEntry({ Cheetah: 120, Falcon: 390, Snail: 0.03 }) // [ 'Falcon', 390 ]
    *
    * @since 8.0.0
    */
@@ -881,7 +881,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param array[].value The value to pick.
    *
    * @example
-   * faker.helpers.weightedArrayElement([{ weight: 5, value: 'sunny' }, { weight: 4, value: 'rainy' }, { weight: 1, value: 'snowy' }]) // 'sunny', 50% of the time, 'rainy' 40% of the time, 'snowy' 10% of the time
+   * faker.helpers.weightedArrayElement([{ weight: 5, value: 'sunny' }, { weight: 4, value: 'rainy' }, { weight: 1, value: 'snowy' }]) // 'rainy'
    *
    * @since 8.0.0
    */
@@ -938,9 +938,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    *    When value exceeds array boundaries, it will be limited to stay inside.
    *
    * @example
-   * faker.helpers.arrayElements(['cat', 'dog', 'mouse']) // ['mouse', 'cat']
-   * faker.helpers.arrayElements([1, 2, 3, 4, 5], 2) // [4, 2]
-   * faker.helpers.arrayElements([1, 2, 3, 4, 5], { min: 2, max: 4 }) // [3, 5, 1]
+   * faker.helpers.arrayElements(['cat', 'dog', 'mouse']) // [ 'dog', 'mouse' ]
+   * faker.helpers.arrayElements([1, 2, 3, 4, 5], 2) // [ 2, 3 ]
+   * faker.helpers.arrayElements([1, 2, 3, 4, 5], { min: 2, max: 4 }) // [ 5, 4, 3 ]
    *
    * @since 6.3.0
    */
@@ -1001,13 +1001,13 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    *
    * @example
    * enum Color { Red, Green, Blue }
-   * faker.helpers.enumValue(Color) // 1 (Green)
+   * faker.helpers.enumValue(Color) // 1
    *
    * enum Direction { North = 'North', South = 'South'}
    * faker.helpers.enumValue(Direction) // 'South'
    *
    * enum HttpStatus { Ok = 200, Created = 201, BadRequest = 400, Unauthorized = 401 }
-   * faker.helpers.enumValue(HttpStatus) // 200 (Ok)
+   * faker.helpers.enumValue(HttpStatus) // 400
    *
    * @since 8.0.0
    */
@@ -1032,7 +1032,7 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    *
    * @example
    * faker.helpers.rangeToNumber(1) // 1
-   * faker.helpers.rangeToNumber({ min: 1, max: 10 }) // 5
+   * faker.helpers.rangeToNumber({ min: 1, max: 10 }) // 6
    *
    * @since 8.0.0
    */
@@ -1068,9 +1068,9 @@ export class SimpleHelpersModule extends SimpleModuleBase {
    * @param options.count The number or range of elements to generate. Defaults to `3`.
    *
    * @example
-   * faker.helpers.multiple(() => faker.person.firstName()) // [ 'Aniya', 'Norval', 'Dallin' ]
-   * faker.helpers.multiple(() => faker.person.firstName(), { count: 3 }) // [ 'Santos', 'Lavinia', 'Lavinia' ]
-   * faker.helpers.multiple((_, i) => `${faker.color.human()}-${i + 1}`) // [ 'orange-1', 'orchid-2', 'sky blue-3' ]
+   * faker.helpers.multiple(() => faker.person.firstName()) // [ 'Katharina', 'Micheal', 'Leda' ]
+   * faker.helpers.multiple(() => faker.person.firstName(), { count: 3 }) // [ 'Karley', 'Henry', 'Luna' ]
+   * faker.helpers.multiple((_, i) => `${faker.color.human()}-${i + 1}`) // [ 'maroon-1', 'turquoise-2', 'white-3' ]
    *
    * @since 8.0.0
    */
@@ -1159,13 +1159,13 @@ export class HelpersModule extends SimpleHelpersModule {
    * @see faker.helpers.mustache(): For using custom functions to resolve templates.
    *
    * @example
-   * faker.helpers.fake('{{person.lastName}}') // 'Barrows'
-   * faker.helpers.fake('{{person.lastName}}, {{person.firstName}} {{person.suffix}}') // 'Durgan, Noe MD'
+   * faker.helpers.fake('{{person.lastName}}') // 'Rau'
+   * faker.helpers.fake('{{person.lastName}}, {{person.firstName}} {{person.suffix}}') // 'Little, Henry III'
    * faker.helpers.fake('This is static test.') // 'This is static test.'
-   * faker.helpers.fake('Good Morning {{person.firstName}}!') // 'Good Morning Estelle!'
-   * faker.helpers.fake('You can visit me at {{location.streetAddress(true)}}.') // 'You can visit me at 3393 Ronny Way Apt. 742.'
+   * faker.helpers.fake('Good Morning {{person.firstName}}!') // 'Good Morning Sim!'
+   * faker.helpers.fake('You can visit me at {{location.streetAddress(true)}}.') // 'You can visit me at 475 Walsh Center Apt. 187.'
    * faker.helpers.fake('I flipped the coin and got: {{helpers.arrayElement(["heads", "tails"])}}') // 'I flipped the coin and got: tails'
-   * faker.helpers.fake('Your PIN number is: {{string.numeric(4, {"exclude": ["0"]})}}') // 'Your PIN number is: 4834'
+   * faker.helpers.fake('Your PIN number is: {{string.numeric(4, {"exclude": ["0"]})}}') // 'Your PIN number is: 9747'
    *
    * @since 7.4.0
    */
@@ -1211,7 +1211,7 @@ export class HelpersModule extends SimpleHelpersModule {
    * @see faker.helpers.mustache(): For using custom functions to resolve templates.
    *
    * @example
-   * faker.helpers.fake(['A: {{person.firstName}}', 'B: {{person.lastName}}']) // 'A: Barry'
+   * faker.helpers.fake(['A: {{person.firstName}}', 'B: {{person.lastName}}']) // 'B: Mitchell'
    *
    * @since 8.0.0
    */
@@ -1254,13 +1254,13 @@ export class HelpersModule extends SimpleHelpersModule {
    * @see faker.helpers.mustache(): For using custom functions to resolve templates.
    *
    * @example
-   * faker.helpers.fake('{{person.lastName}}') // 'Barrows'
-   * faker.helpers.fake('{{person.lastName}}, {{person.firstName}} {{person.suffix}}') // 'Durgan, Noe MD'
+   * faker.helpers.fake('{{person.lastName}}') // 'Rau'
+   * faker.helpers.fake('{{person.lastName}}, {{person.firstName}} {{person.suffix}}') // 'Little, Henry III'
    * faker.helpers.fake('This is static test.') // 'This is static test.'
-   * faker.helpers.fake('Good Morning {{person.firstName}}!') // 'Good Morning Estelle!'
-   * faker.helpers.fake('You can visit me at {{location.streetAddress(true)}}.') // 'You can visit me at 3393 Ronny Way Apt. 742.'
+   * faker.helpers.fake('Good Morning {{person.firstName}}!') // 'Good Morning Sim!'
+   * faker.helpers.fake('You can visit me at {{location.streetAddress(true)}}.') // 'You can visit me at 475 Walsh Center Apt. 187.'
    * faker.helpers.fake('I flipped the coin and got: {{helpers.arrayElement(["heads", "tails"])}}') // 'I flipped the coin and got: tails'
-   * faker.helpers.fake(['A: {{person.firstName}}', 'B: {{person.lastName}}']) // 'A: Barry'
+   * faker.helpers.fake(['A: {{person.firstName}}', 'B: {{person.lastName}}']) // 'B: Koepp'
    *
    * @since 7.4.0
    */

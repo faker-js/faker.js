@@ -156,7 +156,7 @@ function processMethodLikes<T extends MethodLikeDeclaration>(
   nameResolver: (value: T) => string
 ): RawApiDocsMethod[] {
   return methods
-    .filter((method) => !method.hasModifier(SyntaxKind.PrivateKeyword))
+    .filter(isApiMethod)
     .map((method) => {
       const name = nameResolver(method);
       try {
@@ -171,6 +171,10 @@ function processMethodLikes<T extends MethodLikeDeclaration>(
       }
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export function isApiMethod(method: MethodLikeDeclaration): boolean {
+  return !method.hasModifier(SyntaxKind.PrivateKeyword);
 }
 
 export function processMethodLike(

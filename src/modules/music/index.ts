@@ -22,7 +22,7 @@ export class MusicModule extends ModuleBase {
    * Returns a random album name.
    *
    * @example
-   * faker.music.album() // '1989'
+   * faker.music.album() // 'Meet The Orphans'
    *
    * @since 9.0.0
    */
@@ -34,7 +34,7 @@ export class MusicModule extends ModuleBase {
    * Returns a random artist name.
    *
    * @example
-   * faker.music.artist() // 'The Beatles'
+   * faker.music.artist() // 'Mario Lanza'
    *
    * @since 9.0.0
    */
@@ -46,7 +46,7 @@ export class MusicModule extends ModuleBase {
    * Returns a random music genre.
    *
    * @example
-   * faker.music.genre() // 'Reggae'
+   * faker.music.genre() // 'Kitsch'
    *
    * @since 5.2.0
    */
@@ -58,7 +58,7 @@ export class MusicModule extends ModuleBase {
    * Returns a random song name.
    *
    * @example
-   * faker.music.songName() // 'White Christmas'
+   * faker.music.songName() // 'Mony Mony'
    *
    * @since 7.1.0
    */

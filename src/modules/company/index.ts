@@ -19,7 +19,7 @@ export class CompanyModule extends ModuleBase {
    * Generates a random company name.
    *
    * @example
-   * faker.company.name() // 'Zieme, Hauck and McClure'
+   * faker.company.name() // 'Rau LLC'
    *
    * @since 7.4.0
    */
@@ -31,7 +31,7 @@ export class CompanyModule extends ModuleBase {
    * Generates a random catch phrase that can be displayed to an end user.
    *
    * @example
-   * faker.company.catchPhrase() // 'Upgradable systematic flexibility'
+   * faker.company.catchPhrase() // 'Organic optimizing methodology'
    *
    * @since 2.0.1
    */
@@ -47,7 +47,7 @@ export class CompanyModule extends ModuleBase {
    * Generates a random buzz phrase that can be used to demonstrate data being viewed by a manager.
    *
    * @example
-   * faker.company.buzzPhrase() // 'cultivate synergistic e-markets'
+   * faker.company.buzzPhrase() // 'iterate rich models'
    *
    * @since 8.0.0
    */
@@ -59,7 +59,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random catch phrase adjective that can be displayed to an end user..
    *
    * @example
-   * faker.company.catchPhraseAdjective() // 'Multi-tiered'
+   * faker.company.catchPhraseAdjective() // 'Organic'
    *
    * @since 2.0.1
    */
@@ -73,7 +73,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random catch phrase descriptor that can be displayed to an end user..
    *
    * @example
-   * faker.company.catchPhraseDescriptor() // 'composite'
+   * faker.company.catchPhraseDescriptor() // 'intermediate'
    *
    * @since 2.0.1
    */
@@ -87,7 +87,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random catch phrase noun that can be displayed to an end user..
    *
    * @example
-   * faker.company.catchPhraseNoun() // 'leverage'
+   * faker.company.catchPhraseNoun() // 'knowledge base'
    *
    * @since 2.0.1
    */
@@ -99,7 +99,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random buzz adjective that can be used to demonstrate data being viewed by a manager.
    *
    * @example
-   * faker.company.buzzAdjective() // 'one-to-one'
+   * faker.company.buzzAdjective() // 'mission-critical'
    *
    * @since 8.0.0
    */
@@ -113,7 +113,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random buzz verb that can be used to demonstrate data being viewed by a manager.
    *
    * @example
-   * faker.company.buzzVerb() // 'empower'
+   * faker.company.buzzVerb() // 'iterate'
    *
    * @since 8.0.0
    */
@@ -127,7 +127,7 @@ export class CompanyModule extends ModuleBase {
    * Returns a random buzz noun that can be used to demonstrate data being viewed by a manager.
    *
    * @example
-   * faker.company.buzzNoun() // 'paradigms'
+   * faker.company.buzzNoun() // 'metrics'
    *
    * @since 8.0.0
    */

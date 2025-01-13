@@ -212,7 +212,7 @@ export class ColorModule extends ModuleBase {
    * Returns a random human-readable color name.
    *
    * @example
-   * faker.color.human() // 'red'
+   * faker.color.human() // 'orchid'
    *
    * @since 7.0.0
    */
@@ -225,7 +225,7 @@ export class ColorModule extends ModuleBase {
    * Source: https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses
    *
    * @example
-   * faker.color.space() // 'sRGB'
+   * faker.color.space() // 'Natural Color System (NSC)'
    *
    * @since 7.0.0
    */
@@ -237,7 +237,7 @@ export class ColorModule extends ModuleBase {
    * Returns a random css supported color function name.
    *
    * @example
-   * faker.color.cssSupportedFunction() // 'rgb'
+   * faker.color.cssSupportedFunction() // 'hwb'
    *
    * @since 7.0.0
    */
@@ -249,7 +249,7 @@ export class ColorModule extends ModuleBase {
    * Returns a random css supported color space name.
    *
    * @example
-   * faker.color.cssSupportedSpace() // 'display-p3'
+   * faker.color.cssSupportedSpace() // 'rec2020'
    *
    * @since 7.0.0
    */
@@ -261,7 +261,7 @@ export class ColorModule extends ModuleBase {
    * Returns an RGB color.
    *
    * @example
-   * faker.color.rgb() // '#8be4ab'
+   * faker.color.rgb() // '#cfdb9e'
    *
    * @since 7.0.0
    */
@@ -276,16 +276,16 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.rgb() // '#0d7f26'
-   * faker.color.rgb({ prefix: '0x' }) // '0x9ddc8b'
-   * faker.color.rgb({ casing: 'upper' }) // '#B8A51E'
-   * faker.color.rgb({ casing: 'lower' }) // '#b12f8b'
-   * faker.color.rgb({ prefix: '#', casing: 'lower' }) // '#eb0c16'
-   * faker.color.rgb({ format: 'hex', casing: 'lower' }) // '#bb9d17'
-   * faker.color.rgb({ format: 'css' }) // 'rgb(216, 17, 192)'
-   * faker.color.rgb({ format: 'binary' }) // '00110010 00001000 01110110'
-   * faker.color.rgb({ includeAlpha: true }) // '#f96efb5e'
-   * faker.color.rgb({ format: 'css', includeAlpha: true }) // 'rgba(180, 158, 24, 0.75)'
+   * faker.color.rgb() // '#cfdb9e'
+   * faker.color.rgb({ prefix: '0x' }) // '0x9df8bb'
+   * faker.color.rgb({ casing: 'upper' }) // '#CE110C'
+   * faker.color.rgb({ casing: 'lower' }) // '#bdfbab'
+   * faker.color.rgb({ prefix: '#', casing: 'lower' }) // '#2e3eb9'
+   * faker.color.rgb({ format: 'hex', casing: 'lower' }) // '#5bac0d'
+   * faker.color.rgb({ format: 'css' }) // 'rgb(156, 157, 241)'
+   * faker.color.rgb({ format: 'binary' }) // '10101110 01011100 01101111'
+   * faker.color.rgb({ includeAlpha: true }) // '#f1ee4268'
+   * faker.color.rgb({ format: 'css', includeAlpha: true }) // 'rgba(145, 112, 253, 0.1)'
    *
    * @since 7.0.0
    */
@@ -323,9 +323,9 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.rgb() // '0x8be4ab'
-   * faker.color.rgb({ format: 'decimal' }) // [64, 192,174]
-   * faker.color.rgb({ format: 'decimal', includeAlpha: true }) // [52, 250, 209, 0.21]
+   * faker.color.rgb() // '#cfdb9e'
+   * faker.color.rgb({ format: 'decimal' }) // [ 112, 228, 246 ]
+   * faker.color.rgb({ format: 'decimal', includeAlpha: true }) // [ 98, 202, 135, 0.57 ]
    *
    * @since 7.0.0
    */
@@ -353,18 +353,18 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.rgb() // '#0d7f26'
-   * faker.color.rgb({ prefix: '0x' }) // '0x9ddc8b'
-   * faker.color.rgb({ casing: 'upper' }) // '#B8A51E'
-   * faker.color.rgb({ casing: 'lower' }) // '#b12f8b'
-   * faker.color.rgb({ prefix: '#', casing: 'lower' }) // '#eb0c16'
-   * faker.color.rgb({ format: 'hex', casing: 'lower' }) // '#bb9d17'
-   * faker.color.rgb({ format: 'decimal' }) // [64, 192,174]
-   * faker.color.rgb({ format: 'css' }) // 'rgb(216, 17, 192)'
-   * faker.color.rgb({ format: 'binary' }) // '00110010 00001000 01110110'
-   * faker.color.rgb({ includeAlpha: true }) // '#f96efb5e'
-   * faker.color.rgb({ format: 'css', includeAlpha: true }) // 'rgba(180, 158, 24, 0.75)'
-   * faker.color.rgb({ format: 'decimal', includeAlpha: true }) // [52, 250, 209, 0.21]
+   * faker.color.rgb() // '#cfdb9e'
+   * faker.color.rgb({ prefix: '0x' }) // '0x9df8bb'
+   * faker.color.rgb({ casing: 'upper' }) // '#CE110C'
+   * faker.color.rgb({ casing: 'lower' }) // '#bdfbab'
+   * faker.color.rgb({ prefix: '#', casing: 'lower' }) // '#2e3eb9'
+   * faker.color.rgb({ format: 'hex', casing: 'lower' }) // '#5bac0d'
+   * faker.color.rgb({ format: 'decimal' }) // [ 156, 157, 241 ]
+   * faker.color.rgb({ format: 'css' }) // 'rgb(174, 92, 111)'
+   * faker.color.rgb({ format: 'binary' }) // '10110010 00001111 10101010'
+   * faker.color.rgb({ includeAlpha: true }) // '#e4268c9f'
+   * faker.color.rgb({ format: 'css', includeAlpha: true }) // 'rgba(26, 53, 41, 0.65)'
+   * faker.color.rgb({ format: 'decimal', includeAlpha: true }) // [ 64, 119, 62, 0.16 ]
    *
    * @since 7.0.0
    */
@@ -432,7 +432,7 @@ export class ColorModule extends ModuleBase {
    * Returns a CMYK color.
    *
    * @example
-   * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
+   * faker.color.cmyk() // [ 0.55, 0.72, 0.6, 0.55 ]
    *
    * @since 7.0.0
    */
@@ -444,9 +444,9 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated CMYK color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
-   * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
+   * faker.color.cmyk() // [ 0.55, 0.72, 0.6, 0.55 ]
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(42%, 65%, 44%, 90%)'
+   * faker.color.cmyk({ format: 'binary' }) // '00111111011110000101000111101100 00111110110000101000111101011100 00111111010010100011110101110001 00111111000001111010111000010100'
    *
    * @since 7.0.0
    */
@@ -465,8 +465,8 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated CMYK color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'decimal' }) // [0.31, 0.52, 0.32, 0.43]
+   * faker.color.cmyk() // [ 0.55, 0.72, 0.6, 0.55 ]
+   * faker.color.cmyk({ format: 'decimal' }) // [ 0.42, 0.65, 0.44, 0.9 ]
    *
    * @since 7.0.0
    */
@@ -485,10 +485,10 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated CMYK color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'decimal' }) // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
-   * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
+   * faker.color.cmyk() // [ 0.55, 0.72, 0.6, 0.55 ]
+   * faker.color.cmyk({ format: 'decimal' }) // [ 0.42, 0.65, 0.44, 0.9 ]
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(97%, 38%, 79%, 53%)'
+   * faker.color.cmyk({ format: 'binary' }) // '00111111000100011110101110000101 00111111011011100001010001111011 00111101100011110101110000101001 00111101101000111101011100001010'
    *
    * @since 7.0.0
    */
@@ -512,7 +512,7 @@ export class ColorModule extends ModuleBase {
    * Returns an HSL color.
    *
    * @example
-   * faker.color.hsl() // [201, 0.23, 0.32]
+   * faker.color.hsl() // [ 198, 0.72, 0.6 ]
    *
    * @since 7.0.0
    */
@@ -525,11 +525,11 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.hsl() // [201, 0.23, 0.32]
-   * faker.color.hsl({ format: 'css' }) // hsl(0deg, 100%, 80%)
-   * faker.color.hsl({ format: 'css', includeAlpha: true }) // hsl(0deg 100% 50% / 0.5)
-   * faker.color.hsl({ format: 'binary' }) // (8-32 bits) x 3
-   * faker.color.hsl({ format: 'binary', includeAlpha: true }) // (8-32 bits) x 4
+   * faker.color.hsl() // [ 198, 0.72, 0.6 ]
+   * faker.color.hsl({ format: 'css' }) // 'hsl(196deg 42% 65%)'
+   * faker.color.hsl({ format: 'css', includeAlpha: true }) // 'hsl(157deg 90% 97% / 38)'
+   * faker.color.hsl({ format: 'binary' }) // '100011101 00111111000001111010111000010100 00111111000100011110101110000101'
+   * faker.color.hsl({ format: 'binary', includeAlpha: true }) // '101001110 00111101100011110101110000101001 00111101101000111101011100001010 00111100101000111101011100001010'
    *
    * @since 7.0.0
    */
@@ -555,9 +555,9 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.hsl() // [201, 0.23, 0.32]
-   * faker.color.hsl({ format: 'decimal' }) // [300, 0.21, 0.52]
-   * faker.color.hsl({ format: 'decimal', includeAlpha: true }) // [300, 0.21, 0.52, 0.28]
+   * faker.color.hsl() // [ 198, 0.72, 0.6 ]
+   * faker.color.hsl({ format: 'decimal' }) // [ 196, 0.42, 0.65 ]
+   * faker.color.hsl({ format: 'decimal', includeAlpha: true }) // [ 157, 0.9, 0.97, 0.38 ]
    *
    * @since 7.0.0
    */
@@ -583,13 +583,13 @@ export class ColorModule extends ModuleBase {
    * @param options.includeAlpha Adds an alpha value to the color (RGBA). Defaults to `false`.
    *
    * @example
-   * faker.color.hsl() // [201, 0.23, 0.32]
-   * faker.color.hsl({ format: 'decimal' }) // [300, 0.21, 0.52]
-   * faker.color.hsl({ format: 'decimal', includeAlpha: true }) // [300, 0.21, 0.52, 0.28]
-   * faker.color.hsl({ format: 'css' }) // hsl(0deg, 100%, 80%)
-   * faker.color.hsl({ format: 'css', includeAlpha: true }) // hsl(0deg 100% 50% / 0.5)
-   * faker.color.hsl({ format: 'binary' }) // (8-32 bits) x 3
-   * faker.color.hsl({ format: 'binary', includeAlpha: true }) // (8-32 bits) x 4
+   * faker.color.hsl() // [ 198, 0.72, 0.6 ]
+   * faker.color.hsl({ format: 'decimal' }) // [ 196, 0.42, 0.65 ]
+   * faker.color.hsl({ format: 'decimal', includeAlpha: true }) // [ 157, 0.9, 0.97, 0.38 ]
+   * faker.color.hsl({ format: 'css' }) // 'hsl(285deg 53% 57%)'
+   * faker.color.hsl({ format: 'css', includeAlpha: true }) // 'hsl(334deg 7% 8% / 2)'
+   * faker.color.hsl({ format: 'binary' }) // '100101100 00111111010001111010111000010100 00111111010111101011100001010010'
+   * faker.color.hsl({ format: 'binary', includeAlpha: true }) // '101100001 00111111010011001100110011001101 00111110111010111000010100011111 00111111010001111010111000010100'
    *
    * @since 7.0.0
    */
@@ -626,7 +626,7 @@ export class ColorModule extends ModuleBase {
    * Returns an HWB color.
    *
    * @example
-   * faker.color.hwb() // [201, 0.21, 0.31]
+   * faker.color.hwb() // [ 198, 0.72, 0.6 ]
    *
    * @since 7.0.0
    */
@@ -638,9 +638,9 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.hwb() // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
-   * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.hwb() // [ 198, 0.72, 0.6 ]
+   * faker.color.hwb({ format: 'css' }) // 'hwb(196 42% 65%)'
+   * faker.color.hwb({ format: 'binary' }) // '10011101 00111111011001100110011001100110 00111111011110000101000111101100'
    *
    * @since 7.0.0
    */
@@ -659,8 +659,8 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.hwb() // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
+   * faker.color.hwb() // [ 198, 0.72, 0.6 ]
+   * faker.color.hwb({ format: 'decimal' }) // [ 196, 0.42, 0.65 ]
    *
    * @since 7.0.0
    */
@@ -679,10 +679,10 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.hwb() // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
-   * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.hwb() // [ 198, 0.72, 0.6 ]
+   * faker.color.hwb({ format: 'decimal' }) // [ 196, 0.42, 0.65 ]
+   * faker.color.hwb({ format: 'css' }) // 'hwb(157 90% 97%)'
+   * faker.color.hwb({ format: 'binary' }) // '10001010 00111111010010100011110101110001 00111111000001111010111000010100'
    *
    * @since 7.0.0
    */
@@ -731,7 +731,7 @@ export class ColorModule extends ModuleBase {
    * Returns a LAB (CIELAB) color.
    *
    * @example
-   * faker.color.lab() // [0.832133, -80.3245, 100.1234]
+   * faker.color.lab() // [ 0.548814, 43.0379, 20.5527 ]
    *
    * @since 7.0.0
    */
@@ -743,9 +743,9 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lab() // [0.832133, -80.3245, 100.1234]
-   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
-   * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.lab() // [ 0.548814, 43.0379, 20.5527 ]
+   * faker.color.lab({ format: 'css' }) // 'lab(54% -15.269 29.1788)'
+   * faker.color.lab({ format: 'binary' }) // '00111110111000000000101101100111 01000010100111001011010110001110 01000010101110010111011100010111'
    *
    * @since 7.0.0
    */
@@ -764,8 +764,8 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lab() // [0.832133, -80.3245, 100.1234]
-   * faker.color.lab({ format: 'decimal' }) // [0.856773, -80.2345, 100.2341]
+   * faker.color.lab() // [ 0.548814, 43.0379, 20.5527 ]
+   * faker.color.lab({ format: 'decimal' }) // [ 0.544883, -15.269, 29.1788 ]
    *
    * @since 7.0.0
    */
@@ -784,10 +784,10 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lab() // [0.832133, -80.3245, 100.1234]
-   * faker.color.lab({ format: 'decimal' }) // [0.856773, -80.2345, 100.2341]
-   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
-   * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.lab() // [ 0.548814, 43.0379, 20.5527 ]
+   * faker.color.lab({ format: 'decimal' }) // [ 0.544883, -15.269, 29.1788 ]
+   * faker.color.lab({ format: 'css' }) // 'lab(44% 78.3546 92.7326)'
+   * faker.color.lab({ format: 'binary' }) // '00111110110001000101001001100001 01000010011010010110000101001000 01000000101110001110110110010001'
    *
    * @since 7.0.0
    */
@@ -818,7 +818,7 @@ export class ColorModule extends ModuleBase {
    * make a noticeable difference in the browser.
    *
    * @example
-   * faker.color.lch() // [0.522345, 72.2, 56.2]
+   * faker.color.lch() // [ 0.548814, 164.5, 138.6 ]
    *
    * @since 7.0.0
    */
@@ -833,9 +833,9 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lch() // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
-   * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.lch() // [ 0.548814, 164.5, 138.6 ]
+   * faker.color.lch({ format: 'css' }) // 'lch(54% 97.4 148.6)'
+   * faker.color.lch({ format: 'binary' }) // '00111110111000000000101101100111 01000011010011010001100110011010 01000011010111011011001100110011'
    *
    * @since 7.0.0
    */
@@ -857,8 +857,8 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lch() // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'decimal' }) // [0.522345, 72.2, 56.2]
+   * faker.color.lch() // [ 0.548814, 164.5, 138.6 ]
+   * faker.color.lch({ format: 'decimal' }) // [ 0.544883, 97.4, 148.6 ]
    *
    * @since 7.0.0
    */
@@ -880,10 +880,10 @@ export class ColorModule extends ModuleBase {
    * @param options.format Format of generated RGB color. Defaults to `'decimal'`.
    *
    * @example
-   * faker.color.lch() // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'decimal' }) // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
-   * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.lch() // [ 0.548814, 164.5, 138.6 ]
+   * faker.color.lch({ format: 'decimal' }) // [ 0.544883, 97.4, 148.6 ]
+   * faker.color.lch({ format: 'css' }) // 'lch(44% 205.1 221.7)'
+   * faker.color.lch({ format: 'binary' }) // '00111110110001000101001001100001 01000011001101100001100110011010 01000010111100110011001100110011'
    *
    * @since 7.0.0
    */
@@ -909,7 +909,7 @@ export class ColorModule extends ModuleBase {
    * Returns a random color based on CSS color space specified.
    *
    * @example
-   * faker.color.colorByCSSColorSpace() // [0.93, 1, 0.82]
+   * faker.color.colorByCSSColorSpace() // [ 0.5488, 0.7152, 0.6028 ]
    *
    * @since 7.0.0
    */
@@ -922,9 +922,9 @@ export class ColorModule extends ModuleBase {
    * @param options.space Color space to generate the color for. Defaults to `'sRGB'`.
    *
    * @example
-   * faker.color.colorByCSSColorSpace() // [0.93, 1, 0.82]
-   * faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' }) // color(display-p3 0.12 1 0.23)
-   * faker.color.colorByCSSColorSpace({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.colorByCSSColorSpace() // [ 0.5488, 0.7152, 0.6028 ]
+   * faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' }) // 'color(display-p3 0.5449 0.4236 0.6459)'
+   * faker.color.colorByCSSColorSpace({ format: 'binary' }) // '00111110111000000000110100011011 00111111011001000100110100000001 00111111011101101011010100001011'
    *
    * @since 7.0.0
    */
@@ -950,8 +950,8 @@ export class ColorModule extends ModuleBase {
    * @param options.space Color space to generate the color for. Defaults to `'sRGB'`.
    *
    * @example
-   * faker.color.colorByCSSColorSpace() // [0.93, 1, 0.82]
-   * faker.color.colorByCSSColorSpace({ format: 'decimal' }) // [0.12, 0.21, 0.31]
+   * faker.color.colorByCSSColorSpace() // [ 0.5488, 0.7152, 0.6028 ]
+   * faker.color.colorByCSSColorSpace({ format: 'decimal' }) // [ 0.5449, 0.4236, 0.6459 ]
    *
    * @since 7.0.0
    */
@@ -977,10 +977,10 @@ export class ColorModule extends ModuleBase {
    * @param options.space Color space to generate the color for. Defaults to `'sRGB'`.
    *
    * @example
-   * faker.color.colorByCSSColorSpace() // [0.93, 1, 0.82]
-   * faker.color.colorByCSSColorSpace({ format: 'decimal' }) // [0.12, 0.21, 0.31]
-   * faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' }) // color(display-p3 0.12 1 0.23)
-   * faker.color.colorByCSSColorSpace({ format: 'binary' }) // (8-32 bits x 3)
+   * faker.color.colorByCSSColorSpace() // [ 0.5488, 0.7152, 0.6028 ]
+   * faker.color.colorByCSSColorSpace({ format: 'decimal' }) // [ 0.5449, 0.4236, 0.6459 ]
+   * faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' }) // 'color(display-p3 0.4376 0.8918 0.9637)'
+   * faker.color.colorByCSSColorSpace({ format: 'binary' }) // '00111110110001000100110100000001 00111111010010101011001101101000 00111111000001110110010111111110'
    *
    * @since 7.0.0
    */

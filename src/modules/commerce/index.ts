@@ -90,7 +90,7 @@ export class CommerceModule extends ModuleBase {
    * Returns a department inside a shop.
    *
    * @example
-   * faker.commerce.department() // 'Garden'
+   * faker.commerce.department() // 'Industrial'
    *
    * @since 3.0.0
    */
@@ -104,7 +104,7 @@ export class CommerceModule extends ModuleBase {
    * Generates a random descriptive product name.
    *
    * @example
-   * faker.commerce.productName() // 'Incredible Soft Gloves'
+   * faker.commerce.productName() // 'Luxurious Rubber Pants'
    *
    * @since 3.0.0
    */
@@ -129,11 +129,11 @@ export class CommerceModule extends ModuleBase {
    * @param options.symbol The currency value to use. Defaults to `''`.
    *
    * @example
-   * faker.commerce.price() // '828.07'
-   * faker.commerce.price({ min: 100 }) // '904.19'
-   * faker.commerce.price({ min: 100, max: 200 }) // '154.55'
-   * faker.commerce.price({ min: 100, max: 200, dec: 0 }) // '133'
-   * faker.commerce.price({ min: 100, max: 200, dec: 0, symbol: '$' }) // '$114'
+   * faker.commerce.price() // '549.25'
+   * faker.commerce.price({ min: 100 }) // '590.45'
+   * faker.commerce.price({ min: 100, max: 200 }) // '143.78'
+   * faker.commerce.price({ min: 100, max: 200, dec: 0 }) // '138'
+   * faker.commerce.price({ min: 100, max: 200, dec: 0, symbol: '$' }) // '$179'
    *
    * @since 3.0.0
    */
@@ -212,7 +212,7 @@ export class CommerceModule extends ModuleBase {
    * Returns an adjective describing a product.
    *
    * @example
-   * faker.commerce.productAdjective() // 'Handcrafted'
+   * faker.commerce.productAdjective() // 'Luxurious'
    *
    * @since 3.0.0
    */
@@ -226,7 +226,7 @@ export class CommerceModule extends ModuleBase {
    * Returns a material of a product.
    *
    * @example
-   * faker.commerce.productMaterial() // 'Rubber'
+   * faker.commerce.productMaterial() // 'Metal'
    *
    * @since 3.0.0
    */
@@ -240,7 +240,7 @@ export class CommerceModule extends ModuleBase {
    * Returns a short product name.
    *
    * @example
-   * faker.commerce.product() // 'Computer'
+   * faker.commerce.product() // 'Mouse'
    *
    * @since 3.0.0
    */
@@ -254,7 +254,7 @@ export class CommerceModule extends ModuleBase {
    * Returns a product description.
    *
    * @example
-   * faker.commerce.productDescription() // 'Featuring Phosphorus-enhanced technology, our Fish offers unparalleled Modern performance'
+   * faker.commerce.productDescription() // 'Our savory-inspired Mouse brings a taste of luxury to your punctual lifestyle'
    *
    * @since 5.0.0
    */
@@ -273,12 +273,12 @@ export class CommerceModule extends ModuleBase {
    * @param options.separator The separator to use in the format. Defaults to `'-'`.
    *
    * @example
-   * faker.commerce.isbn() // '978-0-692-82459-7'
-   * faker.commerce.isbn(10) // '1-155-36404-X'
-   * faker.commerce.isbn(13) // '978-1-60808-867-6'
-   * faker.commerce.isbn({ separator: ' ' }) // '978 0 452 81498 1'
-   * faker.commerce.isbn({ variant: 10, separator: ' ' }) // '0 940319 49 7'
-   * faker.commerce.isbn({ variant: 13, separator: ' ' }) // '978 1 6618 9122 0'
+   * faker.commerce.isbn() // '978-1-76546-489-4'
+   * faker.commerce.isbn(10) // '0-7559-0008-1'
+   * faker.commerce.isbn(13) // '978-1-897471-61-6'
+   * faker.commerce.isbn({ separator: ' ' }) // '978 1 5427 4506 2'
+   * faker.commerce.isbn({ variant: 10, separator: ' ' }) // '1 6963 4606 1'
+   * faker.commerce.isbn({ variant: 13, separator: ' ' }) // '978 1 213 35491 3'
    *
    * @since 8.1.0
    */

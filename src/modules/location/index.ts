@@ -47,8 +47,8 @@ export class LocationModule extends ModuleBase {
    * @see faker.helpers.replaceSymbols(): For more information about how the pattern is used.
    *
    * @example
-   * faker.location.zipCode() // '17839'
-   * faker.location.zipCode('####') // '6925'
+   * faker.location.zipCode() // '76546-4893'
+   * faker.location.zipCode('####') // '7559'
    *
    * @since 8.0.0
    */
@@ -105,8 +105,8 @@ export class LocationModule extends ModuleBase {
    * Generates a random localized city name.
    *
    * @example
-   * faker.location.city() // 'East Jarretmouth'
-   * fakerDE.location.city() // 'Bad Lilianadorf'
+   * faker.location.city() // 'Michealstead'
+   * fakerDE.location.city() // 'Mervescheid'
    *
    * @since 8.0.0
    */
@@ -120,7 +120,7 @@ export class LocationModule extends ModuleBase {
    * Generates a random building number.
    *
    * @example
-   * faker.location.buildingNumber() // '379'
+   * faker.location.buildingNumber() // '7654'
    *
    * @since 8.0.0
    */
@@ -139,7 +139,7 @@ export class LocationModule extends ModuleBase {
    * Generates a random localized street name.
    *
    * @example
-   * faker.location.street() // 'Schroeder Isle'
+   * faker.location.street() // 'Rau Parks'
    *
    * @since 8.0.0
    */
@@ -157,10 +157,10 @@ export class LocationModule extends ModuleBase {
    * Otherwise it will just generate a street address.
    *
    * @example
-   * faker.location.streetAddress() // '0917 O'Conner Estates'
-   * faker.location.streetAddress(false) // '34830 Erdman Hollow'
-   * faker.location.streetAddress(true) // '3393 Ronny Way Apt. 742'
-   * faker.location.streetAddress({ useFullAddress: true }) // '7917 Miller Park Apt. 410'
+   * faker.location.streetAddress() // '7654 Kertzmann Tunnel'
+   * faker.location.streetAddress(false) // '475 Walsh Center'
+   * faker.location.streetAddress(true) // '18789 Marsh Lane Suite 261'
+   * faker.location.streetAddress({ useFullAddress: true }) // '542 Market Place Suite 166'
    *
    * @since 8.0.0
    */
@@ -192,7 +192,7 @@ export class LocationModule extends ModuleBase {
    * such as an apartment or room number.
    *
    * @example
-   * faker.location.secondaryAddress() // 'Apt. 861'
+   * faker.location.secondaryAddress() // 'Suite 765'
    *
    * @since 8.0.0
    */
@@ -211,8 +211,8 @@ export class LocationModule extends ModuleBase {
    * Returns a random localized county, or other equivalent second-level administrative entity for the locale's country such as a district or department.
    *
    * @example
-   * fakerEN_GB.location.county() // 'Cambridgeshire'
-   * fakerEN_US.location.county() // 'Monroe County'
+   * fakerEN_GB.location.county() // 'Kent'
+   * fakerEN_US.location.county() // 'Lee County'
    *
    * @since 8.0.0
    */
@@ -226,7 +226,7 @@ export class LocationModule extends ModuleBase {
    * Returns a random country name.
    *
    * @example
-   * faker.location.country() // 'Greece'
+   * faker.location.country() // 'Mali'
    *
    * @since 8.0.0
    */
@@ -240,7 +240,7 @@ export class LocationModule extends ModuleBase {
    * Returns a random continent name.
    *
    * @example
-   * faker.location.continent() // 'Asia'
+   * faker.location.continent() // 'Australia'
    *
    * @since 9.1.0
    */
@@ -263,10 +263,10 @@ export class LocationModule extends ModuleBase {
    * Defaults to `'alpha-2'`.
    *
    * @example
-   * faker.location.countryCode() // 'SJ'
-   * faker.location.countryCode('alpha-2') // 'GA'
-   * faker.location.countryCode('alpha-3') // 'TJK'
-   * faker.location.countryCode('numeric') // '528'
+   * faker.location.countryCode() // 'MA'
+   * faker.location.countryCode('alpha-2') // 'PL'
+   * faker.location.countryCode('alpha-3') // 'MRT'
+   * faker.location.countryCode('numeric') // '434'
    *
    * @since 8.0.0
    */
@@ -324,10 +324,10 @@ export class LocationModule extends ModuleBase {
    * Otherwise this will return the long name. Defaults to `false`.
    *
    * @example
-   * faker.location.state() // 'Mississippi'
-   * fakerEN_CA.location.state() // 'Saskatchewan'
-   * fakerDE.location.state() // 'Nordrhein-Westfalen'
-   * faker.location.state({ abbreviated: true }) // 'LA'
+   * faker.location.state() // 'Nevada'
+   * fakerEN_CA.location.state() // 'Nunavut'
+   * fakerDE.location.state() // 'Niedersachsen'
+   * faker.location.state({ abbreviated: true }) // 'OK'
    *
    * @since 8.0.0
    */
@@ -359,10 +359,10 @@ export class LocationModule extends ModuleBase {
    * @param options.precision The number of decimal points of precision for the latitude. Defaults to `4`.
    *
    * @example
-   * faker.location.latitude() // -30.9501
-   * faker.location.latitude({ max: 10 }) // 5.7225
-   * faker.location.latitude({ max: 10, min: -10 }) // -9.6273
-   * faker.location.latitude({ max: 10, min: -10, precision: 5 }) // 2.68452
+   * faker.location.latitude() // 8.7864
+   * faker.location.latitude({ max: 10 }) // -18.481
+   * faker.location.latitude({ max: 10, min: -10 }) // 2.0553
+   * faker.location.latitude({ max: 10, min: -10, precision: 5 }) // 0.89766
    *
    * @since 8.0.0
    */
@@ -402,10 +402,10 @@ export class LocationModule extends ModuleBase {
    * @param options.precision The number of decimal points of precision for the longitude. Defaults to `4`.
    *
    * @example
-   * faker.location.longitude() // -30.9501
-   * faker.location.longitude({ max: 10 }) // 5.7225
-   * faker.location.longitude({ max: 10, min: -10 }) // -9.6273
-   * faker.location.longitude({ max: 10, min: -10, precision: 5 }) // 2.68452
+   * faker.location.longitude() // 17.5729
+   * faker.location.longitude({ max: 10 }) // -44.114
+   * faker.location.longitude({ max: 10, min: -10 }) // 2.0553
+   * faker.location.longitude({ max: 10, min: -10, precision: 5 }) // 0.89766
    *
    * @since 8.0.0
    */
@@ -445,7 +445,7 @@ export class LocationModule extends ModuleBase {
    *
    * @example
    * faker.location.direction() // 'Northeast'
-   * faker.location.direction({ abbreviated: true }) // 'SW'
+   * faker.location.direction({ abbreviated: true }) // 'NW'
    *
    * @since 8.0.0
    */
@@ -483,8 +483,8 @@ export class LocationModule extends ModuleBase {
    * Otherwise this will return the long name. Defaults to `false`.
    *
    * @example
-   * faker.location.cardinalDirection() // 'North'
-   * faker.location.cardinalDirection({ abbreviated: true }) // 'W'
+   * faker.location.cardinalDirection() // 'South'
+   * faker.location.cardinalDirection({ abbreviated: true }) // 'S'
    *
    * @since 8.0.0
    */
@@ -520,8 +520,8 @@ export class LocationModule extends ModuleBase {
    * Otherwise this will return the long name. Defaults to `false`.
    *
    * @example
-   * faker.location.ordinalDirection() // 'Northeast'
-   * faker.location.ordinalDirection({ abbreviated: true }) // 'SW'
+   * faker.location.ordinalDirection() // 'Southeast'
+   * faker.location.ordinalDirection({ abbreviated: true }) // 'SE'
    *
    * @since 8.0.0
    */
@@ -559,9 +559,9 @@ export class LocationModule extends ModuleBase {
    * @param options.isMetric If `true` assume the radius to be in kilometers. If `false` for miles. Defaults to `false`.
    *
    * @example
-   * faker.location.nearbyGPSCoordinate() // [ 33.8475, -170.5953 ]
-   * faker.location.nearbyGPSCoordinate({ origin: [33, -170] }) // [ 33.0165, -170.0636 ]
-   * faker.location.nearbyGPSCoordinate({ origin: [33, -170], radius: 1000, isMetric: true }) // [ 37.9163, -179.2408 ]
+   * faker.location.nearbyGPSCoordinate() // [ 8.7864, 77.4682 ]
+   * faker.location.nearbyGPSCoordinate({ origin: [33, -170] }) // [ 32.95274756100263, -170.06271843206343 ]
+   * faker.location.nearbyGPSCoordinate({ origin: [33, -170], radius: 1000, isMetric: true }) // [ 35.66934494697957, -175.13118223236756 ]
    *
    * @since 8.0.0
    */
@@ -639,7 +639,7 @@ export class LocationModule extends ModuleBase {
    * @see faker.date.timeZone(): For generating a random time zone from all available time zones.
    *
    * @example
-   * faker.location.timeZone() // 'Pacific/Guam'
+   * faker.location.timeZone() // 'Asia/Dili'
    *
    * @since 8.0.0
    */
@@ -657,10 +657,10 @@ export class LocationModule extends ModuleBase {
    * @see [ISO 639-2 Language Code List](https://www.loc.gov/standards/iso639-2/php/code_list.php)
    *
    * @example
-   * faker.location.language() // { alpha2: 'de', alpha3: 'deu', name: 'German' }
-   * faker.location.language().name // German
-   * faker.location.language().alpha2 // de
-   * faker.location.language().alpha3 // deu
+   * faker.location.language() // { 'name': 'Ukrainian', 'alpha2': 'uk', 'alpha3': 'ukr' }
+   * faker.location.language().name // 'Catalan'
+   * faker.location.language().alpha2 // 'sk'
+   * faker.location.language().alpha3 // 'ukr'
    *
    * @since 9.4.0
    */

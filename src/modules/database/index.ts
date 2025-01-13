@@ -14,7 +14,7 @@ export class DatabaseModule extends ModuleBase {
    * Returns a random database column name.
    *
    * @example
-   * faker.database.column() // 'createdAt'
+   * faker.database.column() // 'name'
    *
    * @since 4.0.0
    */
@@ -28,7 +28,7 @@ export class DatabaseModule extends ModuleBase {
    * Returns a random database column type.
    *
    * @example
-   * faker.database.type() // 'timestamp'
+   * faker.database.type() // 'mediumint'
    *
    * @since 4.0.0
    */
@@ -42,7 +42,7 @@ export class DatabaseModule extends ModuleBase {
    * Returns a random database collation.
    *
    * @example
-   * faker.database.collation() // 'utf8_unicode_ci'
+   * faker.database.collation() // 'cp1250_general_ci'
    *
    * @since 4.0.0
    */
@@ -56,7 +56,7 @@ export class DatabaseModule extends ModuleBase {
    * Returns a random database engine.
    *
    * @example
-   * faker.database.engine() // 'ARCHIVE'
+   * faker.database.engine() // 'InnoDB'
    *
    * @since 4.0.0
    */
@@ -70,7 +70,7 @@ export class DatabaseModule extends ModuleBase {
    * Returns a MongoDB [ObjectId](https://docs.mongodb.com/manual/reference/method/ObjectId/) string.
    *
    * @example
-   * faker.database.mongodbObjectId() // 'e175cac316a79afdd0ad3afb'
+   * faker.database.mongodbObjectId() // 'cfdb9e9df8bbce110cbdfbab'
    *
    * @since 6.2.0
    */

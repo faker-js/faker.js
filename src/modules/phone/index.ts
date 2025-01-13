@@ -19,10 +19,10 @@ export class PhoneModule extends ModuleBase {
    * @see faker.helpers.fromRegExp(): For generating a phone number matching a regular expression.
    *
    * @example
-   * faker.phone.number() // '961-770-7727'
-   * faker.phone.number({ style: 'human' }) // '555.770.7727 x1234'
-   * faker.phone.number({ style: 'national' }) // '(961) 770-7727'
-   * faker.phone.number({ style: 'international' }) // '+15551234567'
+   * faker.phone.number() // '765-564-8937 x5590'
+   * faker.phone.number({ style: 'human' }) // '(287) 897-4716'
+   * faker.phone.number({ style: 'national' }) // '(395) 527-4506'
+   * faker.phone.number({ style: 'international' }) // '+16697346066'
    *
    * @since 7.3.0
    */
@@ -55,7 +55,7 @@ export class PhoneModule extends ModuleBase {
    * Generates IMEI number.
    *
    * @example
-   * faker.phone.imei() // '13-850175-913761-7'
+   * faker.phone.imei() // '57-654648-937559-8'
    *
    * @since 6.2.0
    */

@@ -14,7 +14,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a random vehicle.
    *
    * @example
-   * faker.vehicle.vehicle() // 'BMW Explorer'
+   * faker.vehicle.vehicle() // 'Mazda Model S'
    *
    * @since 5.0.0
    */
@@ -26,7 +26,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a manufacturer name.
    *
    * @example
-   * faker.vehicle.manufacturer() // 'Ford'
+   * faker.vehicle.manufacturer() // 'Mazda'
    *
    * @since 5.0.0
    */
@@ -40,7 +40,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a vehicle model.
    *
    * @example
-   * faker.vehicle.model() // 'Explorer'
+   * faker.vehicle.model() // 'Golf'
    *
    * @since 5.0.0
    */
@@ -54,7 +54,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a vehicle type.
    *
    * @example
-   * faker.vehicle.type() // 'Coupe'
+   * faker.vehicle.type() // 'Minivan'
    *
    * @since 5.0.0
    */
@@ -66,7 +66,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a fuel type.
    *
    * @example
-   * faker.vehicle.fuel() // 'Electric'
+   * faker.vehicle.fuel() // 'Gasoline'
    *
    * @since 5.0.0
    */
@@ -78,7 +78,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a vehicle identification number (VIN).
    *
    * @example
-   * faker.vehicle.vin() // 'YV1MH682762184654'
+   * faker.vehicle.vin() // 'JPKHDMEWYCVH59000'
    *
    * @since 5.0.0
    */
@@ -103,7 +103,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a vehicle color.
    *
    * @example
-   * faker.vehicle.color() // 'red'
+   * faker.vehicle.color() // 'orchid'
    *
    * @since 5.0.0
    */
@@ -115,7 +115,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a vehicle registration number (Vehicle Registration Mark - VRM)
    *
    * @example
-   * faker.vehicle.vrm() // 'MF56UPA'
+   * faker.vehicle.vrm() // 'OS65LQL'
    *
    * @since 5.4.0
    */
@@ -136,7 +136,7 @@ export class VehicleModule extends ModuleBase {
    * Returns a type of bicycle.
    *
    * @example
-   * faker.vehicle.bicycle() // 'Adventure Road Bicycle'
+   * faker.vehicle.bicycle() // 'Hybrid Bicycle'
    *
    * @since 5.5.0
    */
