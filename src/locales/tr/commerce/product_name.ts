@@ -1,5 +1,6 @@
 export default {
   adjective: [
+    'Dondurulmuş',
     'El Yapımı',
     'El Üretimi',
     'Ergonomik',
@@ -17,18 +18,17 @@ export default {
     'Zeki',
     'İnanılmaz',
     'Şık',
+    'Taze',
+    'Yumuşak',
   ],
   material: [
     'Ahşap',
     'Beton',
-    'Dondurulmuş',
     'Granit',
     'Kauçuk',
     'Metal',
     'Pamuk',
     'Plastik',
-    'Taze',
-    'Yumuşak',
     'Çelik',
   ],
   product: [
