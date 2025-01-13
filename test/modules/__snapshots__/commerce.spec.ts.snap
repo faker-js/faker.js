@@ -32,7 +32,7 @@ exports[`commerce > 42 > productAdjective 1`] = `"Handcrafted"`;
 
 exports[`commerce > 42 > productDescription 1`] = `"New salmon Pants with ergonomic design for crushing comfort"`;
 
-exports[`commerce > 42 > productMaterial 1`] = `"Frozen"`;
+exports[`commerce > 42 > productMaterial 1`] = `"Cotton"`;
 
 exports[`commerce > 42 > productName 1`] = `"Handcrafted Wooden Sausages"`;
 
@@ -66,9 +66,9 @@ exports[`commerce > 1211 > product 1`] = `"Towels"`;
 
 exports[`commerce > 1211 > productAdjective 1`] = `"Tasty"`;
 
-exports[`commerce > 1211 > productDescription 1`] = `"Small Cheese designed with Wooden for right performance"`;
+exports[`commerce > 1211 > productDescription 1`] = `"Soft Cheese designed with Wooden for right performance"`;
 
-exports[`commerce > 1211 > productMaterial 1`] = `"Wooden"`;
+exports[`commerce > 1211 > productMaterial 1`] = `"Steel"`;
 
 exports[`commerce > 1211 > productName 1`] = `"Tasty Steel Cheese"`;
 
@@ -100,10 +100,10 @@ exports[`commerce > 1337 > price > with min option 1`] = `"293.09"`;
 
 exports[`commerce > 1337 > product 1`] = `"Chicken"`;
 
-exports[`commerce > 1337 > productAdjective 1`] = `"Generic"`;
+exports[`commerce > 1337 > productAdjective 1`] = `"Frozen"`;
 
-exports[`commerce > 1337 > productDescription 1`] = `"Innovative Car featuring lawful technology and Fresh construction"`;
+exports[`commerce > 1337 > productDescription 1`] = `"Innovative Car featuring lawful technology and Concrete construction"`;
 
-exports[`commerce > 1337 > productMaterial 1`] = `"Fresh"`;
+exports[`commerce > 1337 > productMaterial 1`] = `"Ceramic"`;
 
-exports[`commerce > 1337 > productName 1`] = `"Generic Concrete Chicken"`;
+exports[`commerce > 1337 > productName 1`] = `"Frozen Bronze Chicken"`;
