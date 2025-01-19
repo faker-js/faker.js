@@ -539,35 +539,35 @@ export class NumberModule extends SimpleModuleBase {
    * Generates a random number between `min` and `max` using an exponential distribution.
    * The lower bound is inclusive, but the upper bound is exclusive.
    *
-   * The following table shows the rough distribution of values generated using `Math.floor(exponentialDistribution({ min: 0, max: 10, base: x }))`:
+   * The following table shows the rough distribution of values generated using `exponentialDistribution({ base: x })`:
    *
-   * | Value | Base 0.1 | Base 0.5 | Base 1 | Base 2 | Base 10 |
-   * | :---: | -------: | -------: | -----: | -----: | ------: |
-   * |   0   |     4.1% |     7.4% |  10.0% |  13.8% |   27.8% |
-   * |   1   |     4.5% |     7.8% |  10.0% |  12.5% |   16.9% |
-   * |   2   |     5.0% |     8.2% |  10.0% |  11.5% |   12.1% |
-   * |   3   |     5.7% |     8.7% |  10.0% |  10.7% |    9.4% |
-   * |   4   |     6.6% |     9.3% |  10.0% |  10.0% |    7.8% |
-   * |   5   |     7.8% |     9.9% |  10.0% |   9.3% |    6.6% |
-   * |   6   |     9.4% |    10.7% |  10.0% |   8.8% |    5.7% |
-   * |   7   |    12.1% |    11.5% |  10.0% |   8.2% |    5.0% |
-   * |   8   |    16.9% |    12.6% |  10.0% |   7.8% |    4.5% |
-   * |   9   |    27.9% |    13.8% |  10.0% |   7.5% |    4.1% |
+   * |  Result   | Base 0.1 | Base 0.5 | Base 1 | Base 2 | Base 10 |
+   * | :-------: | -------: | -------: | -----: | -----: | ------: |
+   * | 0.0 - 0.1 |     4.1% |     7.4% |  10.0% |  13.8% |   27.8% |
+   * | 0.1 - 0.2 |     4.5% |     7.8% |  10.0% |  12.5% |   16.9% |
+   * | 0.2 - 0.3 |     5.0% |     8.2% |  10.0% |  11.5% |   12.1% |
+   * | 0.3 - 0.4 |     5.7% |     8.7% |  10.0% |  10.7% |    9.4% |
+   * | 0.4 - 0.5 |     6.6% |     9.3% |  10.0% |  10.0% |    7.8% |
+   * | 0.5 - 0.6 |     7.8% |     9.9% |  10.0% |   9.3% |    6.6% |
+   * | 0.6 - 0.7 |     9.4% |    10.7% |  10.0% |   8.8% |    5.7% |
+   * | 0.7 - 0.8 |    12.1% |    11.5% |  10.0% |   8.2% |    5.0% |
+   * | 0.8 - 0.9 |    16.9% |    12.6% |  10.0% |   7.8% |    4.5% |
+   * | 0.9 - 1.0 |    27.9% |    13.8% |  10.0% |   7.5% |    4.1% |
    *
-   * The following table shows the rough distribution of values generated using `Math.floor(exponentialDistribution({ min: 0, max: 10, bias: x }))`:
+   * The following table shows the rough distribution of values generated using `exponentialDistribution({ bias: x })`:
    *
-   * | Value | Bias -9 | Bias -1 | Bias 0 | Bias 1 | Bias 9 |
-   * | :---: | ------: | ------: | -----: | -----: | -----: |
-   * |   0   |   27.9% |   13.7% |  10.0% |   7.4% |   4.1% |
-   * |   1   |   16.9% |   12.5% |  10.0% |   7.8% |   4.5% |
-   * |   2   |   12.1% |   11.6% |  10.0% |   8.3% |   5.1% |
-   * |   3   |    9.5% |   10.7% |  10.0% |   8.8% |   5.7% |
-   * |   4   |    7.8% |   10.0% |  10.0% |   9.3% |   6.6% |
-   * |   5   |    6.6% |    9.3% |  10.0% |   9.9% |   7.7% |
-   * |   6   |    5.7% |    8.8% |  10.0% |  10.7% |   9.5% |
-   * |   7   |    5.0% |    8.2% |  10.0% |  11.5% |  12.1% |
-   * |   8   |    4.5% |    7.8% |  10.0% |  12.6% |  16.8% |
-   * |   9   |    4.1% |    7.4% |  10.0% |  13.7% |  27.9% |
+   * |  Result   | Bias -9 | Bias -1 | Bias 0 | Bias 1 | Bias 9 |
+   * | :-------: | ------: | ------: | -----: | -----: | -----: |
+   * | 0.0 - 0.1 |   27.9% |   13.7% |  10.0% |   7.4% |   4.1% |
+   * | 0.1 - 0.2 |   16.9% |   12.5% |  10.0% |   7.8% |   4.5% |
+   * | 0.2 - 0.3 |   12.1% |   11.6% |  10.0% |   8.3% |   5.1% |
+   * | 0.3 - 0.4 |    9.5% |   10.7% |  10.0% |   8.8% |   5.7% |
+   * | 0.4 - 0.5 |    7.8% |   10.0% |  10.0% |   9.3% |   6.6% |
+   * | 0.5 - 0.6 |    6.6% |    9.3% |  10.0% |   9.9% |   7.7% |
+   * | 0.6 - 0.7 |    5.7% |    8.8% |  10.0% |  10.7% |   9.5% |
+   * | 0.7 - 0.8 |    5.0% |    8.2% |  10.0% |  11.5% |  12.1% |
+   * | 0.8 - 0.9 |    4.5% |    7.8% |  10.0% |  12.6% |  16.8% |
+   * | 0.9 - 1.0 |    4.1% |    7.4% |  10.0% |  13.7% |  27.9% |
    *
    * @param options The options for generating the number.
    * @param options.min The minimum value to generate (inclusive). Defaults to `0`.
@@ -577,20 +577,20 @@ export class NumberModule extends SimpleModuleBase {
    * The higher/more above `1` the `base`, the more likely the number will be closer to the minimum value.
    * The lower/closer to zero the base, the more likely the number will be closer to the maximum value.
    * Values of `1` will generate a uniform distribution.
-   * The following table shows the rough distribution of values generated using `Math.floor(exponentialDistribution({ min: 0, max: 10, base: x }))`:
+   * The following table shows the rough distribution of values generated using `exponentialDistribution({ base: x })`:
    *
-   * | Value | Base 0.1 | Base 0.5 | Base 1 | Base 2 | Base 10 |
-   * | :---: | -------: | -------: | -----: | -----: | ------: |
-   * |   0   |     4.1% |     7.4% |  10.0% |  13.8% |   27.8% |
-   * |   1   |     4.5% |     7.8% |  10.0% |  12.5% |   16.9% |
-   * |   2   |     5.0% |     8.2% |  10.0% |  11.5% |   12.1% |
-   * |   3   |     5.7% |     8.7% |  10.0% |  10.7% |    9.4% |
-   * |   4   |     6.6% |     9.3% |  10.0% |  10.0% |    7.8% |
-   * |   5   |     7.8% |     9.9% |  10.0% |   9.3% |    6.6% |
-   * |   6   |     9.4% |    10.7% |  10.0% |   8.8% |    5.7% |
-   * |   7   |    12.1% |    11.5% |  10.0% |   8.2% |    5.0% |
-   * |   8   |    16.9% |    12.6% |  10.0% |   7.8% |    4.5% |
-   * |   9   |    27.9% |    13.8% |  10.0% |   7.5% |    4.1% |
+   * |  Result   | Base 0.1 | Base 0.5 | Base 1 | Base 2 | Base 10 |
+   * | :-------: | -------: | -------: | -----: | -----: | ------: |
+   * | 0.0 - 0.1 |     4.1% |     7.4% |  10.0% |  13.8% |   27.8% |
+   * | 0.1 - 0.2 |     4.5% |     7.8% |  10.0% |  12.5% |   16.9% |
+   * | 0.2 - 0.3 |     5.0% |     8.2% |  10.0% |  11.5% |   12.1% |
+   * | 0.3 - 0.4 |     5.7% |     8.7% |  10.0% |  10.7% |    9.4% |
+   * | 0.4 - 0.5 |     6.6% |     9.3% |  10.0% |  10.0% |    7.8% |
+   * | 0.5 - 0.6 |     7.8% |     9.9% |  10.0% |   9.3% |    6.6% |
+   * | 0.6 - 0.7 |     9.4% |    10.7% |  10.0% |   8.8% |    5.7% |
+   * | 0.7 - 0.8 |    12.1% |    11.5% |  10.0% |   8.2% |    5.0% |
+   * | 0.8 - 0.9 |    16.9% |    12.6% |  10.0% |   7.8% |    4.5% |
+   * | 0.9 - 1.0 |    27.9% |    13.8% |  10.0% |   7.5% |    4.1% |
    *
    * Can alternatively be configured using the `bias` option. `base` takes precedence over `bias`.
    * @param options.bias An alternative way to specify the `base`. Also accepts values below zero.
@@ -599,20 +599,20 @@ export class NumberModule extends SimpleModuleBase {
    * The lower/more negative the `bias`, the more likely the number will be closer to the minimum value.
    * Values of 0 will generate a uniform distribution.
    *
-   * The following table shows the rough distribution of values generated using `Math.floor(exponentialDistribution({ min: 0, max: 10, bias: x }))`:
+   * The following table shows the rough distribution of values generated using `exponentialDistribution({ bias: x })`:
    *
-   * | Value | Bias -9 | Bias -1 | Bias 0 | Bias 1 | Bias 9 |
-   * | :---: | ------: | ------: | -----: | -----: | -----: |
-   * |   0   |   27.9% |   13.7% |  10.0% |   7.4% |   4.1% |
-   * |   1   |   16.9% |   12.5% |  10.0% |   7.8% |   4.5% |
-   * |   2   |   12.1% |   11.6% |  10.0% |   8.3% |   5.1% |
-   * |   3   |    9.5% |   10.7% |  10.0% |   8.8% |   5.7% |
-   * |   4   |    7.8% |   10.0% |  10.0% |   9.3% |   6.6% |
-   * |   5   |    6.6% |    9.3% |  10.0% |   9.9% |   7.7% |
-   * |   6   |    5.7% |    8.8% |  10.0% |  10.7% |   9.5% |
-   * |   7   |    5.0% |    8.2% |  10.0% |  11.5% |  12.1% |
-   * |   8   |    4.5% |    7.8% |  10.0% |  12.6% |  16.8% |
-   * |   9   |    4.1% |    7.4% |  10.0% |  13.7% |  27.9% |
+   * |  Result   | Bias -9 | Bias -1 | Bias 0 | Bias 1 | Bias 9 |
+   * | :-------: | ------: | ------: | -----: | -----: | -----: |
+   * | 0.0 - 0.1 |   27.9% |   13.7% |  10.0% |   7.4% |   4.1% |
+   * | 0.1 - 0.2 |   16.9% |   12.5% |  10.0% |   7.8% |   4.5% |
+   * | 0.2 - 0.3 |   12.1% |   11.6% |  10.0% |   8.3% |   5.1% |
+   * | 0.3 - 0.4 |    9.5% |   10.7% |  10.0% |   8.8% |   5.7% |
+   * | 0.4 - 0.5 |    7.8% |   10.0% |  10.0% |   9.3% |   6.6% |
+   * | 0.5 - 0.6 |    6.6% |    9.3% |  10.0% |   9.9% |   7.7% |
+   * | 0.6 - 0.7 |    5.7% |    8.8% |  10.0% |  10.7% |   9.5% |
+   * | 0.7 - 0.8 |    5.0% |    8.2% |  10.0% |  11.5% |  12.1% |
+   * | 0.8 - 0.9 |    4.5% |    7.8% |  10.0% |  12.6% |  16.8% |
+   * | 0.9 - 1.0 |    4.1% |    7.4% |  10.0% |  13.7% |  27.9% |
    *
    * This option is ignored if `base` is specified.
    *
