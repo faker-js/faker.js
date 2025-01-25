@@ -207,11 +207,11 @@ export class SimpleFaker {
    * // Consistent values for tests:
    * faker.seed([42, 13, 17])
    * faker.number.int(10); // 4
-   * faker.number.int(10); // 8
+   * faker.number.int(10); // 10
    *
    * faker.seed([42, 13, 17])
    * faker.number.int(10); // 4
-   * faker.number.int(10); // 8
+   * faker.number.int(10); // 10
    *
    * // Random but reproducible tests:
    * // Simply log the seed, and if you need to reproduce it, insert the seed here
