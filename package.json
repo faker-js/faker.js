@@ -107,7 +107,7 @@
   "devDependencies": {
     "@eslint/compat": "1.2.5",
     "@eslint/js": "9.18.0",
-    "@stylistic/eslint-plugin": "2.12.1",
+    "@stylistic/eslint-plugin": "3.0.1",
     "@types/eslint__js": "8.42.3",
     "@types/node": "22.10.3",
     "@types/sanitize-html": "2.13.0",
@@ -120,7 +120,7 @@
     "commit-and-tag-version": "12.5.0",
     "cypress": "13.17.0",
     "eslint": "9.18.0",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "10.0.1",
     "eslint-plugin-file-progress": "3.0.1",
     "eslint-plugin-jsdoc": "50.6.1",
     "eslint-plugin-prettier": "5.2.1",
