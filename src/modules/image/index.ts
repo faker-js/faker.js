@@ -29,7 +29,7 @@ export class ImageModule extends ModuleBase {
   avatar(): string {
     // Add new avatar providers here, when adding a new one.
     const avatarMethod = this.faker.helpers.arrayElement([
-      this.avatarAI,
+      this.personPortrait,
       this.avatarGitHub,
     ]);
     return avatarMethod();
@@ -55,28 +55,36 @@ export class ImageModule extends ModuleBase {
    *
    * @param options Options for generating an AI avatar.
    * @param options.sex The sex of the person for the avatar. Can be 'female' or 'male'. If not provided, defaults to a random selection.
+   * @param options.size The size of the image. Can be 512, 256, 128, 64, 32 or 16. If not provided, defaults to 512.
    *
    * @example
-   * faker.image.avatarAI()
-   * // 'https://cdn.jsdelivr.net/.../female/32.jpg'
-   * faker.image.avatarAI({ sex: 'male' })
-   * // 'https://cdn.jsdelivr.net/.../male/32.jpg'
+   * faker.image.personPortrait()
+   * // 'https://cdn.jsdelivr.net/.../female/512/57.jpg'
+   * faker.image.personPortrait({ sex: 'male', size:'128' })
+   * // 'https://cdn.jsdelivr.net/.../male/128/27.jpg'
    *
    * @since 9.1.0
    */
-  avatarAI(options?: {
+  personPortrait(options?: {
     /**
      * The sex of the person for the avatar.
      * Can be 'female' or 'male'.
      * If not provided, defaults to a random selection.
      */
     sex?: SexType;
+    /**
+     * The size of the image.
+     * Can be 512, 256, 128, 64, 32 or 16.
+     * If not provided, defaults to 512.
+     */
+    size?: 512 | 256 | 128 | 64 | 32 | 16;
   }): string {
     const type = options?.sex ?? this.faker.person.sexType();
-    // FIXME: This should be replaced by the final CDN url, presumably something like: 'https://cdn.jsdelivr.net/gh/faker-js/faker-media/avatars_ai'
+    const size = options?.size ?? 512;
+    // FIXME: This should be replaced by the final CDN url, presumably something like: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait'
     const baseURL =
-      'https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt';
-    return `${baseURL}/${type}/${this.faker.number.int({ min: 1, max: 50 })}.jpg`;
+      'https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images';
+    return `${baseURL}/${type}/${size}/${this.faker.number.int({ min: 0, max: 99 })}.jpg`;
   }
 
   /**

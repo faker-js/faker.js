@@ -1,10 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`image > 42 > avatar 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/male/37.jpg"`;
-
-exports[`image > 42 > avatarAI > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/48.jpg"`;
-
-exports[`image > 42 > avatarAI > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/19.jpg"`;
+exports[`image > 42 > avatar 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/512/73.jpg"`;
 
 exports[`image > 42 > avatarGitHub 1`] = `"https://avatars.githubusercontent.com/u/37454012"`;
 
@@ -25,6 +21,14 @@ exports[`image > 42 > dataUri > with type 1`] = `"data:image/svg+xml;base64,PHN2
 exports[`image > 42 > dataUri > with width 1`] = `"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTQ5OCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2VhZDMzMSIvPjx0ZXh0IHg9IjY0IiB5PSI3NDkiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+MTI4eDE0OTg8L3RleHQ+PC9zdmc+"`;
 
 exports[`image > 42 > dataUri > with width and height 1`] = `"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22128%22%20height%3D%22128%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%238ead33%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2264%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3E128x128%3C%2Ftext%3E%3C%2Fsvg%3E"`;
+
+exports[`image > 42 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/95.jpg"`;
+
+exports[`image > 42 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/37.jpg"`;
+
+exports[`image > 42 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/37.jpg"`;
+
+exports[`image > 42 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/37.jpg"`;
 
 exports[`image > 42 > url > noArgs 1`] = `"https://picsum.photos/seed/993RBH1Y/1498/3802"`;
 
@@ -82,10 +86,6 @@ exports[`image > 42 > urlPlaceholder > with width and height 1`] = `"https://via
 
 exports[`image > 1211 > avatar 1`] = `"https://avatars.githubusercontent.com/u/89347165"`;
 
-exports[`image > 1211 > avatarAI > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/male/45.jpg"`;
-
-exports[`image > 1211 > avatarAI > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/47.jpg"`;
-
 exports[`image > 1211 > avatarGitHub 1`] = `"https://avatars.githubusercontent.com/u/92852016"`;
 
 exports[`image > 1211 > avatarLegacy 1`] = `"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1160.jpg"`;
@@ -105,6 +105,14 @@ exports[`image > 1211 > dataUri > with type 1`] = `"data:image/svg+xml;base64,PH
 exports[`image > 1211 > dataUri > with width 1`] = `"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22128%22%20height%3D%223714%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23d4fefa%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%221857%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3E128x3714%3C%2Ftext%3E%3C%2Fsvg%3E"`;
 
 exports[`image > 1211 > dataUri > with width and height 1`] = `"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWQ0ZmVmIi8+PHRleHQgeD0iNjQiIHk9IjY0IiBmb250LXNpemU9IjIwIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPjEyOHgxMjg8L3RleHQ+PC9zdmc+"`;
+
+exports[`image > 1211 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/512/89.jpg"`;
+
+exports[`image > 1211 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/92.jpg"`;
+
+exports[`image > 1211 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/92.jpg"`;
+
+exports[`image > 1211 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/92.jpg"`;
 
 exports[`image > 1211 > url > noArgs 1`] = `"https://loremflickr.com/3714/3573?lock=8982492793493979"`;
 
@@ -160,11 +168,7 @@ exports[`image > 1211 > urlPlaceholder > with width 1`] = `"https://via.placehol
 
 exports[`image > 1211 > urlPlaceholder > with width and height 1`] = `"https://via.placeholder.com/128x128/ed4fef/a7fbae.webp?text=dapifer%20usque%20unde"`;
 
-exports[`image > 1337 > avatar 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/14.jpg"`;
-
-exports[`image > 1337 > avatarAI > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/8.jpg"`;
-
-exports[`image > 1337 > avatarAI > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/sd3-avatars@country-prompt/female/14.jpg"`;
+exports[`image > 1337 > avatar 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/27.jpg"`;
 
 exports[`image > 1337 > avatarGitHub 1`] = `"https://avatars.githubusercontent.com/u/26202467"`;
 
@@ -185,6 +189,14 @@ exports[`image > 1337 > dataUri > with type 1`] = `"data:image/svg+xml;base64,PH
 exports[`image > 1337 > dataUri > with width 1`] = `"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTA0OCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM2YTdiNSIvPjx0ZXh0IHg9IjY0IiB5PSI1MjQiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+MTI4eDEwNDg8L3RleHQ+PC9zdmc+"`;
 
 exports[`image > 1337 > dataUri > with width and height 1`] = `"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22128%22%20height%3D%22128%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23536a7b%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2264%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3E128x128%3C%2Ftext%3E%3C%2Fsvg%3E"`;
+
+exports[`image > 1337 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/15.jpg"`;
+
+exports[`image > 1337 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/26.jpg"`;
+
+exports[`image > 1337 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/26.jpg"`;
+
+exports[`image > 1337 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/26.jpg"`;
 
 exports[`image > 1337 > url > noArgs 1`] = `"https://loremflickr.com/1048/635?lock=4137158724208997"`;
 

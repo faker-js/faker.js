@@ -109,8 +109,14 @@ describe('image', () => {
         });
     });
 
-    t.describe('avatarAI', (t) => {
-      t.it('noArgs').it('with sex', { sex: 'female' });
+    t.describe('personPortrait', (t) => {
+      t.it('noArgs')
+        .it('with sex', { sex: 'female' })
+        .it('with sex and size', { sex: 'male', size: 256 })
+        .it('with all options', {
+          sex: 'female',
+          size: 128,
+        });
     });
   });
 
@@ -148,13 +154,13 @@ describe('image', () => {
     });
   });
 
-  describe('avatarAI', () => {
+  describe('personPortrait', () => {
     it('should return a random avatar url from AI', () => {
-      const avatarUrl = faker.image.avatarAI();
+      const imageUrl = faker.image.personPortrait();
 
-      expect(avatarUrl).toBeTypeOf('string');
-      expect(avatarUrl).toMatch(/^https:\/\/cdn\.jsdelivr\.net\/.*\.jpg$/);
-      expect(() => new URL(avatarUrl)).not.toThrow();
+      expect(imageUrl).toBeTypeOf('string');
+      expect(imageUrl).toMatch(/^https:\/\/cdn\.jsdelivr\.net\/.*\.jpg$/);
+      expect(() => new URL(imageUrl)).not.toThrow();
     });
   });
 
