@@ -109,12 +109,4 @@ describe('image', () => {
       await assertWorkingUrl(actual);
     });
   });
-
-  describe('urlPlaceholder', () => {
-    it('should return a random image url from Placeholder', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-deprecated
-      const actual = faker.image.urlPlaceholder();
-      await assertWorkingUrl(actual);
-    });
-  });
 });
