@@ -1,10 +1,12 @@
 import type {
+  JSDoc,
+  JSDocTag,
+  ParameterDeclaration,
   PropertySignature,
   Symbol,
   Type,
   TypeParameterDeclaration,
 } from 'ts-morph';
-import { type JSDoc, type JSDocTag, type ParameterDeclaration } from 'ts-morph';
 import { exactlyOne, valueForKey } from '../utils/value-checks';
 import { newProcessingError } from './error';
 import {

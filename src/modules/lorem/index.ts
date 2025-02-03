@@ -75,10 +75,13 @@ export class LoremModule extends ModuleBase {
           strategy?: 'fail' | 'closest' | 'shortest' | 'longest' | 'any-length';
         } = {}
   ): string {
-    const opts = typeof options === 'number' ? { length: options } : options;
+    if (typeof options === 'number') {
+      options = { length: options };
+    }
+
     return this.faker.helpers.arrayElement(
       filterWordListByLength({
-        ...opts,
+        ...options,
         wordList: this.faker.definitions.lorem.word,
       })
     );

@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`toRefreshFunction > should handle multiline calls 1`] = `
+"async (): Promise<unknown[]> => {
+  await enableFaker();
+  faker.seed();
+  faker.setDefaultRefDate();
+  const result: unknown[] = [];
+
+  try {
+    result.push(
+      faker.number.int({
+        min: 1,
+        max: 10,
+      })
+    );
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  return result;
+}"
+`;
+
+exports[`toRefreshFunction > should handle multiple calls 1`] = `
+"async (): Promise<unknown[]> => {
+  await enableFaker();
+  faker.seed();
+  faker.setDefaultRefDate();
+  const result: unknown[] = [];
+
+  try {
+    result.push(faker.number.int());
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  try {
+    result.push(faker.number.int());
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  return result;
+}"
+`;
+
+exports[`toRefreshFunction > should handle properties after calls 1`] = `
+"async (): Promise<unknown[]> => {
+  await enableFaker();
+  faker.seed();
+  faker.setDefaultRefDate();
+  const result: unknown[] = [];
+
+  try {
+    result.push(faker.airline.airport().name);
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  return result;
+}"
+`;
+
+exports[`toRefreshFunction > should handle single line calls with semicolon 1`] = `
+"async (): Promise<unknown[]> => {
+  await enableFaker();
+  faker.seed();
+  faker.setDefaultRefDate();
+  const result: unknown[] = [];
+
+  try {
+    result.push(faker.number.int());
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  return result;
+}"
+`;
+
+exports[`toRefreshFunction > should handle single line calls without semicolon 1`] = `
+"async (): Promise<unknown[]> => {
+  await enableFaker();
+  faker.seed();
+  faker.setDefaultRefDate();
+  const result: unknown[] = [];
+
+  try {
+    result.push(faker.number.int());
+  } catch (error: unknown) {
+    result.push(error instanceof Error ? error.name : 'Error');
+  }
+
+  return result;
+}"
+`;

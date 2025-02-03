@@ -73,77 +73,75 @@ import { faker as fakerZH_CN } from './zh_CN';
 import { faker as fakerZH_TW } from './zh_TW';
 import { faker as fakerZU_ZA } from './zu_ZA';
 
-export {
-  fakerAF_ZA,
-  fakerAR,
-  fakerAZ,
-  fakerBASE,
-  fakerCS_CZ,
-  fakerDA,
-  fakerDE,
-  fakerDE_AT,
-  fakerDE_CH,
-  fakerDV,
-  fakerEL,
-  fakerEN,
-  fakerEN_AU,
-  fakerEN_AU_ocker,
-  fakerEN_BORK,
-  fakerEN_CA,
-  fakerEN_GB,
-  fakerEN_GH,
-  fakerEN_HK,
-  fakerEN_IE,
-  fakerEN_IN,
-  fakerEN_NG,
-  fakerEN_US,
-  fakerEN_ZA,
-  fakerEO,
-  fakerES,
-  fakerES_MX,
-  fakerFA,
-  fakerFI,
-  fakerFR,
-  fakerFR_BE,
-  fakerFR_CA,
-  fakerFR_CH,
-  fakerFR_LU,
-  fakerFR_SN,
-  fakerHE,
-  fakerHR,
-  fakerHU,
-  fakerHY,
-  fakerID_ID,
-  fakerIT,
-  fakerJA,
-  fakerKA_GE,
-  fakerKO,
-  fakerLV,
-  fakerMK,
-  fakerNB_NO,
-  fakerNE,
-  fakerNL,
-  fakerNL_BE,
-  fakerPL,
-  fakerPT_BR,
-  fakerPT_PT,
-  fakerRO,
-  fakerRO_MD,
-  fakerRU,
-  fakerSK,
-  fakerSR_RS_latin,
-  fakerSV,
-  fakerTH,
-  fakerTR,
-  fakerUK,
-  fakerUR,
-  fakerUZ_UZ_latin,
-  fakerVI,
-  fakerYO_NG,
-  fakerZH_CN,
-  fakerZH_TW,
-  fakerZU_ZA,
-};
+export { faker as fakerAF_ZA } from './af_ZA';
+export { faker as fakerAR } from './ar';
+export { faker as fakerAZ } from './az';
+export { faker as fakerBASE } from './base';
+export { faker as fakerCS_CZ } from './cs_CZ';
+export { faker as fakerDA } from './da';
+export { faker as fakerDE } from './de';
+export { faker as fakerDE_AT } from './de_AT';
+export { faker as fakerDE_CH } from './de_CH';
+export { faker as fakerDV } from './dv';
+export { faker as fakerEL } from './el';
+export { faker as fakerEN } from './en';
+export { faker as fakerEN_AU } from './en_AU';
+export { faker as fakerEN_AU_ocker } from './en_AU_ocker';
+export { faker as fakerEN_BORK } from './en_BORK';
+export { faker as fakerEN_CA } from './en_CA';
+export { faker as fakerEN_GB } from './en_GB';
+export { faker as fakerEN_GH } from './en_GH';
+export { faker as fakerEN_HK } from './en_HK';
+export { faker as fakerEN_IE } from './en_IE';
+export { faker as fakerEN_IN } from './en_IN';
+export { faker as fakerEN_NG } from './en_NG';
+export { faker as fakerEN_US } from './en_US';
+export { faker as fakerEN_ZA } from './en_ZA';
+export { faker as fakerEO } from './eo';
+export { faker as fakerES } from './es';
+export { faker as fakerES_MX } from './es_MX';
+export { faker as fakerFA } from './fa';
+export { faker as fakerFI } from './fi';
+export { faker as fakerFR } from './fr';
+export { faker as fakerFR_BE } from './fr_BE';
+export { faker as fakerFR_CA } from './fr_CA';
+export { faker as fakerFR_CH } from './fr_CH';
+export { faker as fakerFR_LU } from './fr_LU';
+export { faker as fakerFR_SN } from './fr_SN';
+export { faker as fakerHE } from './he';
+export { faker as fakerHR } from './hr';
+export { faker as fakerHU } from './hu';
+export { faker as fakerHY } from './hy';
+export { faker as fakerID_ID } from './id_ID';
+export { faker as fakerIT } from './it';
+export { faker as fakerJA } from './ja';
+export { faker as fakerKA_GE } from './ka_GE';
+export { faker as fakerKO } from './ko';
+export { faker as fakerLV } from './lv';
+export { faker as fakerMK } from './mk';
+export { faker as fakerNB_NO } from './nb_NO';
+export { faker as fakerNE } from './ne';
+export { faker as fakerNL } from './nl';
+export { faker as fakerNL_BE } from './nl_BE';
+export { faker as fakerPL } from './pl';
+export { faker as fakerPT_BR } from './pt_BR';
+export { faker as fakerPT_PT } from './pt_PT';
+export { faker as fakerRO } from './ro';
+export { faker as fakerRO_MD } from './ro_MD';
+export { faker as fakerRU } from './ru';
+export { faker as fakerSK } from './sk';
+export { faker as fakerSR_RS_latin } from './sr_RS_latin';
+export { faker as fakerSV } from './sv';
+export { faker as fakerTH } from './th';
+export { faker as fakerTR } from './tr';
+export { faker as fakerUK } from './uk';
+export { faker as fakerUR } from './ur';
+export { faker as fakerUZ_UZ_latin } from './uz_UZ_latin';
+export { faker as fakerVI } from './vi';
+export { faker as fakerYO_NG } from './yo_NG';
+export { faker as fakerZH_CN } from './zh_CN';
+export { faker as fakerZH_TW } from './zh_TW';
+export { faker as fakerZU_ZA } from './zu_ZA';
 
 export const allFakers = {
   af_ZA: fakerAF_ZA,

@@ -50,7 +50,7 @@ export default [
   'Bavarian Warmblood',
   'Belgian Half-blood',
   'Belgian Horse',
-  'Belgian Warmblood ',
+  'Belgian Warmblood',
   'Bhutia Horse',
   'Black Forest Horse',
   'Blazer Horse',

@@ -78,7 +78,7 @@ exports[`system > 42 > networkInterface > with {"interfaceType":"ww"} 1`] = `"ww
 
 exports[`system > 42 > networkInterface > with {} 1`] = `"wlp5s1f0"`;
 
-exports[`system > 42 > semver 1`] = `"3.9.7"`;
+exports[`system > 42 > semver 1`] = `"3.19.15"`;
 
 exports[`system > 1211 > commonFileExt 1`] = `"shtml"`;
 
@@ -158,7 +158,7 @@ exports[`system > 1211 > networkInterface > with {"interfaceType":"ww"} 1`] = `"
 
 exports[`system > 1211 > networkInterface > with {} 1`] = `"P9wwp6s6d6"`;
 
-exports[`system > 1211 > semver 1`] = `"9.8.2"`;
+exports[`system > 1211 > semver 1`] = `"9.18.4"`;
 
 exports[`system > 1337 > commonFileExt 1`] = `"wav"`;
 
@@ -238,4 +238,4 @@ exports[`system > 1337 > networkInterface > with {"interfaceType":"ww"} 1`] = `"
 
 exports[`system > 1337 > networkInterface > with {} 1`] = `"eno2"`;
 
-exports[`system > 1337 > semver 1`] = `"2.1.2"`;
+exports[`system > 1337 > semver 1`] = `"2.3.5"`;

@@ -129,11 +129,11 @@ export class CommerceModule extends ModuleBase {
    * @param options.symbol The currency value to use. Defaults to `''`.
    *
    * @example
-   * faker.commerce.price() // 828.07
-   * faker.commerce.price({ min: 100 }) // 904.19
-   * faker.commerce.price({ min: 100, max: 200 }) // 154.55
-   * faker.commerce.price({ min: 100, max: 200, dec: 0 }) // 133
-   * faker.commerce.price({ min: 100, max: 200, dec: 0, symbol: '$' }) // $114
+   * faker.commerce.price() // '828.07'
+   * faker.commerce.price({ min: 100 }) // '904.19'
+   * faker.commerce.price({ min: 100, max: 200 }) // '154.55'
+   * faker.commerce.price({ min: 100, max: 200, dec: 0 }) // '133'
+   * faker.commerce.price({ min: 100, max: 200, dec: 0, symbol: '$' }) // '$114'
    *
    * @since 3.0.0
    */

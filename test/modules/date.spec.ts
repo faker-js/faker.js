@@ -12,6 +12,19 @@ const converterMap = [
 const NON_SEEDED_BASED_RUN = 5;
 const refDate = '2021-02-21T17:09:15.711Z';
 
+function calculateAge(birthdate: Date, refDate: Date): number {
+  let age = refDate.getFullYear() - birthdate.getFullYear();
+  if (
+    refDate.getMonth() < birthdate.getMonth() ||
+    (refDate.getMonth() === birthdate.getMonth() &&
+      refDate.getDate() < birthdate.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+}
+
 describe('date', () => {
   seededTests(faker, 'date', (t) => {
     t.describe('anytime', (t) => {
@@ -530,19 +543,6 @@ describe('date', () => {
       });
 
       describe('birthdate', () => {
-        function calculateAge(birthdate: Date, refDate: Date): number {
-          let age = refDate.getFullYear() - birthdate.getFullYear();
-          if (
-            refDate.getMonth() < birthdate.getMonth() ||
-            (refDate.getMonth() === birthdate.getMonth() &&
-              refDate.getDate() < birthdate.getDate())
-          ) {
-            age--;
-          }
-
-          return age;
-        }
-
         it('returns a random birthdate', () => {
           const birthdate = faker.date.birthdate();
           expect(birthdate).toBeInstanceOf(Date);

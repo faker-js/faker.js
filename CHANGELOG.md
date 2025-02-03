@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [9.4.0](https://github.com/faker-js/faker/compare/v9.3.0...v9.4.0) (2025-01-15)
+
+
+### Features
+
+* **finance:** use fake patterns for transactionDescription ([#3202](https://github.com/faker-js/faker/issues/3202)) ([5ec4a6c](https://github.com/faker-js/faker/commit/5ec4a6c9ddc037ae189ee93f339fa52065ac2a26))
+* **internet:** update to simplified modern user-agent list ([#3324](https://github.com/faker-js/faker/issues/3324)) ([3c7abb5](https://github.com/faker-js/faker/commit/3c7abb55e68fcbcf41560539a15845e7c8882765))
+* **location:** add list of spoken languages ([#3333](https://github.com/faker-js/faker/issues/3333)) ([ff6dda9](https://github.com/faker-js/faker/commit/ff6dda94ddd312ebcff816cbb63e74df9857d091))
+
+
+### Changed Locales
+
+* **locale:** fix various locale data with trailing spaces ([#3329](https://github.com/faker-js/faker/issues/3329)) ([e5eec0e](https://github.com/faker-js/faker/commit/e5eec0ed848d298ccba1d6db9392a507c5ce2bc4))
+* **locale:** improve product_name data in en and tr ([#3372](https://github.com/faker-js/faker/issues/3372)) ([773fc1f](https://github.com/faker-js/faker/commit/773fc1f654a2ab57d048443e54761f0f288e7427))
+
+
+### Bug Fixes
+
+* **animal:** re-moo-ved some incorrect cow data ([#3326](https://github.com/faker-js/faker/issues/3326)) ([47f835b](https://github.com/faker-js/faker/commit/47f835bd0dc257e5d7b9d7e7e06c08854474a3a7))
+* basic wildcard range handling + add more tests ([#3322](https://github.com/faker-js/faker/issues/3322)) ([817f8a0](https://github.com/faker-js/faker/commit/817f8a01d93378e00c03cf73154fcec34fd5feef))
+* **finance:** update Discover card number format to ensure accuracy ([#3336](https://github.com/faker-js/faker/issues/3336)) ([69c0063](https://github.com/faker-js/faker/commit/69c006344b8c54a9cd5f0adc36d49c88a223de4e))
+* **image:** dataUri should return random type ([#3347](https://github.com/faker-js/faker/issues/3347)) ([eceb17d](https://github.com/faker-js/faker/commit/eceb17d25741c5fb1bd56b8151067eed3708a076))
+* **locales:** update chemical element names in zh_CN ([#3371](https://github.com/faker-js/faker/issues/3371)) ([6ec6f84](https://github.com/faker-js/faker/commit/6ec6f84922a16a8489215ba152e683227f5c8262))
+* **location:** fix bad uz street_name_part data ([#3328](https://github.com/faker-js/faker/issues/3328)) ([b6132cb](https://github.com/faker-js/faker/commit/b6132cbee67ae7e53f57ffb344688d3980f91d3d))
+* **music:** fix truncated song names with commas ([#3327](https://github.com/faker-js/faker/issues/3327)) ([f36fc71](https://github.com/faker-js/faker/commit/f36fc71ac4cce6d5a6c9e6b16d7a22a98a01db74)), closes [#996](https://github.com/faker-js/faker/issues/996)
+* **system:** semver parts should not be limited to 0-9 ([#3349](https://github.com/faker-js/faker/issues/3349)) ([c0d92b8](https://github.com/faker-js/faker/commit/c0d92b8fa856d0c841f5aee57c6e08627025447a))
+
+## [9.3.0](https://github.com/faker-js/faker/compare/v9.2.0...v9.3.0) (2024-12-02)
+
+
+### Features
+
+* add initial seed parameter to constructors ([#3220](https://github.com/faker-js/faker/issues/3220)) ([1633c8d](https://github.com/faker-js/faker/commit/1633c8deb8f6f41151b39b62689ae3e02ab295bc))
+
+
+### Changed Locales
+
+* **locale:** improve zh_CN vehicle manufacturers ([#3254](https://github.com/faker-js/faker/issues/3254)) ([9abaed1](https://github.com/faker-js/faker/commit/9abaed1061b5fa9dc9f93822162610105a788296))
+* **locale:** lowercase Mexican color names ([#3200](https://github.com/faker-js/faker/issues/3200)) ([0d85075](https://github.com/faker-js/faker/commit/0d850758d0ea0db45a9a4c8abda5c1e09796fb44))
+* **locale:** sort person data ([#3269](https://github.com/faker-js/faker/issues/3269)) ([01e20e9](https://github.com/faker-js/faker/commit/01e20e9695575211ee63c7a937f4ae93a934ef32))
+* **locale:** split en_AU_ocker first_names by sex ([#3270](https://github.com/faker-js/faker/issues/3270)) ([b0a5ad3](https://github.com/faker-js/faker/commit/b0a5ad38bb6e516ba4a6776342c0bb389ca17363))
+* **locale:** split up Spanish generic first names ([#3279](https://github.com/faker-js/faker/issues/3279)) ([5d5fe30](https://github.com/faker-js/faker/commit/5d5fe30ab4f4df092a1ebac991cdf4a345f604fc))
+* **locale:** update Polish city name ([#3306](https://github.com/faker-js/faker/issues/3306)) ([53441b7](https://github.com/faker-js/faker/commit/53441b77731f9d15bb7823de8050a18ecbbbe22a))
+
+
+### Bug Fixes
+
+* **internet:** ensure domainWord always returns a valid value in all locales ([#3253](https://github.com/faker-js/faker/issues/3253)) ([525fedc](https://github.com/faker-js/faker/commit/525fedc91bd02f53330cfb40fe228b148dcf562b))
+* **locale:** add Isadora to female names in pt_BR for consistency ([#3282](https://github.com/faker-js/faker/issues/3282)) ([b390432](https://github.com/faker-js/faker/commit/b390432626811d2af32086b16151bc4c55634c60))
+* **locale:** fix incorrect accents in it first_name ([#3281](https://github.com/faker-js/faker/issues/3281)) ([e0fb23e](https://github.com/faker-js/faker/commit/e0fb23ef81009f565676485d63b6fe97afd8a31e))
+
+## [9.2.0](https://github.com/faker-js/faker/compare/v9.1.0...v9.2.0) (2024-11-03)
+
+
+### Features
+
+* **animal:** add petName method ([#3196](https://github.com/faker-js/faker/issues/3196)) ([c02beea](https://github.com/faker-js/faker/commit/c02beeadd49e48656a0307451517e9751e3118c3))
+* **number:** add romanNumeral method ([#3070](https://github.com/faker-js/faker/issues/3070)) ([72937de](https://github.com/faker-js/faker/commit/72937de55c892c011846bc2b67dc0df61fbdf5a2))
+
+
+### Changed Locales
+
+* **locale:** improve Spanish color names ([#3230](https://github.com/faker-js/faker/issues/3230)) ([99d81be](https://github.com/faker-js/faker/commit/99d81bed28b36ab525340e32a7349799cbe88eca))
+
 ## [9.1.0](https://github.com/faker-js/faker/compare/v9.0.3...v9.1.0) (2024-10-26)
 
 

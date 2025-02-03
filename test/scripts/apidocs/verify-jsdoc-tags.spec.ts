@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import validator from 'validator';
+import { isSemVer, isURL } from 'validator';
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 import { processComponents } from '../../../scripts/apidocs/generate';
 import { extractSummaryDefault } from '../../../scripts/apidocs/output/page';
@@ -68,7 +68,7 @@ function assertDescription(description: string): void {
 
   for (const link of links) {
     expect(link).toMatch(/^https?:\/\//);
-    expect(link).toSatisfy(validator.isURL);
+    expect(link).toSatisfy(isURL);
 
     if (link.includes('fakerjs.dev/api/')) {
       expect(allowedLinks, `${link} to point to a valid target`).toContain(
@@ -77,6 +77,18 @@ function assertDescription(description: string): void {
     }
   }
 }
+
+describe('check docs completeness', () => {
+  it('all modules and methods are present', () => {
+    // This could be converted to an Object, but that would erase the order of the pages
+    const pageContents = modules.map((m) => [
+      m.camelTitle,
+      m.methods.map((m) => m.name),
+    ]);
+
+    expect(pageContents).toMatchSnapshot();
+  });
+});
 
 describe('verify JSDoc tags', () => {
   describe.each(modules.map((m) => [m.camelTitle, m]))(
@@ -279,7 +291,7 @@ ${examples}`;
                 expect(since, '@since to be present').toBeTruthy();
                 expect(since).not.toBe('');
                 expect(since, '@since to be a valid semver').toSatisfy(
-                  validator.isSemVer
+                  isSemVer
                 );
               });
             }

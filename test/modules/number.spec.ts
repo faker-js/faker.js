@@ -1,9 +1,17 @@
-import validator from 'validator';
-import { describe, expect, it } from 'vitest';
+import { isHexadecimal, isOctal } from 'validator';
+import { describe, expect, it, vi } from 'vitest';
 import { FakerError, SimpleFaker, faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
 import { MERSENNE_MAX_VALUE } from '../utils/mersenne-test-utils';
 import { times } from './../support/times';
+
+function isFloat(value: number): boolean {
+  return value % 1 !== 0;
+}
+
+function isBinary(str: string): boolean {
+  return [...str].every((char) => char === '0' || char === '1');
+}
 
 describe('number', () => {
   seededTests(faker, 'number', (t) => {
@@ -46,6 +54,16 @@ describe('number', () => {
           min: 6135715171537515454317351n,
           max: 32465761264574654845432354n,
         });
+    });
+
+    t.describe('romanNumeral', (t) => {
+      t.it('noArgs')
+        .it('with number value', 1000)
+        .it('with only min', { min: 5 })
+        .it('with only max', { max: 165 })
+        .it('with min as 1', { min: 1 })
+        .it('with max as 3999', { max: 3999 })
+        .it('with min and max', { min: 100, max: 502 });
     });
   });
 
@@ -249,10 +267,6 @@ describe('number', () => {
     });
 
     describe('float', () => {
-      function isFloat(value: number) {
-        return value % 1 !== 0;
-      }
-
       it('should return a float between 0 and 1 (inclusive) by default', () => {
         const actual = faker.number.float();
 
@@ -395,10 +409,6 @@ describe('number', () => {
     });
 
     describe('binary', () => {
-      function isBinary(str: string) {
-        return [...str].every((char) => char === '0' || char === '1');
-      }
-
       it('generates single binary character when no additional argument was provided', () => {
         const binary = faker.number.binary();
 
@@ -454,7 +464,7 @@ describe('number', () => {
         const octal = faker.number.octal();
 
         expect(octal).toBeTypeOf('string');
-        expect(octal).toSatisfy(validator.isOctal);
+        expect(octal).toSatisfy(isOctal);
 
         expect(octal).toHaveLength(1);
       });
@@ -463,7 +473,7 @@ describe('number', () => {
         const octal = faker.number.octal(5);
 
         expect(octal).toBeTypeOf('string');
-        expect(octal).toSatisfy(validator.isOctal);
+        expect(octal).toSatisfy(isOctal);
 
         const octalNum = Number.parseInt(octal, 8);
         expect(octalNum).toBeLessThanOrEqual(5);
@@ -473,7 +483,7 @@ describe('number', () => {
         const octal = faker.number.octal({ min: 15, max: 255 });
 
         expect(octal).toBeTypeOf('string');
-        expect(octal).toSatisfy(validator.isOctal);
+        expect(octal).toSatisfy(isOctal);
 
         const octalNum = Number.parseInt(octal, 8);
         expect(octalNum).toBeLessThanOrEqual(255);
@@ -505,7 +515,7 @@ describe('number', () => {
         const hex = faker.number.hex();
 
         expect(hex).toBeTypeOf('string');
-        expect(hex).toSatisfy(validator.isHexadecimal);
+        expect(hex).toSatisfy(isHexadecimal);
 
         expect(hex).toHaveLength(1);
       });
@@ -514,14 +524,14 @@ describe('number', () => {
         const hex = faker.number.hex(5);
 
         expect(hex).toBeTypeOf('string');
-        expect(hex).toSatisfy(validator.isHexadecimal);
+        expect(hex).toSatisfy(isHexadecimal);
       });
 
       it('generates a random hex in a specific range', () => {
         const hex = faker.number.hex({ min: 15, max: 255 });
 
         expect(hex).toBeTypeOf('string');
-        expect(hex).toSatisfy(validator.isHexadecimal);
+        expect(hex).toSatisfy(isHexadecimal);
 
         const hexNum = Number.parseInt(hex, 16);
         expect(hexNum).toBeLessThanOrEqual(255);
@@ -623,6 +633,68 @@ describe('number', () => {
         }).toThrow(
           new FakerError(`Max ${max} should be larger then min ${min}.`)
         );
+      });
+    });
+
+    describe('romanNumeral', () => {
+      it('should generate a Roman numeral within default range', () => {
+        const roman = faker.number.romanNumeral();
+        expect(roman).toBeTypeOf('string');
+        expect(roman).toMatch(/^[IVXLCDM]+$/);
+      });
+
+      it('should generate a Roman numeral with max value of 1000', () => {
+        const roman = faker.number.romanNumeral(1000);
+        expect(roman).toMatch(/^[IVXLCDM]+$/);
+      });
+
+      it.each(
+        Object.entries({
+          I: 1,
+          IV: 4,
+          IX: 9,
+          X: 10,
+          XXVII: 27,
+          XC: 90,
+          XCIX: 99,
+          CCLXIII: 263,
+          DXXXVI: 536,
+          DCCXIX: 719,
+          MDCCCLI: 1851,
+          MDCCCXCII: 1892,
+          MMCLXXXIII: 2183,
+          MMCMXLIII: 2943,
+          MMMDCCLXVI: 3766,
+          MMMDCCLXXIV: 3774,
+          MMMCMXCIX: 3999,
+        })
+      )(
+        'should generate a Roman numeral %s for value %d',
+        (expected: string, value: number) => {
+          const mock = vi.spyOn(faker.number, 'int');
+          mock.mockReturnValue(value);
+          const actual = faker.number.romanNumeral();
+          mock.mockRestore();
+          expect(actual).toBe(expected);
+        }
+      );
+
+      it('should throw when min value is less than 1', () => {
+        expect(() => {
+          faker.number.romanNumeral({ min: 0 });
+        }).toThrow(new FakerError('Min value 0 should be 1 or greater.'));
+      });
+
+      it('should throw when max value is greater than 3999', () => {
+        expect(() => {
+          faker.number.romanNumeral({ max: 4000 });
+        }).toThrow(new FakerError('Max value 4000 should be 3999 or less.'));
+      });
+
+      it('should throw when max value is less than min value', () => {
+        expect(() => {
+          faker.number.romanNumeral({ min: 500, max: 100 });
+        }).toThrow(new FakerError('Max 100 should be greater than min 500.'));
       });
     });
   });

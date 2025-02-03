@@ -79,7 +79,7 @@ const randomEmail = faker.internet.email(); // Tomasa_Ferry14@hotmail.com
 ```
 
 ::: info Note
-It is highly recommended to use version tags when importing libraries in Deno, e.g: `import { faker } from "https://esm.sh/@faker-js/faker@v9.1.0"`.
+It is highly recommended to use version tags when importing libraries in Deno, e.g: `import { faker } from "https://esm.sh/@faker-js/faker@v9.4.0"`.
 :::
 
 ### Alternative CDN links
@@ -102,7 +102,6 @@ In order to have Faker working properly, you need to check if these `compilerOpt
 ```json
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "moduleResolution": "Bundler", // "Node10", "Node16" or "NodeNext"
     "strict": true // Optional, but recommended
   }

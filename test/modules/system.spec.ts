@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isMimeType, isSemVer } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
@@ -66,8 +66,8 @@ describe('system', () => {
     () => {
       describe('commonFileExt()', () => {
         it('should return common file types', () => {
-          const fileExt = faker.system.commonFileExt();
-          const extList = [
+          const actual = faker.system.commonFileExt();
+          const extensions = [
             'gif',
             'htm',
             'html',
@@ -96,11 +96,11 @@ describe('system', () => {
           ];
 
           expect(
-            extList,
-            `generated common file ext should be one of [${extList.join(
+            extensions,
+            `generated common file ext should be one of [${extensions.join(
               ', '
-            )}]. Got "${fileExt}".`
-          ).include(fileExt);
+            )}]. Got "${actual}".`
+          ).include(actual);
         });
       });
 
@@ -164,15 +164,15 @@ describe('system', () => {
 
       describe('fileExt()', () => {
         it('should return file ext', () => {
-          const fileExt = faker.system.fileExt();
+          const actual = faker.system.fileExt();
 
-          expect(fileExt).toBeTypeOf('string');
-          expect(fileExt).not.toBe('');
+          expect(actual).toBeTypeOf('string');
+          expect(actual).not.toBe('');
         });
 
         it('should return file ext based on mimeType', () => {
-          const fileExt = faker.system.fileExt('text/plain');
-          const extList = [
+          const actual = faker.system.fileExt('text/plain');
+          const extensions = [
             'txt',
             'text',
             'conf',
@@ -184,11 +184,11 @@ describe('system', () => {
           ];
 
           expect(
-            extList,
-            `generated common file ext should be one of [${extList.join(
+            extensions,
+            `generated common file ext should be one of [${extensions.join(
               ','
-            )}]. Got "${fileExt}".`
-          ).include(fileExt);
+            )}]. Got "${actual}".`
+          ).include(actual);
         });
       });
 
@@ -285,7 +285,7 @@ describe('system', () => {
           expect(
             mimeType,
             `generated mime types should be valid mime types.`
-          ).toSatisfy(validator.isMimeType);
+          ).toSatisfy(isMimeType);
         });
       });
 
@@ -294,7 +294,7 @@ describe('system', () => {
           expect(
             faker.system.semver(),
             `generated semver, first number should be between 0 and 9.`
-          ).toSatisfy(validator.isSemVer);
+          ).toSatisfy(isSemVer);
         });
       });
 

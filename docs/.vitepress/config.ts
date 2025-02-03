@@ -3,6 +3,8 @@ import type { DefaultTheme } from 'vitepress/theme';
 import { apiPages } from './api-pages';
 import {
   algoliaIndex,
+  commitHash,
+  isReleaseBranch,
   version,
   versionBannerInfix,
   versionLabel,
@@ -13,7 +15,13 @@ type SidebarItem = DefaultTheme.SidebarItem;
 
 const description =
   'Generate massive amounts of fake (but reasonable) data for testing and development.';
-const image = 'https://fakerjs.dev/social-image.png';
+const socialImage = 'https://fakerjs.dev/social-image.png';
+const consoleDownload = isReleaseBranch
+  ? `https://cdn.jsdelivr.net/npm/@faker-js/faker@${version}/+esm`
+  : '/faker.js';
+const consoleVersion = isReleaseBranch
+  ? version
+  : `${version.replace(/-.*$/, '')}-preview+${commitHash}`;
 
 function getSideBarWithExpandedEntry(entryToExpand: string): SidebarItem[] {
   const links: SidebarItem[] = [
@@ -109,64 +117,31 @@ const config: UserConfig<DefaultTheme.Config> = {
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#40af7c' }],
-    [
-      'meta',
-      {
-        name: 'og:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'og:image',
-        content: image,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: image,
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'me',
-        href: 'https://fosstodon.org/@faker_js',
-      },
-    ],
+    ['meta', { name: 'og:title', content: 'FakerJS' }],
+    ['meta', { name: 'og:description', content: description }],
+    ['meta', { name: 'og:image', content: socialImage }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'FakerJS' }],
+    ['meta', { name: 'twitter:description', content: description }],
+    ['meta', { name: 'twitter:site', content: '@faker_js' }],
+    ['meta', { name: 'twitter:image', content: socialImage }],
+    ['meta', { name: 'twitter:image:alt', content: 'The FakerJS logo' }],
+    ['link', { rel: 'me', href: 'https://fosstodon.org/@faker_js' }],
     [
       'script',
-      {
-        id: 'browser-console-faker',
-      },
+      { id: 'browser-console-faker' },
       `
 const logStyle = 'background: rgba(16, 183, 127, 0.14); color: rgba(255, 255, 245, 0.86); padding: 0.5rem; display: inline-block;';
 console.log(\`%cIf you would like to test Faker in the browser console, you can do so using 'await enableFaker()'.
 If you would like to test Faker in a playground, visit https://new.fakerjs.dev.\`, logStyle);
 async function enableFaker() {
-  const imported = await import('https://cdn.jsdelivr.net/npm/@faker-js/faker@${version}/+esm');
+  const imported = await import('${consoleDownload}');
   Object.assign(globalThis, imported);
-  console.log(\`%cYou can now start using Faker v${version}:
+  console.log(\`%cYou can now start using Faker v${consoleVersion}:
 e.g. 'faker.food.description()' or 'fakerZH_CN.person.firstName()'
 For other languages please refer to https://fakerjs.dev/guide/localization.html#available-locales
 For a full list of all methods please refer to https://fakerjs.dev/api/\`, logStyle);
+  enableFaker = () => imported; // Init only once
   return imported;
 }
 `,

@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isEmail, isHexadecimal, isSlug } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
@@ -7,6 +7,16 @@ import { times } from './../support/times';
 const NON_SEEDED_BASED_RUN = 5;
 
 const refDate = '2020-01-01T00:00:00.000Z';
+
+function isValidCommitAuthor(email: string): boolean {
+  // `validator.isEmail()` does not support display names
+  // that contain unquoted characters like . output by Git so we need
+  // to quote the display name
+  const quotedEmail = email.replace(/^(.*) </, '"$1" <');
+  return isEmail(quotedEmail, {
+    require_display_name: true,
+  });
+}
 
 describe('git', () => {
   seededTests(faker, 'git', (t) => {
@@ -39,7 +49,7 @@ describe('git', () => {
 
           expect(branch).toBeTruthy();
           expect(branch).toBeTypeOf('string');
-          expect(branch).toSatisfy(validator.isSlug);
+          expect(branch).toSatisfy(isSlug);
         });
       });
 
@@ -56,27 +66,18 @@ describe('git', () => {
           expect(parts.length).toBeLessThanOrEqual(7);
 
           expect(parts[0]).toMatch(/^commit [a-f0-9]+$/);
-          const isValidAuthor = (email: string) => {
-            // `validator.isEmail()` does not support display names
-            // that contain unquoted characters like . output by Git so we need
-            // to quote the display name
-            const quotedEmail = email.replace(/^(.*) </, '"$1" <');
-            return validator.isEmail(quotedEmail, {
-              require_display_name: true,
-            });
-          };
 
           const authorRegex = /^Author: .*$/;
           if (parts.length === 7) {
             expect(parts[1]).toMatch(/^Merge: [a-f0-9]+ [a-f0-9]+$/);
             expect(parts[2]).toMatch(authorRegex);
-            expect(parts[2].substring(8)).toSatisfy(isValidAuthor);
+            expect(parts[2].substring(8)).toSatisfy(isValidCommitAuthor);
             expect(parts[3]).toMatch(/^Date: .+$/);
             expect(parts[4]).toBe('');
             expect(parts[5]).toMatch(/^\s{4}.+$/);
           } else {
             expect(parts[1]).toMatch(authorRegex);
-            expect(parts[1].substring(8)).toSatisfy(isValidAuthor);
+            expect(parts[1].substring(8)).toSatisfy(isValidCommitAuthor);
             expect(parts[2]).toMatch(/^Date: .+$/);
             expect(parts[3]).toBe('');
             expect(parts[4]).toMatch(/^\s{4}.+$/);
@@ -144,7 +145,7 @@ describe('git', () => {
 
           expect(commitSha).toBeTruthy();
           expect(commitSha).toBeTypeOf('string');
-          expect(commitSha).toSatisfy(validator.isHexadecimal);
+          expect(commitSha).toSatisfy(isHexadecimal);
           expect(commitSha).toHaveLength(40);
         });
 
@@ -158,7 +159,7 @@ describe('git', () => {
 
             expect(commitSha).toBeTruthy();
             expect(commitSha).toBeTypeOf('string');
-            expect(commitSha).toSatisfy(validator.isHexadecimal);
+            expect(commitSha).toSatisfy(isHexadecimal);
             expect(commitSha).toHaveLength(length);
           }
         );

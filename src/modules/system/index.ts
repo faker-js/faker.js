@@ -77,21 +77,21 @@ export class SystemModule extends ModuleBase {
       .toLowerCase()
       .replaceAll(/\W/g, '_');
 
-    const extensionsStr = this.faker.helpers
+    const extensionsSuffix = this.faker.helpers
       .multiple(() => this.fileExt(), { count: extensionCount })
       .join('.');
 
-    if (extensionsStr.length === 0) {
+    if (extensionsSuffix.length === 0) {
       return baseName;
     }
 
-    return `${baseName}.${extensionsStr}`;
+    return `${baseName}.${extensionsSuffix}`;
   }
 
   /**
    * Returns a random file name with a given extension or a commonly used extension.
    *
-   * @param ext Extension. Empty string is considered to be not set.
+   * @param extension The file extension to use. Empty string is considered to be not set.
    *
    * @example
    * faker.system.commonFileName() // 'dollar.jpg'
@@ -99,10 +99,10 @@ export class SystemModule extends ModuleBase {
    *
    * @since 3.1.0
    */
-  commonFileName(ext?: string): string {
-    const str = this.fileName({ extensionCount: 0 });
+  commonFileName(extension?: string): string {
+    const fileName = this.fileName({ extensionCount: 0 });
 
-    return `${str}.${ext || this.commonFileExt()}`;
+    return `${fileName}.${extension || this.commonFileExt()}`;
   }
 
   /**
@@ -213,15 +213,15 @@ export class SystemModule extends ModuleBase {
    * Returns a [semantic version](https://semver.org).
    *
    * @example
-   * faker.system.semver() // '1.1.2'
+   * faker.system.semver() // '1.15.2'
    *
    * @since 3.1.0
    */
   semver(): string {
     return [
       this.faker.number.int(9),
-      this.faker.number.int(9),
-      this.faker.number.int(9),
+      this.faker.number.int(20),
+      this.faker.number.int(20),
     ].join('.');
   }
 
@@ -263,17 +263,17 @@ export class SystemModule extends ModuleBase {
 
     let suffix: string;
     let prefix = '';
-    const digit = () => this.faker.string.numeric({ allowLeadingZeros: true });
     switch (interfaceSchema) {
       case 'index': {
-        suffix = digit();
+        suffix = this.faker.string.numeric();
         break;
       }
 
       case 'slot': {
-        suffix = `${digit()}${
-          this.faker.helpers.maybe(() => `f${digit()}`) ?? ''
-        }${this.faker.helpers.maybe(() => `d${digit()}`) ?? ''}`;
+        suffix = `${this.faker.string.numeric()}${
+          this.faker.helpers.maybe(() => `f${this.faker.string.numeric()}`) ??
+          ''
+        }${this.faker.helpers.maybe(() => `d${this.faker.string.numeric()}`) ?? ''}`;
         break;
       }
 
@@ -283,10 +283,13 @@ export class SystemModule extends ModuleBase {
       }
 
       case 'pci': {
-        prefix = this.faker.helpers.maybe(() => `P${digit()}`) ?? '';
-        suffix = `${digit()}s${digit()}${
-          this.faker.helpers.maybe(() => `f${digit()}`) ?? ''
-        }${this.faker.helpers.maybe(() => `d${digit()}`) ?? ''}`;
+        prefix =
+          this.faker.helpers.maybe(() => `P${this.faker.string.numeric()}`) ??
+          '';
+        suffix = `${this.faker.string.numeric()}s${this.faker.string.numeric()}${
+          this.faker.helpers.maybe(() => `f${this.faker.string.numeric()}`) ??
+          ''
+        }${this.faker.helpers.maybe(() => `d${this.faker.string.numeric()}`) ?? ''}`;
         break;
       }
     }

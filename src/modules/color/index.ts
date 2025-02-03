@@ -102,6 +102,15 @@ function toBinary(values: number[]): string {
 }
 
 /**
+ * Converts the given value to a percentage (`round(value * 100)`).
+ *
+ * @param value The value to convert to a percentage.
+ */
+function toPercentage(value: number): number {
+  return Math.round(value * 100);
+}
+
+/**
  * Converts an array of numbers into CSS accepted format.
  *
  * @param values Array of values to be converted.
@@ -113,7 +122,6 @@ function toCSS(
   cssFunction: CssFunctionType = 'rgb',
   space: CssSpaceType = 'sRGB'
 ): string {
-  const percentage = (value: number) => Math.round(value * 100);
   switch (cssFunction) {
     case 'rgba': {
       return `rgba(${values[0]}, ${values[1]}, ${values[2]}, ${values[3]})`;
@@ -124,35 +132,35 @@ function toCSS(
     }
 
     case 'cmyk': {
-      return `cmyk(${percentage(values[0])}%, ${percentage(
+      return `cmyk(${toPercentage(values[0])}%, ${toPercentage(
         values[1]
-      )}%, ${percentage(values[2])}%, ${percentage(values[3])}%)`;
+      )}%, ${toPercentage(values[2])}%, ${toPercentage(values[3])}%)`;
     }
 
     case 'hsl': {
-      return `hsl(${values[0]}deg ${percentage(values[1])}% ${percentage(
+      return `hsl(${values[0]}deg ${toPercentage(values[1])}% ${toPercentage(
         values[2]
       )}%)`;
     }
 
     case 'hsla': {
-      return `hsl(${values[0]}deg ${percentage(values[1])}% ${percentage(
+      return `hsl(${values[0]}deg ${toPercentage(values[1])}% ${toPercentage(
         values[2]
-      )}% / ${percentage(values[3])})`;
+      )}% / ${toPercentage(values[3])})`;
     }
 
     case 'hwb': {
-      return `hwb(${values[0]} ${percentage(values[1])}% ${percentage(
+      return `hwb(${values[0]} ${toPercentage(values[1])}% ${toPercentage(
         values[2]
       )}%)`;
     }
 
     case 'lab': {
-      return `lab(${percentage(values[0])}% ${values[1]} ${values[2]})`;
+      return `lab(${toPercentage(values[0])}% ${values[1]} ${values[2]})`;
     }
 
     case 'lch': {
-      return `lch(${percentage(values[0])}% ${values[1]} ${values[2]})`;
+      return `lch(${toPercentage(values[0])}% ${values[1]} ${values[2]})`;
     }
 
     case 'rgb': {
@@ -437,7 +445,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // cmyk(100%, 0%, 0%, 0%)
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
    * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
    *
    * @since 7.0.0
@@ -479,7 +487,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.cmyk() // [0.31, 0.52, 0.32, 0.43]
    * faker.color.cmyk({ format: 'decimal' }) // [0.31, 0.52, 0.32, 0.43]
-   * faker.color.cmyk({ format: 'css' }) // cmyk(100%, 0%, 0%, 0%)
+   * faker.color.cmyk({ format: 'css' }) // 'cmyk(35%, 39%, 68%, 60%)'
    * faker.color.cmyk({ format: 'binary' }) // (8-32 bits) x 4
    *
    * @since 7.0.0
@@ -631,7 +639,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -673,7 +681,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
    * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -695,7 +703,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.hwb() // [201, 0.21, 0.31]
    * faker.color.hwb({ format: 'decimal' }) // [201, 0.21, 0.31]
-   * faker.color.hwb({ format: 'css' }) // hwb(194 0% 0%)
+   * faker.color.hwb({ format: 'css' }) // 'hwb(354 72% 41%)'
    * faker.color.hwb({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -736,7 +744,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.lab() // [0.832133, -80.3245, 100.1234]
-   * faker.color.lab({ format: 'css' }) // lab(29.2345% 39.3825 20.0664)
+   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
    * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -778,7 +786,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.lab() // [0.832133, -80.3245, 100.1234]
    * faker.color.lab({ format: 'decimal' }) // [0.856773, -80.2345, 100.2341]
-   * faker.color.lab({ format: 'css' }) // lab(29.2345% 39.3825 20.0664)
+   * faker.color.lab({ format: 'css' }) // 'lab(29.2345% 39.3825 20.0664)'
    * faker.color.lab({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -826,7 +834,7 @@ export class ColorModule extends ModuleBase {
    *
    * @example
    * faker.color.lch() // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // lch(52.2345% 72.2 56.2)
+   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
    * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0
@@ -874,7 +882,7 @@ export class ColorModule extends ModuleBase {
    * @example
    * faker.color.lch() // [0.522345, 72.2, 56.2]
    * faker.color.lch({ format: 'decimal' }) // [0.522345, 72.2, 56.2]
-   * faker.color.lch({ format: 'css' }) // lch(52.2345% 72.2 56.2)
+   * faker.color.lch({ format: 'css' }) // 'lch(52.2345% 72.2 56.2)'
    * faker.color.lch({ format: 'binary' }) // (8-32 bits x 3)
    *
    * @since 7.0.0

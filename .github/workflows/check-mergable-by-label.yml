@@ -9,12 +9,14 @@ on:
       - edited
       - labeled
       - unlabeled
+  merge_group:
 
 permissions: {}
 
 jobs:
   fail-by-blocking-label:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'merge_group' }}
     steps:
       - name: Check for blocking labels
         run: |

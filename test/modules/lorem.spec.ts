@@ -1,4 +1,4 @@
-import validator from 'validator';
+import { isSlug } from 'validator';
 import { describe, expect, it } from 'vitest';
 import { faker } from '../../src';
 import { seededTests } from '../support/seeded-runs';
@@ -154,7 +154,7 @@ describe('lorem', () => {
 
           expect(actual).toBeTruthy();
           expect(actual).toBeTypeOf('string');
-          expect(actual).toSatisfy(validator.isSlug);
+          expect(actual).toSatisfy(isSlug);
         });
 
         it.each(times(25))(
@@ -170,7 +170,7 @@ describe('lorem', () => {
             expect(words).toHaveLength(wordCount);
 
             if (wordCount > 1) {
-              expect(actual).toSatisfy(validator.isSlug);
+              expect(actual).toSatisfy(isSlug);
             }
           }
         );
