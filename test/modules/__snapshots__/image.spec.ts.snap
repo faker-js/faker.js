@@ -24,11 +24,11 @@ exports[`image > 42 > dataUri > with width and height 1`] = `"data:image/svg+xml
 
 exports[`image > 42 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/95.jpg"`;
 
-exports[`image > 42 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/37.jpg"`;
-
 exports[`image > 42 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/37.jpg"`;
 
 exports[`image > 42 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/37.jpg"`;
+
+exports[`image > 42 > personPortrait > with size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/95.jpg"`;
 
 exports[`image > 42 > url > noArgs 1`] = `"https://picsum.photos/seed/993RBH1Y/1498/3802"`;
 
@@ -108,11 +108,11 @@ exports[`image > 1211 > dataUri > with width and height 1`] = `"data:image/svg+x
 
 exports[`image > 1211 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/512/89.jpg"`;
 
-exports[`image > 1211 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/92.jpg"`;
-
 exports[`image > 1211 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/92.jpg"`;
 
 exports[`image > 1211 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/92.jpg"`;
+
+exports[`image > 1211 > personPortrait > with size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/128/89.jpg"`;
 
 exports[`image > 1211 > url > noArgs 1`] = `"https://loremflickr.com/3714/3573?lock=8982492793493979"`;
 
@@ -192,11 +192,11 @@ exports[`image > 1337 > dataUri > with width and height 1`] = `"data:image/svg+x
 
 exports[`image > 1337 > personPortrait > noArgs 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/15.jpg"`;
 
-exports[`image > 1337 > personPortrait > with all options 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/26.jpg"`;
-
 exports[`image > 1337 > personPortrait > with sex 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/512/26.jpg"`;
 
 exports[`image > 1337 > personPortrait > with sex and size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/male/256/26.jpg"`;
+
+exports[`image > 1337 > personPortrait > with size 1`] = `"https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images/female/128/15.jpg"`;
 
 exports[`image > 1337 > url > noArgs 1`] = `"https://loremflickr.com/1048/635?lock=4137158724208997"`;
 

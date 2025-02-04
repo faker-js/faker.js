@@ -112,11 +112,8 @@ describe('image', () => {
     t.describe('personPortrait', (t) => {
       t.it('noArgs')
         .it('with sex', { sex: 'female' })
-        .it('with sex and size', { sex: 'male', size: 256 })
-        .it('with all options', {
-          sex: 'female',
-          size: 128,
-        });
+        .it('with size', { size: 128 })
+        .it('with sex and size', { sex: 'male', size: 256 });
     });
   });
 
