@@ -63,7 +63,7 @@ export class ImageModule extends ModuleBase {
    * faker.image.personPortrait({ sex: 'male', size:'128' })
    * // 'https://cdn.jsdelivr.net/.../male/128/27.jpg'
    *
-   * @since 9.1.0
+   * @since 9.5.0
    */
   personPortrait(options?: {
     /**
