@@ -209,6 +209,8 @@ ${examples}`;
                   expect(consoleWarnSpy).toHaveBeenCalled();
                   expect(deprecated).not.toBe('');
                 }
+
+                consoleWarnSpy.mockRestore();
               });
 
               describe.each(signature.parameters.map((p) => [p.name, p]))(
