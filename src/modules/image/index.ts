@@ -67,7 +67,7 @@ export class ImageModule extends ModuleBase {
    *
    * @since 9.5.0
    */
-  personPortrait(options?: {
+  personPortrait(options: {
     /**
      * The sex of the person for the avatar.
      * Can be 'female' or 'male'.
