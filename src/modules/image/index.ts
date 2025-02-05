@@ -67,27 +67,29 @@ export class ImageModule extends ModuleBase {
    *
    * @since 9.5.0
    */
-  personPortrait(options: {
-    /**
-     * The sex of the person for the avatar.
-     * Can be `'female'` or `'male'`.
-     *
-     * @default faker.person.sexType()
-     */
-    sex?: SexType;
-    /**
-     * The size of the image.
-     * Can be `512`, `256`, `128`, `64` or `32`.
-     *
-     * @default 512
-     */
-    size?: 512 | 256 | 128 | 64 | 32;
-  } = {}): string {
+  personPortrait(
+    options: {
+      /**
+       * The sex of the person for the avatar.
+       * Can be `'female'` or `'male'`.
+       *
+       * @default faker.person.sexType()
+       */
+      sex?: SexType;
+      /**
+       * The size of the image.
+       * Can be `512`, `256`, `128`, `64` or `32`.
+       *
+       * @default 512
+       */
+      size?: 512 | 256 | 128 | 64 | 32;
+    } = {}
+  ): string {
     const { sex = this.faker.person.sexType(), size = 512 } = options;
     // FIXME: This should be replaced by the final CDN url, presumably something like: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait'
     const baseURL =
       'https://cdn.jsdelivr.net/gh/matthewmayer/assets-person-portrait@new-images';
-    return `${baseURL}/${type}/${size}/${this.faker.number.int({ min: 0, max: 99 })}.jpg`;
+    return `${baseURL}/${sex}/${size}/${this.faker.number.int({ min: 0, max: 99 })}.jpg`;
   }
 
   /**
