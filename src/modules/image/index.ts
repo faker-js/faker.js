@@ -80,7 +80,7 @@ export class ImageModule extends ModuleBase {
      * If not provided, defaults to 512.
      */
     size?: 512 | 256 | 128 | 64 | 32;
-  }): string {
+  } = {}): string {
     const type = options?.sex ?? this.faker.person.sexType();
     const size = options?.size ?? 512;
     // FIXME: This should be replaced by the final CDN url, presumably something like: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait'
