@@ -57,7 +57,7 @@ export class ImageModule extends ModuleBase {
    *
    * @param options Options for generating an AI avatar.
    * @param options.sex The sex of the person for the avatar. Can be 'female' or 'male'. If not provided, defaults to a random selection.
-   * @param options.size The size of the image. Can be 512, 256, 128, 64, 32 or 16. If not provided, defaults to 512.
+   * @param options.size The size of the image. Can be `512`, `256`, `128`, `64` or `32`. If not provided, defaults to `512`.
    *
    * @example
    * faker.image.personPortrait()
