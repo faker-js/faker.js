@@ -76,7 +76,7 @@ export class ImageModule extends ModuleBase {
     sex?: SexType;
     /**
      * The size of the image.
-     * Can be 512, 256, 128, 64 or 32.
+     * Can be `512`, `256`, `128`, `64` or `32`.
      * If not provided, defaults to 512.
      */
     size?: 512 | 256 | 128 | 64 | 32;
