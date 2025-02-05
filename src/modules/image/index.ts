@@ -71,7 +71,8 @@ export class ImageModule extends ModuleBase {
     /**
      * The sex of the person for the avatar.
      * Can be `'female'` or `'male'`.
-     * If not provided, defaults to a random selection.
+     *
+     * @default faker.person.sexType()
      */
     sex?: SexType;
     /**
