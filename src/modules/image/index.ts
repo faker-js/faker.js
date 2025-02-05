@@ -56,7 +56,7 @@ export class ImageModule extends ModuleBase {
    * The image URLs are served via the JSDelivr CDN and subject to their [terms of use](https://www.jsdelivr.com/terms).
    *
    * @param options Options for generating an AI avatar.
-   * @param options.sex The sex of the person for the avatar. Can be 'female' or 'male'. If not provided, defaults to a random selection.
+   * @param options.sex The sex of the person for the avatar. Can be `'female'` or `'male'`. If not provided, defaults to a random selection.
    * @param options.size The size of the image. Can be `512`, `256`, `128`, `64` or `32`. If not provided, defaults to `512`.
    *
    * @example
