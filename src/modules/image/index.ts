@@ -70,7 +70,7 @@ export class ImageModule extends ModuleBase {
   personPortrait(options: {
     /**
      * The sex of the person for the avatar.
-     * Can be 'female' or 'male'.
+     * Can be `'female'` or `'male'`.
      * If not provided, defaults to a random selection.
      */
     sex?: SexType;
