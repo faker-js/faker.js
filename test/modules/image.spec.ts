@@ -161,6 +161,7 @@ describe('image', () => {
       );
       expect(() => new URL(imageUrl)).not.toThrow();
     });
+
     it('should return a random avatar url from AI with fixed size and sex', () => {
       const imageUrl = faker.image.personPortrait({ sex: 'male', size: 128 });
 
