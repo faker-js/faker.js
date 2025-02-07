@@ -60,10 +60,8 @@ export class ImageModule extends ModuleBase {
    * @param options.size The size of the image. Can be `512`, `256`, `128`, `64` or `32`. If not provided, defaults to `512`.
    *
    * @example
-   * faker.image.personPortrait()
-   * // 'https://cdn.jsdelivr.net/.../female/512/57.jpg'
-   * faker.image.personPortrait({ sex: 'male', size:'128' })
-   * // 'https://cdn.jsdelivr.net/.../male/128/27.jpg'
+   * faker.image.personPortrait() // 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/57.jpg'
+   * faker.image.personPortrait({ sex: 'male', size:'128' }) // 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/128/27.jpg'
    *
    * @since 9.5.0
    */
