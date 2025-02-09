@@ -1,6 +1,7 @@
 import { toBase64 } from '../../internal/base64';
 import { deprecated } from '../../internal/deprecated';
 import { ModuleBase } from '../../internal/module-base';
+import type { SexType } from '../person';
 
 /**
  * Module to generate images.
@@ -11,7 +12,7 @@ import { ModuleBase } from '../../internal/module-base';
  *
  * For a random placeholder image containing only solid color and text, use [`urlPlaceholder()`](https://fakerjs.dev/api/image.html#urlplaceholder) (uses a third-party service) or [`dataUri()`](https://fakerjs.dev/api/image.html#datauri) (returns a SVG string).
  *
- * For a random user avatar image, use [`avatar()`](https://fakerjs.dev/api/image.html#avatar).
+ * For a random user avatar image, use [`avatar()`](https://fakerjs.dev/api/image.html#avatar), or [`personPortrait()`](https://fakerjs.dev/api/image.html#personportrait) which has more control over the size and sex of the person.
  *
  * If you need more control over the content of the images, you can pass a `category` parameter e.g. `'cat'` or `'nature'` to [`urlLoremFlickr()`](https://fakerjs.dev/api/image.html#urlloremflickr) or simply use [`faker.helpers.arrayElement()`](https://fakerjs.dev/api/helpers.html#arrayelement) with your own array of image URLs.
  */
@@ -27,7 +28,11 @@ export class ImageModule extends ModuleBase {
    */
   avatar(): string {
     // Add new avatar providers here, when adding a new one.
-    return this.avatarGitHub();
+    const avatarMethod = this.faker.helpers.arrayElement([
+      this.personPortrait,
+      this.avatarGitHub,
+    ]);
+    return avatarMethod();
   }
 
   /**
@@ -46,6 +51,45 @@ export class ImageModule extends ModuleBase {
   }
 
   /**
+   * Generates a random square portrait (avatar) of a person.
+   * These are static images of fictional people created by an AI, Stable Diffusion 3.
+   * The image URLs are served via the JSDelivr CDN and subject to their [terms of use](https://www.jsdelivr.com/terms).
+   *
+   * @param options Options for generating an AI avatar.
+   * @param options.sex The sex of the person for the avatar. Can be `'female'` or `'male'`. If not provided, defaults to a random selection.
+   * @param options.size The size of the image. Can be `512`, `256`, `128`, `64` or `32`. If not provided, defaults to `512`.
+   *
+   * @example
+   * faker.image.personPortrait() // 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/57.jpg'
+   * faker.image.personPortrait({ sex: 'male', size: '128' }) // 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/128/27.jpg'
+   *
+   * @since 9.5.0
+   */
+  personPortrait(
+    options: {
+      /**
+       * The sex of the person for the avatar.
+       * Can be `'female'` or `'male'`.
+       *
+       * @default faker.person.sexType()
+       */
+      sex?: SexType;
+      /**
+       * The size of the image.
+       * Can be `512`, `256`, `128`, `64` or `32`.
+       *
+       * @default 512
+       */
+      size?: 512 | 256 | 128 | 64 | 32;
+    } = {}
+  ): string {
+    const { sex = this.faker.person.sexType(), size = 512 } = options;
+    const baseURL =
+      'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait';
+    return `${baseURL}/${sex}/${size}/${this.faker.number.int({ min: 0, max: 99 })}.jpg`;
+  }
+
+  /**
    * Generates a random avatar from `https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar`.
    *
    * @example
@@ -59,7 +103,7 @@ export class ImageModule extends ModuleBase {
   avatarLegacy(): string {
     deprecated({
       deprecated: 'faker.image.avatarLegacy()',
-      proposed: 'faker.image.avatar()',
+      proposed: 'faker.image.avatar() or faker.image.personPortrait()',
       since: '9.0.2',
       until: '10.0.0',
     });
