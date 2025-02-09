@@ -710,8 +710,7 @@ describe('number', () => {
         expect(actual).toBe(0);
       });
 
-      // TODO @ST-DDT 2023-10-12: This requires a randomizer with 53 bits of precision
-      it.todo('should be able to return MAX_SAFE_INTEGER', () => {
+      it('should be able to return MAX_SAFE_INTEGER', () => {
         randomizer.next = () => MERSENNE_MAX_VALUE;
         const actual = customFaker.number.int();
         expect(actual).toBe(Number.MAX_SAFE_INTEGER);
