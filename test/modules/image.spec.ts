@@ -108,6 +108,13 @@ describe('image', () => {
           type: 'svg-uri',
         });
     });
+
+    t.describe('personPortrait', (t) => {
+      t.it('noArgs')
+        .it('with sex', { sex: 'female' })
+        .it('with size', { size: 128 })
+        .it('with sex and size', { sex: 'male', size: 256 });
+    });
   });
 
   describe('avatar', () => {
@@ -141,6 +148,28 @@ describe('image', () => {
       );
       // The links aren't working anymore - there is nothing we can do about it
       //  assertWebAddress(avatarUrl);
+    });
+  });
+
+  describe('personPortrait', () => {
+    it('should return a random avatar url from AI', () => {
+      const imageUrl = faker.image.personPortrait();
+
+      expect(imageUrl).toBeTypeOf('string');
+      expect(imageUrl).toMatch(
+        /^https:\/\/cdn\.jsdelivr\.net\/gh\/faker-js\/assets-person-portrait\/(female|male)\/512\/\d{1,2}\.jpg$/
+      );
+      expect(() => new URL(imageUrl)).not.toThrow();
+    });
+
+    it('should return a random avatar url from AI with fixed size and sex', () => {
+      const imageUrl = faker.image.personPortrait({ sex: 'male', size: 128 });
+
+      expect(imageUrl).toBeTypeOf('string');
+      expect(imageUrl).toMatch(
+        /^https:\/\/cdn\.jsdelivr\.net\/gh\/faker-js\/assets-person-portrait\/male\/128\/\d{1,2}\.jpg$/
+      );
+      expect(() => new URL(imageUrl)).not.toThrow();
     });
   });
 
