@@ -24,6 +24,7 @@ describe('finance', () => {
       'currencyCode',
       'currencyName',
       'currencySymbol',
+      'currencyNumID',
       'litecoinAddress',
       'creditCardCVV',
       'ethereumAddress',
@@ -298,6 +299,7 @@ describe('finance', () => {
           expect(currency.code).toMatch(/^[A-Z]{3}$/);
           expect(currency.name).toBeTypeOf('string');
           expect(currency.symbol).toBeTypeOf('string');
+          expect(currency.numID).toBeTypeOf('number');
         });
       });
 
@@ -323,6 +325,14 @@ describe('finance', () => {
           const currencySymbol = faker.finance.currencySymbol();
 
           expect(currencySymbol).toBeTypeOf('string');
+        });
+      });
+
+      describe('currencyNumID()', () => {
+        it('should return a number', () => {
+          const currencyNumID = faker.finance.currencyNumID();
+
+          expect(currencyNumID).toBeTypeOf('number');
         });
       });
 
