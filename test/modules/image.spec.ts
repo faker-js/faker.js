@@ -1,6 +1,6 @@
 import isDataURI from 'validator/lib/isDataURI';
 import { describe, expect, it } from 'vitest';
-import { faker } from '../../src';
+import { faker, Sex } from '../../src';
 import { seededTests } from '../support/seeded-runs';
 
 /**
@@ -161,6 +161,19 @@ describe('image', () => {
       );
       expect(() => new URL(imageUrl)).not.toThrow();
     });
+
+    it.each(Object.values(Sex))(
+      'should return a random avatar url from AI for %s',
+      (sex) => {
+        const imageUrl = faker.image.personPortrait({ sex });
+
+        expect(imageUrl).toBeTypeOf('string');
+        expect(imageUrl).toMatch(
+          /^https:\/\/cdn\.jsdelivr\.net\/gh\/faker-js\/assets-person-portrait\/(female|male)\/512\/\d{1,2}\.jpg$/
+        );
+        expect(() => new URL(imageUrl)).not.toThrow();
+      }
+    );
 
     it('should return a random avatar url from AI with fixed size and sex', () => {
       const imageUrl = faker.image.personPortrait({ sex: 'male', size: 128 });

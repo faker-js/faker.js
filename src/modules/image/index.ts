@@ -56,7 +56,7 @@ export class ImageModule extends ModuleBase {
    * The image URLs are served via the JSDelivr CDN and subject to their [terms of use](https://www.jsdelivr.com/terms).
    *
    * @param options Options for generating an AI avatar.
-   * @param options.sex The sex of the person for the avatar. Can be `'female'` or `'male'`. If not provided, defaults to a random selection.
+   * @param options.sex The sex of the person for the avatar. Can be `'female'` or `'male'`. If not provided or `'generic'`, defaults to a random selection.
    * @param options.size The size of the image. Can be `512`, `256`, `128`, `64` or `32`. If not provided, defaults to `512`.
    *
    * @example
@@ -69,7 +69,7 @@ export class ImageModule extends ModuleBase {
     options: {
       /**
        * The sex of the person for the avatar.
-       * Can be `'female'` or `'male'`.
+       * Can be `'female'` or `'male'`. `'generic'` uses a random selection.
        *
        * @default faker.person.sexType()
        */
@@ -83,7 +83,13 @@ export class ImageModule extends ModuleBase {
       size?: 512 | 256 | 128 | 64 | 32;
     } = {}
   ): string {
-    const { sex = this.faker.person.sexType(), size = 512 } = options;
+    const { size = 512 } = options;
+    let { sex = this.faker.person.sexType() } = options;
+
+    if (sex === 'generic') {
+      sex = this.faker.person.sexType();
+    }
+
     const baseURL =
       'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait';
     return `${baseURL}/${sex}/${size}/${this.faker.number.int({ min: 0, max: 99 })}.jpg`;
