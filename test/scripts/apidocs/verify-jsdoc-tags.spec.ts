@@ -147,7 +147,7 @@ ${examples}`;
                 if (!examples.includes('import ')) {
                   const imports = [
                     // collect the imports for the various locales e.g. fakerDE_CH
-                    ...new Set(examples.match(/(?<!\.)faker[^.]*(?=\.)/g)),
+                    ...new Set(examples.match(/(?<!\.)faker[^.-]*(?=\.)/g)),
                   ];
 
                   if (imports.length > 0) {
