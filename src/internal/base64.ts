@@ -53,7 +53,7 @@ export const toBase64Url: (input: string) => string =
  *
  * @param encoding The encoding to check.
  */
-function bufferFeatureCheck(encoding: 'base64' | 'base64url'): boolean {
+function bufferFeatureCheck(encoding: BufferEncoding): boolean {
   try {
     return typeof Buffer.from('test').toString(encoding) === 'string';
   } catch {
