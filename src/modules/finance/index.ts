@@ -64,6 +64,8 @@ export class FinanceModule extends ModuleBase {
    *
    * @param length The length of the account number. Defaults to `8`.
    *
+   * @see faker.string.numeric(): For generating the number with greater control.
+   *
    * @example
    * faker.finance.accountNumber() // '92842238'
    * faker.finance.accountNumber(5) // '32564'
@@ -76,6 +78,8 @@ export class FinanceModule extends ModuleBase {
    *
    * @param options An options object.
    * @param options.length The length of the account number. Defaults to `8`.
+   *
+   * @see faker.string.numeric(): For generating the number with greater control.
    *
    * @example
    * faker.finance.accountNumber() // '92842238'
@@ -96,6 +100,8 @@ export class FinanceModule extends ModuleBase {
    *
    * @param optionsOrLength An options object or the length of the account number.
    * @param optionsOrLength.length The length of the account number. Defaults to `8`.
+   *
+   * @see faker.string.numeric(): For generating the number with greater control.
    *
    * @example
    * faker.finance.accountNumber() // '92842238'
@@ -121,6 +127,8 @@ export class FinanceModule extends ModuleBase {
    *
    * @param options An options object or the length of the account number.
    * @param options.length The length of the account number. Defaults to `8`.
+   *
+   * @see faker.string.numeric(): For generating the number with greater control.
    *
    * @example
    * faker.finance.accountNumber() // '92842238'
@@ -367,6 +375,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.dec The number of decimal places for the amount. Defaults to `2`.
    * @param options.symbol The symbol used to prefix the amount. Defaults to `''`.
    * @param options.autoFormat If true this method will use `Number.toLocaleString()`. Otherwise it will use `Number.toFixed()`.
+   *
+   * @see faker.number.float(): For generating the amount with greater control.
    *
    * @example
    * faker.finance.amount() // '617.87'
@@ -718,6 +728,8 @@ export class FinanceModule extends ModuleBase {
    *
    * @throws Will throw an error if length is less than 1.
    *
+   * @see faker.string.numeric(): For generating the pin with greater control.
+   *
    * @example
    * faker.finance.pin() // '5067'
    * faker.finance.pin(6) // '213789'
@@ -732,6 +744,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the PIN to generate. Defaults to `4`.
    *
    * @throws Will throw an error if length is less than 1.
+   *
+   * @see faker.string.numeric(): For generating the pin with greater control.
    *
    * @example
    * faker.finance.pin() // '5067'
@@ -754,6 +768,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the PIN to generate. Defaults to `4`.
    *
    * @throws Will throw an error if length is less than 1.
+   *
+   * @see faker.string.numeric(): For generating the pin with greater control.
    *
    * @example
    * faker.finance.pin() // '5067'
@@ -781,6 +797,8 @@ export class FinanceModule extends ModuleBase {
    * @param options.length The length of the PIN to generate. Defaults to `4`.
    *
    * @throws Will throw an error if length is less than 1.
+   *
+   * @see faker.string.numeric(): For generating the pin with greater control.
    *
    * @example
    * faker.finance.pin() // '5067'

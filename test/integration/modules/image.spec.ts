@@ -74,6 +74,13 @@ describe('image', () => {
     });
   });
 
+  describe('personPortrait', () => {
+    it('should return a random asset url', async () => {
+      const actual = faker.image.personPortrait();
+      await assertWorkingUrl(actual);
+    });
+  });
+
   describe('url', () => {
     it('should return a random image url', async () => {
       const actual = faker.image.url();
@@ -106,14 +113,6 @@ describe('image', () => {
   describe('urlPicsumPhotos', () => {
     it('should return a random image url from PicsumPhotos', async () => {
       const actual = faker.image.urlPicsumPhotos();
-      await assertWorkingUrl(actual);
-    });
-  });
-
-  describe('urlPlaceholder', () => {
-    it('should return a random image url from Placeholder', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-deprecated
-      const actual = faker.image.urlPlaceholder();
       await assertWorkingUrl(actual);
     });
   });

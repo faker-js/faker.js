@@ -243,6 +243,7 @@ exports[`check docs completeness > all modules and methods are present 1`] = `
       "avatarGitHub",
       "avatarLegacy",
       "dataUri",
+      "personPortrait",
       "url",
       "urlLoremFlickr",
       "urlPicsumPhotos",
