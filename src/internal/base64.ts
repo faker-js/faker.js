@@ -52,6 +52,8 @@ export const toBase64Url: (input: string) => string =
  * This is required because some `Buffer` polyfills do not support all encodings.
  *
  * @param encoding The encoding to check.
+ *
+ * @see https://github.com/feross/buffer/issues/309
  */
 function bufferFeatureCheck(encoding: BufferEncoding): boolean {
   try {
