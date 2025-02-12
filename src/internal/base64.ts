@@ -53,6 +53,7 @@ export const toBase64Url: (input: string) => string =
  *
  * @param encoding The encoding to check.
  *
+ * @see https://www.npmjs.com/package/buffer
  * @see https://github.com/feross/buffer/issues/309
  */
 function bufferFeatureCheck(encoding: BufferEncoding): boolean {
