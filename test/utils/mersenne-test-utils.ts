@@ -14,4 +14,4 @@ export const TWISTER_53CO_MAX_VALUE = 0.9999999999999999;
 /**
  * The maximum value that can be returned by `next()`.
  */
-export const MERSENNE_MAX_VALUE = TWISTER_32CO_MAX_VALUE;
+export const MERSENNE_MAX_VALUE = TWISTER_53CO_MAX_VALUE;

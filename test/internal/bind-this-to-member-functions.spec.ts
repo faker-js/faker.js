@@ -19,7 +19,7 @@ describe('internal', () => {
       const someMethodWithoutBind = someModule.someMethod;
 
       expect(() => someMethodWithoutBind()).toThrow(
-        new Error("Cannot read properties of undefined (reading 'faker')")
+        new TypeError("Cannot read properties of undefined (reading 'faker')")
       );
 
       bindThisToMemberFunctions(someModule);
