@@ -4,7 +4,7 @@
   <p>Generate massive amounts of fake (but realistic) data for testing and development.</p>
   
   [![npm version](https://badgen.net/npm/v/@faker-js/faker)](https://www.npmjs.com/package/@faker-js/faker)
-  [![npm downloads](https://badgen.net/npm/dm/@faker-js/faker)](https://www.npmjs.com/package/@faker-js/faker)
+  [![npm downloads](https://badgen.net/npm/dm/@faker-js/faker)](https://npm-compare.com/@faker-js/faker/#timeRange=ALL)
   [![Continuous Integration](https://github.com/faker-js/faker/actions/workflows/ci.yml/badge.svg)](https://github.com/faker-js/faker/actions/workflows/ci.yml)
   [![codecov](https://codecov.io/gh/faker-js/faker/branch/next/graph/badge.svg?token=N61U168G08)](https://codecov.io/gh/faker-js/faker)
   [![Chat on Discord](https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord)](https://chat.fakerjs.dev)
@@ -140,14 +140,6 @@ const secondRandom = faker.number.int();
 
 console.log(firstRandom === secondRandom);
 ```
-
-## Usage Trend
-
-[Usage Trend of @faker-js/faker](https://npm-compare.com/@faker-js/faker#timeRange=THREE_YEARS)
-
-<a href="https://npm-compare.com/@faker-js/faker#timeRange=THREE_YEARS" target="_blank">
-  <img src="https://npm-compare.com/img/npm-trend/THREE_YEARS/@faker-js/faker.png" width="800px" alt="NPM Usage Trend of @faker-js/faker" />
-</a>
 
 ## 🤝 Sponsors
 
