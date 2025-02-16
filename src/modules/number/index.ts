@@ -427,6 +427,7 @@ export class NumberModule extends SimpleModuleBase {
 
     const min = BigInt(options.min ?? 0);
     const max = BigInt(options.max ?? min + BigInt(999999999999999));
+    const multipleOf = BigInt(options.multipleOf ?? 1);
 
     if (max === min) {
       return min;
@@ -434,6 +435,10 @@ export class NumberModule extends SimpleModuleBase {
 
     if (max < min) {
       throw new FakerError(`Max ${max} should be larger than min ${min}.`);
+    }
+
+    if (multipleOf <= 0n) {
+      throw new FakerError(`multipleOf should be greater than 0n.`);
     }
 
     const delta = max - min;

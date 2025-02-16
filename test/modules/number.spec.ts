@@ -639,6 +639,12 @@ describe('number', () => {
         const generateBigInt = faker.number.bigInt({ multipleOf: 1n });
         expect(generateBigInt).toBeTypeOf('bigint');
       });
+
+      it('should throw for negative multipleOf', () => {
+        expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
+          new FakerError('multipleOf should be greater than 0n.')
+        );
+      });
     });
 
     describe('romanNumeral', () => {
