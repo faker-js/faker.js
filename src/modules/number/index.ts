@@ -407,7 +407,7 @@ export class NumberModule extends SimpleModuleBase {
            */
           max?: bigint | number | string | boolean;
           /**
-           * The generated number will be a multiple of this parameter.
+           * The generated bigint will be a multiple of this parameter.
            *
            * @default 1n
            */
