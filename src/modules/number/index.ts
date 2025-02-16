@@ -433,7 +433,7 @@ export class NumberModule extends SimpleModuleBase {
     }
 
     if (max < min) {
-      throw new FakerError(`Max ${max} should be larger then min ${min}.`);
+      throw new FakerError(`Max ${max} should be larger than min ${min}.`);
     }
 
     const delta = max - min;

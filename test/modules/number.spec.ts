@@ -631,7 +631,7 @@ describe('number', () => {
         expect(() => {
           faker.number.bigInt({ min, max });
         }).toThrow(
-          new FakerError(`Max ${max} should be larger then min ${min}.`)
+          new FakerError(`Max ${max} should be larger than min ${min}.`)
         );
       });
 
