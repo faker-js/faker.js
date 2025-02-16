@@ -645,6 +645,16 @@ describe('number', () => {
           new FakerError('multipleOf should be greater than 0n.')
         );
       });
+
+      it('should throw when multipleOf is larger than the given max', () => {
+        expect(() =>
+          faker.number.bigInt({ max: 10n, multipleOf: 20n })
+        ).toThrow(
+          new FakerError(
+            'Multiple of 20n should be less than or equal to max 10n.'
+          )
+        );
+      });
     });
 
     describe('romanNumeral', () => {
