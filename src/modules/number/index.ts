@@ -406,6 +406,12 @@ export class NumberModule extends SimpleModuleBase {
            * @default min + 999999999999999n
            */
           max?: bigint | number | string | boolean;
+          /**
+           * The generated number will be a multiple of this parameter.
+           *
+           * @default 1n
+           */
+          multipleOf?: bigint | number | string | boolean;
         } = {}
   ): bigint {
     if (

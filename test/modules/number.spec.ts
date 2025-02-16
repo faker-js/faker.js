@@ -634,6 +634,11 @@ describe('number', () => {
           new FakerError(`Max ${max} should be larger then min ${min}.`)
         );
       });
+
+      it('should generate a random bigint with a given multipleOf of 1n', () => {
+        const generateBigInt = faker.number.bigInt({ multipleOf: 1n });
+        expect(generateBigInt).toBeTypeOf('bigint');
+      });
     });
 
     describe('romanNumeral', () => {
