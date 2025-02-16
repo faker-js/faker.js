@@ -456,10 +456,11 @@ export class NumberModule extends SimpleModuleBase {
           length: delta.toString(10).length,
           allowLeadingZeros: true,
         })
-      ) %
-      (delta + BigInt(1));
+      ) % delta;
 
-    return min + offset;
+    const remaining = multipleOf - ((min + offset) % multipleOf);
+
+    return min + offset + remaining;
   }
 
   /**

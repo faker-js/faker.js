@@ -50,6 +50,7 @@ describe('number', () => {
         .it('with boolean value', true)
         .it('with bigint value', 123n)
         .it('with options', { min: -42, max: 69 })
+        .it('with multipleOf', { multipleOf: 7919n })
         .it('with big options', {
           min: 6135715171537515454317351n,
           max: 32465761264574654845432354n,
@@ -638,6 +639,12 @@ describe('number', () => {
       it('should generate a random bigint with a given multipleOf of 1n', () => {
         const generateBigInt = faker.number.bigInt({ multipleOf: 1n });
         expect(generateBigInt).toBeTypeOf('bigint');
+      });
+
+      it('should generate a random bigint with a given multipleOf of 7919n', () => {
+        const generateBigInt = faker.number.bigInt({ multipleOf: 7919n });
+        expect(generateBigInt).toBeTypeOf('bigint');
+        expect(generateBigInt % 7919n).toBe(0n);
       });
 
       it('should throw for negative multipleOf', () => {
