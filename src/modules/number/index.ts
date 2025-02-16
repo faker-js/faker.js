@@ -440,12 +440,11 @@ export class NumberModule extends SimpleModuleBase {
     if (multipleOf <= 0n) {
       throw new FakerError(`multipleOf should be greater than 0n.`);
     }
-    if (1n < multipleOf) {
-      if (max < multipleOf) {
-        throw new FakerError(
-          `Multiple of ${multipleOf}n should be less than or equal to max ${max}n.`
-        );
-      }
+
+    if (1n < multipleOf && max < multipleOf) {
+      throw new FakerError(
+        `Multiple of ${multipleOf}n should be less than or equal to max ${max}n.`
+      );
     }
 
     const delta = max - min;
