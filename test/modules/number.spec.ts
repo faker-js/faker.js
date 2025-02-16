@@ -647,7 +647,7 @@ describe('number', () => {
         expect(generateBigInt % 7919n).toBe(0n);
       });
 
-      it('should throw for negative multipleOf', () => {
+      it('should throw for non-positive multipleOf', () => {
         expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
           new FakerError('multipleOf should be greater than 0n.')
         );
