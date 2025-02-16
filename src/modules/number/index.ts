@@ -378,6 +378,8 @@ export class NumberModule extends SimpleModuleBase {
    * @param options.multipleOf The generated bigint will be a multiple of this parameter. Defaults to `1n`.
    *
    * @throws When `min` is greater than `max`.
+   * @throws When `multipleOf` is not a positive bigint.
+   * @throws When `multipleOf` is greater than `max`.
    *
    * @example
    * faker.number.bigInt() // 55422n
