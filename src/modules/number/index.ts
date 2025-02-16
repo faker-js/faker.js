@@ -375,6 +375,7 @@ export class NumberModule extends SimpleModuleBase {
    * @param options Maximum value or options object.
    * @param options.min Lower bound for generated bigint. Defaults to `0n`.
    * @param options.max Upper bound for generated bigint. Defaults to `min + 999999999999999n`.
+   * @param options.multipleOf The generated bigint will be a multiple of this parameter. Defaults to `1n`.
    *
    * @throws When `min` is greater than `max`.
    *
@@ -383,6 +384,7 @@ export class NumberModule extends SimpleModuleBase {
    * faker.number.bigInt(100n) // 52n
    * faker.number.bigInt({ min: 1000000n }) // 431433n
    * faker.number.bigInt({ max: 100n }) // 42n
+   * faker.number.bigInt({ multipleOf: 7n }) // 35n
    * faker.number.bigInt({ min: 10n, max: 100n }) // 36n
    *
    * @since 8.0.0
