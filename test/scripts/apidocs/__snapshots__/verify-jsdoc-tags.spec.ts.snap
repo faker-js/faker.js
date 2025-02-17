@@ -329,7 +329,6 @@ exports[`check docs completeness > all modules and methods are present 1`] = `
     [
       "bigInt",
       "binary",
-      "exponentialDistribution",
       "float",
       "hex",
       "int",
