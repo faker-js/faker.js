@@ -87,6 +87,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
           trailingUnderscore: 'forbid',
         },
       ],
+      '@typescript-eslint/no-misused-spread': 'off', // string spreading is fine (mostly)
       '@typescript-eslint/no-confusing-void-expression': [
         'error',
         {
@@ -97,6 +98,7 @@ const config: ReturnType<typeof tseslint.config> = tseslint.config(
         'error',
         { ignoreParameters: true },
       ],
+      '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off', // requires `strictNullChecks` to be enabled
       '@typescript-eslint/no-unnecessary-condition': 'off', // requires `strictNullChecks` to be enabled
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
