@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [9.5.0](https://github.com/faker-js/faker/compare/v9.4.0...v9.5.0) (2025-02-10)
+
+
+### Features
+
+* **image:** add AI-generated avatars ([#3126](https://github.com/faker-js/faker/issues/3126)) ([9e13953](https://github.com/faker-js/faker/commit/9e1395380cf9baf9f0350c43cbbc303430e77dfb))
+
 ## [9.4.0](https://github.com/faker-js/faker/compare/v9.3.0...v9.4.0) (2025-01-15)
 
 
