@@ -49,6 +49,9 @@ import { uniformDistributor } from './uniform';
  * Can alternatively be configured using the `base` option.
  *
  * @example
+ * import { exponentialDistributor, generateMersenne53Randomizer } from '@faker-js/faker';
+ *
+ * const randomizer = generateMersenne53Randomizer();
  * const distributor = exponentialDistributor();
  * distributor(randomizer) // 0.04643770898904198
  * distributor(randomizer) // 0.13436127925491848

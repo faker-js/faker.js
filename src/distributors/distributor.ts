@@ -12,18 +12,23 @@ import type { Randomizer } from '../randomizer';
  * - Normal distributor: Values are more likely to be close to a specific value.
  * - Exponential distributor: Values are more likely to be close to 0.
  *
+ * Distributor functions can be used by some faker functions such as `faker.number.int()` and `faker.number.float()`.
+ *
+ * Please note that the result from the distributor function is processed further by the function accepting it.
+ * E.g. a distributor result of `0.5` within a call to `faker.number.int({ min: 10, max: 20 })` will result in `15`.
+ *
  * @param randomizer The randomizer to use for generating values.
  *
  * @returns Generates a random float between 0 (inclusive) and 1 (exclusive).
  *
  * @example
- * import { Distributor, Randomizer, simpleFaker } from '@faker-js/faker';
+ * import { Distributor, Randomizer, faker } from '@faker-js/faker';
  *
  * const alwaysMin: Distributor = () => 0;
  * const uniform: Distributor = (randomizer: Randomizer) => randomizer.next();
  *
- * simpleFaker.number.int({ min: 2, max: 10, distributor: alwaysMin }); // 2
- * simpleFaker.number.int({ min: 0, max: 10, distributor: uniform }); // 5
+ * faker.number.int({ min: 2, max: 10, distributor: alwaysMin }); // 2
+ * faker.number.int({ min: 0, max: 10, distributor: uniform }); // 5
  *
  * @since 9.6.0
  */

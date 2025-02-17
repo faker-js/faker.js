@@ -22,6 +22,9 @@ import type { Distributor } from './distributor';
  * @returns A new uniform distributor function.
  *
  * @example
+ * import { generateMersenne53Randomizer, uniformDistributor } from '@faker-js/faker';
+ *
+ * const randomizer = generateMersenne53Randomizer();
  * const distributor = uniformDistributor();
  * distributor(randomizer) // 0.9100215692561207
  * distributor(randomizer) // 0.791632947887336

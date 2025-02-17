@@ -59,6 +59,18 @@ function comparableSanitizedHtml(html: string): string {
 }
 
 /**
+ * Wraps the given code in a code block.
+ *
+ * @param code The code to wrap.
+ *
+ * @returns The wrapped code.
+ */
+export function wrapCode(code: string): string {
+  const delimiter = '```';
+  return `${delimiter}ts\n${code}\n${delimiter}`;
+}
+
+/**
  * Converts a Typescript code block to an HTML string and sanitizes it.
  *
  * @param code The code to convert.
@@ -66,8 +78,7 @@ function comparableSanitizedHtml(html: string): string {
  * @returns The converted HTML string.
  */
 export function codeToHtml(code: string): string {
-  const delimiter = '```';
-  return mdToHtml(`${delimiter}ts\n${code}\n${delimiter}`);
+  return mdToHtml(wrapCode(code));
 }
 
 /**

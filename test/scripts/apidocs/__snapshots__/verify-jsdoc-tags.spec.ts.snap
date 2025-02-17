@@ -27,6 +27,13 @@ exports[`check docs completeness > all modules and methods are present 1`] = `
     ],
   ],
   [
+    "distributors",
+    [
+      "exponentialDistributor",
+      "uniformDistributor",
+    ],
+  ],
+  [
     "utils",
     [
       "generateMersenne32Randomizer",

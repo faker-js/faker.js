@@ -1,4 +1,5 @@
 import type { ClassDeclaration, InterfaceDeclaration, Project } from 'ts-morph';
+import { wrapCode } from '../utils/markdown';
 import { required, valuesForKeys } from '../utils/value-checks';
 import { newProcessingError } from './error';
 import type { JSDocableLikeNode } from './jsdocs';
@@ -12,6 +13,7 @@ import type { RawApiDocsMethod } from './method';
 import {
   processClassConstructors,
   processClassMethods,
+  processDistributorFunctions,
   processInterfaceMethods,
   processUtilityFunctions,
 } from './method';
@@ -193,6 +195,34 @@ export function processProjectUtilities(project: Project): RawApiDocsPage {
     description: 'A list of all the utilities available in Faker.js.',
     examples: [],
     methods: processUtilityFunctions(project),
+  };
+}
+
+// Distributors
+
+export function processProjectDistributors(project: Project): RawApiDocsPage {
+  console.log(`- Distributors`);
+
+  const distributor = required(
+    project
+      .getSourceFile('src/distributors/distributor.ts')
+      ?.getTypeAliases()[0],
+    'Distributor'
+  );
+
+  const jsdocs = getJsDocs(distributor);
+  const description = `${getDescription(jsdocs)}
+
+${wrapCode(distributor.getText().replace(/export /, ''))}`;
+
+  return {
+    title: 'Distributors',
+    camelTitle: 'distributors',
+    category: undefined,
+    deprecated: undefined,
+    description,
+    examples: getExamples(jsdocs),
+    methods: processDistributorFunctions(project),
   };
 }
 

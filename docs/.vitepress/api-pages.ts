@@ -5,6 +5,7 @@ export const apiPages = [
   { text: 'Faker', link: '/api/faker.html' },
   { text: 'SimpleFaker', link: '/api/simpleFaker.html' },
   { text: 'Randomizer', link: '/api/randomizer.html' },
+  { text: 'Distributors', link: '/api/distributors.html' },
   { text: 'Utilities', link: '/api/utils.html' },
   {
     text: 'Modules',
