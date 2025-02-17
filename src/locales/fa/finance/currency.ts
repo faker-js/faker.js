@@ -3,162 +3,162 @@ export default [
     name: 'درهم امارات',
     code: 'AED',
     symbol: '',
-    numID: 784, // UAE Dirham
+    numericCode: 784,
   },
   {
     name: 'افغانی',
     code: 'AFN',
     symbol: '؋',
-    numID: 971, // Afghani
+    numericCode: 971,
   },
   {
     name: 'پزو آرژانتین',
     code: 'ARS',
     symbol: '$',
-    numID: 32, // Argentine Peso
+    numericCode: 32,
   },
   {
     name: 'دلار استرالیا',
     code: 'AUD',
     symbol: '$',
-    numID: 36, // Australian Dollar
+    numericCode: 36,
   },
   {
     name: 'مانات آذربایجان',
     code: 'AZN',
     symbol: 'ман',
-    numID: 944, // Azerbaijan Manat
+    numericCode: 944,
   },
   {
     name: 'دلار کانادا',
     code: 'CAD',
     symbol: '$',
-    numID: 124, // Canadian Dollar
+    numericCode: 124,
   },
   {
     name: 'فرانک سوئیس',
     code: 'CHF',
     symbol: 'CHF',
-    numID: 756, // Swiss Franc
+    numericCode: 756,
   },
   {
     name: 'کرون چک',
     code: 'CZK',
     symbol: 'Kč',
-    numID: 203, // Czech Koruna
+    numericCode: 203,
   },
   {
     name: 'کرون',
     code: 'EEK',
     symbol: '',
-    numID: 233, // Estonian Kroon (Note: EEK is no longer in use as Estonia uses EUR)
+    numericCode: 233,
   },
   {
     name: 'دینار عراق',
     code: 'IQD',
     symbol: '',
-    numID: 368, // Iraqi Dinar
+    numericCode: 368,
   },
   {
     name: 'ریال ایران',
     code: 'IRR',
     symbol: '﷼',
-    numID: 364, // Iranian Rial
+    numericCode: 364,
   },
   {
     name: 'کرون ایسلند',
     code: 'ISK',
     symbol: 'kr',
-    numID: 352, // Iceland Krona
+    numericCode: 352,
   },
   {
     name: 'دینار اردن',
     code: 'JOD',
     symbol: '',
-    numID: 400, // Jordanian Dinar
+    numericCode: 400,
   },
   {
     name: 'ین',
     code: 'JPY',
     symbol: '¥',
-    numID: 392, // Yen
+    numericCode: 392,
   },
   {
     name: 'دینار کویت',
     code: 'KWD',
     symbol: '',
-    numID: 414, // Kuwaiti Dinar
+    numericCode: 414,
   },
   {
     name: 'دینار لیبی',
     code: 'LYD',
     symbol: '',
-    numID: 434, // Libyan Dinar
+    numericCode: 434,
   },
   {
     name: 'درهم مراکش',
     code: 'MAD',
     symbol: '',
-    numID: 504, // Moroccan Dirham
+    numericCode: 504,
   },
   {
     name: 'روپی نپال',
     code: 'NPR',
     symbol: '₨',
-    numID: 524, // Nepalese Rupee
+    numericCode: 524,
   },
   {
     name: 'ریال عمان',
     code: 'OMR',
     symbol: '﷼',
-    numID: 512, // Rial Omani
+    numericCode: 512,
   },
   {
     name: 'پزو فیلیپین',
     code: 'PHP',
     symbol: 'Php',
-    numID: 608, // Philippine Peso
+    numericCode: 608,
   },
   {
     name: 'روپی پاکستان',
     code: 'PKR',
     symbol: '₨',
-    numID: 586, // Pakistan Rupee
+    numericCode: 586,
   },
   {
     name: 'ریال قطر',
     code: 'QAR',
     symbol: '﷼',
-    numID: 634, // Qatari Rial
+    numericCode: 634,
   },
   {
     name: 'روبل روسیه',
     code: 'RUB',
     symbol: 'руб',
-    numID: 643, // Russian Ruble
+    numericCode: 643,
   },
   {
     name: 'ریال عربستان',
     code: 'SAR',
     symbol: '﷼',
-    numID: 682, // Saudi Riyal
+    numericCode: 682,
   },
   {
     name: 'پوند سودان',
     code: 'SDG',
     symbol: '',
-    numID: 938, // Sudanese Pound
+    numericCode: 938,
   },
   {
     name: 'کرون سوئد',
     code: 'SEK',
     symbol: 'kr',
-    numID: 752, // Swedish Krona
+    numericCode: 752,
   },
   {
     name: 'دلار سنگاپور',
     code: 'SGD',
     symbol: '$',
-    numID: 702, // Singapore Dollar
+    numericCode: 702,
   },
 ];
