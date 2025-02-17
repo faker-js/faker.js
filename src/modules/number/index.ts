@@ -26,6 +26,7 @@ export class NumberModule extends SimpleModuleBase {
    * @param options.min Lower bound for generated number. Defaults to `0`.
    * @param options.max Upper bound for generated number. Defaults to `Number.MAX_SAFE_INTEGER`.
    * @param options.multipleOf Generated number will be a multiple of the given integer. Defaults to `1`.
+   * @param options.distributor A function to determine the distribution of generated values. Defaults to `uniformDistributor()`.
    *
    * @throws When `min` is greater than `max`.
    * @throws When there are no suitable integers between `min` and `max`.
@@ -124,6 +125,7 @@ export class NumberModule extends SimpleModuleBase {
    * @param options.max Upper bound for generated number, exclusive, unless `multipleOf` or `fractionDigits` are passed. Defaults to `1.0`.
    * @param options.multipleOf The generated number will be a multiple of this parameter. Only one of `multipleOf` or `fractionDigits` should be passed.
    * @param options.fractionDigits The maximum number of digits to appear after the decimal point, for example `2` will round to 2 decimal points.  Only one of `multipleOf` or `fractionDigits` should be passed.
+   * @param options.distributor A function to determine the distribution of generated values. Defaults to `uniformDistributor()`.
    *
    * @throws When `min` is greater than `max`.
    * @throws When `multipleOf` is negative.
