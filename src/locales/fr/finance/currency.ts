@@ -3,516 +3,516 @@ export default [
     name: 'Dollar',
     code: 'USD',
     symbol: '$',
-    numID: 840, // US Dollar
+    numericCode: 840,
   },
   {
     name: 'Dollar canadien',
     code: 'CAD',
     symbol: '$',
-    numID: 124, // Canadian Dollar
+    numericCode: 124,
   },
   {
     name: 'Peso mexicain',
     code: 'MXN',
     symbol: '$',
-    numID: 484, // Mexican Peso
+    numericCode: 484,
   },
   {
     name: 'Florin',
     code: 'AWG',
     symbol: 'ƒ',
-    numID: 533, // Aruban Florin
+    numericCode: 533,
   },
   {
     name: 'Baisse du dollar',
     code: 'BBD',
     symbol: '$',
-    numID: 52, // Barbadian Dollar
+    numericCode: 52,
   },
   {
     name: 'Dollar bermudien',
     code: 'BMD',
     symbol: '$',
-    numID: 60, // Bermudian Dollar
+    numericCode: 60,
   },
   {
     name: 'Dollar des Bahamas',
     code: 'BSD',
     symbol: '$',
-    numID: 44, // Bahamian Dollar
+    numericCode: 44,
   },
   {
     name: 'Peso dominicain',
     code: 'DOP',
     symbol: '$',
-    numID: 214, // Dominican Peso
+    numericCode: 214,
   },
   {
     name: 'Dollar jamaïcain',
     code: 'JMD',
     symbol: '$',
-    numID: 388, // Jamaican Dollar
+    numericCode: 388,
   },
   {
     name: 'Quetzal guatémaltèque',
     code: 'GTQ',
     symbol: 'Q',
-    numID: 320, // Guatemalan Quetzal
+    numericCode: 320,
   },
   {
     name: 'Balboa panaméen',
     code: 'PAB',
     symbol: 'B/.',
-    numID: 590, // Panamanian Balboa
+    numericCode: 590,
   },
   {
     name: 'Dollar des Caraïbes',
     code: 'XCD',
     symbol: '$',
-    numID: 951, // East Caribbean Dollar
+    numericCode: 951,
   },
   {
     name: 'euro',
     code: 'EUR',
     symbol: '€',
-    numID: 978, // Euro
+    numericCode: 978,
   },
   {
     name: 'Livre sterling',
     code: 'GBP',
     symbol: '£',
-    numID: 826, // British Pound Sterling
+    numericCode: 826,
   },
   {
     name: 'Course géorgienne',
     code: 'GEL',
     symbol: '₾',
-    numID: 981, // Georgian Lari
+    numericCode: 981,
   },
   {
     name: 'Lev bulgare',
     code: 'BGN',
     symbol: 'лв',
-    numID: 975, // Bulgarian Lev
+    numericCode: 975,
   },
   {
     name: 'Franc suisse',
     code: 'CHF',
     symbol: 'CHF',
-    numID: 756, // Swiss Franc
+    numericCode: 756,
   },
   {
     name: 'Couronne danoise',
     code: 'DKK',
     symbol: 'kr',
-    numID: 208, // Danish Krone
+    numericCode: 208,
   },
   {
     name: 'République tchèque Couronne',
     code: 'CZK',
     symbol: 'Kč',
-    numID: 203, // Czech Koruna
+    numericCode: 203,
   },
   {
     name: 'Kuna croate',
     code: 'HRK',
     symbol: 'kn',
-    numID: 191, // Croatian Kuna
+    numericCode: 191,
   },
   {
     name: 'Forint hongrois',
     code: 'HUF',
     symbol: 'ft',
-    numID: 348, // Hungarian Forint
+    numericCode: 348,
   },
   {
     name: 'couronne norvégienne',
     code: 'NOK',
     symbol: 'kr',
-    numID: 578, // Norwegian Krone
+    numericCode: 578,
   },
   {
     name: 'Rouble russe',
     code: 'RUB',
     symbol: '₽',
-    numID: 643, // Russian Ruble
+    numericCode: 643,
   },
   {
     name: 'Zloty polonais',
     code: 'PLN',
     symbol: 'zł',
-    numID: 985, // Polish Zloty
+    numericCode: 985,
   },
   {
     name: 'Leu roumain',
     code: 'RON',
     symbol: 'lei',
-    numID: 946, // Romanian Leu
+    numericCode: 946,
   },
   {
     name: 'couronne suédoise',
     code: 'SEK',
     symbol: 'kr',
-    numID: 752, // Swedish Krona
+    numericCode: 752,
   },
   {
     name: 'Hryvnia ukrainienne',
     code: 'UAH',
     symbol: '₴',
-    numID: 980, // Ukrainian Hryvnia
+    numericCode: 980,
   },
   {
     name: 'lire turque',
     code: 'TRY',
     symbol: '₺',
-    numID: 949, // Turkish Lira
+    numericCode: 949,
   },
   {
     name: 'Argentine Peso',
     code: 'ARS',
     symbol: '$',
-    numID: 32, // Argentine Peso
+    numericCode: 32,
   },
   {
     name: 'Bolivien bolivien',
     code: 'BOB',
     symbol: 'Bs.',
-    numID: 68, // Bolivian Boliviano
+    numericCode: 68,
   },
   {
     name: 'Real brésilien',
     code: 'BRL',
     symbol: 'R$',
-    numID: 986, // Brazilian Real
+    numericCode: 986,
   },
   {
     name: 'Peso chilien',
     code: 'CLP',
     symbol: '$',
-    numID: 152, // Chilean Peso
+    numericCode: 152,
   },
   {
     name: 'Peso colombien',
     code: 'COP',
     symbol: '$',
-    numID: 170, // Colombian Peso
+    numericCode: 170,
   },
   {
     name: 'Nouveau Sol Péruvien',
     code: 'PEN',
     symbol: 'S/.',
-    numID: 604, // Peruvian Sol
+    numericCode: 604,
   },
   {
     name: 'Guarani paraguayen',
     code: 'PYG',
     symbol: '₲',
-    numID: 600, // Paraguayan Guarani
+    numericCode: 600,
   },
   {
     name: 'Peso uruguayen',
     code: 'UYU',
     symbol: '$',
-    numID: 858, // Uruguayan Peso
+    numericCode: 858,
   },
   {
     name: 'Bolivar vénézuélien',
     code: 'VES',
     symbol: 'Bs.',
-    numID: 928, // Venezuelan Bolívar
+    numericCode: 928,
   },
   {
     name: 'Yen japonais',
     code: 'JPY',
     symbol: '¥',
-    numID: 392, // Japanese Yen
+    numericCode: 392,
   },
   {
     name: 'Bangladesh Taka',
     code: 'BDT',
     symbol: '৳',
-    numID: 50, // Bangladeshi Taka
+    numericCode: 50,
   },
   {
     name: 'Le yuan chinois',
     code: 'CNY',
     symbol: '¥',
-    numID: 156, // Chinese Yuan
+    numericCode: 156,
   },
   {
     name: 'Dollar de Hong Kong',
     code: 'HKD',
     symbol: '$',
-    numID: 344, // Hong Kong Dollar
+    numericCode: 344,
   },
   {
     name: 'Roupie indienne',
     code: 'INR',
     symbol: '₹',
-    numID: 356, // Indian Rupee
+    numericCode: 356,
   },
   {
     name: 'Riel cambodgien',
     code: 'KHR',
     symbol: '៛',
-    numID: 116, // Cambodian Riel
+    numericCode: 116,
   },
   {
     name: 'Poulet',
     code: 'LAK',
     symbol: '₭',
-    numID: 418, // Lao Kip
+    numericCode: 418,
   },
   {
     name: 'Roupie sri lankaise',
     code: 'LKR',
     symbol: 'රු',
-    numID: 144, // Sri Lankan Rupee
+    numericCode: 144,
   },
   {
     name: 'Rufiyaa',
     code: 'MVR',
     symbol: '.ރ',
-    numID: 462, // Maldivian Rufiyaa
+    numericCode: 462,
   },
   {
     name: 'cloche malaisienne',
     code: 'MYR',
     symbol: 'RM',
-    numID: 458, // Malaysian Ringgit
+    numericCode: 458,
   },
   {
     name: 'Roupie népalaise',
     code: 'NPR',
     symbol: 'रू',
-    numID: 524, // Nepalese Rupee
+    numericCode: 524,
   },
   {
     name: 'Peso philippin',
     code: 'PHP',
     symbol: '₱',
-    numID: 608, // Philippine Peso
+    numericCode: 608,
   },
   {
     name: 'Roupie pakistanaise',
     code: 'PKR',
     symbol: '₨',
-    numID: 586, // Pakistani Rupee
+    numericCode: 586,
   },
   {
     name: 'Dollar de Singapour',
     code: 'SGD',
     symbol: '$',
-    numID: 702, // Singapore Dollar
+    numericCode: 702,
   },
   {
     name: 'Baht thaïlandais',
     code: 'THB',
     symbol: '฿',
-    numID: 764, // Thai Baht
+    numericCode: 764,
   },
   {
     name: 'Nouveau dollar de Taïwan',
     code: 'TWD',
     symbol: '$',
-    numID: 901, // New Taiwan Dollar
+    numericCode: 901,
   },
   {
     name: 'Dong vietnamien',
     code: 'VND',
     symbol: '₫',
-    numID: 704, // Vietnamese Dong
+    numericCode: 704,
   },
   {
     name: 'Dollar australien',
     code: 'AUD',
     symbol: '$',
-    numID: 36, // Australian Dollar
+    numericCode: 36,
   },
   {
     name: 'Dollar fidjien',
     code: 'FJD',
     symbol: '$',
-    numID: 242, // Fijian Dollar
+    numericCode: 242,
   },
   {
     name: 'Dollar néo-zélandais',
     code: 'NZD',
     symbol: '$',
-    numID: 554, // New Zealand Dollar
+    numericCode: 554,
   },
   {
     name: 'Franc CFP',
     code: 'XPF',
     symbol: '₣',
-    numID: 953, // CFP Franc
+    numericCode: 953,
   },
   {
     name: 'Livre égyptienne',
     code: 'EGP',
     symbol: '£',
-    numID: 818, // Egyptian Pound
+    numericCode: 818,
   },
   {
     name: 'Cédi ghanéen',
     code: 'GHS',
     symbol: '₵',
-    numID: 936, // Ghanaian Cedi
+    numericCode: 936,
   },
   {
     name: 'Dalasi',
     code: 'GMD',
     symbol: 'D',
-    numID: 270, // Gambian Dalasi
+    numericCode: 270,
   },
   {
     name: 'Shilling kenyan',
     code: 'KES',
     symbol: 'Sh',
-    numID: 404, // Kenyan Shilling
+    numericCode: 404,
   },
   {
     name: 'Dirham marocain',
     code: 'MAD',
     symbol: 'DH',
-    numID: 504, // Moroccan Dirham
+    numericCode: 504,
   },
   {
     name: 'Ariary malgache',
     code: 'MGA',
     symbol: 'Ar',
-    numID: 969, // Malagasy Ariary
+    numericCode: 969,
   },
   {
     name: 'Roupie mauricienne',
     code: 'MUR',
     symbol: '₨',
-    numID: 480, // Mauritian Rupee
+    numericCode: 480,
   },
   {
     name: 'Dollar namibien',
     code: 'NAD',
     symbol: '$',
-    numID: 516, // Namibian Dollar
+    numericCode: 516,
   },
   {
     name: 'Naira nigérian',
     code: 'NGN',
     symbol: '₦',
-    numID: 566, // Nigerian Naira
+    numericCode: 566,
   },
   {
     name: 'Roupie',
     code: 'SCR',
     symbol: '₨',
-    numID: 690, // Seychellois Rupee
+    numericCode: 690,
   },
   {
     name: 'Dinar tunisien',
     code: 'TND',
     symbol: 'DT',
-    numID: 788, // Tunisian Dinar
+    numericCode: 788,
   },
   {
     name: 'Shilling ougandais',
     code: 'UGX',
     symbol: 'Sh',
-    numID: 800, // Ugandan Shilling
+    numericCode: 800,
   },
   {
     name: 'CFA Franc BEAC',
     code: 'XAF',
     symbol: 'Fr',
-    numID: 950, // CFA Franc BEAC
+    numericCode: 950,
   },
   {
     name: 'CFA Franc BCEAO',
     code: 'XOF',
     symbol: 'Fr',
-    numID: 952, // CFA Franc BCEAO
+    numericCode: 952,
   },
   {
     name: 'Rand sud-africain',
     code: 'ZAR',
     symbol: 'Br',
-    numID: 710, // South African Rand
+    numericCode: 710,
   },
   {
     name: 'Dirham des Émirats arabes unis',
     code: 'AED',
     symbol: 'د.إ',
-    numID: 784, // UAE Dirham
+    numericCode: 784,
   },
   {
     name: 'Nouveau Shekel israélien',
     code: 'ILS',
     symbol: '₪',
-    numID: 376, // Israeli New Shekel
+    numericCode: 376,
   },
   {
     name: 'Livre syrienne',
     code: 'SYP',
     symbol: '£',
-    numID: 760, // Syrian Pound
+    numericCode: 760,
   },
   {
     name: 'Dinar jordanien',
     code: 'JOD',
     symbol: 'د.ا',
-    numID: 400, // Jordanian Dinar
+    numericCode: 400,
   },
   {
     name: 'Dinar koweïtien',
     code: 'KWD',
     symbol: 'د.ك',
-    numID: 414, // Kuwaiti Dinar
+    numericCode: 414,
   },
   {
     name: 'Livre libanaise',
     code: 'LBP',
     symbol: 'ل.ل',
-    numID: 422, // Lebanese Pound
+    numericCode: 422,
   },
   {
     name: 'Rial omanais',
     code: 'OMR',
     symbol: 'ر.ع.',
-    numID: 512, // Omani Rial
+    numericCode: 512,
   },
   {
     name: 'Rial qatari',
     code: 'QAR',
     symbol: 'ر.ق',
-    numID: 634, // Qatari Rial
+    numericCode: 634,
   },
   {
     name: 'Riyal saoudien',
     code: 'SAR',
     symbol: '',
-    numID: 682, // Saudi Riyal
+    numericCode: 682,
   },
   {
     name: 'Bitcoin',
     code: 'BTC',
     symbol: '₿',
-    numID: 0, // Bitcoin (no ISO 4217 code)
+    numericCode: 0,
   },
   {
     name: 'Ethereum',
     code: 'ETH',
     symbol: 'Ξ',
-    numID: 0, // Ethereum (no ISO 4217 code)
+    numericCode: 0,
   },
   {
     name: 'Litecoin',
     code: 'LTC',
     symbol: 'Ł',
-    numID: 0, // Litecoin (no ISO 4217 code)
+    numericCode: 0,
   },
   {
     name: 'Ripples',
     code: 'XRP',
     symbol: 'XRP',
-    numID: 0, // Ripple (no ISO 4217 code)
+    numericCode: 0,
   },
 ];
