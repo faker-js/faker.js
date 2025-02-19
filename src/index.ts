@@ -28,6 +28,9 @@ export type {
   VehicleDefinition,
   WordDefinition,
 } from './definitions';
+export type { Distributor } from './distributors/distributor';
+export { exponentialDistributor } from './distributors/exponential';
+export { uniformDistributor } from './distributors/uniform';
 export { FakerError } from './errors/faker-error';
 export { Faker } from './faker';
 export type { FakerOptions } from './faker';

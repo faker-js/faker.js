@@ -144,6 +144,17 @@ export function processUtilityFunctions(project: Project): RawApiDocsMethod[] {
   );
 }
 
+export function processDistributorFunctions(
+  project: Project
+): RawApiDocsMethod[] {
+  return processMethodLikes(
+    Object.values(getAllFunctions(project)).filter((fn) =>
+      fn.getSourceFile().getFilePath().includes('/src/distributors/')
+    ),
+    (f) => f.getNameOrThrow()
+  );
+}
+
 // Method-likes
 
 type MethodLikeDeclaration = SignatureLikeDeclaration &

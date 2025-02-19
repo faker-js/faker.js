@@ -1,3 +1,5 @@
+import type { Distributor } from '../../distributors/distributor';
+import { uniformDistributor } from '../../distributors/uniform';
 import { FakerError } from '../../errors/faker-error';
 import { SimpleModuleBase } from '../../internal/module-base';
 
@@ -24,6 +26,7 @@ export class NumberModule extends SimpleModuleBase {
    * @param options.min Lower bound for generated number. Defaults to `0`.
    * @param options.max Upper bound for generated number. Defaults to `Number.MAX_SAFE_INTEGER`.
    * @param options.multipleOf Generated number will be a multiple of the given integer. Defaults to `1`.
+   * @param options.distributor A function to determine the distribution of generated values. Defaults to `uniformDistributor()`.
    *
    * @throws When `min` is greater than `max`.
    * @throws When there are no suitable integers between `min` and `max`.
@@ -63,13 +66,24 @@ export class NumberModule extends SimpleModuleBase {
            * @default 1
            */
           multipleOf?: number;
+          /**
+           * A function to determine the distribution of generated values.
+           *
+           * @default uniformDistributor()
+           */
+          distributor?: Distributor;
         } = {}
   ): number {
     if (typeof options === 'number') {
       options = { max: options };
     }
 
-    const { min = 0, max = Number.MAX_SAFE_INTEGER, multipleOf = 1 } = options;
+    const {
+      min = 0,
+      max = Number.MAX_SAFE_INTEGER,
+      multipleOf = 1,
+      distributor = uniformDistributor(),
+    } = options;
 
     if (!Number.isInteger(multipleOf)) {
       throw new FakerError(`multipleOf should be an integer.`);
@@ -98,7 +112,7 @@ export class NumberModule extends SimpleModuleBase {
 
     // @ts-expect-error: access private member field
     const randomizer = this.faker._randomizer;
-    const real = randomizer.next();
+    const real = distributor(randomizer);
     const delta = effectiveMax - effectiveMin + 1; // +1 for inclusive max bounds and even distribution
     return Math.floor(real * delta + effectiveMin) * multipleOf;
   }
@@ -111,6 +125,7 @@ export class NumberModule extends SimpleModuleBase {
    * @param options.max Upper bound for generated number, exclusive, unless `multipleOf` or `fractionDigits` are passed. Defaults to `1.0`.
    * @param options.multipleOf The generated number will be a multiple of this parameter. Only one of `multipleOf` or `fractionDigits` should be passed.
    * @param options.fractionDigits The maximum number of digits to appear after the decimal point, for example `2` will round to 2 decimal points.  Only one of `multipleOf` or `fractionDigits` should be passed.
+   * @param options.distributor A function to determine the distribution of generated values. Defaults to `uniformDistributor()`.
    *
    * @throws When `min` is greater than `max`.
    * @throws When `multipleOf` is negative.
@@ -154,6 +169,12 @@ export class NumberModule extends SimpleModuleBase {
            * The generated number will be a multiple of this parameter. Only one of `multipleOf` or `fractionDigits` should be passed.
            */
           multipleOf?: number;
+          /**
+           * A function to determine the distribution of generated values.
+           *
+           * @default uniformDistributor()
+           */
+          distributor?: Distributor;
         } = {}
   ): number {
     if (typeof options === 'number') {
@@ -168,6 +189,7 @@ export class NumberModule extends SimpleModuleBase {
       fractionDigits,
       multipleOf: originalMultipleOf,
       multipleOf = fractionDigits == null ? undefined : 10 ** -fractionDigits,
+      distributor = uniformDistributor(),
     } = options;
 
     if (max === min) {
@@ -210,13 +232,14 @@ export class NumberModule extends SimpleModuleBase {
       const int = this.int({
         min: min * factor,
         max: max * factor,
+        distributor,
       });
       return int / factor;
     }
 
     // @ts-expect-error: access private member field
     const randomizer = this.faker._randomizer;
-    const real = randomizer.next();
+    const real = distributor(randomizer);
     return real * (max - min) + min;
   }
 

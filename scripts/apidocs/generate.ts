@@ -8,6 +8,7 @@ import type { RawApiDocsPage } from './processing/class';
 import {
   processModuleClasses,
   processProjectClasses,
+  processProjectDistributors,
   processProjectInterfaces,
   processProjectUtilities,
 } from './processing/class';
@@ -26,6 +27,7 @@ export function processComponents(project: Project): RawApiDocsPage[] {
   return [
     ...processProjectClasses(project),
     ...processProjectInterfaces(project),
+    processProjectDistributors(project),
     processProjectUtilities(project),
     ...processModuleClasses(project),
   ];

@@ -1,6 +1,11 @@
 import { isHexadecimal, isOctal } from 'validator';
 import { describe, expect, it, vi } from 'vitest';
-import { FakerError, SimpleFaker, faker } from '../../src';
+import {
+  FakerError,
+  SimpleFaker,
+  exponentialDistributor,
+  faker,
+} from '../../src';
 import { seededTests } from '../support/seeded-runs';
 import { MERSENNE_MAX_VALUE } from '../utils/mersenne-test-utils';
 import { times } from './../support/times';
@@ -264,6 +269,50 @@ describe('number', () => {
           new FakerError(`No suitable integer value between 2.1 and 2.9 found.`)
         );
       });
+
+      it('should generate a number with low base', () => {
+        const distributor = exponentialDistributor({ base: 0.1 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[faker.number.int({ max: 9, distributor })]++;
+        }
+
+        expect(results[0]).toBeLessThan(75);
+        expect(results[9]).toBeGreaterThan(200);
+      });
+
+      it('should generate a number with high base', () => {
+        const distributor = exponentialDistributor({ base: 10 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[faker.number.int({ max: 9, distributor })]++;
+        }
+
+        expect(results[0]).toBeGreaterThan(200);
+        expect(results[9]).toBeLessThan(75);
+      });
+
+      it('should generate a number with low bias', () => {
+        const distributor = exponentialDistributor({ bias: -9 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[faker.number.int({ max: 9, distributor })]++;
+        }
+
+        expect(results[0]).toBeGreaterThan(200);
+        expect(results[9]).toBeLessThan(75);
+      });
+
+      it('should generate a number with high bias', () => {
+        const distributor = exponentialDistributor({ bias: 9 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[faker.number.int({ max: 9, distributor })]++;
+        }
+
+        expect(results[0]).toBeLessThan(75);
+        expect(results[9]).toBeGreaterThan(200);
+      });
     });
 
     describe('float', () => {
@@ -405,6 +454,50 @@ describe('number', () => {
         }).toThrow(
           new FakerError(`Max ${max} should be greater than min ${min}.`)
         );
+      });
+
+      it('should generate a number with low base', () => {
+        const distributor = exponentialDistributor({ base: 0.1 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[Math.floor(faker.number.float({ max: 10, distributor }))]++;
+        }
+
+        expect(results[0]).toBeLessThan(75);
+        expect(results[9]).toBeGreaterThan(200);
+      });
+
+      it('should generate a number with high base', () => {
+        const distributor = exponentialDistributor({ base: 10 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[Math.floor(faker.number.float({ max: 10, distributor }))]++;
+        }
+
+        expect(results[0]).toBeGreaterThan(200);
+        expect(results[9]).toBeLessThan(75);
+      });
+
+      it('should generate a number with low bias', () => {
+        const distributor = exponentialDistributor({ bias: -9 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[Math.floor(faker.number.float({ max: 10, distributor }))]++;
+        }
+
+        expect(results[0]).toBeGreaterThan(200);
+        expect(results[9]).toBeLessThan(75);
+      });
+
+      it('should generate a number with high bias', () => {
+        const distributor = exponentialDistributor({ bias: 9 });
+        const results = Array.from({ length: 10 }, (_, i) => i);
+        for (let i = 0; i < 1000; i++) {
+          results[Math.floor(faker.number.float({ max: 10, distributor }))]++;
+        }
+
+        expect(results[0]).toBeLessThan(75);
+        expect(results[9]).toBeGreaterThan(200);
       });
     });
 
