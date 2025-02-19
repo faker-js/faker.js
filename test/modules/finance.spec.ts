@@ -299,7 +299,7 @@ describe('finance', () => {
           expect(currency.code).toMatch(/^[A-Z]{3}$/);
           expect(currency.name).toBeTypeOf('string');
           expect(currency.symbol).toBeTypeOf('string');
-          expect(currency.numericCode).toBeTypeOf('number');
+          expect(currency.numericCode).toBeTypeOf('string');
         });
       });
 
@@ -329,10 +329,10 @@ describe('finance', () => {
       });
 
       describe('currencyNumericCode()', () => {
-        it('should return a number', () => {
+        it('should return a string', () => {
           const currencyNumericCode = faker.finance.currencyNumericCode();
 
-          expect(currencyNumericCode).toBeTypeOf('number');
+          expect(currencyNumericCode).toBeTypeOf('string');
         });
       });
 
