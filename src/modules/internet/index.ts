@@ -817,11 +817,15 @@ export class InternetModule extends ModuleBase {
    * @param options.greenBase The optional base green in range between `0` and `255`. Defaults to `0`.
    * @param options.blueBase The optional base blue in range between `0` and `255`. Defaults to `0`.
    *
+   * @see faker.color.rgb(): For generating a random RGB color.
+   *
    * @example
    * faker.internet.color() // '#30686e'
    * faker.internet.color({ redBase: 100, greenBase: 100, blueBase: 100 }) // '#4e5f8b'
    *
    * @since 2.0.1
+   *
+   * @deprecated Please use faker.color.rgb() or any of the other color methods instead.
    */
   color(
     options: {
@@ -845,6 +849,13 @@ export class InternetModule extends ModuleBase {
       blueBase?: number;
     } = {}
   ): string {
+    deprecated({
+      deprecated: 'faker.internet.color()',
+      proposed: 'faker.color.rgb()',
+      since: '9.6.0',
+      until: '10.0.0',
+    });
+
     const { redBase = 0, greenBase = 0, blueBase = 0 } = options;
 
     const red = colorFromBase(this.faker, redBase);

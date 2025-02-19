@@ -847,6 +847,7 @@ describe('internet', () => {
 
       describe('color()', () => {
         it('should return a random hex value', () => {
+          // eslint-disable-next-line @typescript-eslint/no-deprecated
           const color = faker.internet.color();
 
           expect(color).toBeTruthy();
@@ -855,6 +856,7 @@ describe('internet', () => {
         });
 
         it('should return a random hex value with given values', () => {
+          // eslint-disable-next-line @typescript-eslint/no-deprecated
           const color = faker.internet.color({
             redBase: 100,
             greenBase: 100,
