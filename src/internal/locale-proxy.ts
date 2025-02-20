@@ -72,6 +72,7 @@ export function assertLocaleData<T>(
   } else if (value === undefined) {
     throw new FakerError(
       `The locale data for '${path.join('.')}' are missing in this locale.
+  If this is a custom Faker instance, please make sure all required locales are used e.g. '[de_AT, de, en, base]'.
   Please contribute the missing data to the project or use a locale/Faker instance that has these data.
   For more information see https://fakerjs.dev/guide/localization.html`
     );

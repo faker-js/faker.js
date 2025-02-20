@@ -97,6 +97,7 @@ describe('LocaleProxy', () => {
       expect(() => locale.category.missing).toThrow(
         new FakerError(
           `The locale data for 'category.missing' are missing in this locale.
+  If this is a custom Faker instance, please make sure all required locales are used e.g. '[de_AT, de, en, base]'.
   Please contribute the missing data to the project or use a locale/Faker instance that has these data.
   For more information see https://fakerjs.dev/guide/localization.html`
         )
@@ -107,6 +108,7 @@ describe('LocaleProxy', () => {
       expect(() => locale.airline.missing).toThrow(
         new FakerError(
           `The locale data for 'airline.missing' are missing in this locale.
+  If this is a custom Faker instance, please make sure all required locales are used e.g. '[de_AT, de, en, base]'.
   Please contribute the missing data to the project or use a locale/Faker instance that has these data.
   For more information see https://fakerjs.dev/guide/localization.html`
         )

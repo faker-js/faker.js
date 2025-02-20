@@ -120,7 +120,9 @@ export class Faker extends SimpleFaker {
    * For more information see our [Localization Guide](https://fakerjs.dev/guide/localization.html).
    *
    * @param options The options to use.
-   * @param options.locale The locale data to use.
+   * @param options.locale The locale data to use for this instance.
+   * If an array is provided, the first locale that has a definition for a given property will be used.
+   * Please make sure that all required locales and their parent locales are present, e.g. `[de_AT, de, en, base]`.
    * @param options.randomizer The Randomizer to use.
    * Specify this only if you want to use it to achieve a specific goal,
    * such as sharing the same random generator with other instances/tools.
@@ -148,6 +150,7 @@ export class Faker extends SimpleFaker {
     /**
      * The locale data to use for this instance.
      * If an array is provided, the first locale that has a definition for a given property will be used.
+     * Please make sure that all required locales and their parent locales are present, e.g. `[de_AT, de, en, base]`.
      *
      * @see mergeLocales(): For more information about how the locales are merged.
      */
