@@ -467,7 +467,7 @@ export class FinanceModule extends ModuleBase {
    * @see faker.finance.currencyCode(): For generating specifically the currency code.
    * @see faker.finance.currencyName(): For generating specifically the currency name.
    * @see faker.finance.currencySymbol(): For generating specifically the currency symbol.
-   * @see faker.finance.currencyNumericCode(): For generating specifically the currency numerical ID.
+   * @see faker.finance.currencyNumericCode(): For generating specifically the currency numeric code.
    *
    * @example
    * faker.finance.currency() // { code: 'USD', name: 'US Dollar', symbol: '$', numericCode: '840' }
