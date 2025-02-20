@@ -181,11 +181,11 @@ As a workaround, you can provide additional fallbacks to your `Faker` instance:
 
 ```ts
 import { Faker, el } from '@faker-js/faker'; // [!code --]
-import { Faker, el, en } from '@faker-js/faker'; // [!code ++]
+import { Faker, base, el, en } from '@faker-js/faker'; // [!code ++]
 
 const faker = new Faker({
   locale: [el], // [!code --]
-  locale: [el, en], // [!code ++]
+  locale: [el, en, base], // [!code ++]
 });
 console.log(faker.location.country()); // 'Belgium'
 ```
