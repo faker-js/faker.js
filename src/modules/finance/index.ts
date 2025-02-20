@@ -523,7 +523,7 @@ export class FinanceModule extends ModuleBase {
   }
 
   /**
-   * Returns a random currency number ID.
+   * Returns a random currency numeric code.
    * (The ISO 4217 numerical code for the currency (e.g. `US Dollar` -> `'840'` ))
    *
    * @example
