@@ -35,20 +35,20 @@
   ],
   "contributors": [
     {
-      "avatar": "https://github.com/import-brain.png",
+      "avatar": "https://github.com/ejcheng.png",
       "name": "Eric Cheng",
       "title": "Contributor",
       "org": "",
       "orgLink": "",
       "desc": "",
       "links": [
-        { "icon": "github", "link": "https://github.com/import-brain" },
+        { "icon": "github", "link": "https://github.com/ejcheng" },
         {
           "icon": "linkedin",
           "link": "https://www.linkedin.com/in/ericcheng-software/"
         }
       ],
-      "sponsor": "https://github.com/sponsors/import-brain"
+      "sponsor": "https://github.com/sponsors/ejcheng"
     },
     {
       "avatar": "https://github.com/matthewmayer.png",
