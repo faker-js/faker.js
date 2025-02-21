@@ -329,10 +329,11 @@ describe('finance', () => {
       });
 
       describe('currencyNumericCode()', () => {
-        it('should return a string', () => {
+        it('should return a string with length of 3', () => {
           const currencyNumericCode = faker.finance.currencyNumericCode();
 
           expect(currencyNumericCode).toBeTypeOf('string');
+          expect(currencyNumericCode).toMatch(/^\d{3}$/);
         });
       });
 
