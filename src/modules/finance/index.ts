@@ -524,7 +524,7 @@ export class FinanceModule extends ModuleBase {
 
   /**
    * Returns a random currency numeric code.
-   * (The ISO 4217 numerical code for the currency (e.g. `US Dollar` -> `'840'` ))
+   * (The ISO 4217 numerical code for a currency (e.g. `US Dollar` -> `840` ))
    *
    * @example
    * faker.finance.currencyNumericCode() // '840'
