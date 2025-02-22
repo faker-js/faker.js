@@ -437,22 +437,22 @@ export class NumberModule extends SimpleModuleBase {
       throw new FakerError(`Max ${max} should be larger than min ${min}.`);
     }
 
-    if (multipleOf <= 0n) {
+    if (multipleOf <= BigInt(0)) {
       throw new FakerError(`multipleOf should be greater than 0.`);
     }
 
     const effectiveMin =
-      min % multipleOf === 0n
+      min % multipleOf === BigInt(0)
         ? min / multipleOf
-        : 0n <= min
-          ? min / multipleOf + 1n
+        : BigInt(0) <= min
+          ? min / multipleOf + BigInt(1)
           : min / multipleOf;
     const effectiveMax =
-      max % multipleOf === 0n
+      max % multipleOf === BigInt(0)
         ? max / multipleOf
-        : 0n <= max
+        : BigInt(0) <= max
           ? max / multipleOf
-          : max / multipleOf - 1n;
+          : max / multipleOf - BigInt(1);
 
     if (effectiveMin === effectiveMax) {
       return effectiveMin * multipleOf;
@@ -472,7 +472,7 @@ export class NumberModule extends SimpleModuleBase {
           allowLeadingZeros: true,
         })
       ) %
-      (delta + 1n);
+      (delta + BigInt(1));
     return (effectiveMin + offset) * multipleOf;
   }
 
