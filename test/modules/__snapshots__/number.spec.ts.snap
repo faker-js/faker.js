@@ -1,20 +1,20 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`number > 42 > bigInt > noArgs 1`] = `397511086709822n`;
+exports[`number > 42 > bigInt > noArgs 1`] = `397511086709821n`;
 
-exports[`number > 42 > bigInt > with big options 1`] = `19556777749482489605814696n`;
+exports[`number > 42 > bigInt > with big options 1`] = `19556777749482489605814694n`;
 
-exports[`number > 42 > bigInt > with bigint value 1`] = `29n`;
+exports[`number > 42 > bigInt > with bigint value 1`] = `25n`;
 
 exports[`number > 42 > bigInt > with boolean value 1`] = `1n`;
 
-exports[`number > 42 > bigInt > with multipleOf 1`] = `18675377700n`;
+exports[`number > 42 > bigInt > with multipleOf 1`] = `147890295638632n`;
 
-exports[`number > 42 > bigInt > with number value 1`] = `40n`;
+exports[`number > 42 > bigInt > with number value 1`] = `39n`;
 
-exports[`number > 42 > bigInt > with options 1`] = `23n`;
+exports[`number > 42 > bigInt > with options 1`] = `19n`;
 
-exports[`number > 42 > bigInt > with string value 1`] = `40n`;
+exports[`number > 42 > bigInt > with string value 1`] = `39n`;
 
 exports[`number > 42 > binary > noArgs 1`] = `"0"`;
 
@@ -66,21 +66,21 @@ exports[`number > 42 > romanNumeral > with only max 1`] = `"LXII"`;
 
 exports[`number > 42 > romanNumeral > with only min 1`] = `"MDI"`;
 
-exports[`number > 1211 > bigInt > noArgs 1`] = `982966736876849n`;
+exports[`number > 1211 > bigInt > noArgs 1`] = `982966736876848n`;
 
-exports[`number > 1211 > bigInt > with big options 1`] = `25442250580110979794946302n`;
+exports[`number > 1211 > bigInt > with big options 1`] = `25442250580110979794946298n`;
 
-exports[`number > 1211 > bigInt > with bigint value 1`] = `122n`;
+exports[`number > 1211 > bigInt > with bigint value 1`] = `114n`;
 
 exports[`number > 1211 > bigInt > with boolean value 1`] = `1n`;
 
-exports[`number > 1211 > bigInt > with multipleOf 1`] = `99016744867n`;
+exports[`number > 1211 > bigInt > with multipleOf 1`] = `784113589297853n`;
 
-exports[`number > 1211 > bigInt > with number value 1`] = `15n`;
+exports[`number > 1211 > bigInt > with number value 1`] = `12n`;
 
-exports[`number > 1211 > bigInt > with options 1`] = `53n`;
+exports[`number > 1211 > bigInt > with options 1`] = `44n`;
 
-exports[`number > 1211 > bigInt > with string value 1`] = `30n`;
+exports[`number > 1211 > bigInt > with string value 1`] = `28n`;
 
 exports[`number > 1211 > binary > noArgs 1`] = `"1"`;
 
@@ -132,21 +132,21 @@ exports[`number > 1211 > romanNumeral > with only max 1`] = `"CLIV"`;
 
 exports[`number > 1211 > romanNumeral > with only min 1`] = `"MMMDCCXIV"`;
 
-exports[`number > 1337 > bigInt > noArgs 1`] = `212435297136195n`;
+exports[`number > 1337 > bigInt > noArgs 1`] = `212435297136194n`;
 
-exports[`number > 1337 > bigInt > with big options 1`] = `27379244885156992800029993n`;
+exports[`number > 1337 > bigInt > with big options 1`] = `27379244885156992800029992n`;
 
-exports[`number > 1337 > bigInt > with bigint value 1`] = `90n`;
+exports[`number > 1337 > bigInt > with bigint value 1`] = `88n`;
 
-exports[`number > 1337 > bigInt > with boolean value 1`] = `1n`;
+exports[`number > 1337 > bigInt > with boolean value 1`] = `0n`;
 
-exports[`number > 1337 > bigInt > with multipleOf 1`] = `86156732331n`;
+exports[`number > 1337 > bigInt > with multipleOf 1`] = `682275118016671n`;
 
-exports[`number > 1337 > bigInt > with number value 1`] = `22n`;
+exports[`number > 1337 > bigInt > with number value 1`] = `21n`;
 
-exports[`number > 1337 > bigInt > with options 1`] = `60n`;
+exports[`number > 1337 > bigInt > with options 1`] = `58n`;
 
-exports[`number > 1337 > bigInt > with string value 1`] = `22n`;
+exports[`number > 1337 > bigInt > with string value 1`] = `21n`;
 
 exports[`number > 1337 > binary > noArgs 1`] = `"0"`;
 

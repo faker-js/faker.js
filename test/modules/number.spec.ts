@@ -686,6 +686,68 @@ describe('number', () => {
         expect(generateBigInt).toBe(-9n);
       });
 
+      it('should return inclusive positive min/max value', () => {
+        const positive4 = 4n;
+        const positive5 = 5n;
+        let foundPositive4 = false;
+        let foundPositive5 = false;
+
+        for (let iter = 0; iter < 1000; iter++) {
+          const actual = faker.number.bigInt({
+            min: positive4,
+            max: positive5,
+          });
+
+          if (actual === positive4) {
+            foundPositive4 = true;
+          } else if (actual === positive5) {
+            foundPositive5 = true;
+          }
+
+          expect(actual).toBeTypeOf('bigint');
+          expect(actual).toBeGreaterThanOrEqual(positive4);
+          expect(actual).toBeLessThanOrEqual(positive5);
+
+          if (foundPositive4 && foundPositive5) {
+            break;
+          }
+        }
+
+        expect(foundPositive4).toBeTruthy();
+        expect(foundPositive5).toBeTruthy();
+      });
+
+      it('should return inclusive negative min/max value', () => {
+        const negative4 = -4n;
+        const negative5 = -5n;
+        let foundNegative4 = false;
+        let foundNegative5 = false;
+
+        for (let iter = 0; iter < 1000; iter++) {
+          const actual = faker.number.bigInt({
+            min: negative5,
+            max: negative4,
+          });
+
+          if (actual === negative4) {
+            foundNegative4 = true;
+          } else if (actual === negative5) {
+            foundNegative5 = true;
+          }
+
+          expect(actual).toBeTypeOf('bigint');
+          expect(actual).toBeGreaterThanOrEqual(negative5);
+          expect(actual).toBeLessThanOrEqual(negative4);
+
+          if (foundNegative4 && foundNegative5) {
+            break;
+          }
+        }
+
+        expect(foundNegative4).toBeTruthy();
+        expect(foundNegative5).toBeTruthy();
+      });
+
       it('should throw for non-positive multipleOf', () => {
         expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
           new FakerError('multipleOf should be greater than 0.')

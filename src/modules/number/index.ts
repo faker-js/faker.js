@@ -471,10 +471,9 @@ export class NumberModule extends SimpleModuleBase {
           length: delta.toString(10).length,
           allowLeadingZeros: true,
         })
-      ) % delta;
-    const random = effectiveMin * multipleOf + offset;
-    const remaining = multipleOf - (random % multipleOf);
-    return random + remaining;
+      ) %
+      (delta + 1n);
+    return (effectiveMin + offset) * multipleOf;
   }
 
   /**
