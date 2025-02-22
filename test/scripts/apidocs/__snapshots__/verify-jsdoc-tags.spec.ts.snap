@@ -167,6 +167,7 @@ exports[`check docs completeness > all modules and methods are present 1`] = `
       "currency",
       "currencyCode",
       "currencyName",
+      "currencyNumericCode",
       "currencySymbol",
       "ethereumAddress",
       "iban",

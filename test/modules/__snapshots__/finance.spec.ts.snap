@@ -46,6 +46,7 @@ exports[`finance > 42 > currency 1`] = `
 {
   "code": "ILS",
   "name": "New Israeli Sheqel",
+  "numericCode": "376",
   "symbol": "₪",
 }
 `;
@@ -53,6 +54,8 @@ exports[`finance > 42 > currency 1`] = `
 exports[`finance > 42 > currencyCode 1`] = `"ILS"`;
 
 exports[`finance > 42 > currencyName 1`] = `"New Israeli Sheqel"`;
+
+exports[`finance > 42 > currencyNumericCode 1`] = `"376"`;
 
 exports[`finance > 42 > currencySymbol 1`] = `"₪"`;
 
@@ -134,6 +137,7 @@ exports[`finance > 1211 > currency 1`] = `
 {
   "code": "VUV",
   "name": "Vatu",
+  "numericCode": "548",
   "symbol": "",
 }
 `;
@@ -141,6 +145,8 @@ exports[`finance > 1211 > currency 1`] = `
 exports[`finance > 1211 > currencyCode 1`] = `"VUV"`;
 
 exports[`finance > 1211 > currencyName 1`] = `"Vatu"`;
+
+exports[`finance > 1211 > currencyNumericCode 1`] = `"548"`;
 
 exports[`finance > 1211 > currencySymbol 1`] = `"$"`;
 
@@ -222,6 +228,7 @@ exports[`finance > 1337 > currency 1`] = `
 {
   "code": "ETB",
   "name": "Ethiopian Birr",
+  "numericCode": "230",
   "symbol": "",
 }
 `;
@@ -229,6 +236,8 @@ exports[`finance > 1337 > currency 1`] = `
 exports[`finance > 1337 > currencyCode 1`] = `"ETB"`;
 
 exports[`finance > 1337 > currencyName 1`] = `"Ethiopian Birr"`;
+
+exports[`finance > 1337 > currencyNumericCode 1`] = `"230"`;
 
 exports[`finance > 1337 > currencySymbol 1`] = `"$"`;
 

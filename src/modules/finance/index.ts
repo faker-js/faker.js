@@ -27,6 +27,11 @@ export interface Currency {
    * The symbol for the currency (e.g. `$`).
    */
   symbol: string;
+
+  /**
+   * The ISO 4217 numeric code for the currency (e.g. `840`).
+   */
+  numericCode: string;
 }
 
 /**
@@ -457,14 +462,15 @@ export class FinanceModule extends ModuleBase {
   }
 
   /**
-   * Returns a random currency object, containing `code`, `name `and `symbol` properties.
+   * Returns a random currency object, containing `code`, `name`, `symbol`, and `numericCode` properties.
    *
    * @see faker.finance.currencyCode(): For generating specifically the currency code.
    * @see faker.finance.currencyName(): For generating specifically the currency name.
    * @see faker.finance.currencySymbol(): For generating specifically the currency symbol.
+   * @see faker.finance.currencyNumericCode(): For generating specifically the currency numeric code.
    *
    * @example
-   * faker.finance.currency() // { code: 'USD', name: 'US Dollar', symbol: '$' }
+   * faker.finance.currency() // { code: 'USD', name: 'US Dollar', symbol: '$', numericCode: '840' }
    *
    * @since 8.0.0
    */
@@ -514,6 +520,19 @@ export class FinanceModule extends ModuleBase {
     } while (symbol.length === 0);
 
     return symbol;
+  }
+
+  /**
+   * Returns a random currency numeric code.
+   * (The ISO 4217 numerical code for a currency (e.g. `US Dollar` -> `840` ))
+   *
+   * @example
+   * faker.finance.currencyNumericCode() // '840'
+   *
+   * @since 9.6.0
+   */
+  currencyNumericCode(): string {
+    return this.currency().numericCode;
   }
 
   /**
