@@ -686,7 +686,7 @@ describe('number', () => {
         ).toThrow(
           new FakerError('No suitable bigint value between 1 and 1 found.')
         );
-      })
+      });
     });
 
     describe('romanNumeral', () => {
