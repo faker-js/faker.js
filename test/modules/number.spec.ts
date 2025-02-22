@@ -679,6 +679,14 @@ describe('number', () => {
           new FakerError('No suitable bigint value between 6 and 9 found.')
         );
       });
+
+      it('should throw if there is no suitable bigint value between same min and max', () => {
+        expect(() =>
+          faker.number.bigInt({ min: 1, max: 1, multipleOf: 5 })
+        ).toThrow(
+          new FakerError('No suitable bigint value between 1 and 1 found.')
+        );
+      })
     });
 
     describe('romanNumeral', () => {
