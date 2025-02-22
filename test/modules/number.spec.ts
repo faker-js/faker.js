@@ -666,6 +666,26 @@ describe('number', () => {
         expect(generateBigInt % 5n).toBe(0n);
       });
 
+      it('should generate a suitable bigint value between negative min and negative max', () => {
+        const generateBigInt = faker.number.bigInt({
+          min: -9,
+          max: -1,
+          multipleOf: 5,
+        });
+        expect(generateBigInt).toBeTypeOf('bigint');
+        expect(generateBigInt).toBe(-5n);
+      });
+
+      it('should generate a suitable bigint value between negative min and negative max (edge case)', () => {
+        const generateBigInt = faker.number.bigInt({
+          min: -9,
+          max: -1,
+          multipleOf: 9,
+        });
+        expect(generateBigInt).toBeTypeOf('bigint');
+        expect(generateBigInt).toBe(-9n);
+      });
+
       it('should throw for non-positive multipleOf', () => {
         expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
           new FakerError('multipleOf should be greater than 0.')

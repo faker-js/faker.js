@@ -441,8 +441,18 @@ export class NumberModule extends SimpleModuleBase {
       throw new FakerError(`multipleOf should be greater than 0.`);
     }
 
-    const effectiveMin = min / multipleOf + (min % multipleOf === 0n ? 0n : 1n);
-    const effectiveMax = max / multipleOf;
+    const effectiveMin =
+      min % multipleOf === 0n
+        ? min / multipleOf
+        : 0n <= min
+          ? min / multipleOf + 1n
+          : min / multipleOf;
+    const effectiveMax =
+      max % multipleOf === 0n
+        ? max / multipleOf
+        : 0n <= max
+          ? max / multipleOf
+          : max / multipleOf - 1n;
 
     if (effectiveMin === effectiveMax) {
       return effectiveMin * multipleOf;
