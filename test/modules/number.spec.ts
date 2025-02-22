@@ -656,6 +656,16 @@ describe('number', () => {
         expect(generatedBigInt % 20n).toBe(0n);
       });
 
+      it('should generate a suitable bigint value between negative min and max', () => {
+        const generateBigInt = faker.number.bigInt({
+          min: -9,
+          max: 0,
+          multipleOf: 5,
+        });
+        expect(generateBigInt).toBeTypeOf('bigint');
+        expect(generateBigInt % 5n).toBe(0n);
+      });
+
       it('should throw for non-positive multipleOf', () => {
         expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
           new FakerError('multipleOf should be greater than 0n.')
