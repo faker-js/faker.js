@@ -445,14 +445,20 @@ export class NumberModule extends SimpleModuleBase {
       throw new FakerError(`multipleOf should be greater than 0n.`);
     }
 
-    if (1n < multipleOf && max < multipleOf) {
+    const effectiveMin = min / multipleOf + (min % multipleOf === 0n ? 0n : 1n);
+    const effectiveMax = max / multipleOf;
+
+    if (effectiveMin === effectiveMax) {
+      return effectiveMin * multipleOf;
+    }
+
+    if (effectiveMax < effectiveMin) {
       throw new FakerError(
-        `Multiple of ${multipleOf}n should be less than or equal to max ${max}n.`
+        `No suitable bigint value between ${min}n and ${max}n found.`
       );
     }
 
-    const delta = max - min;
-
+    const delta = effectiveMax - effectiveMin;
     const offset =
       BigInt(
         this.faker.string.numeric({
@@ -460,10 +466,9 @@ export class NumberModule extends SimpleModuleBase {
           allowLeadingZeros: true,
         })
       ) % delta;
-
-    const remaining = multipleOf - ((min + offset) % multipleOf);
-
-    return min + offset + remaining;
+    const random = effectiveMin * multipleOf + offset;
+    const remaining = multipleOf - (random % multipleOf);
+    return random + remaining;
   }
 
   /**

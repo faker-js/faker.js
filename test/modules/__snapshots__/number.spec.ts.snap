@@ -8,7 +8,7 @@ exports[`number > 42 > bigInt > with bigint value 1`] = `29n`;
 
 exports[`number > 42 > bigInt > with boolean value 1`] = `1n`;
 
-exports[`number > 42 > bigInt > with multipleOf 1`] = `397511086716281n`;
+exports[`number > 42 > bigInt > with multipleOf 1`] = `18675377700n`;
 
 exports[`number > 42 > bigInt > with number value 1`] = `40n`;
 
@@ -74,7 +74,7 @@ exports[`number > 1211 > bigInt > with bigint value 1`] = `122n`;
 
 exports[`number > 1211 > bigInt > with boolean value 1`] = `1n`;
 
-exports[`number > 1211 > bigInt > with multipleOf 1`] = `982966736876952n`;
+exports[`number > 1211 > bigInt > with multipleOf 1`] = `99016744867n`;
 
 exports[`number > 1211 > bigInt > with number value 1`] = `15n`;
 
@@ -140,7 +140,7 @@ exports[`number > 1337 > bigInt > with bigint value 1`] = `90n`;
 
 exports[`number > 1337 > bigInt > with boolean value 1`] = `1n`;
 
-exports[`number > 1337 > bigInt > with multipleOf 1`] = `212435297138188n`;
+exports[`number > 1337 > bigInt > with multipleOf 1`] = `86156732331n`;
 
 exports[`number > 1337 > bigInt > with number value 1`] = `22n`;
 
