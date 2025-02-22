@@ -442,7 +442,7 @@ export class NumberModule extends SimpleModuleBase {
     }
 
     if (multipleOf <= 0n) {
-      throw new FakerError(`multipleOf should be greater than 0n.`);
+      throw new FakerError(`multipleOf should be greater than 0.`);
     }
 
     const effectiveMin = min / multipleOf + (min % multipleOf === 0n ? 0n : 1n);
@@ -454,7 +454,7 @@ export class NumberModule extends SimpleModuleBase {
 
     if (effectiveMax < effectiveMin) {
       throw new FakerError(
-        `No suitable bigint value between ${min}n and ${max}n found.`
+        `No suitable bigint value between ${min} and ${max} found.`
       );
     }
 

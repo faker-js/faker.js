@@ -668,7 +668,7 @@ describe('number', () => {
 
       it('should throw for non-positive multipleOf', () => {
         expect(() => faker.number.bigInt({ multipleOf: 0n })).toThrow(
-          new FakerError('multipleOf should be greater than 0n.')
+          new FakerError('multipleOf should be greater than 0.')
         );
       });
 
@@ -676,7 +676,7 @@ describe('number', () => {
         expect(() =>
           faker.number.bigInt({ min: 6, max: 9, multipleOf: 5 })
         ).toThrow(
-          new FakerError('No suitable bigint value between 6n and 9n found.')
+          new FakerError('No suitable bigint value between 6 and 9 found.')
         );
       });
     });
